@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Conputer Science (mlathematical morphology and biological image processing), University of Strasbourg, 2024 (expected)
+* Ph.D in Conputer Science (Multi-scale hierarchical structures for histological image analysis), University of Strasbourg, 2024 (expected)
 * M.S. in Computer Science, University of Strasbourg, 2019
 * B.S. in Computer Science, University of Strasbourg, 2017
 
