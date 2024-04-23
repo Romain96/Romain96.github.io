@@ -62,4 +62,7 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Member of the Association of ICube's Young Researchers (AJCI) since 2021-10-07
+* Secretary of the AJCI from 2021-07-10 to 2022-12-31 
+* Elected member of the administrative council of the AJCI since 2021-10-07
+* AJCI representative to the [Data Sciences and Knowledge (SDC)](https://sdc.icube.unistra.fr/en/index.php/Home) team of ICube since 2021-10-07
