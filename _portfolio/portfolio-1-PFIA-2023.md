@@ -4,4 +4,5 @@ excerpt: "Plate-Forme Intelligence Artificielle 2023<br/><img src='/images/pfia_
 collection: portfolio
 ---
 
-[[website](https://pfia23.icube.unistra.fr/)]
+[**PFIA 2023**](https://pfia23.icube.unistra.fr/) has been held in Strasbourg, France from the 2023/07/03 to the 2023/07/07.
+Since the [SDC team](https://sdc.icube.unistra.fr/en/index.php/Home) was responsible for organizing the event, I have been helping as a PhD student.
