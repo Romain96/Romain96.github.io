@@ -20,22 +20,22 @@ Work experience
 ======
 
 * 10/2023 -: **Associate Lecturer** (French : ATER, *Attaché temporaire d'enseignement et de recherche*)
-  * IUT Robert Schuman, University of Strasbourg
+  * IUT Robert Schuman, University of Strasbourg, France
   * Duties includes: Updates and improvements to template
 
 * 10/2020 - 10/2023 **Monitor (as Ph.D student)**
-  * IUT Robert Schuman, University of Strasbourg
+  * IUT Robert Schuman, University of Strasbourg, France
 
 * 10/2020 - 10/2024: **Ph.D student**
-  * Data Science and Konwledge (SDC) team, ICube UMR 7357, University of Strasbourg
+  * Data Science and Konwledge (SDC) team, ICube UMR 7357, University of Strasbourg, France
   * Supervisors: Cédric Wemmert (PR 27), Benoît Naegel (PR 27), Aurélie Leborgne (MC 27)
 
 * 11/2019 - 09/2020: **Research Engineer**
-  * Cancéropôle-Est
+  * Cancéropôle-Est, Strasbourg, France
   * Supervisor: Cédric Wemmert (PR 27)
 
 * 01/2019 - 06/2019: **Intern**
-  * IMAGeS team, ICube UMR 7357, University of Strasbourg
+  * IMAGeS team, ICube UMR 7357, University of Strasbourg, France
   * Supervisors: Benoît Naegel (MC 27), Adrien Krähenbühl (MC 27)
 
 Publications
