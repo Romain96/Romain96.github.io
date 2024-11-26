@@ -10,4 +10,7 @@ location: "Florence, Italy"
 
 [Official website](https://dgmm2024.dimai.unifi.it/)
 
+[Paper](/files/2024-DGMM-paper.pdf)
+[Slides](/files/2024-DGMM-slides.pdf)
+
 TODO
