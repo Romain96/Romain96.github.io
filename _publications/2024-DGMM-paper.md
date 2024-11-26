@@ -1,7 +1,7 @@
 ---
 title: "Multi-Scale Component-Tree: A Hierarchical Representation for Sparse Objects"
 collection: publications
-permalink: /publication/2024-04-18-DGMM-2024-paper
+permalink: /publication/2024-DGMM-paper
 excerpt: 'This paper is about the definition of a multi-scale extension to the concept of component-tree for a more efficient representation of images with a certain sparsity of objects.'
 date: 2024-04-18
 venue: 'IAPR Third International Conference on Discrete Geometry and Mathematical Morphology (DGMM 2024)'

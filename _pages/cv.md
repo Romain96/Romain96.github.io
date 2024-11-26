@@ -12,38 +12,28 @@ redirect_from:
 Education
 ======
 
-* Ph.D in Conputer Science (Multi-scale hierarchical structures for histological image analysis), University of Strasbourg, 2024 (expected)
+* Ph.D in Conputer Science (Multi-scale hierarchical structures for histological image analysis), University of Strasbourg, 2024
 * M.S. in Computer Science, University of Strasbourg, 2019
 * B.S. in Computer Science, University of Strasbourg, 2017
 
 Work experience
 ======
 
-* 10/2023 -: ATER (temporary research and teaching assistant)
+* 10/2023 -: Associate Lecturer (french : ATER "Attaché temporaire d'enseinement et de recherche")
   * IUT Robert Schuman, University of Strasbourg
   * Duties includes: Updates and improvements to template
 
-* 10/2020 -: Ph.D student
+* 10/2020 - 10/2024: Ph.D student
   * Data Science and Konwledge (SDC) team, ICube UMR 7357, University of Strasbourg
-  * Supervisors: Cédric Wemmert (Pr 27), Benoît Naegel (Pr 27), Aurélie Leborgne (MC 27)
+  * Supervisors: Cédric Wemmert (PR 27), Benoît Naegel (PR 27), Aurélie Leborgne (MC 27)
 
 * 11/2019 - 09/2020: Research Engineer
   * Cancéropôle-Est
-  * Supervisor: Cédric Wemmert (Pr 27)
+  * Supervisor: Cédric Wemmert (PR 27)
 
 * 01/2019 - 06/2019: Intern
   * IMAGeS team, ICube UMR 7357, University of Strasbourg
   * Supervisors: Benoît Naegel (MC 27), Adrien Krähenbühl (MC 27)
-  
-Skills
-======
-
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
 
 Publications
 ======
