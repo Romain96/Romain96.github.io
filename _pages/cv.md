@@ -12,31 +12,35 @@ redirect_from:
 Education
 ======
 
-* Ph.D in Conputer Science (Multi-scale hierarchical structures for histological image analysis), University of Strasbourg, 2024
-* M.S. in Computer Science, University of Strasbourg, 2019
-* B.S. in Computer Science, University of Strasbourg, 2017
+* **PhD in Conputer Science**, [University of Strasbourg](https://www.unistra.fr/), 2024
+  * Title : Hierarchical multi-scale structures for histological image analysis
+  * Supervisors :
+    * Pr. [Cédric Wemmert](https://wemmertc.github.io/webpage/) (director)
+    * Pr. [Benoît Naegel](https://images.icube.unistra.fr/index.php/Beno%C3%AEt_Naegel) (co-director)
+    * Dr. [Aurélie Leborgne](https://aurelieleborgne.github.io/webpage/index.html) (supervisor)
+* **Master's degree in Computer Science**, [University of Strasbourg](https://www.unistra.fr/), 2019
+* **Bachelor's degree in Computer Science**, [University of Strasbourg](https://www.unistra.fr/), 2017
 
 Work experience
 ======
 
-* 10/2023 -: **Associate Lecturer** (French : ATER, *Attaché temporaire d'enseignement et de recherche*)
-  * IUT Robert Schuman, University of Strasbourg, France
-  * Duties includes: Updates and improvements to template
+* 10/2023 - 08/2025 : **Temporary Associate Lecturer** (French : ATER, *Attaché temporaire d'enseignement et de recherche*)
+  * [IUT Robert Schuman](https://iutrs.unistra.fr/), [University of Strasbourg](https://www.unistra.fr/), France
 
 * 10/2020 - 10/2023 **Monitor (as Ph.D student)**
-  * IUT Robert Schuman, University of Strasbourg, France
+  * [IUT Robert Schuman](https://iutrs.unistra.fr/), [University of Strasbourg](https://www.unistra.fr/), France
 
-* 10/2020 - 10/2024: **Ph.D student**
-  * Data Science and Konwledge (SDC) team, ICube UMR 7357, University of Strasbourg, France
-  * Supervisors: Cédric Wemmert (PR 27), Benoît Naegel (PR 27), Aurélie Leborgne (MC 27)
+* 10/2020 - 10/2024: **PhD student**
+  * [Data Science and Knowledge (SDC)](https://sdc.icube.unistra.fr/en/index.php/Home) team, [ICube UMR 7357](https://icube.unistra.fr/en/?title=Accueil), [University of Strasbourg](https://www.unistra.fr/), France
+  * Supervisors: Pr. [Cédric Wemmert](https://wemmertc.github.io/webpage/) (director), Pr. [Benoît Naegel](https://images.icube.unistra.fr/index.php/Beno%C3%AEt_Naegel) (co-director) and Dr. [Aurélie Leborgne](https://aurelieleborgne.github.io/webpage/index.html) (supervisor)
 
 * 11/2019 - 09/2020: **Research Engineer**
-  * Cancéropôle-Est, Strasbourg, France
-  * Supervisor: Cédric Wemmert (PR 27)
+  * [Cancéropôle-Est](https://www.canceropole-est.org/), Strasbourg, France
+  * Supervisor:  Pr. [Cédric Wemmert](https://wemmertc.github.io/webpage/)
 
-* 01/2019 - 06/2019: **Intern**
-  * IMAGeS team, ICube UMR 7357, University of Strasbourg, France
-  * Supervisors: Benoît Naegel (MC 27), Adrien Krähenbühl (MC 27)
+* 01/2019 - 06/2019: **Research Intern**
+  * [IMAGeS](https://images.icube.unistra.fr/en/index.php/Home) team, [ICube UMR 7357](https://icube.unistra.fr/en/?title=Accueil), [University of Strasbourg](https://www.unistra.fr/), France
+  * Supervisors: Pr. [Benoît Naegel](https://images.icube.unistra.fr/index.php/Beno%C3%AEt_Naegel) and Dr. [Adrien Krähenbühl](https://adrien.krahenbuhl.fr/fr/index/) 
 
 Publications
 ======

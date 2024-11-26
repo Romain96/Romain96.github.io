@@ -8,7 +8,9 @@ date: 2024-04-15
 location: "Florence, Italy"
 ---
 
-Link to the [official website](https://dgmm2024.dimai.unifi.it/).
+The IAPR Third International Conference on Discrete Geometry and Mathematical Morphology (DGMM 2024) was held between the 15th and the 18th of march 2024 in Florence (Firenze) in Italy. Link to the [official website](https://dgmm2024.dimai.unifi.it/).
+
+
 
 The accepted paper is available : [paper](/files/2024-DGMM-paper.pdf).
 
