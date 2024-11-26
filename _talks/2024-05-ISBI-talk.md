@@ -8,6 +8,10 @@ date: 2024-05-27
 location: "Athens, Greece"
 ---
 
-[Official website](https://biomedicalimaging.org/2024/)
+Link to the [official website](https://biomedicalimaging.org/2024/).
 
-TODO
+The accepted paper is available : [paper](/files/2024-ISBI-paper.pdf).
+
+The poster is also available : [poster](/files/2024-ISBI-poster.pdf).
+
+TODO description

@@ -8,6 +8,8 @@ date: 2024-03-25
 location: "Maison Minatec, Grenoble, France"
 ---
 
-[Official website](https://iabm2024.sciencesconf.org/)
+Link to the [official website](https://iabm2024.sciencesconf.org/).
+
+The poster is available : [poster](/files/2024-IABM-poster.pdf).
 
 TODO description

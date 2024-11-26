@@ -8,6 +8,7 @@ date: 2023-12-01
 location: "Besançon, France"
 ---
 
-[Official website](https://www.canceropole-est.org/journee-cancer-du-pancreas)
+Link to the [official website](https://www.canceropole-est.org/journee-cancer-du-pancreas).
 
+The poster is available : [poster](/files/2024-IABM-poster.pdf).
 TODO

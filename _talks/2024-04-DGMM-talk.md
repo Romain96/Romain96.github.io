@@ -8,9 +8,10 @@ date: 2024-04-15
 location: "Florence, Italy"
 ---
 
-[Official website](https://dgmm2024.dimai.unifi.it/)
+Link to the [official website](https://dgmm2024.dimai.unifi.it/).
 
-[Paper](/files/2024-DGMM-paper.pdf)
-[Slides](/files/2024-DGMM-slides.pdf)
+The accepted paper is available : [paper](/files/2024-DGMM-paper.pdf).
 
-TODO
+The presentation is also available : [presentation](/files/2024-DGMM-slides.pdf).
+
+TODO description
