@@ -16,7 +16,7 @@ The poster is available [here](/files/2024-IABM-poster.pdf).
 
 The morphological structure used to represent histological images is the newly-proposed **multi-scale component-tree (MSCT)**[^1].
 This poster an early french version of the final poster and accompanying paper published at ISBI 2024[^2].
-More details are available on the dedicated page [here](//pages/talks/2024-DGMM-talk).
+More details are available on the dedicated page [here](https://romain96.github.io//_talks/2024-DGMM-talk.md).
 
 ### References
 
