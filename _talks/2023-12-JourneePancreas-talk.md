@@ -31,9 +31,18 @@ Step 1
 
 Firstly, the *color deconvolution*[^1] method is applied to the input image in order to extract the *positive* signal in the *DAB* channel.
 
-| RGB image | Hematoxylin channel | DAB channel |
-|:---------:|:-------------------:|:-----------:|
-| ![](/files/2023-JourneePancreas/deconvolution_rgb.png){width="250"} | ![](/files/2023-JourneePancreas/deconvolution_hematoxylin.png){width="250"} | ![](/files/2023-JourneePancreas/deconvolution_dab.png){width="250"} |
+<table>
+    <tr>
+        <td width="33%" align="middle">Input RGB image</td>
+        <td width="33%" align="middle">Hematoxylin channel</td>
+        <td width="33%" align="middle">DAB channel</td>
+    </tr>
+    <tr>
+        <td valign="top"><img src="https://romain96.github.io//files/2023-JourneePancreas/deconvolution_rgb.png" alt="RGB"/></td>
+        <td valign="top"><img src="https://romain96.github.io//files/2023-JourneePancreas/deconvolution_hematoxylin.png" alt="RGB"/></td>
+        <td valign="top"><img src="https://romain96.github.io//files/2023-JourneePancreas/deconvolution_dab.png" alt="RGB"/></td>
+    </tr>
+</table>
 
 Secondly, a filtering step is applied to the entire image.
 It consists of a morphological filter based on *opening* and *closing* operations.
@@ -43,9 +52,22 @@ These operations are able to filter the signal by removing small islets (artifac
 In our work, the structuring element is chosen to represent the *smallest average cell*.
 It is then defined as a disk whose radius is small enough for every detectable cell to be larger.
 
-| Input RGB | DAB channel | Thresholding | Filtering | Cell counting |
-|:---------:|:-----------:|:------------:|:---------:|:-------------:|
-| ![](/files/2023-JourneePancreas/input.png){width="250"} | ![](/files/2023-JourneePancreas/dab.png){width="250"} | ![](/files/2023-JourneePancreas/dab_thresholding.png){width="250"} | ![](/files/2023-JourneePancreas/dab_filtering.png){width="250} | ![](/files/2023-JourneePancreas/output.png){width="250"} |
+<table>
+    <tr>
+        <td width="20%" align="middle">Input RGB image</td>
+        <td width="20%" align="middle">DAB signal</td>
+        <td width="20%" align="middle">Thresholding</td>
+        <td width="20%" align="middle">Filtering</td>
+        <td width="20%" align="middle">Cell counting</td>
+    </tr>
+    <tr>
+        <td valign="top"><img src="https://romain96.github.io//files/2023-JourneePancreas/input.png" alt="RGB"/></td>
+        <td valign="top"><img src="https://romain96.github.io//files/2023-JourneePancreas/dab.png" alt="RGB"/></td>
+        <td valign="top"><img src="https://romain96.github.io//files/2023-JourneePancreas/dab_thresholding.png" alt="RGB"/></td>
+        <td valign="top"><img src="https://romain96.github.io//files/2023-JourneePancreas/dab_filtering.png" alt="RGB"/></td>
+        <td valign="top"><img src="https://romain96.github.io//files/2023-JourneePancreas/output.png" alt="RGB"/></td>
+    </tr>
+</table>
 
 Step 2
 -----
@@ -60,5 +82,18 @@ Step 3
 In order to account for variable tissue size and deformation, the surface area of said tissue is also estimated using the [QuPath](https://qupath.github.io/) software.
 The resulting area forms the *tissue surface area estimate*.
 The final metric is obtained by joining the two estimates together in order to form a *cell quantification estimate by surface area unit* which is has been set to be expressed as a number of estimated cells per unit of 1mm².
+
+<table>
+    <tr>
+        <td width="33%" align="middle">Tissue</td>
+        <td width="33%" align="middle">QuPath parameters</td>
+        <td width="33%" align="middle">Surface area estimate</td>
+    </tr>
+    <tr>
+        <td valign="top"><img src="https://romain96.github.io//files/2023-JourneePancreas/tissue.png" alt="RGB"/></td>
+        <td valign="top"><img src="https://romain96.github.io//files/2023-JourneePancreas/qupath.png" alt="RGB"/></td>
+        <td valign="top"><img src="https://romain96.github.io//files/2023-JourneePancreas/tissue_area.png" alt="RGB"/></td>
+    </tr>
+</table>
 
 [^1]: Ruifrok A.C. and Johnston D.A. Quantification of histochemical staining by color deconvolution. Anal Quant Cytol Histol. 2001 Aug;23(4):291-9
