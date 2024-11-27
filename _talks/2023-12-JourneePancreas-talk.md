@@ -11,11 +11,13 @@ location: "Besançon, France"
 Context
 ======
 
-I have been invited to give a short talk during the [*Journée cancer du pancréas*](https://www.canceropole-est.org/journee-cancer-du-pancreas) organized by the [Cancéropôle-Est](https://www.canceropole-est.org/) on the 1st of december 2023.
+I have been invited to give a short talk during the [*Journée cancer du pancréas*](https://www.canceropole-est.org/journee-cancer-du-pancreas) organized by the [Cancéropôle Est](https://www.canceropole-est.org/) on the 1st of december 2023.
 The joint talk was given alongside my colleague Arthur Bénédic from the [CHU de Strasbourg](https://www.chru-strasbourg.fr/).
 The slides for this presentation are available [here](/files/2023-JourneePancreas-slides.pdf).
 
-Special thanks to Florence Schaffner (Cancéropôle-Est) for the invitation.
+Special thanks to Dr. [Florence Schaffner](https://www.canceropole-est.org/la-recherche/annuaire-du-canceropole-est/personnes/detail?id=2593) ([Cancéropôle Est](https://www.canceropole-est.org/)) for the invitation.
+
+Thanks to Dr. Gerlinde Lang-Avérous ([CHU de Strasbourg](https://www.chru-strasbourg.fr/)) and Dr. Arthur Bénédic ([CHU de Strasbourg](https://www.chru-strasbourg.fr/)).
 
 
 The proposed method
