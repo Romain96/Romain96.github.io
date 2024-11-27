@@ -32,8 +32,8 @@ Step 1
 Firstly, the *color deconvolution*[^1] method is applied to the input image in order to extract the *positive* signal in the *DAB* channel.
 
 | RGB image | Hematoxylin channel | DAB channel |
-|:---:|:---:|:---:|
-| ![RGB](/files/2023-JourneePancreas/deconvolution_rgb.png "RGB image") | ![Hematoxylin](/files/2023-JourneePancreas/deconvolution_hematoxylin.png "Hematoxylin channel") | ![DAB](/files/2023-JourneePancreas/deconvolution_dab.png "DAB channel") |
+|:---------:|:-------------------:|:-----------:|
+| ![](/files/2023-JourneePancreas/deconvolution_rgb.png){width="250"} | ![](/files/2023-JourneePancreas/deconvolution_hematoxylin.png){width="250"} | ![](/files/2023-JourneePancreas/deconvolution_dab.png){width="250"} |
 
 Secondly, a filtering step is applied to the entire image.
 It consists of a morphological filter based on *opening* and *closing* operations.
@@ -43,9 +43,9 @@ These operations are able to filter the signal by removing small islets (artifac
 In our work, the structuring element is chosen to represent the *smallest average cell*.
 It is then defined as a disk whose radius is small enough for every detectable cell to be larger.
 
-| Input RGB | DAB channel | Signal thresholding | Morphological filtering | Cell counting |
-|:---:|:---:|:---:|:---:|:---:|
-| ![RGB](/files/2023-JourneePancreas/input.png "RGB image") | ![DAB](/files/2023-JourneePancreas/dab.png "DAB channel") | ![Thresholding](/files/2023-JourneePancreas/dab_thresholding.png "DAB thresholding") | ![Filtering](/files/2023-JourneePancreas/dab_filtering.png "Morphological filtering") | ![Filtering](/files/2023-JourneePancreas/output.png "Morphological filtering") |
+| Input RGB | DAB channel | Thresholding | Filtering | Cell counting |
+|:---------:|:-----------:|:------------:|:---------:|:-------------:|
+| ![](/files/2023-JourneePancreas/input.png){width="250"} | ![](/files/2023-JourneePancreas/dab.png){width="250"} | ![](/files/2023-JourneePancreas/dab_thresholding.png){width="250"} | ![](/files/2023-JourneePancreas/dab_filtering.png){width="250} | ![](/files/2023-JourneePancreas/output.png){width="250"} |
 
 Step 2
 -----
