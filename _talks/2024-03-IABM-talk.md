@@ -20,6 +20,6 @@ More details are available on the dedicated page [here](/pages/2024-05-DGMM-pape
 
 ### References
 
-[^1]: Perrin, R., Leborgne, A., Passat, N., Naegel, B., Wemmert, C. (2024). Multi-scale Component-Tree: A Hierarchical Representation for Sparse Objects. In: Brunetti, S., Frosini, A., Rinaldi, S. (eds) Discrete Geometry and Mathematical Morphology. DGMM 2024. Lecture Notes in Computer Science, vol 14605. Springer, Cham. https://doi.org/10.1007/978-3-031-57793-2_24
+[^1]: Perrin, R., Leborgne, A., Passat, N., Naegel, B., Wemmert, C. (2024). Multi-scale Component-Tree: A Hierarchical Representation for Sparse Objects. In: Brunetti, S., Frosini, A., Rinaldi, S. (eds) Discrete Geometry and Mathematical Morphology. DGMM 2024. Lecture Notes in Computer Science, vol 14605. Springer, Cham. [https://doi.org/10.1007/978-3-031-57793-2_24](https://doi.org/10.1007/978-3-031-57793-2_24)
 
-[^2]: R. Perrin, A. Leborgne, N. Passat, B. Naegel and C. Wemmert, "Multi-Scale Component-Trees for Enhanced Representation in Multiplex Immunohistochemistry Imaging," 2024 IEEE International Symposium on Biomedical Imaging (ISBI), Athens, Greece, 2024, pp. 1-5, doi: 10.1109/ISBI56570.2024.10635272.
+[^2]: R. Perrin, A. Leborgne, N. Passat, B. Naegel and C. Wemmert, "Multi-Scale Component-Trees for Enhanced Representation in Multiplex Immunohistochemistry Imaging," 2024 IEEE International Symposium on Biomedical Imaging (ISBI), Athens, Greece, 2024, pp. 1-5, doi: [10.1109/ISBI56570.2024.10635272](10.1109/ISBI56570.2024.10635272).

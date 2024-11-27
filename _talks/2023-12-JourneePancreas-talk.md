@@ -8,8 +8,6 @@ date: 2023-12-01
 location: "Besançon, France"
 ---
 
-# Presentation of a morphological cell counting method
-
 I have been invited to give a short talk during the [*Journée cancer du pancréas*](https://www.canceropole-est.org/journee-cancer-du-pancreas) organized by the [Cancéropôle Est](https://www.canceropole-est.org/) on the 1st of december 2023.
 The joint talk was given alongside my colleague Arthur Bénédic from the [CHU de Strasbourg](https://www.chru-strasbourg.fr/).
 The slides for this presentation are available [here](/files/2023-JourneePancreas-slides.pdf).
