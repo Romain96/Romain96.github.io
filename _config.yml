@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Romain PERRIN's webpage"
+title                    : "Personal webpage"
 title_separator          : "-"
-name                     : &name "Romain Perrin"
+name                     : &name "Dr. Romain Perrin, PhD"
 description              : &description "personal description"
 url                      : https://romain96.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -22,7 +22,7 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Romain Perrin"
+  name             : "Dr. Romain Perrin, PhD"
   pronouns         : "he/him"  
   bio              : "Temporary Assistant Lecturer (ATER)"
   location         : "Strasbourg, France"
@@ -280,7 +280,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Paris # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

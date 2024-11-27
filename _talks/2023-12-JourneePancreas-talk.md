@@ -8,8 +8,7 @@ date: 2023-12-01
 location: "Besançon, France"
 ---
 
-Context
-======
+# Presentation of a morphological cell counting method
 
 I have been invited to give a short talk during the [*Journée cancer du pancréas*](https://www.canceropole-est.org/journee-cancer-du-pancreas) organized by the [Cancéropôle Est](https://www.canceropole-est.org/) on the 1st of december 2023.
 The joint talk was given alongside my colleague Arthur Bénédic from the [CHU de Strasbourg](https://www.chru-strasbourg.fr/).
@@ -19,15 +18,12 @@ Special thanks to Dr. [Florence Schaffner](https://www.canceropole-est.org/la-re
 
 Thanks to Dr. Gerlinde Lang-Avérous ([CHU de Strasbourg](https://www.chru-strasbourg.fr/)) and Dr. Arthur Bénédic ([CHU de Strasbourg](https://www.chru-strasbourg.fr/)).
 
-
-The proposed method
-======
+## The proposed method
 
 We have presented a new experimental and automatic method designed to produce an *immune score* given a pancreatic H&E slide.
 The objective is to reproduce the human methodology and to automate it.
 
-Step 1
------
+### Step 1
 
 Firstly, the *color deconvolution*[^1] method is applied to the input image in order to extract the *positive* signal in the *DAB* channel.
 
@@ -69,15 +65,13 @@ It is then defined as a disk whose radius is small enough for every detectable c
     </tr>
 </table>
 
-Step 2
------
+### Step 2
 
 Each connected component is extracted from the filtered image.
 For each of these clusters, the surface area is simply divided by the area of a reference cell, chosen to be the average cell of the studied cell type.
 The sum of all estimated cells for every cluster forms the *cell quantification estimate*.
 
-Step 3
------
+### Step 3
 
 In order to account for variable tissue size and deformation, the surface area of said tissue is also estimated using the [QuPath](https://qupath.github.io/) software.
 The resulting area forms the *tissue surface area estimate*.
