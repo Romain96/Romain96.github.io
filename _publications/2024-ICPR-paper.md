@@ -2,7 +2,7 @@
 title: "New Algorithms for Multivalued Component Trees"
 collection: publications
 permalink: /publication/2024-ICPR-paper
-excerpt: 'TODO.'
+excerpt: ''
 date: 2024-12-01
 venue: '27th International Conference on Pattern Recognition'
 paperurl: 'https://doi.org/10.1007/978-3-031-78347-0_2'

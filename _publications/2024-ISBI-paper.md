@@ -2,7 +2,7 @@
 title: "Multi-Scale Component-Trees for Enhanced Representation in Multiplex Immunohistochemistry Imaging"
 collection: publications
 permalink: /publication/2024-ISBI-paper
-excerpt: 'TODO.'
+excerpt: ''
 date: 2024-05-27
 venue: '2024 IEEE International Symposium on Biomedical Imaging (ISBI)'
 paperurl: 'https://doi.org/10.1109/ISBI56570.2024.10635272'
