@@ -8,7 +8,7 @@ date: 2024-05-27
 location: "Illkirch-Graffenstaden, France"
 ---
 
-Link to the [official university archive](https://theses.unistra.fr/search/notice/view/2024STRAD018) and on [theses.fr](https://theses.unistra.fr/search/notice/view/2024STRAD018).
+Link to the [official university archive](https://theses.unistra.fr/search/notice/view/2024STRAD018) and on [theses.fr](https://theses.fr/2024STRAD018?domaine=theses).
 
 My thesis : [thesis](/files/2024-ThesisRP-paper.pdf).
 
