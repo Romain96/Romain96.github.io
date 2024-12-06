@@ -4,7 +4,7 @@ collection: talks
 type: "Thesis defense"
 permalink: /talks/2024-09-ThesisDefense-talk
 venue: "ICube UMR 7357, Université de Strasbourg"
-date: 2024-05-27
+date: 2024-09-27
 location: "Illkirch-Graffenstaden, France"
 ---
 
