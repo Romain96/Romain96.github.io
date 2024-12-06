@@ -1,5 +1,5 @@
 ---
-title: "Msater 2 Internship presentation"
+title: "Master 2 Internship presentation"
 collection: talks
 type: "Master presentation"
 permalink: /talks/2019-08-Master2Internship-talk
@@ -9,5 +9,7 @@ location: "Illkirch-Graffenstaden, France"
 ---
 
 The final report is available : [here](/files/2019-Master2Internship-report.pdf).
+
+The slides of the presentation are also available : [here](/files/2019-Master2Internship-slides.pdf).
 
 TODO description
