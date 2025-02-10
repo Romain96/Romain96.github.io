@@ -1,4 +1,0 @@
-Y;Economique;100
-W;Economique premium;150
-J;Affaires;200
-F;Première classe;500
