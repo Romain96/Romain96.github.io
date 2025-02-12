@@ -1,6 +1,0 @@
-1;Lutèce;734;	
-2;Alésia;568;17
-3;Gergovie;251;	
-4;Borvo;5;8
-5;Aquae Calidae;15;	
-6;Serum;357;25
