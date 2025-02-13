@@ -1,6 +1,6 @@
 ---
 title: "DGMM 2024"
-excerpt: "IAPR Third International Conference on Discrete Geometry and Mathematical Morphology (DGMM 2024)<br/><img src='/images/dgmm_2024/dgmm_2024.png'>"
+excerpt: "IAPR Third International Conference on Discrete Geometry and Mathematical Morphology (DGMM 2024)"
 collection: portfolio
 date: 2024-04-20
 ---
