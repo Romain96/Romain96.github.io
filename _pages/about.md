@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Dr Romain PERRIN"
+title: "Homepage"
 author_profile: true
 redirect_from: 
   - /about/
