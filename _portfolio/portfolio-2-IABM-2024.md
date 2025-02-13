@@ -2,6 +2,7 @@
 title: "IABM 2024"
 excerpt: "Colloque Français d'Intelligence Artificielle en Imagerie Biomédicale (IABM 2024)"
 collection: portfolio
+date: 2024-03-28
 ---
 
 # Grenoble, France
