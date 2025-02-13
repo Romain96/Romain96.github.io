@@ -5,7 +5,7 @@ collection: portfolio
 date: 2024-04-20
 ---
 
-# DGMM 2024 : Portfolio of Firenze
+# Firenze, Italy
 
 The IAPR Third International Conference on Discrete Geometry and Mathematical Morphology ([**DGMM 2024**](https://dgmm2024.dimai.unifi.it/)) was held between the 15th and the 18h of april 2024 in Firenze, Italy.
 

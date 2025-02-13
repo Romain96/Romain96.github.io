@@ -12,7 +12,7 @@ I have attended the 2<sup>nd</sup> edition of the [Colloque Français d'Intellig
 The event was held between the 25<sup>th</sup> and the 28<sup>th</sup> of march 2024 in Grenoble, France.
 
 I had the opportunity to present a poster about a new way to represent biomedical image data (illustrated in the context of histological slides) using a newly-developped *morphological multi-scale tree-based representation*.
-The poster is available [here](/files/2024-IABM-poster.pdf).
+The poster is available on HAL using [this link](https://hal.science/hal-04440939) or on this site using [this link](/files/2024-IABM-poster.pdf).
 
 The morphological structure used to represent histological images is the newly-proposed **multi-scale component-tree (MSCT)**[^1].
 This poster an early french version of the final poster and accompanying paper published at ISBI 2024[^2].

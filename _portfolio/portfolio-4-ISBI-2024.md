@@ -5,7 +5,7 @@ collection: portfolio
 date: 2024-06-01
 ---
 
-# ISBI 2024 : Portfolio of Athens
+# Athens, Greece
 
 The 21st International Symposium on Biomedical Imaging ([**ISBI 2024**](https://biomedicalimaging.org/2024/)) was held between the 27th and the 30th of may 2024 in Athens, Greece.
 
