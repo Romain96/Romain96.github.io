@@ -9,17 +9,28 @@ redirect_from:
 
 {% include base_path %}
 
+Details
+======
+
+* Surname : PERRIN
+* Given names : Romain, Bruno
+* Birth : 1996-07-01 in Strasbourg, France
+* Email : <romain.perrin@unistra.fr>
+* Teaching address : IUT Robert Schuman, 72 Route du Rhin - CS 10315 - 67411 Illkirch Cedex, France
+* Research address : ICube UMR 7357 - Laboratoire des sciences de l'ingénieur, de l'informatique et de l'imagerie, 
+300 bd Sébastien Brant - CS 10413 - F-67412 Illkirch Cedex, France
+
 Education
 ======
 
 * **PhD in Conputer Science**, [Université de Strasbourg](https://www.unistra.fr/), 2024
   * Title : Hierarchical multi-scale structures for histological image analysis
   * Supervisors :
-    * Pr. [Cédric Wemmert](https://wemmertc.github.io/webpage/) (director)
-    * Pr. [Benoît Naegel](https://images.icube.unistra.fr/index.php/Beno%C3%AEt_Naegel) (co-director)
-    * Dr. [Aurélie Leborgne](https://aurelieleborgne.github.io/webpage/index.html) (supervisor)
-* **Master's degree in Computer Science**, [University of Strasbourg](https://www.unistra.fr/), 2019
-* **Bachelor's degree in Computer Science**, [University of Strasbourg](https://www.unistra.fr/), 2017
+    * Prof [Cédric Wemmert](https://wemmertc.github.io/webpage/) (director)
+    * Prof [Benoît Naegel](https://images.icube.unistra.fr/index.php/Beno%C3%AEt_Naegel) (co-director)
+    * Dr [Aurélie Leborgne](https://aurelieleborgne.github.io/webpage/index.html) (supervisor)
+* **Master's degree in Computer Science**, [Université de Strasbourg](https://www.unistra.fr/), 2019
+* **Bachelor's degree in Computer Science**, [Université de Strasbourg](https://www.unistra.fr/), 2017
 
 Work experience
 ======
@@ -32,15 +43,15 @@ Work experience
 
 * 10/2020 - 10/2024: **PhD student**
   * [Data Science and Knowledge (SDC)](https://sdc.icube.unistra.fr/en/index.php/Home) team, [ICube UMR 7357](https://icube.unistra.fr/en/?title=Accueil), [Université de Strasbourg](https://www.unistra.fr/), France
-  * Supervisors: Pr. [Cédric Wemmert](https://wemmertc.github.io/webpage/) (director), Pr. [Benoît Naegel](https://images.icube.unistra.fr/index.php/Beno%C3%AEt_Naegel) (co-director) and Dr. [Aurélie Leborgne](https://aurelieleborgne.github.io/webpage/index.html) (supervisor)
+  * Supervisors: Prof [Cédric Wemmert](https://wemmertc.github.io/webpage/) (director), Prof [Benoît Naegel](https://images.icube.unistra.fr/index.php/Beno%C3%AEt_Naegel) (co-director) and Dr [Aurélie Leborgne](https://aurelieleborgne.github.io/webpage/index.html) (supervisor)
 
 * 11/2019 - 09/2020: **Research Engineer**
   * [Cancéropôle-Est](https://www.canceropole-est.org/), Strasbourg, France
-  * Supervisor:  Pr. [Cédric Wemmert](https://wemmertc.github.io/webpage/)
+  * Supervisor:  Prof [Cédric Wemmert](https://wemmertc.github.io/webpage/)
 
 * 01/2019 - 06/2019: **Research Intern**
   * [IMAGeS](https://images.icube.unistra.fr/en/index.php/Home) team, [ICube UMR 7357](https://icube.unistra.fr/en/?title=Accueil), [Université de Strasbourg](https://www.unistra.fr/), France
-  * Supervisors: Pr. [Benoît Naegel](https://images.icube.unistra.fr/index.php/Beno%C3%AEt_Naegel) and Dr. [Adrien Krähenbühl](https://adrien.krahenbuhl.fr/fr/index/) 
+  * Supervisors: Prof [Benoît Naegel](https://images.icube.unistra.fr/index.php/Beno%C3%AEt_Naegel) and Dr [Adrien Krähenbühl](https://adrien.krahenbuhl.fr/fr/index/) 
 
 Publications
 ======
