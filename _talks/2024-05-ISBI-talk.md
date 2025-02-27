@@ -10,8 +10,8 @@ location: "Athens, Greece"
 
 Link to the [official website](https://biomedicalimaging.org/2024/).
 
-The accepted paper is available : [paper](/files/2024-ISBI-paper.pdf).
+The accepted paper is available [here](/files/papers/2024-ISBI.pdf).
 
-The poster is also available : [poster](/files/2024-ISBI-poster.pdf).
+The poster is also available [here](/files/posters/2024-ISBI.pdf).
 
 TODO description

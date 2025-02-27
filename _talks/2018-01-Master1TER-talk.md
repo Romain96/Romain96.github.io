@@ -8,8 +8,8 @@ date: 2018-05-29
 location: "Illkirch-Graffenstaden, France"
 ---
 
-The final report is available : [here](/files/2018-Master1TER-report.pdf).
+The final report is available [here](/files/reports/2018-Master1TER.pdf).
 
-The slides of the presentation are also available : [here](/files/2018-Master1TER-slides.pdf).
+The slides of the presentation are also available [here](/files/presentations/2018-Master1TER.pdf).
 
 TODO description

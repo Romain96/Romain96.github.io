@@ -8,6 +8,6 @@ date: 2019-01-01
 location: "Illkirch-Graffenstaden, France"
 ---
 
-The final report is available : [here](/files/2019-Master150hProject-report.pdf).
+The final report is available [here](/files/reports/2019-Master150hProject.pdf).
 
 TODO description

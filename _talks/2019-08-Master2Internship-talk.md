@@ -8,8 +8,8 @@ date: 2019-08-31
 location: "Illkirch-Graffenstaden, France"
 ---
 
-The final report is available : [here](/files/2019-Master2Internship-report.pdf).
+The final report is available [here](/files/reports/2019-Master2Internship.pdf).
 
-The slides of the presentation are also available : [here](/files/2019-Master2Internship-slides.pdf).
+The slides of the presentation are also available [here](/files/presentations/2019-Master2Internship.pdf).
 
 TODO description

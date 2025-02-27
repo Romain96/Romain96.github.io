@@ -12,8 +12,8 @@ The IAPR Third International Conference on Discrete Geometry and Mathematical Mo
 
 
 
-The accepted paper is available : [paper](/files/2024-DGMM-paper.pdf).
+The accepted paper is available [paper](/files/papers/2024-DGMM.pdf).
 
-The presentation is also available : [presentation](/files/2024-DGMM-slides.pdf).
+The presentation is also available [presentation](/files/presentations/2024-DGMM.pdf).
 
 TODO description
