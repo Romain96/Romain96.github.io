@@ -1,14 +1,11 @@
 ---
 permalink: /
-title: "Homepage"
+title: "Welcome"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-
-Welcome
-======
 
 This is my personal webpage.
 I am currently a temporary assistant lecturer at the [IUT Robert Schuman](https://iutrs.unistra.fr/), [Université de Strasbourg](https://www.unistra.fr/).
