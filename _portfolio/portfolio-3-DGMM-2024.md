@@ -14,6 +14,8 @@ Details about the talk can be found [on the dedicated talk page](/talks/2024-04-
 
 Here is a collection of pictures taken by myself all around the city during my stay in Firenze.
 
+## City of Firenze
+
 Firenze as seen from the *Abbazia di San Miniato al Monte*
 ![Firenze as seen from the Abbazia di San Miniato al Monte](/images/2024/firenze/firenze_1.jpg)
 
