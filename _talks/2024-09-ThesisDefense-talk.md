@@ -16,4 +16,3 @@ The PDF file can also be directly downloaded from : [this link](/files/papers/20
 My PhD defense has been held on september the 27th, 2024 at the ICube lab, University of Strasbourg.
 The slides from the PhD defense (in French) are available : [here](/files/presentations/2024-ThesisDefenseRP.pdf).
 
-TODO description
