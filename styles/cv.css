@@ -1,0 +1,130 @@
+/* General styling */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	background-color: #f4f4f4;
+}
+
+.wrapper {
+	max-width: 90%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* Header and navigation styling */
+.header {
+	background-color: #333;
+	color: white;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.header .heading-1 {
+	margin: 0;
+	font-size: 2.5em;
+}
+
+.nav .list {
+	list-style: none;
+	padding: 0;
+}
+
+.nav .list .item {
+	display: inline;
+	margin: 0 15px;
+}
+
+.nav .list .item a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+.nav .list .item a:hover {
+	text-decoration: underline;
+}
+
+/* Main content styling */
+.content {
+	display: flex;
+	margin: 20px 0;
+}
+
+.section {
+	flex: 3;
+	margin-right: 20px;
+}
+
+.section .heading-2 {
+	font-size: 2em;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.section .paragraph {
+	font-size: 1.1em;
+	margin-bottom: 20px;
+}
+
+/* Article styling */
+.article .heading-3 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+.article .paragraph {
+	margin-bottom: 15px;
+}
+
+/* Sidebar styling */
+.sidebar {
+	flex: 1;
+	background-color: #f9f9f9;
+	padding: 20px;
+	border-left: 2px solid #e0e0e0;
+}
+
+.sidebar .heading-3 {
+	font-size: 1.8em;
+	margin-bottom: 10px;
+}
+
+.sidebar .list {
+	list-style: none;
+	padding: 0;
+}
+
+.sidebar .list .item {
+	/*background-color: #333;
+	color: white;*/
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+
+.sidebar .list .item a {
+	color: black;
+	text-decoration: none;
+}
+
+.sidebar .list .logo {
+	height: 1.2em;
+	width: 1.2em;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+
+/* Footer styling */
+.footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.footer .paragraph {
+	margin: 0;
+	font-size: 1em;
+}
