@@ -68,14 +68,86 @@ body {
 	margin-bottom: 20px;
 }
 
+.section .list .item {
+	font-size: 1.2em;
+}
+
 /* Article styling */
 .article .heading-3 {
 	font-size: 1.5em;
 	margin-bottom: 10px;
 }
 
+.article hr {
+	border-width: 1px;
+	border-style: solid;
+	color: #e0e0e0;
+}
+
 .article .paragraph {
 	margin-bottom: 15px;
+}
+
+.article .personalDetails {
+	display: flex;
+}
+
+.article .personalDetails .portrait img {
+	width: 10em;
+}
+
+.article .list {
+	list-style: none;
+}
+
+.article #responsabilities {
+	list-style: inside;
+}
+
+.article #employment .item
+{
+	margin-top: 10px;
+}
+
+.article #employment .sublist .item
+{
+	margin-top: 0px;
+	margin-left: 8em;
+}
+
+.article #employment .item .logo {
+	width: 5em;
+	padding-right: 1em;
+	vertical-align: middle;
+}
+
+.article #qualifications .item
+{
+	margin-top: 10px;
+}
+
+.article #qualifications .sublist .item
+{
+	margin-top: 0px;
+	margin-left: 8em;
+}
+
+.article #qualifications .item .logo {
+	width: 5em;
+	padding-right: 1em;
+	vertical-align: middle;
+}
+
+.article .list .item {
+	margin-bottom: 4px;
+}
+
+.article .sublist {
+	list-style: none;
+}
+
+.article .sublist .item {
+	font-size: 1.0em;
 }
 
 /* Sidebar styling */
@@ -99,14 +171,19 @@ body {
 .sidebar .list .item {
 	/*background-color: #333;
 	color: white;*/
-	padding: 10px;
+	padding: 5px;
 	margin-bottom: 10px;
 	font-size: 1.2em;
+	vertical-align: middle;
 }
 
 .sidebar .list .item a {
 	color: black;
 	text-decoration: none;
+}
+
+.sidebar .list .item:hover {
+	text-decoration: underline;
 }
 
 .sidebar .list .logo {
