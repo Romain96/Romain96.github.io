@@ -80,14 +80,14 @@ body {
 
 /* Sidebar styling */
 .sidebar {
-	flex: 1;
+	flex: 0.6;
 	background-color: #f9f9f9;
 	padding: 20px;
 	border-left: 2px solid #e0e0e0;
 }
 
 .sidebar .heading-3 {
-	font-size: 1.8em;
+	font-size: 1.5em;
 	margin-bottom: 10px;
 }
 
@@ -97,11 +97,12 @@ body {
 }
 
 .sidebar .list .item {
-	background-color: #333;
-	color: white;
-	padding: 10px;
+	/*background-color: #333;
+	color: white;*/
+	padding: 5px;
 	margin-bottom: 10px;
-	font-size: 1.1em;
+	font-size: 1.0em;
+	vertical-align: middle;
 }
 
 .sidebar .list .item:hover {

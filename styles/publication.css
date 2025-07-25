@@ -81,12 +81,76 @@ body {
 }
 
 .article .list {
-	list-style: inside;
+	list-style: none;
+	padding-left: 0;
 }
 
 .article .list .item {
 	font-size: 1.0em;
 	margin-bottom: 4px;
+}
+
+.article .list .paper
+{
+	height: 2em;
+	padding-right: 5px;
+	vertical-align: middle;
+}
+
+.article .list .thesis
+{
+	height: 2em;
+	padding-right: 5px;
+	vertical-align: middle;
+}
+
+.article .sublist .pdf
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: middle;
+}
+
+.article .sublist .online
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: middle;
+}
+
+.article .sublist .poster
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: middle;
+}
+
+.article .sublist .presentation
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: middle;
+}
+
+.article .sublist .ecrin
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: middle;
+}
+
+.article .sublist .thesesfr
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: middle;
+}
+
+.article .sublist .hal
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: middle;
 }
 
 .article .paragraph {
@@ -103,14 +167,14 @@ body {
 
 /* Sidebar styling */
 .sidebar {
-	flex: 1;
+	flex: 0.6;
 	background-color: #f9f9f9;
 	padding: 20px;
 	border-left: 2px solid #e0e0e0;
 }
 
 .sidebar .heading-3 {
-	font-size: 1.8em;
+	font-size: 1.5em;
 	margin-bottom: 10px;
 }
 
@@ -124,7 +188,7 @@ body {
 	color: white;*/
 	padding: 5px;
 	margin-bottom: 10px;
-	font-size: 1.2em;
+	font-size: 1.0em;
 	vertical-align: middle;
 }
 
