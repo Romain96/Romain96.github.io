@@ -46,6 +46,13 @@ body {
 	text-decoration: underline;
 }
 
+.nav .list .navlogo
+{
+	width: 2em;
+	padding-right: 5px;
+	vertical-align: bottom;
+}
+
 /* Main content styling */
 .content {
 	display: flex;
@@ -74,20 +81,278 @@ body {
 	margin-bottom: 10px;
 }
 
+
+/* CV specific */
+
+.article #employment
+{
+	list-style: none;
+}
+
+.article #employment .item:first-child
+{
+	margin-top: 0.5em;
+}
+
+.article #employment .item {
+	font-size: 1.0em;
+	margin-top: 2em;
+	display: flex;
+}
+
+.article #employment .item #employmentLogo
+{
+	flex: 1;
+}
+
+.article #employment .item #employmentText
+{
+	flex: 1;
+}
+
+.article #employment .sublist {
+	list-style: none;
+}
+
+.article #employment .sublist .item
+{
+	font-size: 0.8em;
+	margin-top: 0px;
+	margin-left: 2em;
+}
+
+.article #employment .item .logo {
+	width: 8em;
+	padding-right: 1em;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	vertical-align: top;
+}
+
+.article #qualifications .item .sublist {
+	list-style: none;
+}
+
+.article #qualifications {
+	list-style: none;
+}
+
+.article #qualifications .item {
+	font-size: 1.0em;
+	margin-top: 2em;
+	display: flex;
+}
+.article #qualifications .item:first-child
+{
+	margin-top: 0.5em;
+}
+
+.article #qualifications .item {
+	font-size: 1.0em;
+	margin-top: 2em;
+	display: flex;
+}
+
+.article #qualifications .item #qualificationsLogo
+{
+	flex: 1;
+}
+
+.article #qualifications .item #qualificationsText
+{
+	flex: 1;
+}
+
+.article #qualifications .item .logo {
+	width: 8em;
+	padding-right: 1em;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	vertical-align: top;
+}
+
+.article #qualifications .sublist .item
+{
+	font-size: 0.8em;
+	margin-top: 0px;
+	margin-left: 2em;
+}
+
+.article #qualifications .item #qualificationsText .sublist .item .a {
+	padding-left: 10em;
+}
+
+.article #responsabilities {
+	list-style: inside;
+}
+
+.article hr {
+	border-width: 1px;
+	border-style: solid;
+	color: #e0e0e0;
+}
+
 .article .paragraph {
 	margin-bottom: 15px;
 }
 
+.article .personalDetails {
+	display: flex;
+}
+
+.article .personalDetails .portrait img {
+	width: 10em;
+}
+
+.article .personalDetails #personalDetailsList
+{
+	list-style: none;
+}
+
+.article .personalDetails #personalDetailsList .item
+{
+	margin-bottom: 0.5em;
+}
+
+/* Publication specific */
+
+#internationalJournal .list {
+	list-style: none;
+}
+
+#internationalJournal .list .item {
+	font-size: 1.0em;
+}
+
+#internationalJournal .list .sublist {
+	list-style: none;
+}
+
+#internationalJournal .list .sublist .item {
+	font-size: 0.8em;;
+}
+
+#internationalConference .list {
+	list-style: none;
+}
+
+#internationalConference .list .item {
+	font-size: 1.0em;
+}
+
+#internationalConference .list .sublist {
+	list-style: none;
+}
+
+#internationalConference .list .sublist .item {
+	font-size: 0.8em;;
+}
+
+#nationalConference .list {
+	list-style: none;
+}
+
+#nationalConference .list .item {
+	font-size: 1.0em;
+}
+
+#nationalConference .list .sublist {
+	list-style: none;
+}
+
+#nationalConference .list .sublist .item {
+	font-size: 0.8em;;
+}
+
+#thesis .list {
+	list-style: none;
+}
+
+#thesis .list .item {
+	font-size: 1.0em;
+}
+
+#thesis .list .sublist {
+	list-style: none;
+}
+
+#thesis .list .sublist .item {
+	font-size: 0.8em;;
+}
+
+.article .list .paper
+{
+	height: 2em;
+	padding-right: 5px;
+	vertical-align: bottom;
+}
+
+.article .list .thesis
+{
+	height: 2em;
+	padding-right: 5px;
+	vertical-align: bottom;
+}
+
+.article .sublist .pdf
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .online
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .poster
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .presentation
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .ecrin
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .thesesfr
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .hal
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
 /* Sidebar styling */
 .sidebar {
-	flex: 1;
+	flex: 0.6;
 	background-color: #f9f9f9;
 	padding: 20px;
 	border-left: 2px solid #e0e0e0;
 }
 
 .sidebar .heading-3 {
-	font-size: 1.8em;
+	font-size: 1.5em;
 	margin-bottom: 10px;
 }
 
@@ -97,15 +362,28 @@ body {
 }
 
 .sidebar .list .item {
-	background-color: #333;
-	color: white;
-	padding: 10px;
+	/*background-color: #333;
+	color: white;*/
+	padding: 5px;
 	margin-bottom: 10px;
-	font-size: 1.1em;
+	font-size: 1.0em;
+	vertical-align: middle;
+}
+
+.sidebar .list .item a {
+	color: black;
+	text-decoration: none;
 }
 
 .sidebar .list .item:hover {
-	background-color: #555;
+	text-decoration: underline;
+}
+
+.sidebar .list .logo {
+	height: 1.2em;
+	width: 1.2em;
+	padding-right: 10px;
+	vertical-align: middle;
 }
 
 /* Footer styling */
