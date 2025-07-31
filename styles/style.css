@@ -377,6 +377,17 @@ body {
 	color: #e0e0e0;
 }
 
+.logoLink {
+	height: 1.0em;
+	vertical-align: middle;
+}
+
+.logoLang {
+	height: 1.0em;
+	vertical-align: middle;
+}
+
+
 /* Sidebar styling */
 .sidebar {
 	flex: 0.6;
