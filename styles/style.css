@@ -421,6 +421,28 @@ body {
 	color: #e0e0e0;
 }
 
+.table {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.table .title {
+	text-align: left;
+	border: 1px solid black;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.table .row {
+	border: 1px solid black;
+}
+
+.table .row .column {
+	border: 1px solid black;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
 
 /* Sidebar styling */
 .sidebar {
