@@ -387,6 +387,40 @@ body {
 	vertical-align: middle;
 }
 
+/* teaching specific */
+
+#teaching .article .teachingContent {
+	display: flex;
+	padding-top: 1em;
+}
+
+#teaching .article .teachingContent .teachingText .heading-3 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#teaching .article .teachingContent .teachingText .list {
+	list-style: none;
+	padding-top: 0;
+	margin-top: 0;
+	font-size: 1.0em;
+}
+
+#teaching .article .teachingContent .teachingLogo .logo
+{
+	width: 10em;
+	padding-right: 1em;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	vertical-align: top;
+}
+
+#teaching hr {
+	border-width: 1px;
+	border-style: solid;
+	color: #e0e0e0;
+}
+
 
 /* Sidebar styling */
 .sidebar {
