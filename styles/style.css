@@ -443,6 +443,29 @@ body {
 	padding-right: 1em;
 }
 
+.table .row .column .logo {
+	height: 1.25em;
+	padding-right: 0.25em;
+	vertical-align: middle;
+}
+
+.table .row .column a {
+	color: blue;
+	outline: none;
+	text-decoration: none;
+}
+
+.resource a {
+	color: blue;
+	outline: none;
+	text-decoration: none;
+}
+
+.resource .logo {
+	height: 1.25em;
+	padding-right: 0.25em;
+	vertical-align: middle;
+}
 
 /* Sidebar styling */
 .sidebar {
