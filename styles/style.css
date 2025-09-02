@@ -211,7 +211,7 @@ body {
 
 .article .personalDetails #personalDetailsList .item
 {
-	margin-bottom: 0.5em;
+	margin-bottom: 0.25em;
 }
 
 /* Publication specific */
@@ -495,7 +495,8 @@ body {
 }
 
 .sidebar .list .item a {
-	color: black;
+	color: blue;
+	outline: none;
 	text-decoration: none;
 }
 
