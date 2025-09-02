@@ -467,6 +467,29 @@ body {
 	vertical-align: middle;
 }
 
+.p11pseudocode2024 .variable {
+	color: black;
+}
+
+.p11pseudocode2024 .parametre {
+	color: gray;
+}
+
+.p11pseudocode2024 .type {
+	color: violet;
+	font-weight: bold;
+}
+
+.p11pseudocode2024 .fonction {
+	color: green;
+	font-weight: bold;
+}
+
+.p11pseudocode2024 .motclef {
+	color: red;
+	font-weight: bold;
+}
+
 /* Sidebar styling */
 .sidebar {
 	flex: 0.6;

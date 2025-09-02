@@ -36,7 +36,42 @@
 					<article class="article">
 						<h3 class="heading-3">Introduction : Algorithmique et notations</h3>
 						<p class="paragraph">
-							TODO
+							Dans les algorithmes donnés ci-desous, j'utiliserai le formalisme suivant :
+						</p>
+						<p class="paragraph">
+							Les variables seront écrites en noir.<br>
+							La déclaration d'une variable se fera sous la forme suivante :
+							<code class="p11pseudocode2024"><b>Soit</b> <span class="variable">variable</span> : <span class="type">type</span></code>
+							<br>
+							L'affectation d'une valeur à une variable se fait à l'aide de l'opérateur = :
+							<code class="p11pseudocode2024"><b>Soit</b> <span class="variable">variable</span> : <span class="type">type</span> = valeur</code>
+						</p>
+
+						<p class="paragraph">
+							Les conditions s'écrivent sous la forme Si... alors... Sinon : 
+							<code class="p11pseudocode2024"><span class="motclef">Si</span> condition <span class="motclef">Alors</span> instruction(s) <span class="motclef">Sinon</span> instruction(s) <span class="motclef">Fin Si</span></code>
+						</p>
+
+						<p class="paragraph">
+							Les boucles Pour s'écrivent sous la forme suivantes : 
+							<code class="p11pseudocode2024"><span class="motclef">Pour</span> variable <span class="motclef">de</span> indice début <span class="motclef">à</span> indice fin <span class="motclef">avec un pas de </span> pas <span class="motclef">Faire</span> instruction(s) <span class="motclef">Fin Pour</span></code>
+							<br>
+							Les boucles Tant Que s'écrivent sous la forme suivantes : 
+							<code class="p11pseudocode2024"><span class="motclef">Tant Que</span> condition <span class="motclef">Faire</span> instruction(s) <span class="motclef">Fin Tant Que</span></code>
+						</p>
+
+						<p class="paragraph">
+							Les fonctions et procédures sont écrites en vert, les variables en gris. Chaque fonction/procédure est précédée d'un en-tête précisant les données d'entrée, de sortie, les préconditions éventuelles ainsi que les types manipulés. Voici un exemple d'algorithme affichant les entiers de n1 à n2 dans la console.
+							<br>
+							<code class="p11pseudocode2024">
+								Procédure : <span class="fonction">AfficherEntiersConsole()</span><br>
+								Entrée : <span class="parametre">n1</span> : <span class="type">entier</span>, <span class="parametre">n2</span> : <span class="type">entier</span><br>
+								Sortie : <span class="type">void</span><br>
+								Précondition : <span class="parametre">n1</span> inférieur ou égal à <span class="parametre">n2</span><br>
+								|   <span class="motclef">Pour</span> nombre <span class="motclef">de</span> <span class="parametre">n1</span> <span class="motclef">à</span> <span class="parametre">n2</span> <span class="motclef">avec un pas de </span> 1 <span class="motclef">Faire</span><br>
+								|   |   <span class="fonction">Afficher(</span>nombre<span class="fonction">)</span><br>
+								|   <span class="motclef">Fin Pour</span>
+							</code>
 						</p>
 					</article>
 
