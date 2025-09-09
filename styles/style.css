@@ -492,10 +492,12 @@ body {
 
 .d11sql {
 	line-height: 0.8;
+	margin-top: 1em;
 }
 
 .d11sql .table {
 	border: none;
+	margin-top: 1em;
 }
 
 .table .title {

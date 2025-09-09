@@ -49,7 +49,6 @@
 									AR> res = dept
 									<br>
 									SQL> select * from dept;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">DEPTNO</th>
@@ -92,7 +91,6 @@
 									AR> res = restrict(dept, deptno = 10)
 									<br>
 									SQL> select * from dept where deptno > 10;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">DEPTNO</th>
@@ -128,7 +126,6 @@
 								<br>
 								<code class="d11sql">
 									SQL> select * from dept order by loc;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">DEPTNO</th>
@@ -171,7 +168,6 @@
 									AR> res = proj(emp, {ename, mgr})
 									<br>
 									SQL> select ename, mgr from emp;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">ENAME</th>
@@ -252,7 +248,6 @@
 									AR> res = restrict(emp, job = 'SALESMAN')
 									<br>
 									SQL> select * from emp where job = 'SALESMAN';
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">EMPNO</th>
@@ -323,7 +318,6 @@
 								<br>
 								<code class="d11sql">
 									SQL> select ename, job, sal * 12 from emp where job in ('ANALYST', 'MANAGER');
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">ENAME</th>
@@ -370,7 +364,6 @@
 								<br>
 								<code class="d11sql">
 									SQL> select empno, ename from emp where mgr is null;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">EMPNO</th>
@@ -399,7 +392,6 @@
 									AR> res = proj(restrict(emp, empno >= 7800 ˄ empno <= 7899), {empno, ename})
 									<br>
 									SQL > select empno, ename from emp where empno between 7800 and 7899;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">EMPNO</th>
@@ -430,7 +422,6 @@
 								<br>
 								<code class="d11sql">
 									SQL > select empno, ename from emp where ename like 'A%';
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">EMPNO</th>
@@ -457,7 +448,6 @@
 								<br>
 								<code class="d11sql">
 									SQL > select ename, job, round(sal * 1.82, 2) from emp;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">ENAME</th>
@@ -555,7 +545,6 @@
 									AR> res = proj(emp, {job})
 									<br>
 									SQL> select distinct job from emp;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">JOB</th>
@@ -590,7 +579,6 @@
 								<br>
 								<code class="d11sql">
 									SQL> select * from emp where comm > sal;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">EMPNO</th>
@@ -631,7 +619,6 @@
 								<br>
 								<code class="d11sql">
 									SQL> select * from dept where deptno > 20;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">DEPTNO</th>
@@ -662,7 +649,6 @@
 								<br>
 								<code class="d11sql">
 									SQL> select * from emp where job in ('CLERK', 'ANALYST');
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">EMPNO</th>
@@ -753,7 +739,6 @@
 								<br>
 								<code class="d11sql">
 									SQL> select * from emp where ename like '_L%';
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">EMPNO</th>
@@ -814,7 +799,6 @@
 								<br>
 								<code class="d11sql">
 									SQL> select * from emp where comm is null;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">EMPNO</th>
@@ -955,7 +939,6 @@
 								<br>
 								<code class="d11sql">
 									SQL> select * from emp order by job, sal desc;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">EMPNO</th>
@@ -1128,6 +1111,7 @@
 											<td class="column">10</td>
 										</tr>
 									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
@@ -1135,7 +1119,6 @@
 								<br>
 								<code class="d11sql">
 									SQL> select * from emp where job in ('CLERK', 'MANAGER') and deptno = 10;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">EMPNO</th>
@@ -1186,11 +1169,88 @@
 								<br>
 								<code class="d11sql">
 									SQL> select ename, sal from emp where sal > 3000;
-									<br>
 									<table class="table">
 										<tr class="row">
 											<th class="title">ENAME</th>
 											<th class="title">SAL</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">GAG</td>
+											<td class="column">3000</td>
+										</tr>
+										<tr class="row">
+											<td class="column">KING</td>
+											<td class="column">5000</td>
+										</tr>
+										<tr class="row">
+											<td class="column">BLAKE</td>
+											<td class="column">2850</td>
+										</tr>
+										<tr class="row">
+											<td class="column">CLARK</td>
+											<td class="column">2450</td>
+										</tr>
+										<tr class="row">
+											<td class="column">JONES</td>
+											<td class="column">2975</td>
+										</tr>
+										<tr class="row">
+											<td class="column">MARTIN</td>
+											<td class="column">1250</td>
+										</tr>
+										<tr class="row">
+											<td class="column">ALLEN</td>
+											<td class="column">1600</td>
+										</tr>
+										<tr class="row">
+											<td class="column">TURNER</td>
+											<td class="column">1500</td>
+										</tr>
+										<tr class="row">
+											<td class="column">JAMES</td>
+											<td class="column">950</td>
+										</tr>
+										<tr class="row">
+											<td class="column">WARD</td>
+											<td class="column">1250</td>
+										</tr>
+										<tr class="row">
+											<td class="column">FORD</td>
+											<td class="column">3000</td>
+										</tr>
+										<tr class="row">
+											<td class="column">SMITH</td>
+											<td class="column">800</td>
+										</tr>
+										<tr class="row">
+											<td class="column">SCOTT</td>
+											<td class="column">3000</td>
+										</tr>
+										<tr class="row">
+											<td class="column">ADAMS</td>
+											<td class="column">1100</td>
+										</tr>
+										<tr class="row">
+											<td class="column">MILLER</td>
+											<td class="column">1300</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Noms et salaires des employés affichés respectivement sous les colonnes "Nom" et "Salaire".
+								<br>
+								<code class="d11sql">
+									SQL>  select ename "Nom", sal "Salaire" from emp;
+									<table class="table">
+										<tr class="row">
+											<th class="title">Nom</th>
+											<th class="title">Salaire</th>
 										</tr>
 										<tr class="row">
 											<td class="column">--------------------</td>
@@ -1205,47 +1265,539 @@
 							</li><br>
 
 							<li class="item">
-								Noms et salaires des employés affichés respectivement sous les colonnes "Nom" et "Salaire".
-							</li><br>
-
-							<li class="item">
 								Pour les commerciaux, nom et valeur la plus élevée entre salaire et commission.
+								<br>
+								<code class="d11sql">
+									SQL> select ename, greatest(sal, comm) from emp where comm is not null;
+									<table class="table">
+										<tr class="row">
+											<th class="title">ENAME</th>
+											<th class="title">GREATEST(SAL,COMM)</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+											<td class="column">------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">MARTIN</td>
+											<td class="column">1400</td>
+										</tr>
+										<tr class="row">
+											<td class="column">ALLEN</td>
+											<td class="column">1600</td>
+										</tr>
+										<tr class="row">
+											<td class="column">TURNER</td>
+											<td class="column">1500</td>
+										</tr>
+										<tr class="row">
+											<td class="column">WARD</td>
+											<td class="column">1250</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les employés dans l'ordre décroissant de leur département et par ordre croissant de salaire.
+								<br>
+								<code class="d11sql">
+									select * from emp order by deptno desc, sal;
+									<table class="table">
+										<tr class="row">
+											<th class="title">EMPNO</th>
+											<th class="title">ENAME</th>
+											<th class="title">JOB</th>
+											<th class="title">MGR</th>
+											<th class="title">HIREDATE</th>
+											<th class="title">SAL</th>
+											<th class="title">COMM</th>
+											<th class="title">DEPTNO</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+											<td class="column">----------</td>
+											<td class="column">--------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7900</td>
+											<td class="column">JAMES</td>
+											<td class="column">CLERK</td>
+											<td class="column">7698</td>
+											<td class="column">25/08/81</td>
+											<td class="column">950</td>
+											<td class="column"></td>
+											<td class="column">30</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7521</td>
+											<td class="column">WARD</td>
+											<td class="column">SALESMAN</td>
+											<td class="column">7698</td>
+											<td class="column">14/11/80</td>
+											<td class="column">1250</td>
+											<td class="column">500</td>
+											<td class="column">30</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7654</td>
+											<td class="column">MARTIN</td>
+											<td class="column">SALESMAN</td>
+											<td class="column">7698</td>
+											<td class="column">20/06/81</td>
+											<td class="column">1250</td>
+											<td class="column">1400</td>
+											<td class="column">30</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7844</td>
+											<td class="column">TURNER</td>
+											<td class="column">SALESMAN</td>
+											<td class="column">7698</td>
+											<td class="column">31/05/81</td>
+											<td class="column">1500</td>
+											<td class="column">0</td>
+											<td class="column">30</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7499</td>
+											<td class="column">ALLEN</td>
+											<td class="column">SALESMAN</td>
+											<td class="column">7698</td>
+											<td class="column">12/11/80</td>
+											<td class="column">1600</td>
+											<td class="column">300</td>
+											<td class="column">30</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7698</td>
+											<td class="column">BLAKE</td>
+											<td class="column">MANAGER</td>
+											<td class="column">7839</td>
+											<td class="column">21/01/81</td>
+											<td class="column">2850</td>
+											<td class="column"></td>
+											<td class="column">30</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7369</td>
+											<td class="column">SMITH</td>
+											<td class="column">CLERK</td>
+											<td class="column">7902</td>
+											<td class="column">08/09/80</td>
+											<td class="column">800</td>
+											<td class="column"></td>
+											<td class="column">20</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7876</td>
+											<td class="column">ADAMS</td>
+											<td class="column">CLERK</td>
+											<td class="column">7788</td>
+											<td class="column">04/10/82</td>
+											<td class="column">1100</td>
+											<td class="column"></td>
+											<td class="column">20</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7566</td>
+											<td class="column">JONES</td>
+											<td class="column">MANAGER</td>
+											<td class="column">7839</td>
+											<td class="column">23/12/80</td>
+											<td class="column">2975</td>
+											<td class="column"></td>
+											<td class="column">20</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7902</td>
+											<td class="column">FORD</td>
+											<td class="column">ANALYST</td>
+											<td class="column">7566</td>
+											<td class="column">25/08/81</td>
+											<td class="column">3000</td>
+											<td class="column"></td>
+											<td class="column">20</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7788</td>
+											<td class="column">SCOTT</td>
+											<td class="column">ANALYST</td>
+											<td class="column">7566</td>
+											<td class="column">31/08/82</td>
+											<td class="column">3000</td>
+											<td class="column"></td>
+											<td class="column">20</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7934</td>
+											<td class="column">MILLER</td>
+											<td class="column">CLERK</td>
+											<td class="column">7782</td>
+											<td class="column">15/10/81</td>
+											<td class="column">1300</td>
+											<td class="column"></td>
+											<td class="column">10</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7782</td>
+											<td class="column">CLARK</td>
+											<td class="column">MANAGER</td>
+											<td class="column">7839</td>
+											<td class="column">01/03/81</td>
+											<td class="column">2450</td>
+											<td class="column"></td>
+											<td class="column">10</td>
+										</tr>
+										<tr class="row">
+											<td class="column">9999</td>
+											<td class="column">GAG</td>
+											<td class="column"></td>
+											<td class="column"></td>
+											<td class="column"></td>
+											<td class="column">3000</td>
+											<td class="column"></td>
+											<td class="column">10</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7839</td>
+											<td class="column">KING</td>
+											<td class="column">PRESIDENT</td>
+											<td class="column"></td>
+											<td class="column">09/08/81</td>
+											<td class="column">5000</td>
+											<td class="column"></td>
+											<td class="column">10</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Noms et salaires en dollars des employés du département numéro 20. Les salaires sont en euros et 1 euro=1,32 dollar. Le salaire en dollars est arrondi à l'entier inférieur.
+								<br>
+								<code class="d11sql">
+									SQL> select ename, floor(sal * 1.32) from emp;
+									<table class="table">
+										<tr class="row">
+											<th class="title">ENAME</th>
+											<th class="title">FLOOR(SAL*1.32)</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+											<td class="column">---------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">GAG</td>
+											<td class="column">3960</td>
+										</tr>
+										<tr class="row">
+											<td class="column">KING</td>
+											<td class="column">6600</td>
+										</tr>
+										<tr class="row">
+											<td class="column">BLAKE</td>
+											<td class="column">3762</td>
+										</tr>
+										<tr class="row">
+											<td class="column">CLARK</td>
+											<td class="column">3234</td>
+										</tr>
+										<tr class="row">
+											<td class="column">JONES</td>
+											<td class="column">3927</td>
+										</tr>
+										<tr class="row">
+											<td class="column">MARTIN</td>
+											<td class="column">1650</td>
+										</tr>
+										<tr class="row">
+											<td class="column">ALLEN</td>
+											<td class="column">2112</td>
+										</tr>
+										<tr class="row">
+											<td class="column">TURNER</td>
+											<td class="column">1980</td>
+										</tr>
+										<tr class="row">
+											<td class="column">JAMES</td>
+											<td class="column">1254</td>
+										</tr>
+										<tr class="row">
+											<td class="column">WARD</td>
+											<td class="column">1650</td>
+										</tr>
+										<tr class="row">
+											<td class="column">FORD</td>
+											<td class="column">3960</td>
+										</tr>
+										<tr class="row">
+											<td class="column">SMITH</td>
+											<td class="column">1056</td>
+										</tr>
+										<tr class="row">
+											<td class="column">SCOTT</td>
+											<td class="column">3960</td>
+										</tr>
+										<tr class="row">
+											<td class="column">ADAMS</td>
+											<td class="column">1452</td>
+										</tr>
+										<tr class="row">
+											<td class="column">MILLER</td>
+											<td class="column">1716</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Numéros des employés qui sont responsables hiérarchiques dans les départements 10, 20 ou 30.
+								<br>
+								<code class="d11sql">
+									SQL> select mgr from emp where deptno in (30, 20, 10);
+									<table class="table">
+										<tr class="row">
+											<th class="title">MGR</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">&nbsp;</td>
+										</tr>
+										<tr class="row">
+											<td class="column">&nbsp;</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7839</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7839</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7839</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7698</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7698</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7698</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7698</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7698</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7566</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7902</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7566</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7788</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7782</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les employés dont le nom comporte la lettre J ou la lettre K, et qui ne sont pas MANAGER, triés par nom et par département.
+								<br>
+								<code class="d11sql">
+									SQL> select * from emp where (ename like '%J%' or ename like '%K%') and job != 'MANAGER' order by ename, deptno;
+									<table class="table">
+										<tr class="row">
+											<th class="title">EMPNO</th>
+											<th class="title">ENAME</th>
+											<th class="title">JOB</th>
+											<th class="title">MGR</th>
+											<th class="title">HIREDATE</th>
+											<th class="title">SAL</th>
+											<th class="title">COMM</th>
+											<th class="title">DEPTNO</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+											<td class="column">----------</td>
+											<td class="column">--------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7900</td>
+											<td class="column">JAMES</td>
+											<td class="column">CLERK</td>
+											<td class="column">7698</td>
+											<td class="column">25/08/81</td>
+											<td class="column">950</td>
+											<td class="column"></td>
+											<td class="column">30</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7839</td>
+											<td class="column">KING</td>
+											<td class="column">PRESIDENT</td>
+											<td class="column"></td>
+											<td class="column">09/08/81</td>
+											<td class="column">5000</td>
+											<td class="column"></td>
+											<td class="column">10</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les départements dont le nom comporte deux fois la lettre L.
+								<br>
+								<code class="d11sql">
+									SQL> select * from dept where dname like '%L%L%';
+									<br>
+									aucune ligne selectionnee
+								</code>
 							</li><br>
 
 							<li class="item">
 								Salaires et emplois des employés, classés par emploi et dans l'ordre décroissant des salaires.
+								<br>
+								<code class="d11sql">
+									SQL> select sal, job from emp order by job, sal desc;
+									<table class="table">
+										<tr class="row">
+											<th class="title">SAL</th>
+											<th class="title">JOB</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">3000</td>
+											<td class="column">ANALYST</td>
+										</tr>
+										<tr class="row">
+											<td class="column">3000</td>
+											<td class="column">ANALYST</td>
+										</tr>
+										<tr class="row">
+											<td class="column">1300</td>
+											<td class="column">CLERK</td>
+										</tr>
+										<tr class="row">
+											<td class="column">1100</td>
+											<td class="column">CLERK</td>
+										</tr>
+										<tr class="row">
+											<td class="column">950</td>
+											<td class="column">CLERK</td>
+										</tr>
+										<tr class="row">
+											<td class="column">800</td>
+											<td class="column">CLERK</td>
+										</tr>
+										<tr class="row">
+											<td class="column">2975</td>
+											<td class="column">MANAGER</td>
+										</tr>
+										<tr class="row">
+											<td class="column">2850</td>
+											<td class="column">MANAGER</td>
+										</tr>
+										<tr class="row">
+											<td class="column">2450</td>
+											<td class="column">MANAGER</td>
+										</tr>
+										<tr class="row">
+											<td class="column">5000</td>
+											<td class="column">PRESIDENT</td>
+										</tr>
+										<tr class="row">
+											<td class="column">1600</td>
+											<td class="column">SALESMAN</td>
+										</tr>
+										<tr class="row">
+											<td class="column">1500</td>
+											<td class="column">SALESMAN</td>
+										</tr>
+										<tr class="row">
+											<td class="column">1250</td>
+											<td class="column">SALESMAN</td>
+										</tr>
+										<tr class="row">
+											<td class="column">1250</td>
+											<td class="column">SALESMAN</td>
+										</tr>
+										<tr class="row">
+											<td class="column">3000</td>
+											<td class="column"></td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Numéros, noms et fonctions des employés qui travaillent dans un département autre que les numéros 10, 20, ou 30.
+								<br>
+								<code class="d11sql">
+									SQL> select empno, ename, job from emp where deptno not in (30, 20, 10);
+									<br>
+									aucune ligne selectionnee
+								</code>
 							</li><br>
 
 							<li class="item">
 								Numéros des départements où il y a des employés.
+								<br>
+								<code class="d11sql">
+									SQL> select distinct deptno from emp;
+									<table class="table">
+										<tr class="row">
+											<th class="title">DEPTNO</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">30</td>
+										</tr>
+										<tr class="row">
+											<td class="column">10</td>
+										</tr>
+										<tr class="row">
+											<td class="column">20</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Noms, salaires et fonctions des employés qui ne sont ni ANALYST, ni MANAGER, ni CLERK, et qui gagnent plus de 12000.
+								<br>
+								<code class="d11sql">
+									SQL> select ename, sal, job from emp where job not in ('ANALYST', 'MANAGER', 'CLERK') and sal > 12000;
+									<br>
+									aucune ligne selectionnee
+								</code>
 							</li><br>
 
 							<li class="item">
