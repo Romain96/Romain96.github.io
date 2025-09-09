@@ -490,6 +490,31 @@ body {
 	font-weight: bold;
 }
 
+.d11sql {
+	line-height: 0.8;
+}
+
+.d11sql .table {
+	border: none;
+}
+
+.table .title {
+	border: none;
+	text-align: left;
+	padding-left: 0em;
+	padding-right: 1em;
+}
+
+.table .row {
+	border: none;
+}
+
+.table .row .column {
+	border: none;
+	padding-left: 0em;
+	padding-right: 1em;
+}
+
 /* Sidebar styling */
 .sidebar {
 	flex: 0.6;
