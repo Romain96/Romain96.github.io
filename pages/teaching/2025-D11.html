@@ -1802,42 +1802,596 @@
 
 							<li class="item">
 								Informations sur tous les vols.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_vols;
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+											<th class="title">PILOTE</th>
+											<th class="title">COPILOTE</th>
+											<th class="title">NAVION</th>
+											<th class="title">DEPART</th>
+											<th class="title">ARRIVEE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">101</td>
+											<td class="column">1</td>
+											<td class="column">2</td>
+											<td class="column">1</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">102</td>
+											<td class="column">1</td>
+											<td class="column">3</td>
+											<td class="column">2</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">104</td>
+											<td class="column">2</td>
+											<td class="column">3</td>
+											<td class="column">3</td>
+											<td class="column">Paris</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">105</td>
+											<td class="column">3</td>
+											<td class="column">2</td>
+											<td class="column">2</td>
+											<td class="column">Nantes</td>
+											<td class="column">Lyon</td>
+										</tr>
+										<tr class="row">
+											<td class="column">106</td>
+											<td class="column">4</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">107</td>
+											<td class="column">11</td>
+											<td class="column">4</td>
+											<td class="column">2</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">108</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">4</td>
+											<td class="column">Lyon</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">109</td>
+											<td class="column">9</td>
+											<td class="column">4</td>
+											<td class="column">8</td>
+											<td class="column">Lille</td>
+											<td class="column">Lyon</td>
+										</tr>
+										<tr class="row">
+											<td class="column">110</td>
+											<td class="column">7</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">111</td>
+											<td class="column">7</td>
+											<td class="column">3</td>
+											<td class="column">9</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">112</td>
+											<td class="column">11</td>
+											<td class="column">3</td>
+											<td class="column">9</td>
+											<td class="column">Lyon</td>
+											<td class="column">Lille</td>
+										</tr>
+										<tr class="row">
+											<td class="column">113</td>
+											<td class="column">2</td>
+											<td class="column">11</td>
+											<td class="column">10</td>
+											<td class="column">Strasbourg</td>
+											<td class="column">Lyon</td>
+										</tr>
+										<tr class="row">
+											<td class="column">114</td>
+											<td class="column">4</td>
+											<td class="column">9</td>
+											<td class="column">8</td>
+											<td class="column">Nantes</td>
+											<td class="column">Lyon</td>
+										</tr>
+										<tr class="row">
+											<td class="column">115</td>
+											<td class="column">7</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">116</td>
+											<td class="column">1</td>
+											<td class="column">7</td>
+											<td class="column">9</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">117</td>
+											<td class="column">11</td>
+											<td class="column">8</td>
+											<td class="column">9</td>
+											<td class="column">Lyon</td>
+											<td class="column">Strasbourg</td>
+										</tr>
+										<tr class="row">
+											<td class="column">118</td>
+											<td class="column">12</td>
+											<td class="column">5</td>
+											<td class="column">10</td>
+											<td class="column">Nantes</td>
+											<td class="column">Lyon</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les avions dont la capacité est supérieure à 300.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_avions where capacite > 300;
+									<table class="table">
+										<tr class="row">
+											<th class="title">NAVION</th>
+											<th class="title">TYPE</th>
+											<th class="title">CAPACITE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">2</td>
+											<td class="column">Airbus</td>
+											<td class="column">500</td>
+										</tr>
+										<tr class="row">
+											<td class="column">5</td>
+											<td class="column">Airbus</td>
+											<td class="column">500</td>
+										</tr>
+										<tr class="row">
+											<td class="column">6</td>
+											<td class="column">Boeing</td>
+											<td class="column">600</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7</td>
+											<td class="column">Boeing</td>
+											<td class="column">500</td>
+										</tr>
+										<tr class="row">
+											<td class="column">10</td>
+											<td class="column">Airbus</td>
+											<td class="column">400</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les vols partant de Paris.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_vols where depart = 'Paris';
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+											<th class="title">PILOTE</th>
+											<th class="title">COPILOTE</th>
+											<th class="title">NAVION</th>
+											<th class="title">DEPART</th>
+											<th class="title">ARRIVEE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">101</td>
+											<td class="column">1</td>
+											<td class="column">2</td>
+											<td class="column">1</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">104</td>
+											<td class="column">2</td>
+											<td class="column">3</td>
+											<td class="column">3</td>
+											<td class="column">Paris</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">106</td>
+											<td class="column">4</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">110</td>
+											<td class="column">7</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">115</td>
+											<td class="column">7</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Nom et ville des pilotes.
+								<br>
+								<code class="d11sql">
+									SQL> select nom, habite from iin_pilotes;
+									<table class="table">
+										<tr class="row">
+											<th class="title">NOM</th>
+											<th class="title">HABITE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+											<td class="column">-------------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Saint-Exupéry</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Lindbergh</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Saint-Exupéry</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Garros</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Hamilton</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Bleriot</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Martin</td>
+											<td class="column">Nantes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Pujol</td>
+											<td class="column">Toulouse</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Rousseau</td>
+											<td class="column">Lille</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Pinon</td>
+											<td class="column">Lyon</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Meunier</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Dupont</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Dupont</td>
+											<td class="column">Strasbourg</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 							
 							<li class="item">
 								Toutes les informations sur les vols partant ou arrivant à Paris.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_vols where depart = 'Paris' or arrivee = 'Paris';
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+											<th class="title">PILOTE</th>
+											<th class="title">COPILOTE</th>
+											<th class="title">NAVION</th>
+											<th class="title">DEPART</th>
+											<th class="title">ARRIVEE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">101</td>
+											<td class="column">1</td>
+											<td class="column">2</td>
+											<td class="column">1</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">102</td>
+											<td class="column">1</td>
+											<td class="column">3</td>
+											<td class="column">2</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">104</td>
+											<td class="column">2</td>
+											<td class="column">3</td>
+											<td class="column">3</td>
+											<td class="column">Paris</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">106</td>
+											<td class="column">4</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">107</td>
+											<td class="column">11</td>
+											<td class="column">4</td>
+											<td class="column">2</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">110</td>
+											<td class="column">7</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">111</td>
+											<td class="column">7</td>
+											<td class="column">3</td>
+											<td class="column">9</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">115</td>
+											<td class="column">7</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">116</td>
+											<td class="column">1</td>
+											<td class="column">7</td>
+											<td class="column">9</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Noms de pilotes commençant par S.
+								<br>
+								<code class="d11sql">
+									SQL> select nom from iin_pilotes where nom like 'S%';
+									<table class="table">
+										<tr class="row">
+											<th class="title">NOM</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Saint-Exupéry</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Différents types d'avions (sans redondance).
+								<br>
+								<code class="d11sql">
+									SQL> select distinct type from iin_avions;
+									<table class="table">
+										<tr class="row">
+											<th class="title">TYPE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Airbus</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Boeing</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les vols ayant le pilote numéro 1 comme pilote et le numéro 2 comme copilote.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_vols where pilote = 1 and copilote = 2;
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+											<th class="title">PILOTE</th>
+											<th class="title">COPILOTE</th>
+											<th class="title">NAVION</th>
+											<th class="title">DEPART</th>
+											<th class="title">ARRIVEE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">101</td>
+											<td class="column">1</td>
+											<td class="column">2</td>
+											<td class="column">1</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les vols où les pilotes 1 et 2 sont tous deux présents (comme pilote ou copilote).
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_vols where (pilote = 1 or pilote = 2) and (copilote = 1 or copilote = 2);
+									<br> ou alors<br>
+									SQL> select * from iin_vols where pilote in (1, 2) and copilote in (1, 2);
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+											<th class="title">PILOTE</th>
+											<th class="title">COPILOTE</th>
+											<th class="title">NAVION</th>
+											<th class="title">DEPART</th>
+											<th class="title">ARRIVEE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">101</td>
+											<td class="column">1</td>
+											<td class="column">2</td>
+											<td class="column">1</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Numéro et capacité des Airbus affichés par ordre décroissant de leur capacité.
+								<br>
+								<code class="d11sql">
+									SQL> select navion, capacite from iin_avions where type = 'Airbus' order by capacite desc;
+									<table class="table">
+										<tr class="row">
+											<th class="title">NAVION</th>
+											<th class="title">CAPACITE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">2</td>
+											<td class="column">500</td>
+										</tr>
+										<tr class="row">
+											<td class="column">5</td>
+											<td class="column">500</td>
+										</tr>
+										<tr class="row">
+											<td class="column">10</td>
+											<td class="column">400</td>
+										</tr>
+										<tr class="row">
+											<td class="column">1</td>
+											<td class="column">300</td>
+										</tr>
+										<tr class="row">
+											<td class="column">9</td>
+											<td class="column">200</td>
+										</tr>
+										<tr class="row">
+											<td class="column">4</td>
+											<td class="column">100</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
