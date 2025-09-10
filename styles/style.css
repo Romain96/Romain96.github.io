@@ -500,18 +500,18 @@ body {
 	margin-top: 1em;
 }
 
-.table .title {
+.d11sql .table .title {
 	border: none;
 	text-align: left;
 	padding-left: 0em;
 	padding-right: 1em;
 }
 
-.table .row {
+.d11sql .table .row {
 	border: none;
 }
 
-.table .row .column {
+.d11sql .table .row .column {
 	border: none;
 	padding-left: 0em;
 	padding-right: 1em;

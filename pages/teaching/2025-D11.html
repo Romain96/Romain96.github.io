@@ -2396,62 +2396,656 @@
 
 							<li class="item">
 								Toutes les informations sur les vols qui partent de Paris et n'arrivent pas à Nice.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_vols where depart = 'Paris' and arrivee != 'Nice';
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+											<th class="title">PILOTE</th>
+											<th class="title">COPILOTE</th>
+											<th class="title">NAVION</th>
+											<th class="title">DEPART</th>
+											<th class="title">ARRIVEE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">104</td>
+											<td class="column">2</td>
+											<td class="column">3</td>
+											<td class="column">3</td>
+											<td class="column">Paris</td>
+											<td class="column">Rennes</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Numéro des vols qui partent de Paris et n'arrivent pas à Nice.
+								<br>
+								<code class="d11sql">
+									SQL> select nvol from iin_vols where depart = 'Paris' and arrivee != 'Nice';
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">104</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Numéro, ville de départ et ville d'arrivée des vols partant de Paris ou Nice (de deux façons).
+								<br>
+								<code class="d11sql">
+									SQL> select nvol, depart, arrivee from iin_vols where depart = 'Paris' or depart = 'Nice';
+									<br>ou alors<br>
+									SQL> select nvol, depart, arrivee from iin_vols where depart in ('Paris', 'Nice');
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+											<th class="title">DEPART</th>
+											<th class="title">ARRIVEE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">101</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">102</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">104</td>
+											<td class="column">Paris</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">106</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">107</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">110</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">111</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">115</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">116</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Numéro des avions dont la capacité est comprise entre 200 et 600 (de deux façons).
+								<br>
+								<code class="d11sql">
+									SQL> select navion from iin_avions where capacite >= 200 and capacite <= 600;
+									<br>ou alors<br>
+									SQL> select navion from iin_avions where capacite between 200 and 600;
+									<table class="table">
+										<tr class="row">
+											<th class="title">NAVION</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">1</td>
+										</tr>
+										<tr class="row">
+											<td class="column">2</td>
+										</tr>
+										<tr class="row">
+											<td class="column">3</td>
+										</tr>
+										<tr class="row">
+											<td class="column">5</td>
+										</tr>
+										<tr class="row">
+											<td class="column">6</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7</td>
+										</tr>
+										<tr class="row">
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">9</td>
+										</tr>
+										<tr class="row">
+											<td class="column">10</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Que sait-on d'Asterix ?
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_gaulois where nom = 'Asterix';
+									<table class="table">
+										<tr class="row">
+											<th class="title">GAUNO</th>
+											<th class="title">NOM</th>
+											<th class="title">S</th>
+											<th class="title">METIER</th>
+											<th class="title">VILNO</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">---------------</td>
+											<td class="column">-</td>
+											<td class="column">---------------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">100</td>
+											<td class="column">Asterix</td>
+											<td class="column">M</td>
+											<td class="column">guerrier</td>
+											<td class="column">8</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Différents métiers des femmes.
+								<br>
+								<code class="d11sql">
+									SQL> select distinct metier from iin_gaulois where sexe = 'F';
+									<table class="table">
+										<tr class="row">
+											<th class="title">METIER</th>
+										</tr>
+										<tr class="row">
+											<td class="column">---------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">aide druide</td>
+										</tr>
+										<tr class="row">
+											<td class="column">druide</td>
+										</tr>
+										<tr class="row">
+											<td class="column">poissonniere</td>
+										</tr>
+										<tr class="row">
+											<td class="column">ecoliere</td>
+										</tr>
+										<tr class="row">
+											<td class="column">&nbsp;</td>
+										</tr>
+										<tr class="row">
+											<td class="column">aubergiste</td>
+										</tr>
+										<tr class="row">
+											<td class="column">femme du chef</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les femmes qui n'ont pas de métier connu.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_gaulois where sexe = 'F' and metier is null;
+									<table class="table">
+										<tr class="row">
+											<th class="title">GAUNO</th>
+											<th class="title">NOM</th>
+											<th class="title">S</th>
+											<th class="title">METIER</th>
+											<th class="title">VILNO</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">---------------</td>
+											<td class="column">-</td>
+											<td class="column">---------------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">106</td>
+											<td class="column">Jolifleur</td>
+											<td class="column">F</td>
+											<td class="column"></td>
+											<td class="column">8</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les guerriers du village numéro 8.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_gaulois where metier = 'guerrier' and vilno = 8;
+									<table class="table">
+										<tr class="row">
+											<th class="title">GAUNO</th>
+											<th class="title">NOM</th>
+											<th class="title">S</th>
+											<th class="title">METIER</th>
+											<th class="title">VILNO</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">---------------</td>
+											<td class="column">-</td>
+											<td class="column">---------------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">100</td>
+											<td class="column">Asterix</td>
+											<td class="column">M</td>
+											<td class="column">guerrier</td>
+											<td class="column">8</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les habitants des villages 5 à 10 classés par village et par métier.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_gaulois where vilno between 5 and 10 order by vilno, metier;
+									<table class="table">
+										<tr class="row">
+											<th class="title">GAUNO</th>
+											<th class="title">NOM</th>
+											<th class="title">S</th>
+											<th class="title">METIER</th>
+											<th class="title">VILNO</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">---------------</td>
+											<td class="column">-</td>
+											<td class="column">---------------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">1</td>
+											<td class="column">Diagnostix</td>
+											<td class="column">M</td>
+											<td class="column">druide</td>
+											<td class="column">5</td>
+										</tr>
+										<tr class="row">
+											<td class="column">14</td>
+											<td class="column">Hypotenus</td>
+											<td class="column">M</td>
+											<td class="column">garcon de bains</td>
+											<td class="column">5</td>
+										</tr>
+										<tr class="row">
+											<td class="column">25</td>
+											<td class="column">Aplusbegalix</td>
+											<td class="column">M</td>
+											<td class="column">chef</td>
+											<td class="column">6</td>
+										</tr>
+										<tr class="row">
+											<td class="column">26</td>
+											<td class="column">Catedralgotix</td>
+											<td class="column">M</td>
+											<td class="column">ecolier</td>
+											<td class="column">6</td>
+										</tr>
+										<tr class="row">
+											<td class="column">30</td>
+											<td class="column">Industrichimix</td>
+											<td class="column">M</td>
+											<td class="column">ecolier</td>
+											<td class="column">6</td>
+										</tr>
+										<tr class="row">
+											<td class="column">27</td>
+											<td class="column">Berlix</td>
+											<td class="column">M</td>
+											<td class="column">professeur</td>
+											<td class="column">6</td>
+										</tr>
+										<tr class="row">
+											<td class="column">110</td>
+											<td class="column">Assurancetourix</td>
+											<td class="column">M</td>
+											<td class="column">barde</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">103</td>
+											<td class="column">Abraracourcix</td>
+											<td class="column">M</td>
+											<td class="column">chef</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">109</td>
+											<td class="column">Panoramix</td>
+											<td class="column">M</td>
+											<td class="column">druide</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">104</td>
+											<td class="column">Bonemine</td>
+											<td class="column">F</td>
+											<td class="column">femme du chef</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">102</td>
+											<td class="column">Idefix</td>
+											<td class="column"></td>
+											<td class="column">gardien</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">100</td>
+											<td class="column">Asterix</td>
+											<td class="column">M</td>
+											<td class="column">guerrier</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">101</td>
+											<td class="column">Obelix</td>
+											<td class="column">M</td>
+											<td class="column">livreur menhirs</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">107</td>
+											<td class="column">Ordralfabetix</td>
+											<td class="column">M</td>
+											<td class="column">poissonnier</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">108</td>
+											<td class="column">Ielosubmarine</td>
+											<td class="column">F</td>
+											<td class="column">poissonniere</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">105</td>
+											<td class="column">Agecanonix</td>
+											<td class="column">M</td>
+											<td class="column">retraite</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">106</td>
+											<td class="column">Jolifleur</td>
+											<td class="column"></td>
+											<td class="column">F</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">29</td>
+											<td class="column">Boufiltre</td>
+											<td class="column">F</td>
+											<td class="column">aide druide</td>
+											<td class="column">9</td>
+										</tr>
+										<tr class="row">
+											<td class="column">28</td>
+											<td class="column">Amnesix</td>
+											<td class="column">M</td>
+											<td class="column">druide</td>
+											<td class="column">9</td>
+										</tr>
+										<tr class="row">
+											<td class="column">18</td>
+											<td class="column">Jolitorax</td>
+											<td class="column">M</td>
+											<td class="column">guerrier</td>
+											<td class="column">10</td>
+										</tr>
+										<tr class="row">
+											<td class="column">19</td>
+											<td class="column">Mac Anoterapix</td>
+											<td class="column">M</td>
+											<td class="column">guerrier</td>
+											<td class="column">10</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les batailles qui ont un nom par ordre alphabétique.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_bataille where nom is not null order by nom;
+									<table class="table">
+										<tr class="row">
+											<th class="title">BATNO</th>
+											<th class="title">NOM</th>
+											<th class="title">VILNO</th>
+											<th class="title">CAMPNO</th>
+											<th class="title">DATEBAT</th>
+											<th class="title">DUREE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">---------------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">--------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">1</td>
+											<td class="column">alesia</td>
+											<td class="column">5</td>
+											<td class="column">1</td>
+											<td class="column">15/05/20</td>
+											<td class="column">2</td>
+										</tr>
+										<tr class="row">
+											<td class="column">5</td>
+											<td class="column">gergovie</td>
+											<td class="column">8</td>
+											<td class="column">1</td>
+											<td class="column">16/06/21</td>
+											<td class="column">1</td>
+										</tr>
+										<tr class="row">
+											<td class="column">6</td>
+											<td class="column">poisson d avril</td>
+											<td class="column">8</td>
+											<td class="column">1</td>
+											<td class="column">01/04/24</td>
+											<td class="column">1</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les batailles par ordre chronologique.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_bataille order by datebat;
+									<table class="table">
+										<tr class="row">
+											<th class="title">BATNO</th>
+											<th class="title">NOM</th>
+											<th class="title">VILNO</th>
+											<th class="title">CAMPNO</th>
+											<th class="title">DATEBAT</th>
+											<th class="title">DUREE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">---------------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">--------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">1</td>
+											<td class="column">alesia</td>
+											<td class="column">5</td>
+											<td class="column">1</td>
+											<td class="column">15/05/20</td>
+											<td class="column">2</td>
+										</tr>
+										<tr class="row">
+											<td class="column">5</td>
+											<td class="column">gergovie</td>
+											<td class="column">8</td>
+											<td class="column">1</td>
+											<td class="column">16/06/21</td>
+											<td class="column">1</td>
+										</tr>
+										<tr class="row">
+											<td class="column">8</td>
+											<td class="column"></td>
+											<td class="column">8</td>
+											<td class="column">3</td>
+											<td class="column">05/12/21</td>
+											<td class="column">1</td>
+										</tr>
+										<tr class="row">
+											<td class="column">2</td>
+											<td class="column"></td>
+											<td class="column">5</td>
+											<td class="column">2</td>
+											<td class="column">20/04/22</td>
+											<td class="column">3</td>
+										</tr>
+										<tr class="row">
+											<td class="column">10</td>
+											<td class="column"></td>
+											<td class="column">1</td>
+											<td class="column">3</td>
+											<td class="column">02/10/22</td>
+											<td class="column">3</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7</td>
+											<td class="column"></td>
+											<td class="column">8</td>
+											<td class="column">2</td>
+											<td class="column">09/10/23</td>
+											<td class="column">1</td>
+										</tr>
+										<tr class="row">
+											<td class="column">6</td>
+											<td class="column">poisson d avril</td>
+											<td class="column">8</td>
+											<td class="column">1</td>
+											<td class="column">01/04/24</td>
+											<td class="column">1</td>
+										</tr>
+										<tr class="row">
+											<td class="column">3</td>
+											<td class="column"></td>
+											<td class="column">4</td>
+											<td class="column">3</td>
+											<td class="column">12/12/25</td>
+											<td class="column">1</td>
+										</tr>
+										<tr class="row">
+											<td class="column">9</td>
+											<td class="column"></td>
+											<td class="column">8</td>
+											<td class="column">4</td>
+											<td class="column">13/02/26</td>
+											<td class="column">1</td>
+										</tr>
+										<tr class="row">
+											<td class="column">4</td>
+											<td class="column"></td>
+											<td class="column">4</td>
+											<td class="column">3</td>
+											<td class="column">03/05/27</td>
+											<td class="column">5</td>
+										</tr>
+									</table>
+								</code>
 							</li><br>
 
 							<li class="item">
 								Nom et densité de population des nations.
+								<br>
+								<code class="d11sql">
+									SQL> select nation, population / area from nation;
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les produits dans l'ordre alphabétique.
+								<br>
+								<code class="d11sql">
+									SQL> select * from product order by descrip;
+								</code>
 							</li><br>
 
 							<li class="item">
 								Toutes les informations sur les lignes de la commande numéro 610 dans l'ordre des lignes.
+								<br>
+								<code class="d11sql">
+									SQL> select * from item where ordid = 640 order by itemid;
+								</code>
 							</li><br>
 
 							<li class="item">
-								Numéros, dates de commande et totaux des commandes du client numéro 100 dans l'ordre chronologique. 
+								Numéros, dates de commande et totaux des commandes du client numéro 100 dans l'ordre chronologique.
+								<br>
+								<code class="d11sql">
+									SQL> select ordid, orderdate, total from ord where custid = 100 order by orderdate;
+								</code>
 							</li>
 						</lo>
 						
