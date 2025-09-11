@@ -1,6 +1,6 @@
 /* General styling */
 body {
-	font-family: Arial, sans-serif;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
 	line-height: 1.6;
@@ -56,7 +56,7 @@ body {
 /* Main content styling */
 .content {
 	display: flex;
-	margin: 20px 0;
+	margin: 20px 0 20px 5%;
 }
 
 .section {
@@ -71,14 +71,25 @@ body {
 }
 
 .section .paragraph {
-	font-size: 1.1em;
+	font-size: 1.0em;
 	margin-bottom: 20px;
+	width: 80%;
 }
 
 /* Article styling */
 .article .heading-3 {
 	font-size: 1.5em;
 	margin-bottom: 10px;
+}
+
+a {
+	color: blue;
+	outline: none;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 
@@ -116,7 +127,7 @@ body {
 
 .article #employment .sublist .item
 {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	margin-top: 0px;
 	margin-left: 2em;
 }
@@ -148,7 +159,7 @@ body {
 }
 
 .article #qualifications .item {
-	font-size: 1.0em;
+	font-size: 0.9em;
 	margin-top: 2em;
 	display: flex;
 }
@@ -173,7 +184,7 @@ body {
 
 .article #qualifications .sublist .item
 {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	margin-top: 0px;
 	margin-left: 2em;
 }
@@ -365,7 +376,7 @@ body {
 #talks .article .talkContent .talkLogo .logo
 {
 	width: 10em;
-	padding-right: 1em;
+	padding-right: 2em;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 	vertical-align: top;
@@ -467,6 +478,12 @@ body {
 	vertical-align: middle;
 }
 
+hr {
+	border-width: 1px;
+	border-style: solid;
+	color: #e0e0e0;
+}
+
 .p11pseudocode2024 .variable {
 	color: black;
 }
@@ -488,6 +505,17 @@ body {
 .p11pseudocode2024 .motclef {
 	color: red;
 	font-weight: bold;
+}
+
+.p11pseudocode2025 {
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 0.8em;
+	line-height: 125%;
+	background-color: lightgray;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	width: 80%;
 }
 
 .p11pseudocode2025 .variable {
@@ -515,6 +543,56 @@ body {
 .p11pseudocode2025 .motclef {
 	color: red;
 	font-weight: bold;
+}
+
+.p11pseudocode2025 .tab {
+	margin-left: 2em;
+}
+
+.p11csharp {
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 0.8em;
+	line-height: 125%;
+	background-color: lightgray;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	width: 80%;
+}
+
+.p11csharp .tab {
+	margin-left: 2em;
+}
+
+.p11csharp .variable {
+	color: blueviolet;
+}
+
+.p11csharp .fonction {
+	color: red;
+	font-weight: bold;
+}
+
+.p11csharp .motclef {
+	color: blue;
+	font-weight: bold;
+}
+
+.p11csharp .type {
+	color: blue;
+	font-weight: bold;
+}
+
+.p11csharp .number {
+	color: yellowgreen;
+}
+
+.p11csharp .chaine {
+	color: orange;
+}
+
+.p11csharp .class {
+	color: green;
 }
 
 .d11sql {
@@ -546,7 +624,7 @@ body {
 
 /* Sidebar styling */
 .sidebar {
-	flex: 0.6;
+	flex: 0.7;
 	background-color: #f9f9f9;
 	padding: 20px;
 	border-left: 2px solid #e0e0e0;

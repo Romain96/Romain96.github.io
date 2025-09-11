@@ -19,10 +19,11 @@
 					<ul class="list">
 						<li class="item" id="home"><img class="navlogo" src="../../images/navigation/home.png"><a href="../../index.html">Home</a></li>
 						<li class="item" id="about"><img class="navlogo" src="../../images/navigation/cv.png"><a href="../../pages/cv.html">CV</a></li>
-						<li class="item" id="research"><img class="navlogo" src="../../images/navigation/research.png"><a href="../../pages/research.html">Project</a></li>
-						<li class="item" id="talk"><img class="navlogo" src="../../images/navigation/talk.png"><a href="../../pages/talk.html">Talk</a></li>
+						<li class="item" id="research"><img class="navlogo" src="../../images/navigation/research.png"><a href="../../pages/research.html">Research</a></li>
+						<li class="item" id="talk"><img class="navlogo" src="../../images/navigation/talk.png"><a href="../../pages/talk.html">Talks</a></li>
 						<li class="item" id="publication"><img class="navlogo" src="../../images/navigation/publication.png"><a href="../../pages/publication.html">Publication</a></li>
 						<li class="item" id="teaching"><img class="navlogo" src="../../images/navigation/teaching.png"><a href="../../pages/teaching.html">Teaching</a></li>
+						<li class="item" id="project"><img class="navlogo" src="../../images/navigation/project.png"><a href="../../pages/project.html">Projects</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -31,6 +32,7 @@
 
 				<section class="section">
 					<h2 class="heading-2">P11 - Initiation au développement (2025-2026)</h2>
+					<hr>
 
 					<article class="article">
 						<h3 class="heading-3">Introduction : Algorithmique et notations</h3>
@@ -38,21 +40,44 @@
 						<p class="paragraph">
 							Voici un exemple d'algorithme afin d'illustrer le formalisme que j'utilise dans mes corrigés.
 						</p>
-						<code class="p11pseudocode2025">
+						<p class="p11pseudocode2025">
 							<b>Fonction :</b> <span class="fonction">CalculerIMC()</span><br>
 							<b>Entrée :</b> <span class="parametre">taille</span> : <span class="type">réel</span>, <span class="parametre">poids</span> : <span class="type">réel</span><br>
 							<b>Sortie :</b> <span class="type">void</span><br>
 							<b>Constantes :</b> <span class="variable">TAILLE_MIN</span> : <span class="type">réel</span> = 1.50, <span class="variable">TAILLE_MAX</span> : <span class="type">réel</span> = 2.10<br>
 							<b>Variables :</b> <span class="variable">imc</span> : <span class="type">réel</span><br>
 							<b>Début</b><br>
-							<b>|</b>   <span class="motclef">Si</span> <span class="parametre">taille</span> < TAILLE_MIN <span class="motclef">Alors</span><br>
-							<b>|</b>   |   <span class="fonction">Afficher(</span><span class="chaine">"La taille doit être entre "</span> + TAILLE_MIN + <span class="chaine">" et "</span> + TAILLE_MAX + <span class="chaine">"."</span><span class="fonction">)</span><br>
-							<b>|</b>   <span class="motclef">Sinon</span><br>
-							<b>|</b>   |   imc = poids / (<span class="parametre">taille</span> * <span class="parametre">taille</span>);<br>
-							<b>|</b>   |   <span class="fonction">Afficher(</span><span class="chaine">"Votre IMC est de "</span> + imc<span class="fonction">)</span><br>
+							<b>|</b><span class="tab"></span><span class="motclef">Si</span> <span class="parametre">taille</span> < TAILLE_MIN <span class="motclef">Alors</span><br>
+							<b>|</b><span class="tab"></span>|<span class="tab"></span><span class="fonction">Afficher(</span><span class="chaine">"La taille doit être entre "</span> + TAILLE_MIN + <span class="chaine">" et "</span> + TAILLE_MAX + <span class="chaine">"."</span><span class="fonction">)</span><br>
+							<b>|</b><span class="tab"></span><span class="motclef">Sinon</span><br>
+							<b>|</b><span class="tab"></span>|<span class="tab"></span>imc = poids / (<span class="parametre">taille</span> * <span class="parametre">taille</span>);<br>
+							<b>|</b><span class="tab"></span>|<span class="tab"></span><span class="fonction">Afficher(</span><span class="chaine">"Votre IMC est de "</span> + imc<span class="fonction">)</span><br>
 							<b>|</b>   <span class="motclef">Fin Si</span><br>
 							<b>Fin</b>
-						</code>
+						</p>
+
+						<p class="paragraph">
+							Pour démarrer, voici un programme basique en C#.<br>
+						</p>
+						<p class="p11csharp">
+							<span class="motclef">using</span> <span class="class">System</span>;<br>
+							<br>
+							<span class="motclef">class</span> <span class="class">HelloWorld</span><br>
+							{<br>
+							<span class="tab"></span><span class="motclef">public static</span> <span class="type">void</span> <span class="fonction">Main</span>()<br>
+							<span class="tab"></span>{<br>
+							<span class="tab"></span><span class="tab"></span><span class="variable">Console</span>.<span class="fonction">WriteLine</span>(<span class="chaine">"Hello World !"</span>);<br>
+							<span class="tab"></span>}<br>
+							}
+						</p>
+						<p class="paragraph">
+							La première étape est la <em>compilation</em> du notre programme.<br>
+							Pour ce faire, on utilise le compilateur <em>mono</em> (à installer avec "<i>sudo apt install mono-mcs</i>" sous Linux).<br>
+							La compilation d'un fichier <em>test.cs</em> s'effectue à l'aide de la commande "<i>mcs test.cs</i>".<br>
+							S'il n'y a pas d'erreur de compilation, le compilateur génère un fichier exécutable <em>test.exe</em><br>
+							Pour lancer l'exécution, on utilise la commande "<i>mono test.exe</i>".
+							
+						</p>
 					</article>
 
 					<article class="article">
