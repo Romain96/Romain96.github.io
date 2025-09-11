@@ -490,6 +490,33 @@ body {
 	font-weight: bold;
 }
 
+.p11pseudocode2025 .variable {
+	color: black;
+}
+
+.p11pseudocode2025 .parametre {
+	color: blue;
+}
+
+.p11pseudocode2025 .type {
+	color: violet;
+	font-weight: bold;
+}
+
+.p11pseudocode2025 .chaine {
+	color: gray;
+}
+
+.p11pseudocode2025 .fonction {
+	color: green;
+	font-weight: bold;
+}
+
+.p11pseudocode2025 .motclef {
+	color: red;
+	font-weight: bold;
+}
+
 .d11sql {
 	line-height: 0.8;
 	margin-top: 1em;

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>𝓡𝓟&nbsp;&nbsp;Dr Romain PERRIN, PhD</title>
+		<link rel="stylesheet" href="../../styles/style.css"/>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+
+			<header class="header">
+				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
+				<nav class="nav">
+					<ul class="list">
+						<li class="item" id="home"><img class="navlogo" src="../../images/navigation/home.png"><a href="../../index.html">Home</a></li>
+						<li class="item" id="about"><img class="navlogo" src="../../images/navigation/cv.png"><a href="../../pages/cv.html">CV</a></li>
+						<li class="item" id="research"><img class="navlogo" src="../../images/navigation/research.png"><a href="../../pages/research.html">Project</a></li>
+						<li class="item" id="talk"><img class="navlogo" src="../../images/navigation/talk.png"><a href="../../pages/talk.html">Talk</a></li>
+						<li class="item" id="publication"><img class="navlogo" src="../../images/navigation/publication.png"><a href="../../pages/publication.html">Publication</a></li>
+						<li class="item" id="teaching"><img class="navlogo" src="../../images/navigation/teaching.png"><a href="../../pages/teaching.html">Teaching</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<main class="content">
+
+				<section class="section">
+					<h2 class="heading-2">P11 - Initiation au développement (2025-2026)</h2>
+
+					<article class="article">
+						<h3 class="heading-3">Introduction : Algorithmique et notations</h3>
+
+						<p class="paragraph">
+							Voici un exemple d'algorithme afin d'illustrer le formalisme que j'utilise dans mes corrigés.
+						</p>
+						<code class="p11pseudocode2025">
+							<b>Fonction :</b> <span class="fonction">CalculerIMC()</span><br>
+							<b>Entrée :</b> <span class="parametre">taille</span> : <span class="type">réel</span>, <span class="parametre">poids</span> : <span class="type">réel</span><br>
+							<b>Sortie :</b> <span class="type">void</span><br>
+							<b>Constantes :</b> <span class="variable">TAILLE_MIN</span> : <span class="type">réel</span> = 1.50, <span class="variable">TAILLE_MAX</span> : <span class="type">réel</span> = 2.10<br>
+							<b>Variables :</b> <span class="variable">imc</span> : <span class="type">réel</span><br>
+							<b>Début</b><br>
+							<b>|</b>   <span class="motclef">Si</span> <span class="parametre">taille</span> < TAILLE_MIN <span class="motclef">Alors</span><br>
+							<b>|</b>   |   <span class="fonction">Afficher(</span><span class="chaine">"La taille doit être entre "</span> + TAILLE_MIN + <span class="chaine">" et "</span> + TAILLE_MAX + <span class="chaine">"."</span><span class="fonction">)</span><br>
+							<b>|</b>   <span class="motclef">Sinon</span><br>
+							<b>|</b>   |   imc = poids / (<span class="parametre">taille</span> * <span class="parametre">taille</span>);<br>
+							<b>|</b>   |   <span class="fonction">Afficher(</span><span class="chaine">"Votre IMC est de "</span> + imc<span class="fonction">)</span><br>
+							<b>|</b>   <span class="motclef">Fin Si</span><br>
+							<b>Fin</b>
+						</code>
+					</article>
+
+					<article class="article">
+						<h3 class="heading-3">TD/TP 1 : Conditions et structures de code</h3>
+						<p class="paragraph">
+							<div class="resource">
+								Les ressources complètes du TD1 sont disponible en téléchargant l'archive suivante :
+								<img class="logo" src="../../images/teaching/zip.png"> <a href="../../files/teaching/2025/P11/1_TD1.zip">1_TD1.zip</a>
+								<br>
+								Les ressources individuelles (sujets, algorithmes en pseudo-code et codes C#) sont disponibles ci-dessous.
+							</div>
+						</p>
+						<table class="table">
+							<tr class="row">
+								<th class="title">Sujets</th>
+								<th class="title">Exercices</th>
+								<th class="title">Algorithmes</th>
+								<th class="title">Codes C#</th>
+							</tr>
+							<tr class="row">
+								<td class="column" rowspan="11"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_TD1.pdf">1_TD1.pdf</a><br><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_TD1_algos.pdf">1_TD1_algos.pdf</a> (corrigé officiel)</td>
+								<td class="column">Exercice 1</td>
+								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_1.pdf">1_algo_1.pdf</a></td>
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_1.cs">1_exo_1.cs</a></td>
+							</tr>
+							<tr class="row">
+								<td class="column">Exercice 2 : seaux</td>
+								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_2.pdf">1_algo_2.pdf</a></td>
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_2.cs">1_exo_2.cs</a></td>
+							</tr>
+							<tr class="row">
+								<td class="column" rowspan="2">Exercice 3 : surface et perimètre</td>
+								<td class="column" rowspan="2"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_3.pdf">1_algo_3.pdf</a></td>
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_3a.cs">1_exo_3a.cs</a></td>
+							</tr>
+							<tr class="row">
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_3b.cs">1_exo_3b.cs</a></td>
+							</tr>
+							<tr class="row">
+								<td class="column">Exercice 4 : IMC</td>
+								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_4.pdf">1_algo_4.pdf</a></td>
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_4.cs">1_exo_4.cs</a></td>
+							</tr>
+							<tr class="row">
+								<td class="column">Exercice 5 : surface et perimètre avec prix</td>
+								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_5.pdf">1_algo_5.pdf</a></td>
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_5.cs">1_exo_5.cs</a></td>
+							</tr>
+							<tr class="row">
+								<td class="column">Exercice 6 : tickets de la CTS</td>
+								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_6.pdf">1_algo_6.pdf</a></td>
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_6.cs">1_exo_6.cs</a></td>
+							</tr>
+							<tr class="row">
+								<td class="column">Exercice 7</td>
+								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_7.pdf">1_algo_7.pdf</a></td>
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_7.cs">1_exo_7.cs</a></td>
+							</tr>
+							<tr class="row">
+								<td class="column">Exercice 8 : mineur ou majeur ?</td>
+								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_8.pdf">1_algo_8.pdf</a></td>
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_8.cs">1_exo_8.cs</a></td>
+							</tr>
+							<tr class="row">
+								<td class="column">Exercice 9 : IMC avec niveaux</td>
+								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_9.pdf">1_algo_9.pdf</a></td>
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_9.cs">1_exo_9.cs</a></td>
+							</tr>
+							<tr class="row">
+								<td class="column">Exercice 10 : test de date</td>
+								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_10.pdf">1_algo_10.pdf</a></td>
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_10.cs">1_exo_10.cs</a></td>
+							</tr>
+							<tr class="row">
+								<td class="column">Programme à saisir</td>
+								<td class="column">Exercice : bouteille</td>
+								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_bouteille.pdf">1_algo_bouteille.pdf</a></td>
+								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_bouteille.cs">1_bouteille.cs</a></td>
+							</tr>
+						</table>
+					</article>
+
+				</section>
+
+				<aside class="sidebar">
+					<h3 class="heading-3">Contact</h3>
+					<ul class="list" id="contact">
+						<li class="item"><img class="logo" src="../../images/cv/email.png"><a href=mailto:romain.perrin@unistra.fr>romain.perrin@unistra.fr</a></li>
+						<li class="item"><img class="logo" src="../../images/cv/gmail.png"><a href=mailto:romainperrin67@gmail.com>romainperrin67@gmail.com</a></li>
+						<li class="item"><img class="logo" src="../../images/cv/github.png" alt="github logo"><a href="https://github.com/Romain96">Github</a></li>
+						<li class="item"><img class="logo" src="../../images/cv/orcid.png" alt="orcid logo"><a href="https://orcid.org/0009-0001-6534-9727">ORCID</a></li>
+						<li class="item"><img class="logo" src="../../images/cv/scholar.png" alt="Google scholar logo"><a href="https://scholar.google.com/citations?user=HXjAJR4AAAAJ&hl=fr">Google scholar</a></li>
+						<li class="item"><img class="logo" src="../../images/cv/linkedin.png" alt="linkedin logo"><a href="https://www.linkedin.com/in/romain-perrin-213270356">LinkedIn</a></li>
+					</ul>
+				</aside>
+
+			</main>
+
+			<footer class="footer">
+				<p class="paragraph">&copy; 2025 Romain PERRIN (@Romain96)</p>
+			</footer>
+
+		</div>
+
+	</body>
+</html>
