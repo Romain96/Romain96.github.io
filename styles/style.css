@@ -358,7 +358,7 @@ a:hover {
 
 #talks .article .talkContent {
 	display: flex;
-	padding-top: 1em;
+	padding-top: 1.0em;
 }
 
 #talks .article .talkContent .talkText .heading-3 {
