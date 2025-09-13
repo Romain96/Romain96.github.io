@@ -3052,6 +3052,1078 @@
 						
 					</article>
 
+					<article class="article">
+						<h3 class="heading-3">TD/TP 2 : Requêtes imbriquées</h3>
+
+						<p class="paragraph">
+							Les questions 1 à 16 sont à effectuer sur la base <em>vols</em>, les questions 17 à 23 sur la base <em>employé</em> et les questions 24 à 29 sur la base <em>gaulois</em>.
+							Les requêtes SQL sont demandées et parfois les expressions en algèbre relationnelle.
+						</p>
+
+						<ol class="liste">
+							<li class="item">
+								Exercice introductif 1 : Numéros des vols effectués sur un Airbus.
+								<br>
+								<code class="d11sql">
+									r1 = proj(restrict(iin_avions, type = 'Airbus'), {navion})<br>
+									r2 = proj(restrict(iin_vols, navion appartient à r1), {nvol})<br>
+									SQL> select nvol from iin_vols where navion in<br>
+									<span class="tab"></span>(select navion from iin_avions where type = 'Airbus');
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">101</td>
+										</tr>
+										<tr class="row">
+											<td class="column">102</td>
+										</tr>
+										<tr class="row">
+											<td class="column">105</td>
+										</tr>
+										<tr class="row">
+											<td class="column">107</td>
+										</tr>
+										<tr class="row">
+											<td class="column">108</td>
+										</tr>
+										<tr class="row">
+											<td class="column">116</td>
+										</tr>
+										<tr class="row">
+											<td class="column">117</td>
+										</tr>
+										<tr class="row">
+											<td class="column">112</td>
+										</tr>
+										<tr class="row">
+											<td class="column">111</td>
+										</tr>
+										<tr class="row">
+											<td class="column">113</td>
+										</tr>
+										<tr class="row">
+											<td class="column">118</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Exercice introductif 2 : Toutes les informations sur les avions de même capacité que l'avion numéro 4.
+								<br>
+								<code class="d11sql">
+									r1 = proj(restrict(iin_avions, navion = 4), {capacite})<br>
+									r2 = res = restrict(iin_avions, capacite = r1)<br>
+									SQL> select * from iin_avions where capacite =<br>
+									<span class="tab"></span>(select capacite from iin_avions where navion = 4);
+									<table class="table">
+										<tr class="row">
+											<th class="title">NAVION</th>
+											<th class="title">TYPE</th>
+											<th class="title">CAPACITE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">4</td>
+											<td class="column">Airbus</td>
+											<td class="column">100</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Exercice introductif 3 : Toutes les informations sur les vols s'effectuant sur un avion pour lequel un Dupont est pilote principal pour certains de ses vols partant de Lyon.
+								<br>
+								<code class="d11sql">
+									r1 = proj(restrict(iin_pilotes, nom = 'Dupont'), {npilote})<br>
+									r2 = proj(restrict(iin_vols, pilote in r1 et depart = 'Lyon'), {navion})<br>
+									r3 = restrict(iin_avions, navion appartient à r2)<br>
+									SQL> select * from iin_vols where navion in<br>
+									<span class="tab"></span>(select navion from iin_vols where depart = 'Lyon' and pilote in<br>
+									<span class="tab"></span><span class="tab"></span>(select npilote from iin_pilotes where nom = 'Dupont'));
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+											<th class="title">PILOTE</th>
+											<th class="title">COPILOTE</th>
+											<th class="title">NAVION</th>
+											<th class="title">DEPART</th>
+											<th class="title">ARRIVEE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">111</td>
+											<td class="column">7</td>
+											<td class="column">3</td>
+											<td class="column">9</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">112</td>
+											<td class="column">11</td>
+											<td class="column">3</td>
+											<td class="column">9</td>
+											<td class="column">Lyon</td>
+											<td class="column">Lille</td>
+										</tr>
+										<tr class="row">
+											<td class="column">116</td>
+											<td class="column">1</td>
+											<td class="column">7</td>
+											<td class="column">9</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">117</td>
+											<td class="column">11</td>
+											<td class="column">8</td>
+											<td class="column">9</td>
+											<td class="column">Lyon</td>
+											<td class="column">Strasbourg</td>
+										</tr>
+										<tr class="row">
+											<td class="column">108</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">4</td>
+											<td class="column">Lyon</td>
+											<td class="column">Rennes</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Exercice introductif 4 : Comprendre une requête.
+								<br>
+								<code class="d11sql">
+									SQL> select nom from iin_pilotes where npilote not in<br>
+									<span class="tab"></span>(select pilote from iin_vols where arrivee='Nice');<br>
+									r1 = proj(restrict(iin_vols, arrivee = 'Nice'), {pilote})<br>
+									r2 = proj(restrict(iin_pilotes, npilote n' appartient pas à r1), {nom})<br>
+									r1 correspond à sélectionner les lignes (restrict) de la table iin_vols en conservant celles pour lesquelles l'attribut arrivee vaut 'Nice' puis projeter (proj) la colonne pilote. Il s'agit donc <i>la liste des numéros de pilotes qui n'ont effectué aucun trajet à destination de Nice</i>.<br>
+									r2 correspond à sélectionner (restrict) dans la table iin_pilotes les lignes pour lesquelles l'attribut npilote n'appartient pas à la liste des pilotes r1 puis à projeter (proj) l'attribut nom. Il s'agit donc des nom des pilotes qui n'appartiennent pas à la liste r1.<br>
+									Autrement dit, la requête retourne <b>le nom des pilotes qui n'ont effectué aucun vols à destination de Nice en tant que pilote principal</b>.
+								</code>					
+							</li><br>
+
+							<li class="item">
+								Exercice introductif 5 : Comprendre une requête.
+								<br>
+								<code class="d11sql">
+									SQL> select arrivee from iin_vols where arrivee not in<br>
+									<span class="tab"></span>(select arrivee from iin_vols where navion in<br>
+									<span class="tab"></span><span class="tab"></span>(select navion from iin_avions where capacite < 300));<br>
+									r1 = proj(restrict(iin_avions, capacite < 300), {navion})<br>
+									r2 = proj(restrict(iin_vols, navion appartient à r1), {arrivee})<br>
+									r1 correspond à sélectionner (restrict) dans la table iin_avions les lignes pour lesquelles l'attribut capacite est strictement inférieur à 300 puis de projeter (proj) la colonne navion. Il s'agit donc des <i>numéros d'avions dont la capacité est inférieure à 300</i>.<br>
+									r2 correspond à sélectionner (restrict) les lignes de la table iin_vols pour lesquelles l'attribut navion appartient à la liste r1 puis de projeter la colonne arrivee. Il s'agit donc des <i>destinations pour lesquelles l'avion de fait pas partie de la liste r1</i>.<br> 
+									Autrement dit, la requête retourne <b>les destinations des vols dont l'avion a une capacité supérieure ou égale à 300</b>.
+								</code>					
+							</li><br>
+
+							<li class="item">
+								Exercice introductif 6 : Comprendre une requête.
+								<br>
+								<code class="d11sql">
+									SQL> select depart, arrivee from iin_vols where (depart, arrivee) in<br>
+									<span class="tab"></span>(select arrivee, depart from iin_vols);<br>
+									r1 = proj(iin_vols, {depart, arrivee})<br>
+									r2 = proj(restrict(iin_vols, (depart, arrivee) appartient à r1), {depart, arrivee})<br>
+									r1 correspond à projeter (proj) les colonnes arrivee et depart de la table iin_vols. Il s'agit donc de <i>tous les trajets retour</i>.<br>
+									r2 correspond à sélectionner (restrict) les lignes de la table iin_vols pour lesquelles les couples (depart, arrivee) appartiennent à la liste r1 puis de projeter les colonnes depart et arrivee. Il s'agit donc des <i>trajets appartenant à la liste des trajets r1</i>.<br> 
+									Autrement dit, la requête retourne <b>les couple de villes pour lesquelles il existe un vol retour</b>.
+								</code>					
+							</li><br>
+
+							<li class="item">
+								Numéros des pilotes (pilote principal) volant sur des avions de capacité inférieure à 200 places (en AR et SQL).
+								<br>
+								<code class="d11sql">
+									r1 = proj(restrict(iin_avions, capacite < 200), {navion})<br>
+									r2 = proj(restrict(iin_vols, navion appartient r1), {pilote})<br>
+									SQL> select distinct pilote from iin_vols where navion in<br>
+									<span class="tab"></span>(select navion from iin_avions where capacite < 200);
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+											<th class="title">PILOTE</th>
+											<th class="title">COPILOTE</th>
+											<th class="title">NAVION</th>
+											<th class="title">DEPART</th>
+											<th class="title">ARRIVEE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">111</td>
+											<td class="column">7</td>
+											<td class="column">3</td>
+											<td class="column">9</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">112</td>
+											<td class="column">11</td>
+											<td class="column">3</td>
+											<td class="column">9</td>
+											<td class="column">Lyon</td>
+											<td class="column">Lille</td>
+										</tr>
+										<tr class="row">
+											<td class="column">116</td>
+											<td class="column">1</td>
+											<td class="column">7</td>
+											<td class="column">9</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">117</td>
+											<td class="column">11</td>
+											<td class="column">8</td>
+											<td class="column">9</td>
+											<td class="column">Lyon</td>
+											<td class="column">Strasbourg</td>
+										</tr>
+										<tr class="row">
+											<td class="column">108</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">4</td>
+											<td class="column">Lyon</td>
+											<td class="column">Rennes</td>
+										</tr>
+									</table>
+								</code>	
+							</li><br>
+
+							<li class="item">
+								Trajets (villes de départ et d'arrivée) distincts pour lesquels on peut voyager sur un Airbus d'au moins 300 places (en AR et SQL).
+								<br>
+								<code class="d11sql">
+									r1 = proj(restrict(iin_avions, capacite >= 300 et type = 'Airbus'), {navion})<br>
+									r2 = proj(restrict(iin_vols, navion appartient r1), {depart, arrivee})<br>
+									SQL> select depart, arrive from iin_vols where navion in<br>
+									<span class="tab"></span>(select navion in iin_avions where capacite >= 300 and type = 'Airbus');
+									<table class="table">
+										<tr class="row">
+											<th class="title">DEPART</th>
+											<th class="title">ARRIVEE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Nantes</td>
+											<td class="column">Lyon</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Strasbourg</td>
+											<td class="column">Lyon</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+									</table>
+								</code>					
+							</li><br>
+
+							<li class="item">
+								Noms des pilotes qui ne sont jamais copilote (en AR et SQL).
+								<br>
+								<code class="d11sql">
+									r1 = proj(iin_vols, {copilote})<br>
+									r2 = proj(restrict(iin_pilotes, npilote appartient pas r1), {nom})<br>
+									SQL> select nom from iin_pilotes where npilote not in<br>
+									<span class="tab"></span>(select copilote from iin_vols);
+									<table class="table">
+										<tr class="row">
+											<th class="title">NOM</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Saint-Exupéry</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Martin</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Meunier</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Toutes les informations sur les vols pour lesquels le pilote principal ne part pas de la ville où il habite (en AR et SQL).
+								<br>
+								<code class="d11sql">
+									r1 = proj(iin_pilotes, {npilote, habite})<br>
+									r2 = restrict(iin_vols, (pilote, depart) appartient pas r1)
+									SQL> select * from iin_vols where (pilote, depart) not in<br>
+									<span class="tab"></span>(select npilote, habite from iin_pilotes);
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+											<th class="title">PILOTE</th>
+											<th class="title">COPILOTE</th>
+											<th class="title">NAVION</th>
+											<th class="title">DEPART</th>
+											<th class="title">ARRIVEE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">102</td>
+											<td class="column">1</td>
+											<td class="column">3</td>
+											<td class="column">2</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">116</td>
+											<td class="column">1</td>
+											<td class="column">7</td>
+											<td class="column">9</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">101</td>
+											<td class="column">1</td>
+											<td class="column">2</td>
+											<td class="column">1</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">104</td>
+											<td class="column">2</td>
+											<td class="column">3</td>
+											<td class="column">3</td>
+											<td class="column">Paris</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">113</td>
+											<td class="column">2</td>
+											<td class="column">11</td>
+											<td class="column">10</td>
+											<td class="column">Strasbourg</td>
+											<td class="column">Lyon</td>
+										</tr>
+										<tr class="row">
+											<td class="column">105</td>
+											<td class="column">3</td>
+											<td class="column">2</td>
+											<td class="column">2</td>
+											<td class="column">Nantes</td>
+											<td class="column">Lyon</td>
+										</tr>
+										<tr class="row">
+											<td class="column">114</td>
+											<td class="column">4</td>
+											<td class="column">9</td>
+											<td class="column">8</td>
+											<td class="column">Nantes</td>
+											<td class="column">Lyon</td>
+										</tr>
+										<tr class="row">
+											<td class="column">106</td>
+											<td class="column">4</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">111</td>
+											<td class="column">7</td>
+											<td class="column">3</td>
+											<td class="column">9</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">110</td>
+											<td class="column">7</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">115</td>
+											<td class="column">7</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">Paris</td>
+											<td class="column">Nice</td>
+										</tr>
+										<tr class="row">
+											<td class="column">109</td>
+											<td class="column">9</td>
+											<td class="column">4</td>
+											<td class="column">8</td>
+											<td class="column">Lille</td>
+											<td class="column">Lyon</td>
+										</tr>
+										<tr class="row">
+											<td class="column">117</td>
+											<td class="column">11</td>
+											<td class="column">8</td>
+											<td class="column">9</td>
+											<td class="column">Lyon</td>
+											<td class="column">Strasbourg</td>
+										</tr>
+										<tr class="row">
+											<td class="column">112</td>
+											<td class="column">11</td>
+											<td class="column">3</td>
+											<td class="column">9</td>
+											<td class="column">Lyon</td>
+											<td class="column">Lille</td>
+										</tr>
+										<tr class="row">
+											<td class="column">107</td>
+											<td class="column">11</td>
+											<td class="column">4</td>
+											<td class="column">2</td>
+											<td class="column">Nice</td>
+											<td class="column">Paris</td>
+										</tr>
+										<tr class="row">
+											<td class="column">108</td>
+											<td class="column">12</td>
+											<td class="column">8</td>
+											<td class="column">4</td>
+											<td class="column">Lyon</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">118</td>
+											<td class="column">12</td>
+											<td class="column">5</td>
+											<td class="column">10</td>
+											<td class="column">Nantes</td>
+											<td class="column">Lyon</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Nom des pilotes décollant de Nice (en tant que pilote principal) dans des avions d'une capacité supérieure à 300.
+								<br>
+								<code class="d11sql">
+									r1 = proj(restrict(iin_avions, capacite > 300), {navion})<br>
+									r2 = proj(restrict(iin_vols, navion in r1 et depart = 'Nice'), {pilote})<br>
+									r3 = proj(restrict(iin_pilotes, npilote in r2), {nom})<br>
+									SQL> select nom from iin_pilotes where npilote in<br>
+									<span class="tab"></span>(select pilote from iin_vols where depart = 'Nice' and navion in<br>
+									<span class="tab"></span><span class="tab"></span>(select navion from iin_avions where capacite > 300));
+									<table class="table">
+										<tr class="row">
+											<th class="title">NOM</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Saint-Exupéry</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Dupont</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Noms des pilotes qui sont toujours copilotes (jamais pilotes principaux - s'assurer qu'il leur arrive effectivement de participer à des vols).
+								<br>
+								<code class="d11sql">
+									r1 = proj(iin_vols, {pilote})<br>
+									r2 = proj(restrict(iin_vols, copilote n'appartient pas à r1), {copilote})<br>
+									r3 = proj(restrict(iin_pilotes, npilote appartient à r2), {nom})<br>
+									SQL> select nom from iin_pilotes where npilote in<br>
+									ou alors<br>
+									SQL> select nom from iin_pilotes where npilote not in (select pilote from iin_vols) and npilote in (select copilote from iin_vols);
+									<span class="tab"></span>(select copilote from iin_vols where copilote not in<br>
+									<span class="tab"></span><span class="tab"></span>(select pilote from iin_vols));
+									<table class="table">
+										<tr class="row">
+											<th class="title">NOM</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Bleriot</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Rousseau</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Informations sur les pilotes qui n'effectuent jamais de vols sur Lyon (en tant que pilote ou copilote, pour des vols arrivant ou partant de Lyon).
+								<br>
+								<code class="d11sql">
+									r1 = proj(restrict(iin_vols, depart != 'Lyon' et arrivee != 'Lyon'), {pilote})<br>
+									r2 = proj(restrict(iin_vols, depart != 'Lyon' et arrivee != 'Lyon'), {copilote})<br>
+									r3 = restrict(iin_pilotes, npilote appartient à r1 ou npilote appartient à r2)<br>
+									SQL> select * from iin_pilotes where npilote in<br>
+									<span class="tab"></span>(select pilote from iin_vols where depart != 'Lyon' and arrivee != 'Lyon') or npilote in<br>
+									<span class="tab"></span><span class="tab"></span>(select copilote from iin_vols where depart != 'Lyon' and arrivee != 'Lyon');<br>
+									ou alors<br>
+									r1 = proj(restrict(iin_vols, depart = 'Lyon' ou arrivee = 'Lyon'), {pilote})<br>
+									r2 = proj(restrict(iin_vols, depart = 'Lyon' ou arrivee = 'Lyon'), {copilote})<br>
+									r3 = restrict(iin_pilotes, npilote n'appartient pas à r1 et npilote n' appartient pas r2)<br>
+									SQL> select * from iin_pilotes where npilote not in<br>
+									<span class="tab"></span>(select pilote from iin_vols where depart = 'Lyon' or arrivee = 'Lyon') or npilote not in<br>
+									<span class="tab"></span><span class="tab"></span>(select copilote from iin_vols where depart = 'Lyon' or arrivee = 'Lyon');<br>
+									<table class="table">
+										<tr class="row">
+											<th class="title">NOM</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Bleriot</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Rousseau</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Numéro des vols s'effectuant sur un avion du même modèle que l'avion numéro 4 (même modèle signifiant même type et même capacité).
+								<br>
+								<code class="d11sql">
+									r1 = proj(restrict(iin_avions, navion = 4), {type, capacite})<br>
+									r2 = proj(restrict(iin_avions, (type, capacite) = r1 ), {navion})<br>
+									r3 = proj(restrict(iin_vols, navion in r2), {nvol})<br>
+									SQL> select nvol from iin_vols where navion in<br>
+									<span class="tab"></span>(select navion from iin_avions where (type, capacite) =<br>
+									<span class="tab"></span><span class="tab"></span>(select type, capacite from iin_avions where navion = 4));
+									<table class="table">
+										<tr class="row">
+											<th class="title">NVOL</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">108</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Trajets (ville de départ et ville d'arrivée), pour lesquels il existe un vol retour avec les mêmes pilotes et copilotes.
+								<br>
+								<code class="d11sql">
+									r1 = proj(iin_vols, {depart, arrive, pilote, copilote})<br>
+									r2 = proj(restrict(iin_vols, (arrivee, depart, pilote, copilote) appartient r1), {depart, arrivee})<br>
+									SQL> select depart, arrivee from iin_vols where (arrivee, depart, pilote, copilote) in <br>
+									<span class="tab"></span>(select depart, arrivee, pilote, copilote from iin_vols);<br>
+									aucune ligne selectionnee
+								</code>
+							</li><br>
+
+							<li class="item">
+								Numéros des airbus de plus grande capacité. Aide : utiliser >=ALL (voir page 63 du diaporama du TD).
+								<br>
+								<code class="d11sql">
+									r1 = proj(restrict(iin_avions, type = 'Airbus'), {capacite})<br>
+									r2 = proj(restrict(iin_avions, capacite >= tous r1), {navion})<br>
+									SQL> select navion from iin_avions where type = 'Airbus' and capacite >= all<br>
+									<span class="tab"></span>(select capacite from iin_avions where type = 'Airbus');
+									<table class="table">
+										<tr class="row">
+											<th class="title">NAVION</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">2</td>
+										</tr>
+										<tr class="row">
+											<td class="column">5</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Noms des employés du département 10 ayant même job que quelqu'un du département SALES.
+								<br>
+								<code class="d11sql">
+									SQL> select distinct ename from emp where deptno = 10 and job in<br>
+									<span class="tab"></span>(select job from emp where deptno in<br>
+									<span class="tab"></span><span class="tab"></span>(select deptno from dept where dname = 'SALES'));
+									<table class="table">
+										<tr class="row">
+											<th class="title">ENAME</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">CLARK</td>
+										</tr>
+										<tr class="row">
+											<td class="column">MILLER</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+							
+							<li class="item">
+								Noms des employés travaillant dans un département de CHICAGO et ayant même job que ALLEN.
+								<br>
+								<code class="d11sql">
+									SQL> select distinct ename from emp where deptno in<br>
+									<span class="tab"></span>(select deptno from dept where loc = 'CHICAGO') and job in<br>
+									<span class="tab"></span><span class="tab"></span>(select job from emp where ename = 'ALLEN');
+									<table class="table">
+										<tr class="row">
+											<th class="title">ENAME</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">MARTIN</td>
+										</tr>
+										<tr class="row">
+											<td class="column">ALLEN</td>
+										</tr>
+										<tr class="row">
+											<td class="column">TURNER</td>
+										</tr>
+										<tr class="row">
+											<td class="column">WARD</td>
+										</tr>
+									</table>
+								</code>
+							</li><br> 
+							
+							<li class="item">
+								Liste des employés des départements de CHICAGO et qui sont managers.
+								<br>
+								<code class="d11sql">
+									SQL> select * from emp where deptno in<br>
+									<span class="tab"></span>(select deptno from dept where loc = 'CHICAGO') and empno in<br>
+									<span class="tab"></span><span class="tab"></span>(select mgr from emp);
+									<table class="table">
+										<tr class="row">
+											<th class="title">EMPNO</th>
+											<th class="title">ENAME</th>
+											<th class="title">JOB</th>
+											<th class="title">MGR</th>
+											<th class="title">HIREDATE</th>
+											<th class="title">SAL</th>
+											<th class="title">COMM</th>
+											<th class="title">DEPTNO</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">--------------------</td>
+											<td class="column">----------</td>
+											<td class="column">--------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7698</td>
+											<td class="column">BLAKE</td>
+											<td class="column">MANAGER</td>
+											<td class="column">7839</td>
+											<td class="column">21/01/81</td>
+											<td class="column">2850</td>
+											<td class="column"></td>
+											<td class="column">30</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+							
+							<li class="item">
+								Liste des employés qui ont le même travail que JAMES et qui travaillent dans son département.
+								<br>
+								<code class="d11sql">
+									SQL> select ename from emp where (job, deptno) in<br>
+									<span class="tab"></span>(select job, deptno from emp where ename = 'JAMES');
+									<table class="table">
+										<tr class="row">
+											<th class="title">ENAME</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">JAMES</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+							
+							<li class="item">
+								Quels sont les employés qui ont le même responsable que TURNER (à part lui !) ?
+								<br>
+								<code class="d11sql">
+									SQL> select ename from emp where mgr in<br>
+									<span class="tab"></span>(select mgr from emp where ename = 'TURNER') and ename != 'TURNER';
+									<table class="table">
+										<tr class="row">
+											<th class="title">ENAME</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">MARTIN</td>
+										</tr>
+										<tr class="row">
+											<td class="column">ALLEN</td>
+										</tr>
+										<tr class="row">
+											<td class="column">JAMES</td>
+										</tr>
+										<tr class="row">
+											<td class="column">WARD</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+							
+							<li class="item">
+								Quels sont les départements où il n'y a pas d'employés ?
+								<br>
+								<code class="d11sql">
+									SQL> select * from dept where deptno not in<br>
+									<span class="tab"></span>(select deptno from emp);
+									<table class="table">
+										<tr class="row">
+											<th class="title">DEPTNO</th>
+											<th class="title">DNAME</th>
+											<th class="title">LOC</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">40</td>
+											<td class="column">OPERATIONS</td>
+											<td class="column">BOSTON</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+							
+							<li class="item">
+								Numéros, noms et départements d'une part des employés qui dépendent de KING, et d'autre part des ANALYST, l'ensemble trié par département et par nom.
+								<br>
+								<code class="d11sql">
+									SQL> select empno, ename, deptno from emp where mgr in<br>
+									<span class="tab"></span>(select empno from emp where ename = 'KING') or job = 'ANALYST' order by deptno, ename;
+									<table class="table">
+										<tr class="row">
+											<th class="title">EMPNO</th>
+											<th class="title">ENAME</th>
+											<th class="title">DEPTNO</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7782</td>
+											<td class="column">CLARK</td>
+											<td class="column">10</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7902</td>
+											<td class="column">FORD</td>
+											<td class="column">20</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7566</td>
+											<td class="column">JONES</td>
+											<td class="column">20</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7788</td>
+											<td class="column">SCOTT</td>
+											<td class="column">20</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7698</td>
+											<td class="column">BLAKE</td>
+											<td class="column">30</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+
+							<li class="item">
+								Quel est le nom du village d'Asterix ?
+								<br>
+								<code class="d11sql">
+									SQL> select nom from iin_village where vilno in<br>
+									<span class="tab"></span>(select vilno from iin_gaulois where nom = 'Asterix');
+									<table class="table">
+										<tr class="row">
+											<th class="title">NOM</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Village gaulois</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+							
+							<li class="item">
+								Quel est le nombre de huttes du village d'Obelix ?
+								<br>
+								<code class="d11sql">
+									SQL> select nbhutte from iin_village where vilno in<br>
+									<span class="tab"></span>(select vilno from iin_gaulois where nom = 'Obelix');
+									<table class="table">
+										<tr class="row">
+											<th class="title">NBHUTTE</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">15</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+							
+							<li class="item">
+								Liste des noms de villages qui ont combattu contre le camp n°3 classés par ordre alphabétique.
+								<br>
+								<code class="d11sql">
+									SQL> select nom from iin_village where vilno in<br>
+									<span class="tab"></span>(select vilno from iin_bataille where campno = 3);
+									<table class="table">
+										<tr class="row">
+											<th class="title">NOM</th>
+										</tr>
+										<tr class="row">
+											<td class="column">--------------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Lutece</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Borvo</td>
+										</tr>
+										<tr class="row">
+											<td class="column">Village gaulois</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+							
+							<li class="item">
+								Toutes les informations sur les gauloises du village d'Astérix.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_gaulois where sexe = 'F' and vilno in<br>
+									<span class="tab"></span>(select vilno from iin_gaulois where nom = 'Asterix');
+									<table class="table">
+										<tr class="row">
+											<th class="title">GAUNO</th>
+											<th class="title">NOM</th>
+											<th class="title">S</th>
+											<th class="title">METIER</th>
+											<th class="title">VILNO</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">---------------</td>
+											<td class="column">-</td>
+											<td class="column">---------------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column"></td>
+											<td class="column">Bonemine</td>
+											<td class="column">F</td>
+											<td class="column">femme du chef</td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">106</td>
+											<td class="column">Jolifleur</td>
+											<td class="column">F</td>
+											<td class="column"></td>
+											<td class="column">8</td>
+										</tr>
+										<tr class="row">
+											<td class="column">108</td>
+											<td class="column">Ielosubmarine</td>
+											<td class="column">F</td>
+											<td class="column">poissonniere</td>
+											<td class="column">8</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+							
+							<li class="item">
+								Liste des habitants de Serum classés par métier.
+								<br>
+								<code class="d11sql">
+									SQL> select * from iin_gaulois where vilno in<br>
+									<span class="tab"></span>(select vilno from iin_village where nom = 'Serum') order by metier;
+									<table class="table">
+										<tr class="row">
+											<th class="title">GAUNO</th>
+											<th class="title">NOM</th>
+											<th class="title">S</th>
+											<th class="title">METIER</th>
+											<th class="title">VILNO</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">---------------</td>
+											<td class="column">-</td>
+											<td class="column">---------------</td>
+											<td class="column">----------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">25</td>
+											<td class="column">Aplusbegalix</td>
+											<td class="column">M</td>
+											<td class="column">chef</td>
+											<td class="column">6</td>
+										</tr>
+										<tr class="row">
+											<td class="column">30</td>
+											<td class="column">Industrichimix</td>
+											<td class="column">M</td>
+											<td class="column">ecolier</td>
+											<td class="column">6</td>
+										</tr>
+										<tr class="row">
+											<td class="column">26</td>
+											<td class="column">Catedralgotix</td>
+											<td class="column">M</td>
+											<td class="column">ecolier</td>
+											<td class="column">6</td>
+										</tr>
+										<tr class="row">
+											<td class="column">27</td>
+											<td class="column">Berlix</td>
+											<td class="column">M</td>
+											<td class="column">professeur</td>
+											<td class="column">6</td>
+										</tr>
+									</table>
+								</code>
+							</li><br>
+							
+							<li class="item">
+								Quels sont les n°, noms et métiers des gauloises du village d'Astérix ?
+								<br>
+								<code class="d11sql">
+									SQL> select gauno, nom, metier from iin_gaulois where sexe = 'F' and vilno in<br>
+									<span class="tab"></span>(select vilno from iin_gaulois where nom = 'Asterix');
+									<table class="table">
+										<tr class="row">
+											<th class="title">GAUNO</th>
+											<th class="title">NOM</th>
+											<th class="title">METIER</th>
+										</tr>
+										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">---------------</td>
+											<td class="column">---------------</td>
+										</tr>
+										<tr class="row">
+											<td class="column">104 	   </td>
+											<td class="column">Bonemine</td>
+											<td class="column">femme du chef</td>
+										</tr>
+										<tr class="row">
+											<td class="column">106</td>
+											<td class="column">Jolifleur</td>
+											<td class="column"></td>
+										</tr>
+										<tr class="row">
+											<td class="column">08</td>
+											<td class="column">Ielosubmarine</td>
+											<td class="column">poissonniere</td>
+										</tr>
+									</table>
+								</code>
+							</li>
+						</ol>
+					</article>
 				</section>
 
 				<aside class="sidebar">

@@ -600,6 +600,10 @@ hr {
 	margin-top: 1em;
 }
 
+.d11sql .tab {
+	margin-left: 4em;
+}
+
 .d11sql .table {
 	border: none;
 	margin-top: 1em;
