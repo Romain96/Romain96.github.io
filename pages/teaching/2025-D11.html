@@ -3265,60 +3265,13 @@
 									<span class="tab"></span>(select navion from iin_avions where capacite < 200);
 									<table class="table">
 										<tr class="row">
-											<th class="title">NVOL</th>
 											<th class="title">PILOTE</th>
-											<th class="title">COPILOTE</th>
-											<th class="title">NAVION</th>
-											<th class="title">DEPART</th>
-											<th class="title">ARRIVEE</th>
 										</tr>
 										<tr class="row">
 											<td class="column">----------</td>
-											<td class="column">----------</td>
-											<td class="column">----------</td>
-											<td class="column">----------</td>
-											<td class="column">--------------------</td>
-											<td class="column">--------------------</td>
 										</tr>
 										<tr class="row">
-											<td class="column">111</td>
-											<td class="column">7</td>
-											<td class="column">3</td>
-											<td class="column">9</td>
-											<td class="column">Nice</td>
-											<td class="column">Paris</td>
-										</tr>
-										<tr class="row">
-											<td class="column">112</td>
-											<td class="column">11</td>
-											<td class="column">3</td>
-											<td class="column">9</td>
-											<td class="column">Lyon</td>
-											<td class="column">Lille</td>
-										</tr>
-										<tr class="row">
-											<td class="column">116</td>
-											<td class="column">1</td>
-											<td class="column">7</td>
-											<td class="column">9</td>
-											<td class="column">Nice</td>
-											<td class="column">Paris</td>
-										</tr>
-										<tr class="row">
-											<td class="column">117</td>
-											<td class="column">11</td>
-											<td class="column">8</td>
-											<td class="column">9</td>
-											<td class="column">Lyon</td>
-											<td class="column">Strasbourg</td>
-										</tr>
-										<tr class="row">
-											<td class="column">108</td>
 											<td class="column">12</td>
-											<td class="column">8</td>
-											<td class="column">4</td>
-											<td class="column">Lyon</td>
-											<td class="column">Rennes</td>
 										</tr>
 									</table>
 								</code>	
@@ -3625,20 +3578,38 @@
 									r2 = proj(restrict(iin_vols, depart = 'Lyon' ou arrivee = 'Lyon'), {copilote})<br>
 									r3 = restrict(iin_pilotes, npilote n'appartient pas à r1 et npilote n' appartient pas r2)<br>
 									SQL> select * from iin_pilotes where npilote not in<br>
-									<span class="tab"></span>(select pilote from iin_vols where depart = 'Lyon' or arrivee = 'Lyon') or npilote not in<br>
+									<span class="tab"></span>(select pilote from iin_vols where depart = 'Lyon' or arrivee = 'Lyon') and npilote not in<br>
 									<span class="tab"></span><span class="tab"></span>(select copilote from iin_vols where depart = 'Lyon' or arrivee = 'Lyon');<br>
 									<table class="table">
 										<tr class="row">
+											<th class="title">NPILOTE</th>
 											<th class="title">NOM</th>
+											<th class="title">HABITE</th>
 										</tr>
 										<tr class="row">
+											<td class="column">----------</td>
+											<td class="column">--------------------</td>
 											<td class="column">--------------------</td>
 										</tr>
 										<tr class="row">
-											<td class="column">Bleriot</td>
+											<td class="column">6</td>
+											<td class="column">Martin</td>
+											<td class="column">Nantes</td>
 										</tr>
 										<tr class="row">
-											<td class="column">Rousseau</td>
+											<td class="column">1</td>
+											<td class="column">Saint-Exupéry</td>
+											<td class="column">Rennes</td>
+										</tr>
+										<tr class="row">
+											<td class="column">7</td>
+											<td class="column">Pujol</td>
+											<td class="column">Toulouse</td>
+										</tr>
+										<tr class="row">
+											<td class="column">10</td>
+											<td class="column">Meunier</td>
+											<td class="column">Paris</td>
 										</tr>
 									</table>
 								</code>
