@@ -391,7 +391,8 @@
 								Numéros et noms des employés qui ont un numéro entre 7800 et 7899 (en Algèbre relationnelle et SQL).
 								<br>
 								<code class="d11sql">
-									AR> res = proj(restrict(emp, empno >= 7800 ˄ empno <= 7899), {empno, ename})
+									AR> r1 = restrict(emp, empno >= 7800 ˄ empno <= 7899)<br>
+									r2 = proj(r1, {empno, ename})
 									<br>
 									SQL > select empno, ename from emp where empno between 7800 and 7899;
 									<table class="table">
@@ -3066,8 +3067,10 @@
 								Exercice introductif 1 : Numéros des vols effectués sur un Airbus.
 								<br>
 								<code class="d11sql">
-									r1 = proj(restrict(iin_avions, type = 'Airbus'), {navion})<br>
-									r2 = proj(restrict(iin_vols, navion appartient à r1), {nvol})<br>
+									r1 = restrict(iin_avions, type = 'Airbus')<br>
+									r2 = proj(r1, {navion})<br>
+									r3 = restrict(iin_vols, navion appartient à r2)<br>
+									r4 = proj(r3, {nvol})<br>
 									SQL> select nvol from iin_vols where navion in<br>
 									<span class="tab"></span>(select navion from iin_avions where type = 'Airbus');
 									<table class="table">
@@ -3118,8 +3121,9 @@
 								Exercice introductif 2 : Toutes les informations sur les avions de même capacité que l'avion numéro 4.
 								<br>
 								<code class="d11sql">
-									r1 = proj(restrict(iin_avions, navion = 4), {capacite})<br>
-									r2 = res = restrict(iin_avions, capacite = r1)<br>
+									r1 = restrict(iin_avions, navion = 4)<br>
+									r2 = proj(r1, {capacite})<br>
+									r3 = restrict(iin_avions, capacite = r2)<br>
 									SQL> select * from iin_avions where capacite =<br>
 									<span class="tab"></span>(select capacite from iin_avions where navion = 4);
 									<table class="table">
@@ -3146,9 +3150,11 @@
 								Exercice introductif 3 : Toutes les informations sur les vols s'effectuant sur un avion pour lequel un Dupont est pilote principal pour certains de ses vols partant de Lyon.
 								<br>
 								<code class="d11sql">
-									r1 = proj(restrict(iin_pilotes, nom = 'Dupont'), {npilote})<br>
-									r2 = proj(restrict(iin_vols, pilote in r1 et depart = 'Lyon'), {navion})<br>
-									r3 = restrict(iin_avions, navion appartient à r2)<br>
+									r1 = restrict(iin_pilotes, nom = 'Dupont')<br>
+									r2 = proj(r1, {npilote})<br>
+									r3 = restrict(iin_vols, pilote in r2 et depart = 'Lyon')<br>
+									r4 = proj(r3, {navion})<br>
+									r5 = restrict(iin_avions, navion appartient à r4)<br>
 									SQL> select * from iin_vols where navion in<br>
 									<span class="tab"></span>(select navion from iin_vols where depart = 'Lyon' and pilote in<br>
 									<span class="tab"></span><span class="tab"></span>(select npilote from iin_pilotes where nom = 'Dupont'));
@@ -3260,8 +3266,10 @@
 								Numéros des pilotes (pilote principal) volant sur des avions de capacité inférieure à 200 places (en AR et SQL).
 								<br>
 								<code class="d11sql">
-									r1 = proj(restrict(iin_avions, capacite < 200), {navion})<br>
-									r2 = proj(restrict(iin_vols, navion appartient r1), {pilote})<br>
+									r1 = restrict(iin_avions, capacite < 200)<br>
+									r2 = proj(r1 {navion})<br>
+									r3 = restrict(iin_vols, navion appartient r2)<br>
+									r4 = proj(r3, {pilote})<br>
 									SQL> select distinct pilote from iin_vols where navion in<br>
 									<span class="tab"></span>(select navion from iin_avions where capacite < 200);
 									<table class="table">
@@ -3282,8 +3290,10 @@
 								Trajets (villes de départ et d'arrivée) distincts pour lesquels on peut voyager sur un Airbus d'au moins 300 places (en AR et SQL).
 								<br>
 								<code class="d11sql">
-									r1 = proj(restrict(iin_avions, capacite >= 300 et type = 'Airbus'), {navion})<br>
-									r2 = proj(restrict(iin_vols, navion appartient r1), {depart, arrivee})<br>
+									r1 = restrict(iin_avions, capacite >= 300 et type = 'Airbus')<br>
+									r2 = proj(r1, {navion})<br>
+									r3 = restrict(iin_vols, navion appartient r2)<br>
+									r4 = proj(r3, {depart, arrivee})<br>
 									SQL> select depart, arrive from iin_vols where navion in<br>
 									<span class="tab"></span>(select navion in iin_avions where capacite >= 300 and type = 'Airbus');
 									<table class="table">
@@ -3320,7 +3330,8 @@
 								<br>
 								<code class="d11sql">
 									r1 = proj(iin_vols, {copilote})<br>
-									r2 = proj(restrict(iin_pilotes, npilote appartient pas r1), {nom})<br>
+									r2 = restrict(iin_pilotes, npilote appartient pas r1)<br>
+									r3 = proj(r2, {nom})<br>
 									SQL> select nom from iin_pilotes where npilote not in<br>
 									<span class="tab"></span>(select copilote from iin_vols);
 									<table class="table">
@@ -3348,7 +3359,7 @@
 								<br>
 								<code class="d11sql">
 									r1 = proj(iin_pilotes, {npilote, habite})<br>
-									r2 = restrict(iin_vols, (pilote, depart) appartient pas r1)
+									r2 = restrict(iin_vols, (pilote, depart) appartient pas r1)<br>
 									SQL> select * from iin_vols where (pilote, depart) not in<br>
 									<span class="tab"></span>(select npilote, habite from iin_pilotes);
 									<table class="table">
@@ -3513,8 +3524,11 @@
 								<br>
 								<code class="d11sql">
 									r1 = proj(restrict(iin_avions, capacite > 300), {navion})<br>
-									r2 = proj(restrict(iin_vols, navion in r1 et depart = 'Nice'), {pilote})<br>
-									r3 = proj(restrict(iin_pilotes, npilote in r2), {nom})<br>
+									r2 = proj(r1, {navion})<br>
+									r3 = restrict(iin_vols, navion in r2 et depart = 'Nice')<br>
+									r4 = proj(r3, {pilote})<br>
+									r5 = restrict(iin_pilotes, npilote in r4)<br>
+									r6 = proj(r5, {nom})<br>
 									SQL> select nom from iin_pilotes where npilote in<br>
 									<span class="tab"></span>(select pilote from iin_vols where depart = 'Nice' and navion in<br>
 									<span class="tab"></span><span class="tab"></span>(select navion from iin_avions where capacite > 300));
@@ -3540,8 +3554,10 @@
 								<br>
 								<code class="d11sql">
 									r1 = proj(iin_vols, {pilote})<br>
-									r2 = proj(restrict(iin_vols, copilote n'appartient pas à r1), {copilote})<br>
-									r3 = proj(restrict(iin_pilotes, npilote appartient à r2), {nom})<br>
+									r2 = restrict(iin_vols, copilote n'appartient pas à r1)<br>
+									r3 = proj(r3, {copilote})<br>
+									r4 = restrict(iin_pilotes, npilote appartient à r3)<br>
+									r5 = proj(r4, {nom})<br>
 									SQL> select nom from iin_pilotes where npilote in<br>
 									ou alors<br>
 									SQL> select nom from iin_pilotes where npilote not in (select pilote from iin_vols) and npilote in (select copilote from iin_vols);
@@ -3568,9 +3584,11 @@
 								Informations sur les pilotes qui n'effectuent jamais de vols sur Lyon (en tant que pilote ou copilote, pour des vols arrivant ou partant de Lyon).
 								<br>
 								<code class="d11sql">
-									r1 = proj(restrict(iin_vols, depart != 'Lyon' et arrivee != 'Lyon'), {pilote})<br>
-									r2 = proj(restrict(iin_vols, depart != 'Lyon' et arrivee != 'Lyon'), {copilote})<br>
-									r3 = restrict(iin_pilotes, npilote appartient à r1 ou npilote appartient à r2)<br>
+									r1 = restrict(iin_vols, depart != 'Lyon' et arrivee != 'Lyon')<br>
+									r2 = proj(r1, {pilote})<br>
+									r3 = restrict(iin_vols, depart != 'Lyon' et arrivee != 'Lyon')<br>
+									r4 = proj(r3, {copilote})<br>
+									r5 = restrict(iin_pilotes, npilote appartient à r1 ou npilote appartient à r2)<br>
 									SQL> select * from iin_pilotes where npilote in<br>
 									<span class="tab"></span>(select pilote from iin_vols where depart != 'Lyon' and arrivee != 'Lyon') or npilote in<br>
 									<span class="tab"></span><span class="tab"></span>(select copilote from iin_vols where depart != 'Lyon' and arrivee != 'Lyon');<br>
@@ -3620,9 +3638,12 @@
 								Numéro des vols s'effectuant sur un avion du même modèle que l'avion numéro 4 (même modèle signifiant même type et même capacité).
 								<br>
 								<code class="d11sql">
-									r1 = proj(restrict(iin_avions, navion = 4), {type, capacite})<br>
-									r2 = proj(restrict(iin_avions, (type, capacite) = r1 ), {navion})<br>
-									r3 = proj(restrict(iin_vols, navion in r2), {nvol})<br>
+									r1 = restrict(iin_avions, navion = 4)<br>
+									r2 = proj(r1, {type, capacite})<br>
+									r3 = restrict(iin_avions, (type, capacite) = r2)<br>
+									r4 = proj(r3, {navion})<br>
+									r5 = restrict(iin_vols, navion in r4)<br>
+									r6 = proj(r5, {nvol})<br>
 									SQL> select nvol from iin_vols where navion in<br>
 									<span class="tab"></span>(select navion from iin_avions where (type, capacite) =<br>
 									<span class="tab"></span><span class="tab"></span>(select type, capacite from iin_avions where navion = 4));
@@ -3645,7 +3666,8 @@
 								<br>
 								<code class="d11sql">
 									r1 = proj(iin_vols, {depart, arrive, pilote, copilote})<br>
-									r2 = proj(restrict(iin_vols, (arrivee, depart, pilote, copilote) appartient r1), {depart, arrivee})<br>
+									r2 = restrict(iin_vols, (arrivee, depart, pilote, copilote) appartient r1)<br>
+									r3 = proj(r2, {depart, arrivee})<br>
 									SQL> select depart, arrivee from iin_vols where (arrivee, depart, pilote, copilote) in <br>
 									<span class="tab"></span>(select depart, arrivee, pilote, copilote from iin_vols);<br>
 									aucune ligne selectionnee
@@ -3656,8 +3678,10 @@
 								Numéros des airbus de plus grande capacité. Aide : utiliser >=ALL (voir page 63 du diaporama du TD).
 								<br>
 								<code class="d11sql">
-									r1 = proj(restrict(iin_avions, type = 'Airbus'), {capacite})<br>
-									r2 = proj(restrict(iin_avions, capacite >= tous r1), {navion})<br>
+									r1 = restrict(iin_avions, type = 'Airbus')<br>
+									r2 = proj(r1, {capacite})<br>
+									r3 = restrict(iin_avions, capacite >= tous r2)<br>
+									r4 = proj(r3, {navion})<br>
 									SQL> select navion from iin_avions where type = 'Airbus' and capacite >= all<br>
 									<span class="tab"></span>(select capacite from iin_avions where type = 'Airbus');
 									<table class="table">
