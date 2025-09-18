@@ -595,9 +595,18 @@ hr {
 	color: green;
 }
 
+.d11answer {
+	width: 80%;
+	background-color: lightgray;
+	padding-bottom: 0.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
 .d11sql {
 	line-height: 0.8;
-	margin-top: 1em;
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 0.8em;
 }
 
 .d11sql .tab {
