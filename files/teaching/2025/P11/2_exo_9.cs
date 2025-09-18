@@ -12,7 +12,7 @@ class Exercice9
 		const int ENTIER_MAX = 100;
 
 		// variables
-		int tentative = 0;	// numéro de la tentative (< TENTATIVE_MAX)
+		int tentative = 1;	// numéro de la tentative (< TENTATIVE_MAX)
 		int nAleatoire;	// nombre généré par la machine, à deviner (>= ENTIER_MIN et <= ENTIER_MAX)
 		int nSaisi;	// nombre saisi par l'utilisateur
 		bool trouve = false;	// vrai si l'utilisateur trouve le bon nombre
@@ -22,10 +22,10 @@ class Exercice9
 		nAleatoire = generateur.Next(ENTIER_MIN, ENTIER_MAX + 1);
 
 		// boucle de jeu
-		while (tentative < TENTATIVES_MAX && trouve == false)
+		while (tentative <= TENTATIVES_MAX && trouve == false)
 		{
 			// saisie de nSaisi
-			Console.Write($"Tentative {tentative + 1} - Saisir un nombre entre {ENTIER_MIN} et {ENTIER_MAX} : ");
+			Console.Write($"Tentative {tentative} - Saisir un nombre entre {ENTIER_MIN} et {ENTIER_MAX} : ");
 			nSaisi = int.Parse(Console.ReadLine());
 
 			// plus petit que le nombre

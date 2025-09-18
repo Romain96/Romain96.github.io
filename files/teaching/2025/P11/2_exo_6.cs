@@ -16,10 +16,10 @@ class Exercice6
 		plusPetitEntier = int.Parse(Console.ReadLine());	// par défaut c'est le plus petit (car le seul)
 
 		// saisie de 9 valeurs consécutivement
-		for (int i = 1; i < NB_ENTIERS; i++)
+		for (int i = 2; i <= NB_ENTIERS; i++)
 		{
 			// saisie d'une valeur entière (entierCourant)
-			Console.Write($"Saisir le {i + 1}ème entier : ");
+			Console.Write($"Saisir le {i}ème entier : ");
 			entierCourant = int.Parse(Console.ReadLine());
 
 			// conserver le plus petit entre entierCourant et plusPetitEntier

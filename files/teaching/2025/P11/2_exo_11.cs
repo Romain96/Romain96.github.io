@@ -31,7 +31,7 @@ class Exercice11
 		// on sort de la boucle si c'est le caractère STOP
 		while (c != STOP);
 
-		// on retire le dernier caractères du nomnbre (car c'est le caractère STOP)
+		// on retire le dernier caractères du nombre (car c'est le caractère STOP)
 		nbCaracteres -= 1;
 
 		// le taux est le nombre d'occurrences divisé par le nombre total de caractères
