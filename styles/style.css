@@ -635,6 +635,32 @@ hr {
 	padding-right: 1em;
 }
 
+/* personal projects specific */
+
+#personalProjects {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#personalProjects .article {
+	flex: 1;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: 45%;
+	border: 1px solid #afafaf;
+	margin: 1em 1em 1em 1em;
+	padding-left: 1em;
+	background-color: #e1e1e1;
+}
+
+#personalProjects .article .heading-3 {
+	font-size: 1.0em;
+}
+
+#personalProjects .article .paragraph {
+	font-size: 0.8em;
+}
+
 /* Sidebar styling */
 .sidebar {
 	flex: 0.7;
