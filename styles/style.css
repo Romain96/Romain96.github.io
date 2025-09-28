@@ -635,6 +635,20 @@ hr {
 	padding-right: 1em;
 }
 
+details {
+	line-height: 1.0;
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 1em;
+}
+
+details summary {
+	line-height: 1.0;
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 0.8em;
+	padding-bottom: 0.5em;
+	color: blue;
+}
+
 /* personal projects specific */
 
 #personalProjects {
