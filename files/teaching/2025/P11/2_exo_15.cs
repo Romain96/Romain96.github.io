@@ -16,12 +16,16 @@ class Exercice15
 
 		// variables
 		int n;	// nombre de salariés
-		int matricule, moisTravailles, joursArret;
-		float salaireBase, prime;
+		int matricule, moisTravailles, joursArret, totalJoursArret;
+		float salaireBase, prime, totalPrimes, moyenneJoursArret;
 
 		// saisir le nombre de salariés à traiter
 		Console.Write("Saisir le nombre de salariés à traiter : ");
 		n = int.Parse(Console.ReadLine());
+		
+		totalJoursArret = 0;
+		moyenneJoursArret = 0.0f;
+		totalPrimes = 0.0f;
 
 		// pour chaque salarié
 		for (int i = 0; i < n; i++)
@@ -63,6 +67,12 @@ class Exercice15
 
 			// affichage du résultat
 			Console.WriteLine($"Salarié n°{i+1}:\tMatricule {matricule}\tSalaire {salaireBase}\tMois travaillés {moisTravailles}\tJours d'arrêt {joursArret}\tPrime {prime}");
+			totalPrimes = totalPrimes + prime;
+			totalJoursArret = totalJoursArret + joursArret;
 		}
+		
+		// statistiques
+		moyenneJoursArret = (float) totalJoursArret / (float) n;
+		Console.WriteLine($"Total des primes {totalPrimes}\nTotal des jours d'arrêt {totalJoursArret}\nMoyenne jours d'arrêt {moyenneJoursArret}");
 	}
 }
