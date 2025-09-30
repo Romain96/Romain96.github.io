@@ -6933,18 +6933,687 @@
 						<ol class="liste">
 							<li class="item">
 								Trajets (ville de départ et d'arrivée), numéro d'avion et capacité. (AR, SQL 1, SQL2)
+								<details>
+									<summary>AR</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											r1 = proj(iin_avions, {navion, capacite})<br>
+											r2 = proj(iin_vols, {navion, depart, arrivee})<br>
+											r3 = join(r1, r2, r1.navion = r2.navion)
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL1</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT DISTINCT v.depart, v.arrivee, v.navion, a.capacite FROM iin_vols v, iin_avions a WHERE v.navion = a.navion;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">DEPART</th>
+													<th class="title">ARRIVEE</th>
+													<th class="title">NAVION</th>
+													<th class="title">CAPACITE</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lyon</td>
+													<td class="column">Lille</td>
+													<td class="column">9</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lyon</td>
+													<td class="column">Strasbourg</td>
+													<td class="column">9</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Paris</td>
+													<td class="column">Rennes</td>
+													<td class="column">3</td>
+													<td class="column">250</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+													<td class="column">10</td>
+													<td class="column">400</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lille</td>
+													<td class="column">Lyon</td>
+													<td class="column">8</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Strasbourg</td>
+													<td class="column">Lyon</td>
+													<td class="column">10</td>
+													<td class="column">400</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lyon</td>
+													<td class="column">Rennes</td>
+													<td class="column">4</td>
+													<td class="column">100</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Paris</td>
+													<td class="column">Nice</td>
+													<td class="column">8</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Paris</td>
+													<td class="column">Nice</td>
+													<td class="column">1</td>
+													<td class="column">300</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Nice</td>
+													<td class="column">Paris</td>
+													<td class="column">2</td>
+													<td class="column">500</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Nice</td>
+													<td class="column">Paris</td>
+													<td class="column">9</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+													<td class="column">8</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+													<td class="column">2</td>
+													<td class="column">500</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT DISTINCT v.depart, v.arrivee, v.navion, a.capacite FROM iin_vols v JOIN iin_avions a ON v.navion = a.navion;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">DEPART</th>
+													<th class="title">ARRIVEE</th>
+													<th class="title">NAVION</th>
+													<th class="title">CAPACITE</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lyon</td>
+													<td class="column">Lille</td>
+													<td class="column">9</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lyon</td>
+													<td class="column">Strasbourg</td>
+													<td class="column">9</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Paris</td>
+													<td class="column">Rennes</td>
+													<td class="column">3</td>
+													<td class="column">250</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+													<td class="column">10</td>
+													<td class="column">400</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lille</td>
+													<td class="column">Lyon</td>
+													<td class="column">8</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Strasbourg</td>
+													<td class="column">Lyon</td>
+													<td class="column">10</td>
+													<td class="column">400</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lyon</td>
+													<td class="column">Rennes</td>
+													<td class="column">4</td>
+													<td class="column">100</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Paris</td>
+													<td class="column">Nice</td>
+													<td class="column">8</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Paris</td>
+													<td class="column">Nice</td>
+													<td class="column">1</td>
+													<td class="column">300</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Nice</td>
+													<td class="column">Paris</td>
+													<td class="column">2</td>
+													<td class="column">500</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Nice</td>
+													<td class="column">Paris</td>
+													<td class="column">9</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+													<td class="column">8</td>
+													<td class="column">200</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+													<td class="column">2</td>
+													<td class="column">500</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li><br>
 
 							<li class="item">
 								Nom des pilotes (principaux) de l'avion 8 (une solution avec jointure et une solution sans). (AR, SQL 1, SQL2)
+								<details>
+									<summary>AR avec jointure</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											r1 = restrict(iin_vols, navion = 8)<br>
+											r2 = proj(r1, {pilote})<br>
+											r3 = proj(iin_pilotes, {npilote, nom})<br>
+											r4 = join(r2, r3, r2.pilote = r3.npilote)<br>
+											r5 = proj(r4, {nom})
+											
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>AR sans jointure</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											r1 = restrict(iin_vols, navion = 8)<br>
+											r2 = proj(r1, {pilote})<br>
+											r3 = restrict(iin_pilotes, npilote appartient à r2)<br>
+											r4 = proj(r3, {nom})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL sans jointure</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT DISTINCT p.nom FROM iin_pilotes p WHERE p.npilote IN<br>
+											<span class="tab"></span>(SELECT v.pilote FROM iin_vols v WHERE v.navion = 8);
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pujol</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Hamilton</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pinon</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+
+								<details>
+									<summary>Requête SQL1</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT DISTINCT p.nom FROM iin_pilotes p, iin_vols v WHERE p.npilote = v.pilote AND v.navion = 8;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pujol</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Hamilton</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pinon</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT DISTINCT p.nom FROM iin_pilotes p JOIN iin_vols v ON p.npilote = v.pilote WHERE v.navion = 8;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pujol</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Hamilton</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pinon</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li><br>
 
 							<li class="item">
 								Noms de tous les pilotes, et trajets qu'ils sont amenés à faire (ville de départ et ville d'arrivée) en tant que pilote principal, sans redondance et classés par ordre alphabétique du nom du pilote, de la ville de départ puis de la ville d'arrivée. (AR (NB : sans le tri qui n'existe pas en AR), SQL 1, SQL2)
+								<details>
+									<summary>AR</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											r1 = proj(iin_pilotes, {npilote, nom})<br>
+											r2 = proj(iin_vols, {pilote, depart, arrivee})<br>
+											r3 = left-join(r1, r2, r1.npilote = r2.pilote)<br>
+											r4 = proj(r3, {nom, depart, arrivee})<br>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL1</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT DISTINCT p.nom, v.depart, v.arrivee FROM iin_pilotes p, iin_vols v WHERE p.npilote = v.pilote(+) ORDER BY p.nom, v.depart, v.arrivee;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+													<th class="title">DEPART</th>
+													<th class="title">ARRIVEE</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Bleriot</td>
+													<td class="column"></td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Lyon</td>
+													<td class="column">Lille</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Lyon</td>
+													<td class="column">Rennes</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Lyon</td>
+													<td class="column">Strasbourg</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Nice</td>
+													<td class="column">Paris</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Garros</td>
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Hamilton</td>
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Hamilton</td>
+													<td class="column">Paris</td>
+													<td class="column">Nice</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lindbergh</td>
+													<td class="column">Paris</td>
+													<td class="column">Rennes</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lindbergh</td>
+													<td class="column">Strasbourg</td>
+													<td class="column">Lyon</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Martin</td>
+													<td class="column"></td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">Meunier</td>
+													<td class="column"></td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pinon</td>
+													<td class="column">Lille</td>
+													<td class="column">Lyon</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pujol</td>
+													<td class="column">Nice</td>
+													<td class="column">Paris</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pujol</td>
+													<td class="column">Paris</td>
+													<td class="column">Nice</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Rousseau</td>
+													<td class="column"></td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">Saint-Exupéry</td>
+													<td class="column">Nice</td>
+													<td class="column">Paris</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Saint-Exupéry</td>
+													<td class="column">Paris</td>
+													<td class="column">Nice</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT DISTINCT p.nom, v.depart, v.arrivee FROM iin_pilotes p LEFT JOIN iin_vols v ON p.npilote = v.pilote ORDER BY p.nom, v.depart, v.arrivee;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+													<th class="title">DEPART</th>
+													<th class="title">ARRIVEE</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Bleriot</td>
+													<td class="column"></td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Lyon</td>
+													<td class="column">Lille</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Lyon</td>
+													<td class="column">Rennes</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Lyon</td>
+													<td class="column">Strasbourg</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Nice</td>
+													<td class="column">Paris</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Garros</td>
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Hamilton</td>
+													<td class="column">Nantes</td>
+													<td class="column">Lyon</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Hamilton</td>
+													<td class="column">Paris</td>
+													<td class="column">Nice</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lindbergh</td>
+													<td class="column">Paris</td>
+													<td class="column">Rennes</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lindbergh</td>
+													<td class="column">Strasbourg</td>
+													<td class="column">Lyon</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Martin</td>
+													<td class="column"></td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">Meunier</td>
+													<td class="column"></td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pinon</td>
+													<td class="column">Lille</td>
+													<td class="column">Lyon</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pujol</td>
+													<td class="column">Nice</td>
+													<td class="column">Paris</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pujol</td>
+													<td class="column">Paris</td>
+													<td class="column">Nice</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Rousseau</td>
+													<td class="column"></td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">Saint-Exupéry</td>
+													<td class="column">Nice</td>
+													<td class="column">Paris</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Saint-Exupéry</td>
+													<td class="column">Paris</td>
+													<td class="column">Nice</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li><br>
 
 							<li class="item">
 								Nom des pilotes et copilotes qui font ensemble un vol entre Paris et Nice (sans redondance) (de deux façons). (AR, SQL 1, SQL2)
+								<details>
+									<summary>AR</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											r1 = proj(iin_pilotes, {npilote, nom})<br>
+											r2 = restrict(iin_vols, depart = 'Paris' et arrivee = 'Nice')<br>
+											r3 = proj(r2, {pilote, copilote})<br>
+											r4 = join(r1, r3, r1.npilote = r3.pilote)<br>
+											r5 = proj(r4, {nom, copilote})<br>
+											r6(npilote, nomc) = proj(iin_pilotes, {npilote, nom})<br>
+											r7 = join(r5, r6, r5.copilote = r6.npilote)<br>
+											r8 = proj(r7, {nom, nonc})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL avec sous-requêtes</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT p1.nom, p2.nom FROM iin_pilotes p1, iin_pilotes p2 WHERE (p1.npilote, p2.npilote) IN<br>
+											<span class="tab"></span>(SELECT v.pilote, v.copilote FROM iin_vols v WHERE LOWER(v.depart) = 'paris' AND LOWER(v.arrivee) = 'nice');
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Saint-Exupéry</td>
+													<td class="column">Lindbergh</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Hamilton</td>
+													<td class="column">Dupont</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pujol</td>
+													<td class="column">Dupont</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL1</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT DISTINCT p1.nom, p2.nom FROM iin_pilotes p1, iin_pilotes p2, iin_vols v WHERE p1.npilote = v.pilote AND p2.npilote = v.copilote AND LOWER(v.depart) = 'paris' AND LOWER(v.arrivee) = 'nice';
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Saint-Exupéry</td>
+													<td class="column">Lindbergh</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Hamilton</td>
+													<td class="column">Dupont</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pujol</td>
+													<td class="column">Dupont</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT DISTINCT p1.nom, p2.nom FROM iin_pilotes p1 JOIN iin_vols v ON p1.npilote = v.pilote<br>
+											<span class="tab"></span>JOIN iin_pilotes p2 ON p2.npilote = v.copilote WHERE LOWER(v.depart) = 'paris' AND LOWER(v.arrivee) = 'nice';
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Saint-Exupéry</td>
+													<td class="column">Lindbergh</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Hamilton</td>
+													<td class="column">Dupont</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pujol</td>
+													<td class="column">Dupont</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li>
 						</ol>
 
@@ -6952,18 +7621,467 @@
 						<ol class="liste">
 							<li class="item">
 								Noms, jobs et noms de département des employés travaillant à DALLAS. (AR, SQL 1, SQL2)
+								<details>
+									<summary>AR</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											r1 = restrict(dept, deptno = 'DALLAS')<br>
+											r2 = proj(r1, {deptno, dname})<br>
+											r3 = proj(emp, {deptno, ename, job})<br>
+											r4 = join(r2, r3, r2.deptno = r3.deptno)<br>
+											r5 = proj(r4, {ename, job, dname})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL1</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT e.ename, e.job, d.dname FROM emp e, dept d WHERE e.deptno = d.deptno AND LOWER(d.loc) = 'dallas';
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">ENAME</th>
+													<th class="title">JOB</th>
+													<th class="title">DNAME</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">JONES</td>
+													<td class="column">MANAGER</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ADAMS</td>
+													<td class="column">CLERK</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SCOTT</td>
+													<td class="column">ANALYST</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SMITH</td>
+													<td class="column">CLERK</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">FORD</td>
+													<td class="column">ANALYST</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT e.ename, e.job, d.dname FROM emp e JOIN dept d ON e.deptno = d.deptno WHERE LOWER(d.loc) = 'dallas';
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">ENAME</th>
+													<th class="title">JOB</th>
+													<th class="title">DNAME</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">JONES</td>
+													<td class="column">MANAGER</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ADAMS</td>
+													<td class="column">CLERK</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SCOTT</td>
+													<td class="column">ANALYST</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SMITH</td>
+													<td class="column">CLERK</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">FORD</td>
+													<td class="column">ANALYST</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li><br>
 
 							<li class="item">
 								Noms des départements et de leurs employés, classés dans l'ordre alphabétique des noms de départements et des noms d'employés. (AR, SQL 1, SQL2)
+								<details>
+									<summary>AR</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											r1 = proj(dept, {deptno, dname})<br>
+											r2 = proj(emp, {deptno, ename})<br>
+											r3 = left-join(r1, r2, r1.deptno = r2.deptno)<br>
+											r4 = proj(r3, {dname, ename})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL1</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT d.dname, e.ename FROM dept d, emp e WHERE d.deptno = e.deptno(+) ORDER BY d.dname, e.ename;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">DNAME</th>
+													<th class="title">ENAME</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ACCOUNTING</td>
+													<td class="column">CLARK</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ACCOUNTING</td>
+													<td class="column">GAG</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ACCOUNTING</td>
+													<td class="column">KING</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ACCOUNTING</td>
+													<td class="column">MILLER</td>
+												</tr>
+												<tr class="row">
+													<td class="column">OPERATIONS</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">RESEARCH</td>
+													<td class="column">ADAMS</td>
+												</tr>
+												<tr class="row">
+													<td class="column">RESEARCH</td>
+													<td class="column">FORD</td>
+												</tr>
+												<tr class="row">
+													<td class="column">RESEARCH</td>
+													<td class="column">JONES</td>
+												</tr>
+												<tr class="row">
+													<td class="column">RESEARCH</td>
+													<td class="column">SCOTT</td>
+												</tr>
+												<tr class="row">
+													<td class="column">RESEARCH</td>
+													<td class="column">SMITH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">ALLEN</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">BLAKE</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">JAMES</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">MARTIN</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">TURNER</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">WARD</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT d.dname, e.ename FROM dept d LEFT JOIN emp e ON d.deptno = e.deptno ORDER BY d.dname, e.ename;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">DNAME</th>
+													<th class="title">ENAME</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ACCOUNTING</td>
+													<td class="column">CLARK</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ACCOUNTING</td>
+													<td class="column">GAG</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ACCOUNTING</td>
+													<td class="column">KING</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ACCOUNTING</td>
+													<td class="column">MILLER</td>
+												</tr>
+												<tr class="row">
+													<td class="column">OPERATIONS</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">RESEARCH</td>
+													<td class="column">ADAMS</td>
+												</tr>
+												<tr class="row">
+													<td class="column">RESEARCH</td>
+													<td class="column">FORD</td>
+												</tr>
+												<tr class="row">
+													<td class="column">RESEARCH</td>
+													<td class="column">JONES</td>
+												</tr>
+												<tr class="row">
+													<td class="column">RESEARCH</td>
+													<td class="column">SCOTT</td>
+												</tr>
+												<tr class="row">
+													<td class="column">RESEARCH</td>
+													<td class="column">SMITH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">ALLEN</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">BLAKE</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">JAMES</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">MARTIN</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">TURNER</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SALES</td>
+													<td class="column">WARD</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li><br>
 
 							<li class="item">
 								Noms, salaires et noms de département des employés et de leurs managers, classés par noms de département des employés.
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT e.ename, e.sal, d.dname, m.ename, m.sal, md.dname FROM emp e JOIN emp m ON e.mgr = m.empno<br>
+											<span class="tab"></span>JOIN dept d ON e.deptno = d.deptno<br>
+											<span class="tab"></span><span class="tab"></span>JOIN dept md on m.deptno = md.deptno ORDER BY d.dname;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">ENAME</th>
+													<th class="title">SAL</th>
+													<th class="title">DNAME</th>
+													<th class="title">ENAME</th>
+													<th class="title">SAL</th>
+													<th class="title">DNAME</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">MILLER</td>
+													<td class="column">1300</td>
+													<td class="column">ACCOUNTING</td>
+													<td class="column">CLARK</td>
+													<td class="column">2450</td>
+													<td class="column">ACCOUNTING</td>
+												</tr>
+												<tr class="row">
+													<td class="column">CLARK</td>
+													<td class="column">2450</td>
+													<td class="column">ACCOUNTING</td>
+													<td class="column">KING</td>
+													<td class="column">5000</td>
+													<td class="column">ACCOUNTING</td>
+												</tr>
+												<tr class="row">
+													<td class="column">JONES</td>
+													<td class="column">2975</td>
+													<td class="column">RESEARCH</td>
+													<td class="column">KING</td>
+													<td class="column">5000</td>
+													<td class="column">ACCOUNTING</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SMITH</td>
+													<td class="column">800</td>
+													<td class="column">RESEARCH</td>
+													<td class="column">FORD</td>
+													<td class="column">3000</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ADAMS</td>
+													<td class="column">1100</td>
+													<td class="column">RESEARCH</td>
+													<td class="column">SCOTT</td>
+													<td class="column">3000</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">FORD</td>
+													<td class="column">3000</td>
+													<td class="column">RESEARCH</td>
+													<td class="column">JONES</td>
+													<td class="column">2975</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SCOTT</td>
+													<td class="column">3000</td>
+													<td class="column">RESEARCH</td>
+													<td class="column">JONES</td>
+													<td class="column">2975</td>
+													<td class="column">RESEARCH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">MARTIN</td>
+													<td class="column">1250</td>
+													<td class="column">SALES</td>
+													<td class="column">BLAKE</td>
+													<td class="column">2850</td>
+													<td class="column">SALES</td>
+												</tr>
+												<tr class="row">
+													<td class="column">WARD</td>
+													<td class="column">1250</td>
+													<td class="column">SALES</td>
+													<td class="column">BLAKE</td>
+													<td class="column">2850</td>
+													<td class="column">SALES</td>
+												</tr>
+												<tr class="row">
+													<td class="column">JAMES</td>
+													<td class="column">950</td>
+													<td class="column">SALES</td>
+													<td class="column">BLAKE</td>
+													<td class="column">2850</td>
+													<td class="column">SALES</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ALLEN</td>
+													<td class="column">1600</td>
+													<td class="column">SALES</td>
+													<td class="column">BLAKE</td>
+													<td class="column">2850</td>
+													<td class="column">SALES</td>
+												</tr>
+												<tr class="row">
+													<td class="column">TURNER</td>
+													<td class="column">1500</td>
+													<td class="column">SALES</td>
+													<td class="column">BLAKE</td>
+													<td class="column">2850</td>
+													<td class="column">SALES</td>
+												</tr>
+												<tr class="row">
+													<td class="column">BLAKE</td>
+													<td class="column">2850</td>
+													<td class="column">SALES</td>
+													<td class="column">KING</td>
+													<td class="column">5000</td>
+													<td class="column">ACCOUNTING</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li><br>
 
 							<li class="item">
 								Noms des employés ne travaillant pas dans le même département que leur manager.
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT e.ename, e.deptno, m.ename, m.deptno FROM emp e JOIN emp m ON e.mgr = m.empno WHERE e.deptno != m.deptno;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">ENAME</th>
+													<th class="title">DEPTNO</th>
+													<th class="title">ENAME</th>
+													<th class="title">DEPTNO</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">BLAKE</td>
+													<td class="column">30</td>
+													<td class="column">KING</td>
+													<td class="column">10</td>
+												</tr>
+												<tr class="row">
+													<td class="column">JONES</td>
+													<td class="column">20</td>
+													<td class="column">KING</td>
+													<td class="column">10</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li>
 						</ol>
 
@@ -6971,18 +8089,342 @@
 						<ol class="liste">
 							<li class="item">
 								Noms, métiers et noms des potions que des gaulois savent préparer.
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT g.nom, g.metier, p.nom FROM iin_gaulois g INNER JOIN iin_druide_potion d ON g.gauno = d.gauno<br>
+											<span class="tab"></span>INNER JOIN iin_potion p ON d.potno = p.potno;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+													<th class="title">METIER</th>
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">---------------</td>
+													<td class="column">---------------</td>
+													<td class="column">---------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Diagnostix</td>
+													<td class="column">druide</td>
+													<td class="column">Gentil</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Laringolix</td>
+													<td class="column">druide</td>
+													<td class="column">Jouvence</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Laringolix</td>
+													<td class="column">druide</td>
+													<td class="column">Aphrodisiaque</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pronostix</td>
+													<td class="column">druide</td>
+													<td class="column">Invincibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pronostix</td>
+													<td class="column">druide</td>
+													<td class="column">Aphrodisiaque</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Otorino</td>
+													<td class="column">druide</td>
+													<td class="column">Invisibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Otorino</td>
+													<td class="column">druide</td>
+													<td class="column">Genuis</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Otorino</td>
+													<td class="column">druide</td>
+													<td class="column">Jouvence</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Otorino</td>
+													<td class="column">druide</td>
+													<td class="column">Gentil</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Otorino</td>
+													<td class="column">druide</td>
+													<td class="column">Dodo</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Otorino</td>
+													<td class="column">druide</td>
+													<td class="column">Aphrodisiaque</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Marjolaine</td>
+													<td class="column">druide</td>
+													<td class="column">Invincibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Marjolaine</td>
+													<td class="column">druide</td>
+													<td class="column">Jouvence</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Marjolaine</td>
+													<td class="column">druide</td>
+													<td class="column">Aphrodisiaque</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Jolifleur</td>
+													<td class="column"></td>
+													<td class="column">Jouvence</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Panoramix</td>
+													<td class="column">druide</td>
+													<td class="column">Invincibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Panoramix</td>
+													<td class="column">druide</td>
+													<td class="column">Invisibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Panoramix</td>
+													<td class="column">druide</td>
+													<td class="column">Genuis</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Panoramix</td>
+													<td class="column">druide</td>
+													<td class="column">Jouvence</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Panoramix</td>
+													<td class="column">druide</td>
+													<td class="column">Gentil</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Panoramix</td>
+													<td class="column">druide</td>
+													<td class="column">Dodo</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Panoramix</td>
+													<td class="column">druide</td>
+													<td class="column">Aphrodisiaque</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Berlix</td>
+													<td class="column">professeur</td>
+													<td class="column">Genuis</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Amnesix</td>
+													<td class="column">druide</td>
+													<td class="column">Invincibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Amnesix</td>
+													<td class="column">druide</td>
+													<td class="column">Genuis</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Amnesix</td>
+													<td class="column">druide</td>
+													<td class="column">Gentil</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Amnesix</td>
+													<td class="column">druide</td>
+													<td class="column">Aphrodisiaque</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li><br>
 
 							<li class="item">
 								Noms et noms du village des gaulois dont le métier est 'femme du chef'.
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT g.nom, v.nom, g.metier FROM iin_gaulois g JOIN iin_village v ON g.vilno = v.vilno WHERE LOWER(g.metier) = 'femme du chef';
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+													<th class="title">NOM</th>
+													<th class="title">METIER</th>
+												</tr>
+												<tr class="row">
+													<td class="column">---------------</td>
+													<td class="column">--------------------</td>
+													<td class="column">---------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Bonemine</td>
+													<td class="column">Village gaulois</td>
+													<td class="column">femme du chef</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li><br>
 
 							<li class="item">
 								Numéros, noms des batailles et noms des potions absorbées un jour de bataille.
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT DISTINCT b.batno, b.nom, p.nom FROM iin_potion p INNER JOIN iin_absorption a ON p.potno = a.potno<br>
+											<span class="tab"></span>CROSS JOIN iin_bataille b WHERE a.dateab BETWEEN b.datebat AND b.datebat + b.duree;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">BATNO</th>
+													<th class="title">NOM</th>
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+													<td class="column">---------------</td>
+													<td class="column">---------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">9</td>
+													<td class="column"></td>
+													<td class="column">Invincibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">1</td>
+													<td class="column">alesia</td>
+													<td class="column">Invincibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">2</td>
+													<td class="column"></td>
+													<td class="column">Invisibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">5</td>
+													<td class="column">gergovie</td>
+													<td class="column">Invincibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">8</td>
+													<td class="column"></td>
+													<td class="column">Invincibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">7</td>
+													<td class="column"></td>
+													<td class="column">Invincibilite</td>
+												</tr>
+												<tr class="row">
+													<td class="column">6</td>
+													<td class="column">poisson d avril</td>
+													<td class="column">Invincibilite</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li><br>
 
 							<li class="item">
 								Numéros, noms des batailles et noms des villages et des camps.
+								<details>
+									<summary>Requête SQL2</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT b.batno, b.nom, v.nom, c.nom FROM iin_bataille b INNER JOIN iin_village v ON b.vilno = v.vilno<br>
+											<span class="tab"></span>INNER JOIN iin_camp c ON b.campno = c.campno;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">BATNO</th>
+													<th class="title">NOM</th>
+													<th class="title">NOM</th>
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+													<td class="column">---------------</td>
+													<td class="column">--------------------</td>
+													<td class="column">---------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">10</td>
+													<td class="column"></td>
+													<td class="column">Lutece</td>
+													<td class="column">LAUDANUM</td>
+												</tr>
+												<tr class="row">
+													<td class="column">1</td>
+													<td class="column">alesia</td>
+													<td class="column">Aquae Calidae</td>
+													<td class="column">BABAORUM</td>
+												</tr>
+												<tr class="row">
+													<td class="column">2</td>
+													<td class="column"></td>
+													<td class="column">Aquae Calidae</td>
+													<td class="column">PETITBONUM</td>
+												</tr>
+												<tr class="row">
+													<td class="column">4</td>
+													<td class="column"></td>
+													<td class="column">Borvo</td>
+													<td class="column">LAUDANUM</td>
+												</tr>
+												<tr class="row">
+													<td class="column">3</td>
+													<td class="column"></td>
+													<td class="column">Borvo</td>
+													<td class="column">LAUDANUM</td>
+												</tr>
+												<tr class="row">
+													<td class="column">6</td>
+													<td class="column">poisson d avril</td>
+													<td class="column">Village gaulois</td>
+													<td class="column">BABAORUM</td>
+												</tr>
+												<tr class="row">
+													<td class="column">5</td>
+													<td class="column">gergovie</td>
+													<td class="column">Village gaulois</td>
+													<td class="column">BABAORUM</td>
+												</tr>
+												<tr class="row">
+													<td class="column">7</td>
+													<td class="column"></td>
+													<td class="column">Village gaulois</td>
+													<td class="column">PETITBONUM</td>
+												</tr>
+												<tr class="row">
+													<td class="column">8</td>
+													<td class="column"></td>
+													<td class="column">Village gaulois</td>
+													<td class="column">LAUDANUM</td>
+												</tr>
+												<tr class="row">
+													<td class="column">9</td>
+													<td class="column"></td>
+													<td class="column">Village gaulois</td>
+													<td class="column">AQUARIUM</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
 							</li>
 						</ol>
 					</article>
