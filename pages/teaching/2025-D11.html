@@ -35,7 +35,7 @@
 					<hr>
 
 					<article class="article">
-						<h3 class="heading-3">TD/TP 1 : projection, restriction et requêtes SQL simples</h3>
+						<h3 class="heading-3">📖 TD/TP 1 : projection, restriction et requêtes SQL simples</h3>
 
 						<h4 class="heading-4">Base employés</h4>
 						<ol class="liste">
@@ -43,11 +43,17 @@
 								Toutes les informations sur les départements (en Algèbre relationnelle et SQL).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											AR> res = dept
-											<br>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT * FROM dept;
 											<table class="table">
 												<tr class="row">
@@ -90,11 +96,17 @@
 								Toutes les informations sur les départements de numéro supérieur à 10 (en Algèbre relationnelle et SQL).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											AR> res = restrict(dept, deptno > 10)
-											<br>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT * FROM dept WHERE deptno > 10;
 											<table class="table">
 												<tr class="row">
@@ -177,11 +189,17 @@
 								Noms des employés et le numéro de leur chef (en Algèbre relationnelle et SQL).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											AR> res = proj(emp, {ename, mgr})
-											<br>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT ename, mgr FROM emp;
 											<table class="table">
 												<tr class="row">
@@ -262,11 +280,17 @@
 								Toutes les informations sur les employés dont le travail est SALESMAN (en Algèbre relationnelle et SQL).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											AR> res = restrict(emp, job = 'SALESMAN')
-											<br>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT * FROM emp WHERE job = 'SALESMAN';
 											<table class="table">
 												<tr class="row">
@@ -421,12 +445,18 @@
 								Numéros et noms des employés qui ont un numéro entre 7800 et 7899 (en Algèbre relationnelle et SQL).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											AR> r1 = restrict(emp, empno >= 7800 ˄ empno <= 7899)<br>
+											AR> r1 = restrict(emp, empno >= 7800 ∧ empno <= 7899)<br>
 											r2 = proj(r1, {empno, ename})
-											<br>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL > SELECT empno, ename FROM emp WHERE empno BETWEEN 7800 AND 7899;
 											<table class="table">
 												<tr class="row">
@@ -590,11 +620,17 @@
 								Différentes fonctions des employés (en Algèbre relationnelle et SQL).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											AR> res = proj(emp, {job})
-											<br>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT DISTINCT job FROM emp;
 											<table class="table">
 												<tr class="row">
@@ -2512,11 +2548,43 @@
 								Toutes les informations sur les vols où les pilotes 1 et 2 sont tous deux présents (comme pilote ou copilote).
 								<br>
 								<details>
-									<summary>Requête SQL</summary>
+									<summary>Requête SQL (option 1)</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											SQL> SELECT * FROM iin_vols WHERE (pilote = 1 OR pilote = 2) AND (copilote = 1 OR copilote = 2);
-											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NVOL</th>
+													<th class="title">PILOTE</th>
+													<th class="title">COPILOTE</th>
+													<th class="title">NAVION</th>
+													<th class="title">DEPART</th>
+													<th class="title">ARRIVEE</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+													<td class="column">----------</td>
+													<td class="column">----------</td>
+													<td class="column">----------</td>
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">101</td>
+													<td class="column">1</td>
+													<td class="column">2</td>
+													<td class="column">1</td>
+													<td class="column">Paris</td>
+													<td class="column">Nice</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL (option 2)</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT * FROM iin_vols WHERE pilote IN (1, 2) AND copilote IN (1, 2);
 											<table class="table">
 												<tr class="row">
@@ -3337,7 +3405,7 @@
 					</article>
 
 					<article class="article">
-						<h3 class="heading-3">TD/TP 2 : Requêtes imbriquées</h3>
+						<h3 class="heading-3">📖 TD/TP 2 : Requêtes imbriquées</h3>
 
 						<h4 class="heading-4">Base vols</h4>
 						<ol class="liste">
@@ -3345,13 +3413,20 @@
 								Exercice introductif 1 : Numéros des vols effectués sur un Airbus.
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = restrict(iin_avions, type = 'Airbus')<br>
 											r2 = proj(r1, {navion})<br>
-											r3 = restrict(iin_vols, navion appartient à r2)<br>
-											r4 = proj(r3, {nvol})<br>
+											r3 = restrict(iin_vols, navion ∈ r2)<br>
+											r4 = proj(r3, {nvol})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT nvol FROM iin_vols WHERE navion IN<br>
 											<span class="tab"></span>(SELECT navion FROM iin_avions WHERE type = 'Airbus');
 											<table class="table">
@@ -3404,12 +3479,19 @@
 								Exercice introductif 2 : Toutes les informations sur les avions de même capacité que l'avion numéro 4.
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = restrict(iin_avions, navion = 4)<br>
 											r2 = proj(r1, {capacite})<br>
-											r3 = restrict(iin_avions, capacite = r2)<br>
+											r3 = restrict(iin_avions, capacite = r2)
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT * FROM iin_avions WHERE capacite =<br>
 											<span class="tab"></span>(SELECT capacite FROM iin_avions WHERE navion = 4);
 											<table class="table">
@@ -3438,14 +3520,21 @@
 								Exercice introductif 3 : Toutes les informations sur les vols s'effectuant sur un avion pour lequel un Dupont est pilote principal pour certains de ses vols partant de Lyon.
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = restrict(iin_pilotes, nom = 'Dupont')<br>
 											r2 = proj(r1, {npilote})<br>
-											r3 = restrict(iin_vols, pilote appartient à r2 et depart = 'Lyon')<br>
+											r3 = restrict(iin_vols, pilote ∈ r2 ∧ depart = 'Lyon')<br>
 											r4 = proj(r3, {navion})<br>
-											r5 = restrict(iin_avions, navion appartient à r4)<br>
+											r5 = restrict(iin_avions, navion ∈ r4)
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT * FROM iin_vols WHERE navion IN<br>
 											<span class="tab"></span>(SELECT navion FROM iin_vols WHERE depart = 'Lyon' AND pilote IN<br>
 											<span class="tab"></span><span class="tab"></span>(SELECT npilote FROM iin_pilotes WHERE nom = 'Dupont'));
@@ -3515,42 +3604,64 @@
 							<li class="item">
 								Exercice introductif 4 : Comprendre une requête.
 								<br>
+								<div class="d11answer">
+									<code class="d11sql">
+										SQL> SELECT nom FROM iin_pilotes WHERE npilote NOT IN<br>
+										<span class="tab"></span>(SELECT pilote FROM iin_vols WHERE arrivee='Nice');
+									</code>
+								</div>
 								<details>
-									<summary>AR et explications</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT nom FROM iin_pilotes WHERE npilote NOT IN<br>
-											<span class="tab"></span>(SELECT pilote FROM iin_vols WHERE arrivee='Nice');<br>
 											r1 = restrict(iin_vols, arrivee = 'Nice')<br>
 											r2 = proj(r1, {pilote})<br>
-											r3 = restrict(iin_pilotes, npilote n'appartient pas à r2)<br>
-											r4 = proj(r3, {nom})<br>
+											r3 = restrict(iin_pilotes, npilote ∉ r2)<br>
+											r4 = proj(r3, {nom})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Explications</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											r1 correspond à sélectionner les lignes (restrict) de la table iin_vols en conservant celles pour lesquelles l'attribut arrivee vaut 'Nice'.
 											r2 correspond à projeter (proj) la colonne pilote.
 											r2 est alors <i>la liste des numéros de pilotes qui n'ont effectué aucun trajet à destination de Nice</i>.<br>
 											r3 correspond à sélectionner (restrict) dans la table iin_pilotes les lignes pour lesquelles l'attribut npilote n'appartient pas à la liste des numéros de pilotes r2.
 											r4 correspond à projeter (proj) l'attribut nom.
-											r4 contient alors la liste des des nom des pilotes qui n'appartiennent pas à la liste r2.<br>
+											r4 contient alors la liste des nom des pilotes qui n'appartiennent pas à la liste r2.<br>
 											Autrement dit, la requête retourne <b>le nom des pilotes qui n'ont effectué aucun vols à destination de Nice en tant que pilote principal</b>.
 										</code>
 									</div>
-								</details>			
+								</details>
 							</li><br>
 
 							<li class="item">
 								Exercice introductif 5 : Comprendre une requête.
 								<br>
+								<div class="d11answer">
+									<code class="d11sql">
+										SQL> SELECT arrivee FROM iin_vols WHERE arrivee NOT IN<br>
+										<span class="tab"></span>(SELECT arrivee FROM iin_vols WHERE navion IN<br>
+										<span class="tab"></span><span class="tab"></span>(SELECT navion FROM iin_avions WHERE capacite < 300));<br>
+									</code>
+								</div>
 								<details>
-									<summary>AR et explications</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT arrivee FROM iin_vols WHERE arrivee NOT IN<br>
-											<span class="tab"></span>(SELECT arrivee FROM iin_vols WHERE navion IN<br>
-											<span class="tab"></span><span class="tab"></span>(SELECT navion FROM iin_avions WHERE capacite < 300));<br>
 											r1 = restrict(iin_avions, capacite < 300)<br>
 											r2 = proj(r1, {navion})<br>
-											r3 = restrict(iin_vols, navion appartient à r2)<br>
-											r4 = proj(r3, {arrivee})<br>
+											r3 = restrict(iin_vols, navion ∈ r2)<br>
+											r4 = proj(r3, {arrivee})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Explications</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											r1 correspond à sélectionner (restrict) dans la table iin_avions les lignes pour lesquelles l'attribut capacite est strictement inférieur à 300.
 											r2 correspond à projeter (proj) la colonne navion.
 											r2 contient alors les <i>numéros d'avions dont la capacité est inférieure à 300</i>.<br>
@@ -3560,41 +3671,59 @@
 											Autrement dit, la requête retourne <b>les destinations des vols dont l'avion a une capacité supérieure ou égale à 300</b>.
 										</code>
 									</div>
-								</details>		
+								</details>
 							</li><br>
 
 							<li class="item">
 								Exercice introductif 6 : Comprendre une requête.
 								<br>
+								<div class="d11answer">
+									<code class="d11sql">
+										SQL> SELECT depart, arrivee FROM iin_vols WHERE (depart, arrivee) IN<br>
+										<span class="tab"></span>(SELECT arrivee, depart FROM iin_vols);
+									</code>
+								</div>
 								<details>
-									<summary>AR et explications</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT depart, arrivee FROM iin_vols WHERE (depart, arrivee) IN<br>
-											<span class="tab"></span>(SELECT arrivee, depart FROM iin_vols);<br>
 											r1 = proj(iin_vols, {depart, arrivee})<br>
-											r2 = restrict(iin_vols, (depart, arrivee) appartient à r1)<br>
-											r3 = proj(r2, {depart, arrivee})<br>
+											r2 = restrict(iin_vols, (depart, arrivee) ∈ r1)<br>
+											r3 = proj(r2, {depart, arrivee})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Explications</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											r1 correspond à projeter (proj) les colonnes arrivee et depart de la table iin_vols. Il s'agit donc de <i>tous les trajets retour</i>.<br>
 											r2 correspond à sélectionner (restrict) les lignes de la table iin_vols pour lesquelles les couples (depart, arrivee) appartiennent à la liste r1.
 											r3 correspond à projeter les colonnes depart et arrivee. Il s'agit donc des <i>trajets appartenant à la liste des trajets r1</i>.<br> 
 											Autrement dit, la requête retourne <b>les couples de villes pour lesquelles il existe un vol retour</b>.
 										</code>
 									</div>
-								</details>	
+								</details>
 							</li><br>
 
 							<li class="item">
 								Numéros des pilotes (pilote principal) volant sur des avions de capacité inférieure à 200 places (en AR et SQL).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = restrict(iin_avions, capacite < 200)<br>
 											r2 = proj(r1 {navion})<br>
-											r3 = restrict(iin_vols, navion appartient à r2)<br>
-											r4 = proj(r3, {pilote})<br>
+											r3 = restrict(iin_vols, navion ∈ r2)<br>
+											r4 = proj(r3, {pilote})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT DISTINCT pilote FROM iin_vols WHERE navion IN<br>
 											<span class="tab"></span>(SELECT navion FROM iin_avions WHERE capacite < 200);
 											<table class="table">
@@ -3617,13 +3746,20 @@
 								Trajets (villes de départ et d'arrivée) distincts pour lesquels on peut voyager sur un Airbus d'au moins 300 places (en AR et SQL).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											r1 = restrict(iin_avions, capacite >= 300 et type = 'Airbus')<br>
+											r1 = restrict(iin_avions, capacite >= 300 ∧ type = 'Airbus')<br>
 											r2 = proj(r1, {navion})<br>
-											r3 = restrict(iin_vols, navion appartient à r2)<br>
-											r4 = proj(r3, {depart, arrivee})<br>
+											r3 = restrict(iin_vols, navion ∈ r2)<br>
+											r4 = proj(r3, {depart, arrivee})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT depart, arrive FROM iin_vols WHERE navion IN<br>
 											<span class="tab"></span>(SELECT navion FROM iin_avions WHERE capacite >= 300 AND type = 'Airbus');
 											<table class="table">
@@ -3654,19 +3790,26 @@
 											</table>
 										</code>
 									</div>
-								</details>	
+								</details>
 							</li><br>
 
 							<li class="item">
 								Noms des pilotes qui ne sont jamais copilote (en AR et SQL).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = proj(iin_vols, {copilote})<br>
-											r2 = restrict(iin_pilotes, npilote n'appartient pas à r1)<br>
-											r3 = proj(r2, {nom})<br>
+											r2 = restrict(iin_pilotes, npilote ∉ r1)<br>
+											r3 = proj(r2, {nom})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT nom FROM iin_pilotes WHERE npilote NOT IN<br>
 											<span class="tab"></span>(SELECT copilote FROM iin_vols);
 											<table class="table">
@@ -3695,11 +3838,18 @@
 								Toutes les informations sur les vols pour lesquels le pilote principal ne part pas de la ville où il habite (en AR et SQL).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = proj(iin_pilotes, {npilote, habite})<br>
-											r2 = restrict(iin_vols, (pilote, depart) n'appartient pas à r1)<br>
+											r2 = restrict(iin_vols, (pilote, depart) ∉ r1)
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT * FROM iin_vols WHERE (pilote, depart) NOT IN<br>
 											<span class="tab"></span>(SELECT npilote, habite FROM iin_pilotes);
 											<table class="table">
@@ -3865,15 +4015,22 @@
 								Nom des pilotes décollant de Nice (en tant que pilote principal) dans des avions d'une capacité supérieure à 300.
 								<br>
 								<details>
-									<summary>AR re requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = proj(restrict(iin_avions, capacite > 300), {navion})<br>
 											r2 = proj(r1, {navion})<br>
-											r3 = restrict(iin_vols, navion appartient à r2 et depart = 'Nice')<br>
+											r3 = restrict(iin_vols, navion ∈ r2 ∧ depart = 'Nice')<br>
 											r4 = proj(r3, {pilote})<br>
-											r5 = restrict(iin_pilotes, npilote appartient à r4)<br>
-											r6 = proj(r5, {nom})<br>
+											r5 = restrict(iin_pilotes, npilote ∈ r4)<br>
+											r6 = proj(r5, {nom})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT nom FROM iin_pilotes WHERE npilote IN<br>
 											<span class="tab"></span>(SELECT pilote FROM iin_vols WHERE depart = 'Nice' AND navion IN<br>
 											<span class="tab"></span><span class="tab"></span>(SELECT navion FROM iin_avions WHERE capacite > 300));
@@ -3900,14 +4057,21 @@
 								Noms des pilotes qui sont toujours copilotes (jamais pilotes principaux - s'assurer qu'il leur arrive effectivement de participer à des vols).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = proj(iin_vols, {pilote})<br>
-											r2 = restrict(iin_vols, copilote n'appartient pas à r1)<br>
+											r2 = restrict(iin_vols, copilote ∉ r1)<br>
 											r3 = proj(r3, {copilote})<br>
-											r4 = restrict(iin_pilotes, npilote appartient à r3)<br>
-											r5 = proj(r4, {nom})<br>
+											r4 = restrict(iin_pilotes, npilote ∈ r3)<br>
+											r5 = proj(r4, {nom})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT nom FROM iin_pilotes WHERE npilote IN<br>
 											<span class="tab"></span>(SELECT copilote FROM iin_vols WHERE copilote NOT IN<br>
 											<span class="tab"></span><span class="tab"></span>(SELECT pilote FROM iin_vols));
@@ -3934,14 +4098,21 @@
 								Informations sur les pilotes qui n'effectuent jamais de vols sur Lyon (en tant que pilote ou copilote, pour des vols arrivant ou partant de Lyon).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											r1 = restrict(iin_vols, depart = 'LYON' ou arrivee = 'LYON')<br>
+											r1 = restrict(iin_vols, depart = 'LYON' ∨ arrivee = 'LYON')<br>
 											r2 = proj(r1, {copilote})<br>
-											r3 = restrict(iin_vols, (depart = 'LYON' ou arrivee = 'LYON') ET npilote n'appartient pas à r2)<br>
+											r3 = restrict(iin_vols, (depart = 'LYON' ∨ arrivee = 'LYON') ∧ npilote ∉ r2)<br>
 											r4 = proj(r3, {pilote})<br>
-											r5 = restrict(iin_pilotes, npilote n'appartient pas à r4)<br>
+											r5 = restrict(iin_pilotes, npilote ∉ r4)
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT * FROM iin_pilotes WHERE npilote NOT IN<br>
 											<span class="tab"></span>(SELECT pilote FROM iin_vols WHERE depart = 'Lyon' OR arrivee = 'Lyon') AND npilote NOT IN<br>
 											<span class="tab"></span><span class="tab"></span>(SELECT copilote FROM iin_vols WHERE depart = 'Lyon' OR arrivee = 'Lyon');<br>
@@ -3986,15 +4157,22 @@
 								Numéro des vols s'effectuant sur un avion du même modèle que l'avion numéro 4 (même modèle signifiant même type et même capacité).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = restrict(iin_avions, navion = 4)<br>
 											r2 = proj(r1, {type, capacite})<br>
 											r3 = restrict(iin_avions, (type, capacite) = r2)<br>
 											r4 = proj(r3, {navion})<br>
-											r5 = restrict(iin_vols, navion appartient à r4)<br>
-											r6 = proj(r5, {nvol})<br>
+											r5 = restrict(iin_vols, navion ∈ r4)<br>
+											r6 = proj(r5, {nvol})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT nvol FROM iin_vols WHERE navion IN<br>
 											<span class="tab"></span>(SELECT navion FROM iin_avions WHERE (type, capacite) =<br>
 											<span class="tab"></span><span class="tab"></span>(SELECT type, capacite FROM iin_avions WHERE navion = 4));
@@ -4018,12 +4196,19 @@
 								Trajets (ville de départ et ville d'arrivée), pour lesquels il existe un vol retour avec les mêmes pilotes et copilotes.
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = proj(iin_vols, {depart, arrive, pilote, copilote})<br>
-											r2 = restrict(iin_vols, (arrivee, depart, pilote, copilote) appartient à r1)<br>
-											r3 = proj(r2, {depart, arrivee})<br>
+											r2 = restrict(iin_vols, (arrivee, depart, pilote, copilote) ∈ r1)<br>
+											r3 = proj(r2, {depart, arrivee})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT depart, arrivee FROM iin_vols WHERE (arrivee, depart, pilote, copilote) IN <br>
 											<span class="tab"></span>(SELECT depart, arrivee, pilote, copilote FROM iin_vols);<br>
 											aucune ligne selectionnee
@@ -4036,13 +4221,20 @@
 								Numéros des airbus de plus grande capacité. Aide : utiliser >=ALL (voir page 63 du diaporama du TD).
 								<br>
 								<details>
-									<summary>AR et requête SQL</summary>
+									<summary>AR</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = restrict(iin_avions, type = 'Airbus')<br>
 											r2 = proj(r1, {capacite})<br>
-											r3 = restrict(iin_avions, capacite >= tous les r2)<br>
-											r4 = proj(r3, {navion})<br>
+											r3 = restrict(iin_avions, capacite >= ∀ r2)<br>
+											r4 = proj(r3, {navion})
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
 											SQL> SELECT navion FROM iin_avions WHERE type = 'Airbus' AND capacite >= ALL<br>
 											<span class="tab"></span>(SELECT capacite FROM iin_avions WHERE type = 'Airbus');
 											<table class="table">
@@ -4557,15 +4749,12 @@
 
 
 					<article class="article">
-						<h3 class="heading-3">TD/TP 3 : expressions et fonctions</h3>
+						<h3 class="heading-3">📖 TD/TP 3 : expressions et fonctions</h3>
 
 						<h4 class="heading-4">Les chaînes de caractères</h4>
 						<ol class="liste">
 							<li class="item">
-								Testez la requête <em>SELECT * FROM iin_avionspc WHERE type='Airbus';</em><br>
-								Donne-t-elle tous les Airbus ? 
-								Si ce n'est pas le cas, modifiez-la pour qu'elle le fasse.
-								(Remarquez que la table est <em>avionspc</em> et non avions)
+								Testez la requête <em>SELECT * FROM iin_avionspc WHERE type='Airbus';</em>
 								<br>
 								<div class="d11answer">
 									<code class="d11sql">
@@ -4605,13 +4794,22 @@
 										</table>
 									</code>
 								</div>
+								Donne-t-elle tous les Airbus ? 
+								Si ce n'est pas le cas, modifiez-la pour qu'elle le fasse.
+								(Remarquez que la table est <em>avionspc</em> et non avions)
 								<details>
-									<summary>Réponse et requête SQL</summary>
+									<summary>Réponse</summary>
 									<div class="d11answer">
 										<code class="d11sql">
 											Il faut faire attention à la casse lors de la saisie. Les types commencent par une majuscules, on utlise la fonction <em>initcap</em>.
-											<br>
-											SQL> select * from iin_avionspc where initcap(type) = 'Airbus';
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT * FROM iin_avionspc WHERE INITCAP(type) = 'Airbus';
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -4661,8 +4859,7 @@
 							</li><br>
 
 							<li class="item">
-								Testez la requête <em>SELECT 'Avion ' || navion FROM iin_avions;</em><br>
-								Modifiez-la pour obtenir pour tous les Airbus un affichage comme 'Avion 1 : 300 places'.
+								Testez la requête <em>SELECT 'Avion ' || navion FROM iin_avions;</em>
 								<br>
 								<div class="d11answer">
 									<code class="d11sql">
@@ -4708,11 +4905,12 @@
 										</table>
 									</code>
 								</div>
+								Modifiez-la pour obtenir pour tous les Airbus un affichage comme 'Avion 1 : 300 places'.
 								<details>
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT 'Avion ' || navion || ' : ' || capacite || ' places.' FROM iin_avions WHERE lower(type) ='airbus';
+											SQL> SELECT 'Avion ' || navion || ' : ' || capacite || ' places.' FROM iin_avions WHERE LOWER(type) ='airbus';
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -4749,12 +4947,18 @@
 								Que permet d'obtenir la requête <em>SELECT npilote, substr(habite,1,2) FROM iin_pilotes;</em> ?
 								<br>
 								<details>
-									<summary>Réponse et requête SQL</summary>
+									<summary>Réponse</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											=> Pour chaque pilote, son numéro et les 2 premières lettre de sa ville de résidence.
-											<br>
-											SQL> select npilote, substr(habite, 1, 2) from iin_pilotes;
+											Pour chaque pilote, son numéro (npilote) et les 2 premières lettres (substr(..., 1, 2)) de sa ville de résidence (habite).
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT npilote, SUBSTR(habite, 1, 2) FROM iin_pilotes;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -4820,8 +5024,7 @@
 							</li><br>
 
 							<li class="item">
-								Comparez les requêtes <em>SELECT * FROM iin_avionspc WHERE type=(SELECT type FROM iin_avionspc WHERE navion=4);</em><br>
-								et <em>SELECT * FROM iin_avionspc WHERE lower(type)=(SELECT lower(type) FROM iin_avionspc WHERE navion=4);</em>
+								Comparez les requêtes <em>SELECT * FROM iin_avionspc WHERE type=(SELECT type FROM iin_avionspc WHERE navion=4);</em>
 								<br>
 								<div class="d11answer">
 									<code class="d11sql">
@@ -4862,57 +5065,63 @@
 										</table>
 									</code>
 								</div>
+								et <em>SELECT * FROM iin_avionspc WHERE LOWER(type)=(SELECT LOWER(type) FROM iin_avionspc WHERE navion=4);</em>
+								<div class="d11answer">
+									<code class="d11sql">
+										SQL> SELECT * FROM iin_avionspc WHERE lower(type) =<br>
+										<span class="tab"></span>(SELECT lower(type) FROM iin_avionspc WHERE navion = 4);
+										<br>
+										<table class="table">
+											<tr class="row">
+												<th class="title">NAVION</th>
+												<th class="title">TYPE</th>
+												<th class="title">CAPACITE</th>
+											</tr>
+											<tr class="row">
+												<td class="column">----------</td>
+												<td class="column">------</td>
+												<td class="column">----------</td>
+											</tr>
+											<tr class="row">
+												<td class="column">1</td>
+												<td class="column">AIRBUS</td>
+												<td class="column">300</td>
+											</tr>
+											<tr class="row">
+												<td class="column">2</td>
+												<td class="column">Airbus</td>
+												<td class="column">500</td>
+											</tr>
+											<tr class="row">
+												<td class="column">4</td>
+												<td class="column">Airbus</td>
+												<td class="column">100</td>
+											</tr> 
+											<tr class="row">
+												<td class="column">5</td>
+												<td class="column">airbus</td>
+												<td class="column">500</td>
+											</tr>
+											<tr class="row">
+												<td class="column">9</td>
+												<td class="column">Airbus</td>
+												<td class="column">200</td>
+											</tr>
+											<tr class="row">
+												<td class="column">10</td>
+												<td class="column">Airbus</td>
+												<td class="column">400</td>
+											</tr>
+										</table>
+									</code>
+								</div>
 								<details>
-									<summary>Réponse et requête SQL</summary>
+									<summary>Réponse</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											=> Remarque similaire à la première question. Il faut faire attention à la casse sur l'attribut type !
-											<br>
-											SQL> SELECT * FROM iin_avionspc WHERE lower(type) =<br>
-											<span class="tab"></span>(SELECT lower(type) FROM iin_avionspc WHERE navion = 4);
-											<br>
-											<table class="table">
-												<tr class="row">
-													<th class="title">NAVION</th>
-													<th class="title">TYPE</th>
-													<th class="title">CAPACITE</th>
-												</tr>
-												<tr class="row">
-													<td class="column">----------</td>
-													<td class="column">------</td>
-													<td class="column">----------</td>
-												</tr>
-												<tr class="row">
-													<td class="column">1</td>
-													<td class="column">AIRBUS</td>
-													<td class="column">300</td>
-												</tr>
-												<tr class="row">
-													<td class="column">2</td>
-													<td class="column">Airbus</td>
-													<td class="column">500</td>
-												</tr>
-												<tr class="row">
-													<td class="column">4</td>
-													<td class="column">Airbus</td>
-													<td class="column">100</td>
-												</tr> 
-												<tr class="row">
-													<td class="column">5</td>
-													<td class="column">airbus</td>
-													<td class="column">500</td>
-												</tr>
-												<tr class="row">
-													<td class="column">9</td>
-													<td class="column">Airbus</td>
-													<td class="column">200</td>
-												</tr>
-												<tr class="row">
-													<td class="column">10</td>
-													<td class="column">Airbus</td>
-													<td class="column">400</td>
-												</tr>
-											</table>
+											Remarque similaire à la première question. Il faut faire attention à la casse sur l'attribut type.
+											Dans la table iin_avionspc, les types ne sont pas forcément écrits avec la première lettre en majuscule et les autres en minuscules.
+											En utilisant LOWER, on s'assure de prendre toutes les occurrences de Airbus, peu importe la casse des lettres.
 										</code>
 									</div>
 								</details>
@@ -4923,26 +5132,29 @@
 						<ol class="liste">
 							<li class="item">
 								Testez la requête <em>SELECT sysdate FROM dual;</em>
-								A quoi correspond sysdate ?<br>
+								<div class="d11answer">
+									<code class="d11sql">
+										SQL> SELECT sysdate FROM dual;
+										<br>
+										<table class="table">
+											<tr class="row">
+												<th class="title">SYSDATE</th>
+											</tr>
+											<tr class="row">
+												<td class="column">--------</td>
+											</tr>
+											<tr class="row">
+												<td class="column">22/09/25</td>
+											</tr>
+										</table>
+									</code>
+								</div>
+								A quoi correspond sysdate ?
 								<details>
-									<summary>Réponse et requête SQL</summary>
+									<summary>Réponse</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											=> sysdate est la date du système (c'est à dire la date actuelle).
-											<br>
-											SQL> SELECT sysdate FROM dual;
-											<br>
-											<table class="table">
-												<tr class="row">
-													<th class="title">SYSDATE</th>
-												</tr>
-												<tr class="row">
-													<td class="column">--------</td>
-												</tr>
-												<tr class="row">
-													<td class="column">22/09/25</td>
-												</tr>
-											</table>
+											sysdate est la date du système (c'est à dire la date actuelle).
 										</code>
 									</div>
 								</details>
@@ -4950,26 +5162,29 @@
 
 							<li class="item">
 								Testez la requête <em>SELECT to_char(sysdate, 'dd/mm/yyyy hh24:mi:ss') FROM dual;</em>
+								<div class="d11answer">
+									<code class="d11sql">
+										SQL> SELECT TO_CHAR(sysdate, 'dd/mm/yyyy hh24:mi:ss') FROM dual;
+										<br>
+										<table class="table">
+											<tr class="row">
+												<th class="title">TO_CHAR(SYSDATE,'DD</th>
+											</tr>
+											<tr class="row">
+												<td class="column">-------------------</td>
+											</tr>
+											<tr class="row">
+												<td class="column">22/09/2025 14:03:04</td>
+											</tr>
+										</table>
+									</code>
+								</div>
 								Que fait la fonction to_char ?
 								<details>
-									<summary>Réponse et requête SQL</summary>
+									<summary>Réponse</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											to_char = transformation en chaîne de caractères avec formatage dans le format donné.
-											<br>
-											SQL> SELECT to_char(sysdate, 'dd/mm/yyyy hh24:mi:ss') FROM dual;
-											<br>
-											<table class="table">
-												<tr class="row">
-													<th class="title">TO_CHAR(SYSDATE,'DD</th>
-												</tr>
-												<tr class="row">
-													<td class="column">-------------------</td>
-												</tr>
-												<tr class="row">
-													<td class="column">22/09/2025 14:03:04</td>
-												</tr>
-											</table>
+											TO_CHAR = transformation de l'expression en chaîne de caractères avec formatage dans le format donné.
 										</code>
 									</div>
 								</details>
@@ -4982,7 +5197,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT to_char(sysdate, 'mm') FROM dual;
+											SQL> SELECT TO_CHAR(sysdate, 'mm') FROM dual;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -5002,25 +5217,28 @@
 
 							<li class="item">
 								Quelle différence entre la requête de la question précédente et la requête <em>SELECT extract(month from sysdate) FROM dual</em> ?
+								<div class="d11answer">
+									<code class="d11sql">
+										SQL> SELECT EXTRACT(month FROM sysdate) FROM dual;
+										<br>
+										<table class="table">
+											<tr class="row">
+												<th class="title">EXTRACT(MONTHFROMSYSDATE)</th>
+											</tr>
+											<tr class="row">
+												<td class="column">-------------------------</td>
+											</tr>
+											<tr class="row">
+												<td class="column">9</td>
+											</tr>
+										</table>
+									</code>
+								</div>
 								<details>
-									<summary>Réponse et requête SQL</summary>
+									<summary>Réponse</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											=> to_char retourne une chaîne de caractères, extract retourne un nombre.
-											<br>
-											SQL> SELECT extract(month FROM sysdate) FROM dual;
-											<br>
-											<table class="table">
-												<tr class="row">
-													<th class="title">EXTRACT(MONTHFROMSYSDATE)</th>
-												</tr>
-												<tr class="row">
-													<td class="column">-------------------------</td>
-												</tr>
-												<tr class="row">
-													<td class="column">9</td>
-												</tr>
-											</table>
+											TO_CHAR retourne une chaîne de caractères alors que EXTRACT retourne un nombre.
 										</code>
 									</div>
 								</details>
@@ -5028,16 +5246,22 @@
 
 							<li class="item">
 								Pour obtenir le jour de la semaine correspondant au 14 décembre 1999 (c'est un mardi),
-								je tape <em>SELECT to_char('14/12/99','day') FROM dual;</em>. Corrigez cette requête.
+								je tape <em>SELECT TO_CHAR('14/12/99','day') FROM dual;</em>. Corrigez cette requête.
 								<details>
 									<summary>Réponse et requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											=> to_char attends une date or on fournit une chaîne.
-											Il faut d'abord convertir en date et comme la date est 1999 si on la mets sur deux chiffres le système va l'interpréter comme étant 2099.
-											On lui donne donc sur 4 chiffres soit 1999.
-											<br>
-											SQL> SELECT to_char(to_date('14/12/1999', 'dd/mm/yyyy'), 'day') FROM dual;
+											TO_CHAR attends une date or on fournit une chaîne.
+											Il faut d'abord convertir la chaîne en date et comme la date est 1999 si on la mets sur deux chiffres le système va l'interpréter comme étant 2099.
+											On lui donne donc la date sur 4 chiffres soit 1999 au lieu de 99.
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT TO_CHAR(to_date('14/12/1999', 'dd/mm/yyyy'), 'day') FROM dual;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -5059,14 +5283,21 @@
 						<h4 class="heading-4">Les valeurs NULL</h4>
 						<ol class="liste">
 							<li class="item">
-								Que fait la requête <em>SELECT 'Avion ' || navion || ' : ' || nvl(type, 'à compléter') "Types" FROM iin_avionspc;</em> ?
+								Que fait la requête <em>SELECT 'Avion ' || navion || ' : ' || NVL(type, 'à compléter') "Types" FROM iin_avionspc;</em> ?
 								<details>
-									<summary>Réponse et requête SQL</summary>
+									<summary>Réponse</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											=> nvl permet de remplacer la valeur NULL par une valeur donnée (ici la valeur est la chaîne 'à compléter'). On utile l'alias "Types" pour l'attribut (la colonne) type.
-											<br>
-											SQL> SELECT 'Avion ' || navion || ' : ' || nvl(type, 'à compléter') "Types" FROM iin_avionspc;
+											NVL permet de remplacer la valeur NULL par une valeur donnée (ici la valeur est la chaîne 'à compléter').
+											On utile l'alias "Types" pour l'attribut (la colonne) type, celle-ci sera alors affichée comme "Types".
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT 'Avion ' || navion || ' : ' || NVL(type, 'à compléter') "Types" FROM iin_avionspc;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -5127,7 +5358,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT depart, substr(depart, 1, 3) FROM iin_vols;
+											SQL> SELECT depart, SUBSTR(depart, 1, 3) FROM iin_vols;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -5219,7 +5450,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT depart, substr(upper(depart), 1, 3) FROM iin_vols;
+											SQL> SELECT depart, SUBSTR(UPPER(depart), 1, 3) FROM iin_vols;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -5311,7 +5542,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT upper(substr(depart, 1, 3)) || nvol "Code des Vols" FROM iin_vols where lower(depart) LIKE 'l%' ORDER BY lower(depart), nvol DESC;
+											SQL> SELECT UPPER(SUBSTR(depart, 1, 3)) || nvol "Code des Vols" FROM iin_vols where LOWER(depart) LIKE 'l%' ORDER BY LOWER(depart), nvol DESC;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -5394,8 +5625,9 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT nvol, depart FROM iin_vols where navion in<br>
-											<span class="tab"></span>(SELECT navion FROM iin_avions WHERE lower(type) = 'airbus') ORDER BY lower(depart), nvol;
+											SQL> SELECT nvol, depart FROM iin_vols WHERE navion IN<br>
+											<span class="tab"></span>(SELECT navion FROM iin_avions WHERE LOWER(type) = 'airbus')<br>
+											<span class="tab"></span>ORDER BY LOWER(depart), nvol;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -5463,8 +5695,8 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT nvol FROM iin_vols WHERE lower(depart) =<br>
-											<span class="tab"></span>(SELECT lower(depart) FROM iin_vols WHERE nvol = 108);
+											SQL> SELECT nvol FROM iin_vols WHERE LOWER(depart) =<br>
+											<span class="tab"></span>(SELECT LOWER(depart) FROM iin_vols WHERE nvol = 108);
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -5495,7 +5727,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT ename, sal * 0.853479, comm * 0.853479, trunc(0.853479 * (sal + nvl(comm, 0)), 2) "Revenu mensuel", ceil(0.853479 * (sal + nvl(comm, 0)) * 12) "Revenu annuel" FROM emp;
+											SQL> SELECT ename, sal * 0.853479, comm * 0.853479, TRUNC(0.853479 * (sal + NVL(comm, 0)), 2) "Revenu mensuel", CEIL(0.853479 * (sal + NVL(comm, 0)) * 12) "Revenu annuel" FROM emp;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -5630,7 +5862,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT nom, metier, substr(nom, 1, 5) || metier "Abréviation" FROM iin_gaulois ORDER BY lower(sexe), "Abréviation";
+											SQL> SELECT nom, metier, SUBSTR(nom, 1, 5) || metier "Abréviation" FROM iin_gaulois ORDER BY LOWER(sexe), "Abréviation";
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -5864,7 +6096,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT ename, hiredate, sal, job, floor(sysdate - hiredate) FROM emp ORDER BY hiredate;
+											SQL> SELECT ename, hiredate, sal, job, FLOOR(sysdate - hiredate) FROM emp ORDER BY hiredate;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -5999,7 +6231,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT next_day(sysdate, 'LUNDI') FROM dual;
+											SQL> SELECT NEXT_DAY(sysdate, 'LUNDI') FROM dual;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6024,7 +6256,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT next_day(to_date('01/07/1996', 'dd,mm,yyyy'), 'VENDREDI') FROM dual;
+											SQL> SELECT NEXT_DAY(TO_DATE('01/07/1996', 'dd,mm,yyyy'), 'VENDREDI') FROM dual;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6049,7 +6281,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT batno, nom, datebat, duree FROM iin_bataille WHERE extract(month FROM datebat) = 5;
+											SQL> SELECT batno, nom, datebat, duree FROM iin_bataille WHERE EXTRACT(month FROM datebat) = 5;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6089,7 +6321,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT batno, nom, 'du ' || to_char(datebat, 'dd/mm/yyyy'), 'au ' || to_char(datebat + duree, 'dd/mm/yyy') FROM iin_bataille ORDER BY duree DESC;
+											SQL> SELECT batno, nom, 'du ' || TO_CHAR(datebat, 'dd/mm/yyyy'), 'au ' || TO_CHAR(datebat + duree, 'dd/mm/yyy') FROM iin_bataille ORDER BY duree DESC;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6177,7 +6409,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT months_between(sysdate, to_date('01/07/1996', 'dd/mm/yyyy')) FROM dual;
+											SQL> SELECT MONTHS_BETWEEN(sysdate, TO_DATE('01/07/1996', 'dd/mm/yyyy')) FROM dual;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6202,7 +6434,7 @@
 									<summary>Requête SQL (option 1)</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT to_char(sysdate, 'dd/mm/yyyy hh24:mi:ss') FROM dual;
+											SQL> SELECT TO_CHAR(sysdate, 'dd/mm/yyyy hh24:mi:ss') FROM dual;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6222,7 +6454,7 @@
 									<summary>Requête SQL (option 2)</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT to_char(sysdate, 'Day DD Month YYYY HH24:MI:SS') FROM dual;
+											SQL> SELECT TO_CHAR(sysdate, 'Day DD Month YYYY HH24:MI:SS') FROM dual;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6247,7 +6479,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT to_char(last_day(add_months(sysdate, 3)), 'Day dd Month yyyy') FROM dual;
+											SQL> SELECT TO_CHAR(LAST_DAY(ADD_MONTHS(sysdate, 3)), 'Day dd Month yyyy') FROM dual;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6272,7 +6504,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT to_char(last_day(sysdate) + 1, 'Day dd Month yyyy') FROM dual;
+											SQL> SELECT TO_CHAR(LAST_DAY(sysdate) + 1, 'Day dd Month yyyy') FROM dual;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6297,7 +6529,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT to_char(to_date('01/07/1996', 'dd/mm/yyyy'), 'Day') FROM dual;
+											SQL> SELECT TO_CHAR(TO_DATE('01/07/1996', 'dd/mm/yyyy'), 'Day') FROM dual;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6322,7 +6554,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT to_char(to_date('25/12/0001', 'dd/mm/yyyy'), 'Day') FROM dual;
+											SQL> SELECT TO_CHAR(TO_DATE('25/12/0001', 'dd/mm/yyyy'), 'Day') FROM dual;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6347,7 +6579,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT DISTINCT deptno FROM emp WHERE extract(year FROM hiredate) = 1981;
+											SQL> SELECT DISTINCT deptno FROM emp WHERE EXTRACT(year FROM hiredate) = 1981;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6378,7 +6610,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT DISTINCT deptno FROM emp WHERE extract(year FROM hiredate) < 1981;
+											SQL> SELECT DISTINCT deptno FROM emp WHERE EXTRACT(year FROM hiredate) < 1981;
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6406,7 +6638,7 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT vilno FROM iin_bataille WHERE months_between(to_date('04/10/0022', 'dd/mm/yyyy'), datebat) BETWEEN 0 AND 6;
+											SQL> SELECT vilno FROM iin_bataille WHERE MONTHS_BETWEEN(TO_DATE('04/10/0022', 'dd/mm/yyyy'), datebat) BETWEEN 0 AND 6;
 											<br>
 											aucune ligne selectionnee
 										</code>
@@ -6421,8 +6653,8 @@
 									<summary>Requête SQL (TP2 - Q11)</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT * FROM iin_vols WHERE (pilote, lower(depart)) NOT IN<br>
-											<span class="tab"></span>(SELECT npilote, lower(habite) FROM iin_pilotes);
+											SQL> SELECT * FROM iin_vols WHERE (pilote, LOWER(depart)) NOT IN<br>
+											<span class="tab"></span>(SELECT npilote, LOWER(habite) FROM iin_pilotes);
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6586,8 +6818,8 @@
 									<div class="d11answer">
 										<code class="d11sql">
 											SQL> SELECT nvol FROM iin_vols WHERE navion IN<br>
-											<span class="tab"></span>(SELECT navion FROM iin_avions WHERE (lower(type), capacite) =<br>
-											<span class="tab"></span><span class="tab"></span>(SELECT lower(type), capacite FROM iin_avions WHERE navion = 4));
+											<span class="tab"></span>(SELECT navion FROM iin_avions WHERE (LOWER(type), capacite) =<br>
+											<span class="tab"></span><span class="tab"></span>(SELECT LOWER(type), capacite FROM iin_avions WHERE navion = 4));
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6607,8 +6839,8 @@
 									<summary>Requête SQL (TP2 - Q16)</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT depart, arrivee FROM iin_vols WHERE (lower(depart), lower(arrivee), pilote, copilote) IN<br>
-											<span class="tab"></span>(SELECT lower(arrivee), lower(depart), pilote, copilote FROM iin_vols);
+											SQL> SELECT depart, arrivee FROM iin_vols WHERE (LOWER(depart), LOWER(arrivee), pilote, copilote) IN<br>
+											<span class="tab"></span>(SELECT LOWER(arrivee), LOWER(depart), pilote, copilote FROM iin_vols);
 											<br>
 											aucune ligne selectionnee
 										</code>
@@ -6619,8 +6851,8 @@
 									<div class="d11answer">
 										<code class="d11sql">
 											SQL> SELECT ename FROM emp where deptno IN<br>
-											<span class="tab"></span>(SELECT deptno FROM dept WHERE lower(loc) = 'chicago') AND job IN<br>
-											<span class="tab"></span><span class="tab"></span>(SELECT job FROM emp WHERE lower(ename) = 'allen');
+											<span class="tab"></span>(SELECT deptno FROM dept WHERE LOWER(loc) = 'chicago') AND job IN<br>
+											<span class="tab"></span><span class="tab"></span>(SELECT job FROM emp WHERE LOWER(ename) = 'allen');
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6658,7 +6890,7 @@
 									<div class="d11answer">
 										<code class="d11sql">
 											SQL> SELECT ename FROM emp WHERE empno IN<br>
-											<span class="tab"></span>(SELECT mgr FROM emp WHERE hiredate > to_date('10/10/1981', 'dd/mm/yyyy'));
+											<span class="tab"></span>(SELECT mgr FROM emp WHERE hiredate > TO_DATE('10/10/1981', 'dd/mm/yyyy'));
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6690,7 +6922,7 @@
 									<div class="d11answer">
 										<code class="d11sql">
 											SQL> SELECT dname FROM dept WHERE deptno IN<br>
-											<span class="tab"></span>(SELECT deptno FROM emp WHERE extract(year FROM hiredate) = 1981);
+											<span class="tab"></span>(SELECT deptno FROM emp WHERE EXTRACT(year FROM hiredate) = 1981);
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6723,7 +6955,7 @@
 										<code class="d11sql">
 											SQL> SELECT ename, to_char(hiredate, 'MM/YYYY') "Mois embauche" FROM emp WHERE empno IN<br>
 											<span class="tab"></span>(SELECT mgr FROM emp WHERE deptno IN<br>
-											<span class="tab"></span><span class="tab"></span>(SELECT deptno FROM dept WHERE lower(loc) = 'chicago'));
+											<span class="tab"></span><span class="tab"></span>(SELECT deptno FROM dept WHERE LOWER(loc) = 'chicago'));
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6757,7 +6989,7 @@
 										<code class="d11sql">
 											SQL> SELECT loc FROM dept WHERE deptno IN<br>
 											<span class="tab"></span>(SELECT deptno FROM emp WHERE hiredate < ANY<br>
-											<span class="tab"></span><span class="tab"></span>(SELECT hiredate FROM emp WHERE lower(ename) = 'king'));
+											<span class="tab"></span><span class="tab"></span>(SELECT hiredate FROM emp WHERE LOWER(ename) = 'king'));
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6791,8 +7023,8 @@
 									<summary>Requête SQL</summary>
 									<div class="d11answer">
 										<code class="d11sql">
-											SQL> SELECT DISTINCT arrivee, substr(upper(arrivee), 1, 2) || substr(upper(arrivee), length(arrivee), 1) "Code" FROM iin_vols WHERE navion NOT IN<br>
-											<span class="tab"></span>(SELECT navion FROM iin_avions WHERE lower(type) = 'airbus');
+											SQL> SELECT DISTINCT arrivee, SUBSTR(UPPER(arrivee), 1, 2) || SUBSTR(UPPER(arrivee), LENGTH(arrivee), 1) "Code" FROM iin_vols WHERE navion NOT IN<br>
+											<span class="tab"></span>(SELECT navion FROM iin_avions WHERE LOWER(type) = 'airbus');
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6833,7 +7065,7 @@
 										<code class="d11sql">
 											SQL> SELECT nom FROM iin_potion WHERE potno IN<br>
 											<span class="tab"></span>(SELECT potno FROM iin_druide_potion WHERE gauno NOT IN<br>
-											<span class="tab"></span><span class="tab"></span>(SELECT gauno FROM iin_gaulois WHERE lower(metier) != 'druide'));
+											<span class="tab"></span><span class="tab"></span>(SELECT gauno FROM iin_gaulois WHERE LOWER(metier) != 'druide'));
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6902,8 +7134,8 @@
 									<div class="d11answer">
 										<code class="d11sql">
 											SQL> SELECT nom FROM iin_potion WHERE potno IN<br>
-											<span class="tab"></span>(SELECT potno FROM iin_absorption WHERE to_char(dateab, 'dd/mm/yyyy') IN<br>
-											<span class="tab"></span><span class="tab"></span>(SELECT to_char(datebat, 'dd/mm/yyyy') FROM iin_bataille));
+											<span class="tab"></span>(SELECT potno FROM iin_absorption WHERE TO_CHAR(dateab, 'dd/mm/yyyy') IN<br>
+											<span class="tab"></span><span class="tab"></span>(SELECT TO_CHAR(datebat, 'dd/mm/yyyy') FROM iin_bataille));
 											<br>
 											<table class="table">
 												<tr class="row">
@@ -6927,7 +7159,7 @@
 					</article>
 
 					<article class="article">
-						<h3 class="heading-3">TD/TP 4 : Jointures</h3>
+						<h3 class="heading-3">📖 TD/TP 4 : Jointures</h3>
 
 						<h4 class="heading-4">Base vols</h4>
 						<ol class="liste">
@@ -7158,7 +7390,6 @@
 											r3 = proj(iin_pilotes, {npilote, nom})<br>
 											r4 = join(r2, r3, r2.pilote = r3.npilote)<br>
 											r5 = proj(r4, {nom})
-											
 										</code>
 									</div>
 								</details>
@@ -7168,7 +7399,7 @@
 										<code class="d11sql">
 											r1 = restrict(iin_vols, navion = 8)<br>
 											r2 = proj(r1, {pilote})<br>
-											r3 = restrict(iin_pilotes, npilote appartient à r2)<br>
+											r3 = restrict(iin_pilotes, npilote ∈ r2)<br>
 											r4 = proj(r3, {nom})
 										</code>
 									</div>
@@ -7264,7 +7495,7 @@
 											r1 = proj(iin_pilotes, {npilote, nom})<br>
 											r2 = proj(iin_vols, {pilote, depart, arrivee})<br>
 											r3 = left-join(r1, r2, r1.npilote = r2.pilote)<br>
-											r4 = proj(r3, {nom, depart, arrivee})<br>
+											r4 = proj(r3, {nom, depart, arrivee})
 										</code>
 									</div>
 								</details>
@@ -7509,7 +7740,7 @@
 									<div class="d11answer">
 										<code class="d11sql">
 											r1 = proj(iin_pilotes, {npilote, nom})<br>
-											r2 = restrict(iin_vols, depart = 'Paris' et arrivee = 'Nice')<br>
+											r2 = restrict(iin_vols, depart = 'Paris' ∧ arrivee = 'Nice')<br>
 											r3 = proj(r2, {pilote, copilote})<br>
 											r4 = join(r1, r3, r1.npilote = r3.pilote)<br>
 											r5 = proj(r4, {nom, copilote})<br>
