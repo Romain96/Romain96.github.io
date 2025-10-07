@@ -8660,6 +8660,796 @@
 						</ol>
 					</article>
 
+					<article class="article">
+						<h3 class="heading-3">📖 TD/TP 5 : Fonctions d'agrégation</h3>
+
+						<h4 class="heading-4">Base vols</h4>
+						<ol class="liste">
+							<li class="item">
+								Nombre d'Airbus et nombre maximum de places parmi ces avions.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT COUNT(*), MAX(capacite) FROM iin_avions WHERE LOWER(type) = 'airbus';
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">COUNT(*)</th>
+													<th class="title">MAX(CAPACITE)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+													<td class="column">-------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">6</td>
+													<td class="column">500</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Nombre de places total sur l'ensemble des avions.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT SUM(capacite) FROM iin_avions;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">SUM(CAPACITE)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">-------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">3550</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Numéros des Airbus qui ont le plus de places.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT navion FROM iin_avions WHERE LOWER(type) = 'airbus' AND capacite =<br>
+											<span class="tab"></span>(SELECT MAX(capacite) FROM iin_avions WHERE LOWER(type) = 'airbus');
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NAVION</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">2</td>
+												</tr>
+												<tr class="row">
+													<td class="column">5</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Nombre de vols entre Strasbourg et Lyon (peu importe le sens).
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT COUNT(*) FROM iin_vols WHERE<br>
+											<span class="tab"></span>(LOWER(depart) = 'strasbourg' AND LOWER(arrivee) = 'lyon') OR<br>
+											<span class="tab"></span>(LOWER(depart) = 'lyon' AND LOWER(arrivee) = 'strasbourg');
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">COUNT(*)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">2</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Capacité moyenne des Airbus (arrondie à deux chiffres après la virgule) volant de Paris à Nice.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT ROUND(AVG(capacite), 2) FROM iin_avions WHERE LOWER(type) = 'airbus' AND navion IN<br>
+											<span class="tab"></span>(SELECT navion FROM iin_vols WHERE LOWER(depart) = 'paris' AND LOWER(arrivee) = 'nice');
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">ROUND(AVG(CAPACITE),2)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">300</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Nombre de vols de Dupont en tant que pilote principal.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT COUNT(*) FROM iin_vols WHERE pilote IN<br>
+											<span class="tab"></span>(SELECT npilote FROM iin_pilotes WHERE LOWER(nom) = 'dupont');
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">COUNT(*)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">5</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Nom et ville des pilotes qui n'habitent pas dans la même ville qu'un pilote s'appelant Hamilton (les pilotes s'appelant Hamilton seront considérés comme habitant la ville d'un Hamilton, ils ne sont donc pas dans le résultat).
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT nom, habite FROM iin_pilotes WHERE LOWER(habite) NOT IN<br>
+											<span class="tab"></span>(SELECT LOWER(habite) FROM iin_pilotes WHERE LOWER(nom) = 'hamilton' AND habite IS NOT NULL);
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+													<th class="title">HABITE</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">-------------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Meunier</td>
+													<td class="column">Paris</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Paris</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Dupont</td>
+													<td class="column">Strasbourg</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pujol</td>
+													<td class="column">Toulouse</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Pinon</td>
+													<td class="column">Lyon</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Martin</td>
+													<td class="column">Nantes</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Rousseau</td>
+													<td class="column">Lille</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li>
+						</ol>
+
+						<h4 class="heading-4">Base employés</h4>
+						<ol class="liste">
+							<li class="item">
+								Nom et salaire du(des) employé(s) du département 20 qui a(ont) le salaire le plus élevé ? 
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT ename, sal FROM emp WHERE deptno = 20 AND sal =<br>
+											<span class="tab"></span>(SELECT MAX(sal) FROM emp WHERE deptno = 20);
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">ENAME</th>
+													<th class="title">SAL</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">FORD</td>
+													<td class="column">3000</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SCOTT</td>
+													<td class="column">3000</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Moyenne des commissions des commerciaux.
+								<details>
+									<summary>Requête SQL (version compliquée)</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT AVG(comm) FROM emp WHERE comm IS NOT NULL;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">AVG(COMM)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">550</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL (version simple)</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT AVG(comm) FROM emp;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">AVG(COMM)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">550</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Moyenne des commissions des employés.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT AVG(NVL(comm, 0)) FROM emp;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">AVG(NVL(COMM,0))</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">146,666667</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Gain minimum des employés.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT MIN(sal + NVL(comm, 0)) FROM emp;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">MIN(SAL+NVL(COMM,0))</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">800</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Nombre d'employés sans commission ou dont la commission est inférieure à 1000.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT COUNT(*) FROM emp WHERE comm IS NULL OR comm < 1000;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">COUNT(*)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">14</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Employés qui ne sont pas manager.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT ename FROM emp WHERE empno NOT IN<br>
+											<span class="tab"></span>(SELECT mgr FROM emp WHERE mgr IS NOT NULL);
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">ENAME</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ADAMS</td>
+												</tr>
+												<tr class="row">
+													<td class="column">WARD</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ALLEN</td>
+												</tr>
+												<tr class="row">
+													<td class="column">JAMES</td>
+												</tr>
+												<tr class="row">
+													<td class="column">MILLER</td>
+												</tr>
+												<tr class="row">
+													<td class="column">SMITH</td>
+												</tr>
+												<tr class="row">
+													<td class="column">MARTIN</td>
+												</tr>
+												<tr class="row">
+													<td class="column">TURNER</td>
+												</tr>
+												<tr class="row">
+													<td class="column">GAG</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Quels sont les noms, numéros de département et salaires des employés qui sont les 'CLERK' les mieux payés ?
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT ename, deptno, sal FROM emp WHERE LOWER(job) = 'clerk' AND sal =<br>
+											<span class="tab"></span>(SELECT MAX(sal) FROM emp WHERE LOWER(job) = 'clerk');
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">ENAME</th>
+													<th class="title">DEPTNO</th>
+													<th class="title">SAL</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">MILLER</td>
+													<td class="column">10</td>
+													<td class="column">1300</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Quelle est la moyenne des salaires des employés dirigés par 'BLAKE' ?
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT AVG(sal) FROM emp WHERE mgr IN<br>
+											<span class="tab"></span>(SELECT empno FROM emp WHERE LOWER(ename) = 'blake');
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">AVG(SAL)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">1310</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Liste des employés (numéro, nom) dont le salaire est supérieur à la moyenne des salaires des analystes.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT empno, ename FROM emp WHERE sal ><br>
+											<span class="tab"></span>(SELECT AVG(sal) FROM emp WHERE LOWER(job) = 'analyst');
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">EMPNO</th>
+													<th class="title">ENAME</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">7839</td>
+													<td class="column">KING</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Nom, job et salaire de la personne ayant le plus de revenus.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT ename, job, sal FROM emp WHERE sal + NVL(comm, 0) =<br>
+											<span class="tab"></span>(SELECT MAX(sal + NVL(comm, 0)) FROM emp);
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">ENAME</th>
+													<th class="title">JOB</th>
+													<th class="title">SAL</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">KING</td>
+													<td class="column">PRESIDENT</td>
+													<td class="column">5000</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Nom et nombre de lettres du nom de la personne ayant le nom le plus long.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT ename, length(ename) FROM emp WHERE LENGTH(ename) =<br>
+											<span class="tab"></span>(SELECT MAX(LENGTH(ename)) FROM emp);
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">ENAME</th>
+													<th class="title">LENGTH(ENAME)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">-------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">MARTIN</td>
+													<td class="column">6</td>
+												</tr>
+												<tr class="row">
+													<td class="column">MILLER</td>
+													<td class="column">6</td>
+												</tr>
+												<tr class="row">
+													<td class="column">TURNER</td>
+													<td class="column">6</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Nombre de personnes touchant une commission.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT COUNT(*) FROM emp WHERE comm IS NOT NULL;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">COUNT(*)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">4</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Revenus moyens des employés.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT AVG(sal + NVL(comm, 0)) FROM emp;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">AVG(SAL+NVL(COMM,0))</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">2281,66667</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Noms, noms de département et noms du manager des employés dirigés par le manager le plus récemment embauché.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT e.ename, d.dname, m.ename FROM<br>
+											<span class="tab"></span>emp e JOIN dept d ON e.deptno = d.deptno<br>
+											<span class="tab"></span><span class="tab"></span>JOIN emp m ON e.mgr = m.empno<br>
+											<span class="tab"></span><span class="tab"></span><span class="tab"></span>WHERE m.hiredate =<br>
+											<span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>(SELECT MAX(hiredate) FROM emp WHERE empno IN<br>
+											<span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>(SELECT mgr FROM emp));
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">ENAME</th>
+													<th class="title">DNAME</th>
+													<th class="title">ENAME</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">ADAMS</td>
+													<td class="column">RESEARCH</td>
+													<td class="column">SCOTT</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li>
+						</ol>
+
+						<h4 class="heading-4">Base gaulois</h4>
+						<ol class="liste">
+							<li class="item">
+								Nom du village ayant le plus de huttes.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT nom FROM iin_village WHERE nbhutte =<br>
+											<span class="tab"></span>(SELECT MAX(nbhutte) FROM iin_village);
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lutece</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Quels sont les villages dont le nombre de huttes est supérieur au nombre moyen de huttes que comporte un village ?
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT nom FROM iin_village WHERE nbhutte ><br>
+											<span class="tab"></span>(SELECT AVG(nbhutte) FROM iin_village);
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Lutece</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Clairmont</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Alesia</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Serum</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Combien de casques ont été gagnés par les gaulois du village n°8 ?
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT SUM(nbcasque) FROM iin_trophee WHERE gauno IN<br>
+											<span class="tab"></span>(SELECT gauno FROM iin_gaulois WHERE vilno = 8);
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">SUM(NBCASQUE)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">-------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">223</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								De combien de grades différents sont les casques rapportés de la bataille 'Poisson d avril' ?<br>
+								Notez que s'il y avait une apostrophe (Poisson d'avril), pour faire passer le caractère apostrophe (') dans un texte délimité par des apostrophes, il suffirait de la doubler, par exemple 'Poisson d''avril'.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT COUNT(DISTINCT grade) FROM iin_trophee WHERE batno =<br>
+											<span class="tab"></span>(SELECT batno FROM iin_bataille WHERE LOWER(nom) = 'poisson d avril');
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">COUNT(DISTINCTGRADE)</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">3</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Noms du ou des chefs et du ou des villages les plus grands dont le chef est connu.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT g.nom, v.nom FROM<br>
+											<span class="tab"></span>iin_gaulois g JOIN iin_village v ON g.gauno = v.chef<br>
+											<span class="tab"></span><span class="tab"></span>WHERE chef IS NOT NULL AND v.nbhutte =<br>
+											<span class="tab"></span><span class="tab"></span><span class="tab"></span>(SELECT MAX(nbhutte) FROM iin_village WHERE chef IS NOT NULL);
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">NOM</th>
+													<th class="title">NOM</th>
+												</tr>
+												<tr class="row">
+													<td class="column">---------------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">Vercingetorix</td>
+													<td class="column">Alesia</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li>
+						</ol>
+
 				</section>
 
 				<aside class="sidebar">
