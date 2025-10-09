@@ -650,6 +650,12 @@ details summary {
 	color: blue;
 }
 
+.logo {
+	height: 1.25em;
+	padding-right: 0.25em;
+	vertical-align: middle;
+}
+
 /* personal projects specific */
 
 #personalProjects {
