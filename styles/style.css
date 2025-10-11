@@ -92,7 +92,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-
 /* CV specific */
 
 .article #employment
@@ -111,45 +110,35 @@ a:hover {
 	display: flex;
 }
 
-.article #employment .item #employmentLogo
-{
-	flex: 1;
-}
-
-.article #employment .item #employmentText
-{
-	flex: 1;
-}
-
-.article #employment .sublist {
+#employment .sublist {
 	list-style: none;
 }
 
-.article #employment .sublist .item
+#employment .sublist .item
 {
 	font-size: 0.9em;
 	margin-top: 0px;
 	margin-left: 2em;
 }
 
-.article #employment .item .logo {
+.employmentLogo .logo {
 	width: 8em;
-	padding-right: 1em;
+	padding-right: 2em;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 	vertical-align: top;
-}
-
-.article #qualifications .item .sublist {
-	list-style: none;
 }
 
 .article #qualifications {
 	list-style: none;
 }
 
+.article #qualifications .item .sublist {
+	list-style: none;
+}
+
 .article #qualifications .item {
-	font-size: 1.0em;
+	font-size: 1em;
 	margin-top: 2em;
 	display: flex;
 }
@@ -158,25 +147,9 @@ a:hover {
 	margin-top: 0.5em;
 }
 
-.article #qualifications .item {
-	font-size: 0.9em;
-	margin-top: 2em;
-	display: flex;
-}
-
-.article #qualifications .item #qualificationsLogo
-{
-	flex: 1;
-}
-
-.article #qualifications .item #qualificationsText
-{
-	flex: 1;
-}
-
-.article #qualifications .item .logo {
+.qualificationsLogo .logo {
 	width: 8em;
-	padding-right: 1em;
+	padding-right: 2em;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 	vertical-align: top;
@@ -189,7 +162,7 @@ a:hover {
 	margin-left: 2em;
 }
 
-.article #qualifications .item #qualificationsText .sublist .item .a {
+.article #qualifications .item .qualificationsText .sublist .item .a {
 	padding-left: 10em;
 }
 
@@ -648,12 +621,6 @@ details summary {
 	font-size: 0.8em;
 	padding-bottom: 0.5em;
 	color: blue;
-}
-
-.logo {
-	height: 1.25em;
-	padding-right: 0.25em;
-	vertical-align: middle;
 }
 
 /* personal projects specific */
