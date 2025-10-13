@@ -9458,6 +9458,1839 @@
 								</details>
 							</li>
 						</ol>
+					</article>
+
+					<article class="article">
+						<h3 class="heading-3">📖 TD/TP 6 : LDD et mise à jour</h3>
+						<hr>
+
+						<p class="paragraph">
+							Dans la suite, vous allez créer les tables mesvillages et mesgaulois qui seront des copies des tables village et gaulois, avec toutes les contraintes d'intégrité.
+							La structure des tables est la suivante :<br><br>
+
+							<b>village</b>(<u>vilno</u>, nom, nbhutte, chef)
+							<ul class="list">
+								<li class="item">
+									vilno : numéro du village (nombre sur 2 chiffres), doit être renseigné
+								</li>
+								<li class="item">
+									nom : nom (chaîne de 20 caractères maximum), doit être renseigné<br>
+								</li>
+								<li class="item">
+									nbhutte : nombre de huttes (nombre sur 3 chiffres)<br>
+								</li>
+								<li class="item">
+									chef : numéro du chef du village, référence gauno de gaulois<br>
+								</li>
+								<li class="item">
+									vilno : numéro du village (nombre sur 2 chiffres), doit être renseigné
+								</li>
+							</ul>
+
+							<b>gaulois</b>(<u>gauno</u>, nom, sexe, metier, vilno)
+							<ul class="list">
+								<li class="item">
+									gauno : numéro du gaulois (nombre sur 3 chiffres), doit être renseigné
+								</li>
+								<li class="item">
+									nom : nom (chaîne de 15 caractères maximum), doit être renseigné
+								</li>
+								<li class="item">
+									sexe : sexe (chaîne de 1 caractère exactement), vaut 'M', 'F' ou NULL
+								</li>
+								<li class="item">
+									metier : métier (chaîne de 15 caractères maximum)
+								</li>
+								<li class="item">
+									vilno : numéro du village où le gaulois habite, référence vilno de village
+								</li>
+							</ul>
+
+							Compte tenu de cette description, les deux tables présentent des références croisées
+
+							Rappel : nous utilisons les conventions de nommage suivantes pour les noms des contraintes
+							<ul class="list">
+								<li class="item">
+									clé primaire : <b>pk_nomtable</b>
+								</li>
+								<li class="item">
+									clé étrangère : <b>fk_nomtablesource_nomscolssource</b>
+								</li>
+								<li class="item">
+									contrainte applicative : <b>c_nomtable_nomscols</b>
+								</li>
+								<li class="item">
+									contrainte unique : <b>u_nomtable_nomscols</b>
+								</li>
+							</ul>
+						</p>
+
+						<h4 class="heading-4">LDD - tables mesgaulois et mesvillages</h4>
+						<ol class="liste">
+							<li class="item">
+								Le type de la colonne chef de la table village n'est pas précisé, peut-on le déterminer ?
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											Oui, il doit être le même que celui de la colonne référencée, gauno de gaulois.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Supposons que l'on crée en premier la table village, peut-on la créer avec la contrainte de référence de chef vers gauno de gaulois ?
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											Non car il n'est pas possible de référencer une colonne qui n'existe pas encore. 
+											Il faudra créer la table village sans la contrainte de référence, 
+											puis la table gaulois avec la contrainte de référence de vilno vers vilno de village car la colonne existe, 
+											puis ajouter la contrainte de référence de chef vers gauno de gaulois avec un alter table.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Quelle est la différence entre CHECK(sexe IN ('M', 'F') or sexe is NULL) et CHECK(upper(sexe) IN ('M', 'F') or sexe is NULL) ?
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											sexe IN ('M', 'F') impose que la saisie soit faite en majuscules, upper(sexe) permet majuscules et minuscules dans la table.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Complétez le script qui contient la commande de création de la table mesvillages, 
+								avec la commande de création de la table mesgaulois et la commande d'ajout de la contrainte de 
+								référence de chef de mesvillages vers vilno de mesgaulois.
+								<details>
+									<summary>Script original</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											CREATE TABLE mesvillages (<br>
+											<span class="tab"></span>vilno number(2) NOT NULL,<br>
+											<span class="tab"></span>nom varchar2(20) NOT NULL,<br>
+											<span class="tab"></span>nbhutte number(3),<br>
+											<span class="tab"></span>chef number(3),<br>
+											<span class="tab"></span>CONSTRAINT pk_mesvillages PRIMARY KEY(vilno)<br>
+											);
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Script modifié</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											CREATE TABLE mesvillages (<br>
+											<span class="tab"></span>vilno number(2) NOT NULL,<br>
+											<span class="tab"></span>nom varchar2(20) NOT NULL,<br>
+											<span class="tab"></span>nbhutte number(3),<br>
+											<span class="tab"></span>chef number(3),<br>
+											<span class="tab"></span>CONSTRAINT pk_mesvillages PRIMARY KEY(vilno)<br>
+											);
+											<br>
+											CREATE TABLE mesgaulois (<br>
+											<span class="tab"></span>gauno number(3) NOT NULL,<br>
+											<span class="tab"></span>nom varchar2(15) NOT NULL,<br>
+											<span class="tab"></span>sexe char(1),<br>
+											<span class="tab"></span>metier varchar2(15),<br>
+											<span class="tab"></span>vilno number(2),<br>
+											<span class="tab"></span>CONSTRAINT pk_mesgaulois PRIMARY KEY(gauno),<br>
+											<span class="tab"></span>CONSTRAINT c_mesgaulois_sexe CHECK(sexe IN ('M','F') OR sexe is NULL),<br>
+											<span class="tab"></span>CONSTRAINT fk_mesgaulois_vilno FOREIGN KEY (vilno) REFERENCES mesvillages<br>
+											); 
+											<br>
+											ALTER TABLE mesvillages ADD (<br>
+											<span class="tab"></span>CONSTRAINT fk_mesvillages_chef FOREIGN KEY (chef) REFERENCES mesgaulois<br>
+											);
+										</code>
+									</div>
+								</details>
+								Télécharger le script modifié à exécuter : <a href="../../files/teaching/2025/D11/script_creation_base_gaulois.sql">script_creation_base_gaulois.sql</a><br>
+								<details>
+									<summary>Requête SQL (lancement du script)</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> start script_creation_base_gaulois<br><br>
+											Table creee.<br><br><br>
+											Table creee.<br><br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Insérez dans la base le gaulois pascalix, qui est un homme forgeron et habite le village 14. 
+								Il a pour numéro 114. Le village 14 est Strasbourgia, il comporte 100 huttes et a pour chef un homme appelé Frederix de numéro 112.
+								<details>
+									<summary>Requêtes SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> INSERT INTO mesvillages (vilno, nom, nbhutte) VALUES (14, 'Strasbourgia', 100);<br><br>
+											1 ligne creee.<br><br>
+											SQL> INSERT INTO mesgaulois (gauno, nom, sexe, metier, vilno) VALUES (112, 'Frederix', 'M', 'chef', 14);<br><br>
+											1 ligne creee.<br><br>
+											SQL> UPDATE mesvillages SET chef=112 WHERE vilno=14;<br><br>
+											1 ligne mise a jour.<br><br>
+											SQL> INSERT into mesgaulois (gauno, nom, sexe, metier, vilno) VALUES (114, 'pascalix', 'M', 'forgeron', 14);<br><br>
+											1 ligne creee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Supprimez maintenant le village 14. 
+								Que se passe-t-il ?
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											Vous devez obtenir une violation sur la contrainte FK_MESGAULOIS_VILNO <i>enregistrement fils existant</i>, 
+											ce qui signifie que vous essayez de supprimer un village alors qu'un gaulois est indiqué comme ayant ce vilno comme village où il habite.
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> DELETE FROM mesvillages WHERE vilno=14;<br>
+											DELETE FROM mesvillages WHERE vilno=14<br>
+											*<br>
+											ERREUR a la ligne 1 :<br>
+											ORA-02292: violation de contrainte (ROMAIN_PERRIN.FK_MESGAULOIS_VILNO) d'integrite - enregistrement fils existant
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Exécutez les commandes<br>
+								ALTER TABLE mesgaulois DROP CONSTRAINT fk_mesgaulois_vilno;<br>
+								ALTER TABLE mesgaulois ADD (CONSTRAINT fk_mesgaulois_vilno FOREIGN KEY (vilno) REFERENCES mesvillages ON DELETE CASCADE);<br>
+								(on ne peut pas modifier une contrainte, il faut la supprimer et la recréer) 
+								puis essayez à nouveau de supprimer le village 14. Que se passe-t-il ?
+								<details>
+									<summary>Requêtes SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mesgaulois DROP CONSTRAINT fk_mesgaulois_vilno;<br><br>
+											Table modifiee.<br><br>
+											SQL> ALTER TABLE mesgaulois ADD (CONSTRAINT fk_mesgaulois_vilno FOREIGN KEY (vilno) REFERENCES mesvillages ON DELETE CASCADE);<br><br>
+											Table modifiee.<br><br>
+											SQL> DELETE FROM mesvillages WHERE vilno=14;<br><br>
+											1 ligne supprimee.<br><br>
+											SQL> SELECT * FROM mesvillages;<br><br>
+											aucune ligne selectionnee<br><br>
+											SQL> SELECT * FROM mesgaulois;<br><br>
+											aucune ligne selectionnee
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Annulez la dernière commande et vérifiez l'effet.
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											Les suppressions ont bien été annulées.
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requêtes SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ROLLBACK;<br><br>
+											Annulation (rollback) effectuee.<br><br>
+											SQL> SELECT * FROM mesvillages;
+											<table class="table">
+												<tr class="row">
+													<th class="title">VILNO</th>
+													<th class="title">NOM</th>
+													<th class="title">NBHUTTE</th>
+													<th class="title">CHEF</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">14</td>
+													<td class="column">Strasbourgia</td>
+													<td class="column">100</td>
+													<td class="column">112</td>
+												</tr>
+											</table>
+											<br>
+											SQL> SELECT * FROM mesgaulois;
+											<table class="table">
+												<tr class="row">
+													<th class="title">GAUNO</th>
+													<th class="title">NOM</th>
+													<th class="title">S</th>
+													<th class="title">METIER</th>
+													<th class="title">VILNO</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+													<td class="column">---------------</td>
+													<td class="column">-</td>
+													<td class="column">---------------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">112</td>
+													<td class="column">Frederix</td>
+													<td class="column">M</td>
+													<td class="column">chef</td>
+													<td class="column">14</td>
+												</tr>
+												<tr class="row">
+													<td class="column">114</td>
+													<td class="column">pascalix</td>
+													<td class="column">M</td>
+													<td class="column">forgeron</td>
+													<td class="column">14</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Complétez les tables mesgaulois et mesvillages avec le contenu des tables iin_gaulois et iin_village (INSERT INTO ... requête).
+								Que se passe-t-il ?
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											Vous devez obtenir une violation sur la contrainte FK_MESGAULOIS_VILNO <i>clé parent introuvable</i>, 
+											ce qui signifie que vous essayez d'ajouter un gaulois dans un village qui n'existe pas. 
+											Pour pouvoir faire ces ajouts, il faut désactiver la contrainte puis la réactiver une fois les ajouts faits.
+											Il est nécessaire de désactiver la contrainte fk_mesgaulois_vilno puis de la réactiver après exécution des commandes.
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requêtes SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mesgaulois DISABLE CONSTRAINT fk_mesgaulois_vilno;<br><br>
+											Table modifiee.<br><br>
+											SQL> INSERT INTO mesgaulois<br>
+											<span class="tab"></span>SELECT * FROM iin_gaulois;<br><br>
+											41 lignes creees.<br><br>
+											SQL> INSERT INTO mesvillages<br>
+											<span class="tab"></span>SELECT * FROM iin_village;<br><br>
+											12 lignes creees.<br><br>
+											SQL> ALTER TABLE mesgaulois ENABLE CONSTRAINT fk_mesgaulois_vilno;<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Vérifiez le contenu des tables avec une commande select. 
+								Maintenant annulez les derniers ajouts. 
+								Vérifiez à nouveau le contenu des tables.
+								Normalement les données ajoutées dernièrement ajoutées sont toujours présentes car l'exécution des commandes du langage de définition des données,
+								et notamment de gestion des tables comme ALTER TABLE provoquent une validation automatique. 
+								Le dernier ALTER TABLE a donc eu cet effet.
+								<details>
+									<summary>Requêtes SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> SELECT * FROM mesgaulois;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">GAUNO</th>
+													<th class="title">NOM</th>
+													<th class="title">S</th>
+													<th class="title">METIER</th>
+													<th class="title">VILNO</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+													<td class="column">---------------</td>
+													<td class="column">-</td>
+													<td class="column">---------------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">112</td>
+													<td class="column">Frederix</td>
+													<td class="column">M</td>
+													<td class="column">chef</td>
+													<td class="column">14</td>
+												</tr>
+												<tr class="row">
+													<td class="column">114</td>
+													<td class="column">pascalix</td>
+													<td class="column">M</td>
+													<td class="column">forgeron</td>
+													<td class="column">14</td>
+												</tr>
+												<tr class="row">
+													<td class="column">102</td>
+													<td class="column">Idefix</td>
+													<td class="column"></td>
+													<td class="column">gardien</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">1</td>
+													<td class="column">Diagnostix</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">5</td>
+												</tr>
+												<tr class="row">
+													<td class="column">2</td>
+													<td class="column">Alambix</td>
+													<td class="column">M</td>
+													<td class="column">commercant</td>
+													<td class="column">3</td>
+												</tr>
+												<tr class="row">
+													<td class="column">3</td>
+													<td class="column">Pourquepix</td>
+													<td class="column">M</td>
+													<td class="column">commercant</td>
+													<td class="column">3</td>
+												</tr>
+												<tr class="row">
+													<td class="column">4</td>
+													<td class="column">Pronostix</td>
+													<td class="column">M</td>
+													<td class="column">commercant</td>
+													<td class="column">3</td>
+												</tr>
+												<tr class="row">
+													<td class="column">5</td>
+													<td class="column">Bainpuplix</td>
+													<td class="column">M</td>
+													<td class="column">commercant</td>
+													<td class="column">3</td>
+												</tr>
+												<tr class="row">
+													<td class="column">16</td>
+													<td class="column">Laringolix</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">2</td>
+												</tr>
+												<tr class="row">
+													<td class="column">6</td>
+													<td class="column">Coquelus</td>
+													<td class="column">M</td>
+													<td class="column">fabricant roues</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">7</td>
+													<td class="column">Pronostix</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">8</td>
+													<td class="column">Caius Laius</td>
+													<td class="column">M</td>
+													<td class="column">garcon de bains</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">9</td>
+													<td class="column">Gracchus</td>
+													<td class="column">M</td>
+													<td class="column">garcon de bains</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">10</td>
+													<td class="column">Tomatojus</td>
+													<td class="column">M</td>
+													<td class="column">garcon de bains</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">11</td>
+													<td class="column">Caliguliminix</td>
+													<td class="column">M</td>
+													<td class="column">guide</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">12</td>
+													<td class="column">Cetyounix</td>
+													<td class="column">M</td>
+													<td class="column">guerrier</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">13</td>
+													<td class="column">Zebigbos</td>
+													<td class="column">M</td>
+													<td class="column">chef</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">14</td>
+													<td class="column">Hypotenus</td>
+													<td class="column">M</td>
+													<td class="column">garcon de bains</td>
+													<td class="column">5</td>
+												</tr>
+												<tr class="row">
+													<td class="column">15</td>
+													<td class="column">Otorino</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">17</td>
+													<td class="column">Vercingetorix</td>
+													<td class="column">M</td>
+													<td class="column">chef gaulois</td>
+													<td class="column">2</td>
+												</tr>
+												<tr class="row">
+													<td class="column">18</td>
+													<td class="column">Jolitorax</td>
+													<td class="column">M</td>
+													<td class="column">guerrier</td>
+													<td class="column">10</td>
+												</tr>
+												<tr class="row">
+													<td class="column">19</td>
+													<td class="column">Mac Anoterapix</td>
+													<td class="column">M</td>
+													<td class="column">guerrier</td>
+													<td class="column">10</td>
+												</tr>
+												<tr class="row">
+													<td class="column">20</td>
+													<td class="column">Cassivellaunos</td>
+													<td class="column">M</td>
+													<td class="column">chef</td>
+													<td class="column">11</td>
+												</tr>
+												<tr class="row">
+													<td class="column">21</td>
+													<td class="column">Bouilleurdecrus</td>
+													<td class="column">M</td>
+													<td class="column">aubergiste</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">22</td>
+													<td class="column">Angine</td>
+													<td class="column">F</td>
+													<td class="column">aubergiste</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">23</td>
+													<td class="column">Coriza</td>
+													<td class="column">F</td>
+													<td class="column">ecoliere</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">24</td>
+													<td class="column">Marjolaine</td>
+													<td class="column">F</td>
+													<td class="column">druide</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">100</td>
+													<td class="column">Asterix</td>
+													<td class="column">M</td>
+													<td class="column">guerrier</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">101</td>
+													<td class="column">Obelix</td>
+													<td class="column">M</td>
+													<td class="column">livreur menhirs</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">103</td>
+													<td class="column">Abraracourcix</td>
+													<td class="column">M</td>
+													<td class="column">chef</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">104</td>
+													<td class="column">Bonemine</td>
+													<td class="column">F</td>
+													<td class="column">femme du chef</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">105</td>
+													<td class="column">Agecanonix</td>
+													<td class="column">M</td>
+													<td class="column">retraite</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">106</td>
+													<td class="column">Jolifleur</td>
+													<td class="column">F</td>
+													<td class="column"></td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">107</td>
+													<td class="column">Ordralfabetix</td>
+													<td class="column">M</td>
+													<td class="column">poissonnier</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">108</td>
+													<td class="column">Ielosubmarine</td>
+													<td class="column">F</td>
+													<td class="column">poissonniere</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">109</td>
+													<td class="column">Panoramix</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">110</td>
+													<td class="column">Assurancetourix</td>
+													<td class="column">M</td>
+													<td class="column">barde</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">25</td>
+													<td class="column">Aplusbegalix</td>
+													<td class="column">M</td>
+													<td class="column">chef</td>
+													<td class="column">6</td>
+												</tr>
+												<tr class="row">
+													<td class="column">26</td>
+													<td class="column">Catedralgotix</td>
+													<td class="column">M</td>
+													<td class="column">ecolier</td>
+													<td class="column">6</td>
+												</tr>
+												<tr class="row">
+													<td class="column">27</td>
+													<td class="column">Berlix</td>
+													<td class="column">M</td>
+													<td class="column">professeur</td>
+													<td class="column">6</td>
+												</tr>
+												<tr class="row">
+													<td class="column">28</td>
+													<td class="column">Amnesix</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">9</td>
+												</tr>
+												<tr class="row">
+													<td class="column">29</td>
+													<td class="column">Boufiltre</td>
+													<td class="column">F</td>
+													<td class="column">aide druide</td>
+													<td class="column">9</td>
+												</tr>
+												<tr class="row">
+													<td class="column">30</td>
+													<td class="column">Industrichimix</td>
+													<td class="column">M</td>
+													<td class="column">ecolier</td>
+													<td class="column">6</td>
+												</tr>
+											</table>
+											<br>
+											SQL> SELECT * FROM mesvillages;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">VILNO</th>
+													<th class="title">NOM</th>
+													<th class="title">NBHUTTE</th>
+													<th class="title">CHEF</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">14</td>
+													<td class="column">Strasbourgia</td>
+													<td class="column">100</td>
+													<td class="column">112</td>
+												</tr>
+												<tr class="row">
+													<td class="column">1</td>
+													<td class="column">Lutece</td>
+													<td class="column">734</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">3</td>
+													<td class="column">Gergovie</td>
+													<td class="column">45</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">5</td>
+													<td class="column">Aquae Calidae</td>
+													<td class="column">15</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">7</td>
+													<td class="column">Clairmont</td>
+													<td class="column">458</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">9</td>
+													<td class="column">Illkirch les bains</td>
+													<td class="column">35</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">12</td>
+													<td class="column">Fantome</td>
+													<td class="column">17</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">2</td>
+													<td class="column">Alesia</td>
+													<td class="column">568</td>
+													<td class="column">17</td>
+												</tr>
+												<tr class="row">
+													<td class="column">4</td>
+													<td class="column">Borvo</td>
+													<td class="column">5</td>
+													<td class="column">13</td>
+												</tr>
+												<tr class="row">
+													<td class="column">6</td>
+													<td class="column">Serum</td>
+													<td class="column">356</td>
+													<td class="column">25</td>
+												</tr>
+												<tr class="row">
+													<td class="column">8</td>
+													<td class="column">Village gaulois</td>
+													<td class="column">15</td>
+													<td class="column">103</td>
+												</tr>
+												<tr class="row">
+													<td class="column">10</td>
+													<td class="column">Lugdunum</td>
+													<td class="column">87</td>
+													<td class="column">18</td>
+												</tr>
+												<tr class="row">
+													<td class="column">11</td>
+													<td class="column">Uderzoville</td>
+													<td class="column">8</td>
+													<td class="column">20</td>
+												</tr>
+											</table>
+											<br>
+											SQL> ROLLBACK;<br><br>
+											Annulation (rollback) effectuee.<br><br>
+											SQL> SELECT * FROM mesgaulois;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">GAUNO</th>
+													<th class="title">NOM</th>
+													<th class="title">S</th>
+													<th class="title">METIER</th>
+													<th class="title">VILNO</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+													<td class="column">---------------</td>
+													<td class="column">-</td>
+													<td class="column">---------------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">112</td>
+													<td class="column">Frederix</td>
+													<td class="column">M</td>
+													<td class="column">chef</td>
+													<td class="column">14</td>
+												</tr>
+												<tr class="row">
+													<td class="column">114</td>
+													<td class="column">pascalix</td>
+													<td class="column">M</td>
+													<td class="column">forgeron</td>
+													<td class="column">14</td>
+												</tr>
+												<tr class="row">
+													<td class="column">102</td>
+													<td class="column">Idefix</td>
+													<td class="column"></td>
+													<td class="column">gardien</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">1</td>
+													<td class="column">Diagnostix</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">5</td>
+												</tr>
+												<tr class="row">
+													<td class="column">2</td>
+													<td class="column">Alambix</td>
+													<td class="column">M</td>
+													<td class="column">commercant</td>
+													<td class="column">3</td>
+												</tr>
+												<tr class="row">
+													<td class="column">3</td>
+													<td class="column">Pourquepix</td>
+													<td class="column">M</td>
+													<td class="column">commercant</td>
+													<td class="column">3</td>
+												</tr>
+												<tr class="row">
+													<td class="column">4</td>
+													<td class="column">Pronostix</td>
+													<td class="column">M</td>
+													<td class="column">commercant</td>
+													<td class="column">3</td>
+												</tr>
+												<tr class="row">
+													<td class="column">5</td>
+													<td class="column">Bainpuplix</td>
+													<td class="column">M</td>
+													<td class="column">commercant</td>
+													<td class="column">3</td>
+												</tr>
+												<tr class="row">
+													<td class="column">16</td>
+													<td class="column">Laringolix</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">2</td>
+												</tr>
+												<tr class="row">
+													<td class="column">6</td>
+													<td class="column">Coquelus</td>
+													<td class="column">M</td>
+													<td class="column">fabricant roues</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">7</td>
+													<td class="column">Pronostix</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">8</td>
+													<td class="column">Caius Laius</td>
+													<td class="column">M</td>
+													<td class="column">garcon de bains</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">9</td>
+													<td class="column">Gracchus</td>
+													<td class="column">M</td>
+													<td class="column">garcon de bains</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">10</td>
+													<td class="column">Tomatojus</td>
+													<td class="column">M</td>
+													<td class="column">garcon de bains</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">11</td>
+													<td class="column">Caliguliminix</td>
+													<td class="column">M</td>
+													<td class="column">guide</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">12</td>
+													<td class="column">Cetyounix</td>
+													<td class="column">M</td>
+													<td class="column">guerrier</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">13</td>
+													<td class="column">Zebigbos</td>
+													<td class="column">M</td>
+													<td class="column">chef</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">14</td>
+													<td class="column">Hypotenus</td>
+													<td class="column">M</td>
+													<td class="column">garcon de bains</td>
+													<td class="column">5</td>
+												</tr>
+												<tr class="row">
+													<td class="column">15</td>
+													<td class="column">Otorino</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">17</td>
+													<td class="column">Vercingetorix</td>
+													<td class="column">M</td>
+													<td class="column">chef gaulois</td>
+													<td class="column">2</td>
+												</tr>
+												<tr class="row">
+													<td class="column">18</td>
+													<td class="column">Jolitorax</td>
+													<td class="column">M</td>
+													<td class="column">guerrier</td>
+													<td class="column">10</td>
+												</tr>
+												<tr class="row">
+													<td class="column">19</td>
+													<td class="column">Mac Anoterapix</td>
+													<td class="column">M</td>
+													<td class="column">guerrier</td>
+													<td class="column">10</td>
+												</tr>
+												<tr class="row">
+													<td class="column">20</td>
+													<td class="column">Cassivellaunos</td>
+													<td class="column">M</td>
+													<td class="column">chef</td>
+													<td class="column">11</td>
+												</tr>
+												<tr class="row">
+													<td class="column">21</td>
+													<td class="column">Bouilleurdecrus</td>
+													<td class="column">M</td>
+													<td class="column">aubergiste</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">22</td>
+													<td class="column">Angine</td>
+													<td class="column">F</td>
+													<td class="column">aubergiste</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">23</td>
+													<td class="column">Coriza</td>
+													<td class="column">F</td>
+													<td class="column">ecoliere</td>
+													<td class="column">1</td>
+												</tr>
+												<tr class="row">
+													<td class="column">24</td>
+													<td class="column">Marjolaine</td>
+													<td class="column">F</td>
+													<td class="column">druide</td>
+													<td class="column">4</td>
+												</tr>
+												<tr class="row">
+													<td class="column">100</td>
+													<td class="column">Asterix</td>
+													<td class="column">M</td>
+													<td class="column">guerrier</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">101</td>
+													<td class="column">Obelix</td>
+													<td class="column">M</td>
+													<td class="column">livreur menhirs</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">103</td>
+													<td class="column">Abraracourcix</td>
+													<td class="column">M</td>
+													<td class="column">chef</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">104</td>
+													<td class="column">Bonemine</td>
+													<td class="column">F</td>
+													<td class="column">femme du chef</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">105</td>
+													<td class="column">Agecanonix</td>
+													<td class="column">M</td>
+													<td class="column">retraite</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">106</td>
+													<td class="column">Jolifleur</td>
+													<td class="column">F</td>
+													<td class="column"></td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">107</td>
+													<td class="column">Ordralfabetix</td>
+													<td class="column">M</td>
+													<td class="column">poissonnier</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">108</td>
+													<td class="column">Ielosubmarine</td>
+													<td class="column">F</td>
+													<td class="column">poissonniere</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">109</td>
+													<td class="column">Panoramix</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">110</td>
+													<td class="column">Assurancetourix</td>
+													<td class="column">M</td>
+													<td class="column">barde</td>
+													<td class="column">8</td>
+												</tr>
+												<tr class="row">
+													<td class="column">25</td>
+													<td class="column">Aplusbegalix</td>
+													<td class="column">M</td>
+													<td class="column">chef</td>
+													<td class="column">6</td>
+												</tr>
+												<tr class="row">
+													<td class="column">26</td>
+													<td class="column">Catedralgotix</td>
+													<td class="column">M</td>
+													<td class="column">ecolier</td>
+													<td class="column">6</td>
+												</tr>
+												<tr class="row">
+													<td class="column">27</td>
+													<td class="column">Berlix</td>
+													<td class="column">M</td>
+													<td class="column">professeur</td>
+													<td class="column">6</td>
+												</tr>
+												<tr class="row">
+													<td class="column">28</td>
+													<td class="column">Amnesix</td>
+													<td class="column">M</td>
+													<td class="column">druide</td>
+													<td class="column">9</td>
+												</tr>
+												<tr class="row">
+													<td class="column">29</td>
+													<td class="column">Boufiltre</td>
+													<td class="column">F</td>
+													<td class="column">aide druide</td>
+													<td class="column">9</td>
+												</tr>
+												<tr class="row">
+													<td class="column">30</td>
+													<td class="column">Industrichimix</td>
+													<td class="column">M</td>
+													<td class="column">ecolier</td>
+													<td class="column">6</td>
+												</tr>
+											</table>
+											<br>
+											SQL> SELECT * FROM mesvillages;
+											<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">VILNO</th>
+													<th class="title">NOM</th>
+													<th class="title">NBHUTTE</th>
+													<th class="title">CHEF</th>
+												</tr>
+												<tr class="row">
+													<td class="column">----------</td>
+													<td class="column">--------------------</td>
+													<td class="column">----------</td>
+													<td class="column">----------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">14</td>
+													<td class="column">Strasbourgia</td>
+													<td class="column">100</td>
+													<td class="column">112</td>
+												</tr>
+												<tr class="row">
+													<td class="column">1</td>
+													<td class="column">Lutece</td>
+													<td class="column">734</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">3</td>
+													<td class="column">Gergovie</td>
+													<td class="column">45</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">5</td>
+													<td class="column">Aquae Calidae</td>
+													<td class="column">15</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">7</td>
+													<td class="column">Clairmont</td>
+													<td class="column">458</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">9</td>
+													<td class="column">Illkirch les bains</td>
+													<td class="column">35</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">12</td>
+													<td class="column">Fantome</td>
+													<td class="column">17</td>
+													<td class="column"></td>
+												</tr>
+												<tr class="row">
+													<td class="column">2</td>
+													<td class="column">Alesia</td>
+													<td class="column">568</td>
+													<td class="column">17</td>
+												</tr>
+												<tr class="row">
+													<td class="column">4</td>
+													<td class="column">Borvo</td>
+													<td class="column">5</td>
+													<td class="column">13</td>
+												</tr>
+												<tr class="row">
+													<td class="column">6</td>
+													<td class="column">Serum</td>
+													<td class="column">356</td>
+													<td class="column">25</td>
+												</tr>
+												<tr class="row">
+													<td class="column">8</td>
+													<td class="column">Village gaulois</td>
+													<td class="column">15</td>
+													<td class="column">103</td>
+												</tr>
+												<tr class="row">
+													<td class="column">10</td>
+													<td class="column">Lugdunum</td>
+													<td class="column">87</td>
+													<td class="column">18</td>
+												</tr>
+												<tr class="row">
+													<td class="column">11</td>
+													<td class="column">Uderzoville</td>
+													<td class="column">8</td>
+													<td class="column">20</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Exécutez ce script.
+								<details>
+									<summary>Script à exécuter</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											CREATE TABLE mescamps (<br>
+											<span class="tab"></span>campno number(2) NOT NULL,<br>
+											<span class="tab"></span>nom varchar2(20) NOT NULL,<br>
+											<span class="tab"></span>nbtente number(3),<br>
+											<span class="tab"></span>nblegio number(4),<br>
+											<span class="tab"></span>CONSTRAINT pk_mescamps PRIMARY KEY (campno)<br>
+											);
+											<br>
+											CREATE TABLE mesbatailles (<br>
+											<span class="tab"></span>batno number(3) NOT NULL,<br>
+											<span class="tab"></span>nom varchar2(20),<br>
+											<span class="tab"></span>vilno number(2) NOT NULL,<br>
+											<span class="tab"></span>campno number(2) NOT NULL,<br>
+											<span class="tab"></span>datebat date,<br>
+											<span class="tab"></span>duree number(3),<br>
+											<span class="tab"></span>CONSTRAINT pk_mesbatailles PRIMARY KEY (batno),<br>
+											<span class="tab"></span>CONSTRAINT fk_mesbatailles_vilno FOREIGN KEY (vilno) REFERENCES mesvillages,<br>
+											<span class="tab"></span>CONSTRAINT fk_mesbatailles_campno FOREIGN KEY (campno) REFERENCES mescamps<br>
+											);
+											<br>
+											INSERT INTO mescamps VALUES (5, 'Nanciorum', 70, 400);<br>
+											INSERT INTO mesbatailles VALUES (12, 'Vosgia', 14, 5, to_date('02/09/0090', 'dd/mm/yyyy'), 20);<br>
+											INSERT INTO mescamps SELECT * FROM iin_camp;<br>
+											INSERT INTO mesbatailles SELECT * FROM iin_bataille;
+										</code>
+									</div>
+								</details>
+								Télécharger le script à exécuter : <a href="../../files/teaching/2025/D11/script_camp_bataille.sql">script_camp_bataille.sql</a>
+								<details>
+									<summary>Requête SQL (exécution du script)</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> start script_camp_bataille<br><br>
+											Table creee.<br><br>
+											Table creee.<br><br>
+											1 ligne creee.<br><br>
+											1 ligne creee.<br><br>
+											4 lignes creees.<br><br>
+											10 lignes creees.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Créez la table mestrophees par copie (CREATE TABLE ... AS requête) de la table iin_trophee 
+								puis ajoutez les contraintes d'intégrité données dans la description de la table ci-dessous.
+								<br>
+								<b>mestrophees</b>(<u>gauno</u>, <u>batno</u>, <u>grade</u>, nbcasque)
+								<ul class="liste">
+									<li class="item">
+										gauno : numéro du gaulois, contrainte de référence vers gauno de gaulois
+									</li>
+									<li class="item">
+										batno : numéro de bataille, contrainte de référence vers batno de bataille
+									</li>
+									<li class="item">
+										grade : grade du casque ramené en trophée, vaut 'Tribun', 'Centurion', 'Legionnaire' ou 'Decurion'
+									</li>
+									<li class="item">
+										nbcasque : nombre de casques de ce type ramené par ce gaulois lors de cette bataille
+									</li>
+								</ul>
+								<details>
+									<summary>Requêtes SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> CREATE TABLE mestrophees AS SELECT * FROM iin_trophee;<br><br>
+											Table creee.<br><br>
+											SQL> ALTER TABLE mestrophees ADD (<br>
+											<span class="tab"></span>CONSTRAINT pk_mestrophees PRIMARY KEY(gauno, batno, grade),<br>
+											<span class="tab"></span>CONSTRAINT fk_mestrophees_gauno FOREIGN KEY (gauno) REFERENCES mesgaulois,<br>
+											<span class="tab"></span>CONSTRAINT fk_mestrophees_batno FOREIGN KEY (batno) REFERENCES mesbatailles,<br>
+											<span class="tab"></span>CONSTRAINT c_mestrophees_grade CHECK (grade IN ('Tribun', 'Centurion', 'Legionnaire' , 'Decurion'))<br>
+											);<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Dans une requête ou une commande de mise à jour, il est possible de demander à l'utilisateur la saisie d'une valeur. 
+								Pour faire cela, on préfixe un nom (qui servira de nom de variable) par un &. 
+								Si la valeur attendue est une chaîne de caractères, le tout sera entre '. Par exemple '&bidon'. 
+								Sachant cela, écrire un script permettant d'ajouter une ligne à mestrophees, permettant aux gaulois de saisir leurs trophées au retour d'une bataille.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> INSERT INTO mestrophees VALUES (&gauno, &batno, '&grade', &nbcasque);<br>
+											Entrez une valeur pour gauno : 107<br>
+											Entrez une valeur pour batno : 12<br>
+											Entrez une valeur pour grade : Centurion<br>
+											Entrez une valeur pour nbcasque : 15<br>
+											ancien   1 : INSERT INTO mestrophees VALUES (&gauno, &batno, '&grade', &nbcasque)<br>
+											nouveau   1 : INSERT INTO mestrophees VALUES (107, 12, 'Centurion', 15)<br><br>
+											1 ligne creee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Ajoutez une colonne nom_chef à la table mescamps.
+								Utilisez la commande DESC pour vérifier l'ajout.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mescamps ADD (nom_chef varchar2(15));<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Augmentez la taille de la colonne nom dans la table mesbatailles à 25 caractères. 
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mesbatailles MODIFY (nom varchar2(25));<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Créez une vue <i>batailleVGaulois_Babaorum</i>, qui contient le numéro, le nom, la date de début et la durée des batailles entre <b>Village gaulois</b> et <b>Babaorum</b>.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> CREATE VIEW batailleVGaulois_Babaorum<br>
+											<span class="tab"></span>AS SELECT batno, nom, datebat, duree<br>
+											<span class="tab"></span>FROM mesbatailles<br>
+											<span class="tab"></span>WHERE vilno IN<br>
+											<span class="tab"></span><span class="tab"></span>(SELECT vilno<br>
+											<span class="tab"></span><span class="tab"></span>FROM mesvillages<br>
+											<span class="tab"></span><span class="tab"></span>WHERE upper(nom) = 'VILLAGE GAULOIS')<br>
+											<span class="tab"></span><span class="tab"></span>AND campno IN<br>
+											<span class="tab"></span><span class="tab"></span><span class="tab"></span>(SELECT campno<br>
+											<span class="tab"></span><span class="tab"></span><span class="tab"></span>FROM mescamps<br>
+											<span class="tab"></span><span class="tab"></span><span class="tab"></span>WHERE upper(nom) = 'BABAORUM'<br>
+											);<br><br>
+											Vue creee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Ajouter à la table mesbatailles la contrainte<br>
+								ALTER TABLE mesbatailles ADD (CONSTRAINT c_mesbatailles_datebat CHECK(datebat < sysdate));<br>
+								Que se passe-t-il ?
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											Cette contrainte aurait pour but de vérifier que la date de la bataille est antérieure à la date du jour. 
+											Cela est refusé car une fois vérifiée sur une donnée, la contrainte doit rester vraie, or la date du jour change chaque jour et donc la condition serait susceptible de ne plus être vraie).<br>
+											NB : la contrainte ALTER TABLE mesbatailles ADD (CONSTRAINT c_mesbatailles_datebat CHECK(datebat < to_date('12/10/2021','dd/mm/yyyy')));serait acceptée mais ne correspond pas à la date du jour quelque soit le jour... et ne répond donc pas à la question.
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mesbatailles ADD (CONSTRAINT c_mesbatailles_datebat CHECK(datebat < sysdate));<br>
+											ALTER TABLE mesbatailles ADD (CONSTRAINT c_mesbatailles_datebat CHECK(datebat < sysdate))<br>
+											<span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span>*<br>
+											ERREUR a la ligne 1 :<br>
+											ORA-02436: variable de date ou systeme mal indiquee dans contrainte de verification
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Tentez de réduire la taille de la colonne nom de la table mon_camp à 10 caractères.
+								Que se passe-t-il ?
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											Pas de problème, ça fonctionne.
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mescamps MODIFY (nom varchar2(10));<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Tentez maintenant de réduire la taille de la colonne nom de la table mon_camp à 8 caractères.
+								Que se passe-t-il ?
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											Erreur, ça ne fonctionne pas car il existe un nom à 10 caractères.
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mescamps MODIFY (nom varchar2(8));<br>
+											ALTER TABLE mescamps MODIFY (nom varchar2(8))<br>
+											<span class="tab"><span class="tab"></span>*<br>
+											ERREUR a la ligne 1 :<br>
+											ORA-01441: impossible de diminuer la largeur de colonne : certaines valeurs sont trop elevees
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Supprimez la colonne nom_chef de la table mon_camp.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mescamps DROP COLUMN nom_chef;<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Désactivez la clé primaire de la table mon_camp.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mescamps DISABLE CONSTRAINT pk_mescamps;<br>
+											ALTER TABLE mescamps DISABLE CONSTRAINT pk_mescamps<br>
+											*<br>
+											ERREUR a la ligne 1 :<br>
+											ORA-02297: impossible de desactiver la contrainte (ROMAIN_PERRIN.PK_MESCAMPS) - des dependances existent
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											C'est impossible en raison de la contrainte de référence : campno de mesbatailles référence campno de camp.<br>
+											il faut d'abord désactiver cette contrainte :<br>
+											ALTER TABLE mesbatailles DISABLE CONSTRAINT fk_mesbatailles_campno;
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL corrigée</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mesbatailles DISABLE CONSTRAINT fk_mesbatailles_campno;<br><br>
+											Table modifiee.<br><br>
+											SQL> ALTER TABLE mescamps DISABLE CONSTRAINT pk_mescamps;<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Ajoutez un camp avec un campno déjà présent dans la table.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> INSERT INTO mescamps(campno, nom, nbtente, nblegio) VALUES(5, 'Bibendum',80, 600);<br><br>
+											1 ligne creee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Réactivez la clé primaire.
+								Que se passe-t-il ?
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											On obtient un message de violation de la clé primaire car il y a maintenant 2 lignes avec la même valeur.
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mescamps ENABLE CONSTRAINT pk_mescamps;<br>
+											ALTER TABLE mescamps ENABLE CONSTRAINT pk_mescamps<br>
+											*<br>
+											ERREUR a la ligne 1 :<br>
+											ORA-02437: impossible de valider (ROMAIN_PERRIN.PK_MESCAMPS) - violation de la cle primaire
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Supprimez le dernier camp ajouté et réactivez la clé primaire, puis la contrainte de référence qui avait été supprimée.
+								<details>
+									<summary>Requêtes SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> DELETE FROM mescamps WHERE LOWER(nom) = 'bibendum';<br><br>
+											1 ligne supprimee.<br><br>
+											SQL> ALTER TABLE mescamps ENABLE CONSTRAINT pk_mescamps;<br><br>
+											Table modifiee.<br><br>
+											SQL> ALTER TABLE mesbatailles ENABLE CONSTRAINT fk_mesbatailles_campno;<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Les gaulois qui ont le même métier que le gaulois numéro 1 déménagent dans le village 14, 
+								vérifier l'effet en regardant le contenu des tables avant et après exécution de la commande.
+								Validez.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											UPDATE mesgaulois<br>
+											<span class="tab"></span>SET vilno = 14<br>
+											<span class="tab"></span>WHERE lower(metier) =<br>
+											<span class="tab"></span><span class="tab"></span>(SELECT LOWER(metier)<br>
+											<span class="tab"></span><span class="tab"></span>FROM mesgaulois<br>
+											<span class="tab"></span><span class="tab"></span>WHERE gauno = 1<br>
+											);<br><br>
+											7 lignes mises a jour.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Ajoutez une contrainte d'unicité sur la colonne nom de mesvillages.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE mesvillages ADD (CONSTRAINT u_mesvillages_nom UNIQUE(nom));<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li>
+						</ol>
+						
+						<h4 class="heading-4">Exercice bonus</h4>
+
+						<ol class="list">
+							<li class="item">
+								NB: il faut que tout le monde donne le même nom aux objets créés (la table kdo ne suffit pas pour que cette histoire de Père Noël marche ! ).<br> 
+								Mettez-vous d'accord !<br>
+								Créer la table kdo avec les colonnes receveur (en fait, un compte Oracle de votre groupe) et cadeau. 
+								Dans receveur, mettre le nom du compte en minuscules 
+								Définissez bien la clé !<br>
+								exemple de contenu de la table kdo:<br>
+								<table class="table">
+									<tr class="row">
+										<th class="title">receveur</th>
+										<th class="title">cadeau</th>
+									</tr>
+									<tr class="row">
+										<td class="column">tfusser</td>
+										<td class="column">Perroquet</td>
+									</tr>
+									<tr class="row">
+										<td class="column">jmougenel</td>
+										<td class="column">Porsche bleue</td>
+									</tr>
+									<tr class="row">
+										<td class="column">abonnet</td>
+										<td class="column">DVD Harry Potter 22</td>
+									</tr>
+									<tr class="row">
+										<td class="column">...</td>
+										<td class="column">...</td>
+									</tr>
+								</table>
+								
+								On peut offrir plusieurs cadeaux au même compte oracle, et le même cadeau à plusieurs comptes.
+								Pour des raisons de tests, s'offrir un (ou plusieurs) cadeaux à soi-même.
+								Vos partenaires doivent pouvoir consulter les cadeaux que vous leur avez offerts ! 
+								Bien entendu, s'ils ont "bien fait" leur travail, en récompense de votre travail, vous pourrez aussi consulter vos cadeaux en fonction du donateur. 
+								Attention: regardez bien ce que donne la commande show user. 
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											CREATE TABLE kdo (<br>
+											<span class="tab"></span>receveur varchar2(30),<br>
+											<span class="tab"></span>cadeau varchar2(40),<br>
+											<span class="tab"></span>CONSTRAINT pk_kdo PRIMARY KEY (receveur, cadeau)<br>
+											);<br><br>
+											Table creee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Créer la vue :<br>
+								<span class="tab"></span>CREATE VIEW cadeaux<br>
+								<span class="tab"></span>AS SELECT * FROM kdo<br>
+								<span class="tab"></span>WHERE UPPER(receveur) = UPPER(user);
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> CREATE VIEW cadeaux<br>
+											<span class="tab"></span>AS SELECT * FROM kdo<br>
+											<span class="tab"></span>WHERE UPPER(receveur) = UPPER(user);<br><br>
+											Vue creee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Exécuter la commande GRANT select ON cadeaux TO login; où login est le login Oracle d'une personne à qui vous avez offert un cadeau 
+								(cette commande donne le droit à l'autre utilisateur de faire un select sur la vue). 
+								Demander à cette personne de faire un select sur la vue en préfixant le nom de la vue de "votrelogin.". 
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> GRANT select ON cadeaux TO login;<br><br>
+											==> Me demander de vous donner les doits sur ma table :)
+										</code>
+									</div>
+								</details>
+								Mon script pour vous offir des cadeaux : <a href="../../files/teaching/2025/D11/ajout_cadeaux.sql">ajout_cadeaux.sql</a>
+							</li><br>
+
+							<li class="item">
+								Ajouter une colonne à la table kdo date_cad pour la date où le cadeau a été offert.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE kdo ADD (date_cad date);<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Mettre la date du jour comme date_cad pour une des lignes de la table kdo.
+								<details>
+									<summary>Requêtes SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> INSERT INTO kdo VALUES ('toto', 'jeu', NULL);<br><br>
+											1 ligne creee.<br><br>
+											SQL> INSERT INTO kdo VALUES ('titi', 'voiture', NULL);<br><br>
+											1 ligne creee.<br><br>
+											UPDATE kdo SET date_cad = SYSDATE WHERE receveur = 'toto';<br><br>
+											1 ligne modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Interdire que la date ne soit pas renseignée.
+								Que se passe-t-il ?
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											Des valeurs NULL existent dans la table qui violent la contrainte.
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE kdo MODIFY (date_cad date NOT NULL);<br>
+											ALTER TABLE kdo MODIFY (date_cad date NOT NULL)<br>
+											*<br>
+											ERREUR a la ligne 1 :<br>
+											ORA-02296: impossible d'activer la contrainte (ROMAIN_PERRIN.) - valeurs null trouvees
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Faire en sorte que l'instruction précédente puisse être exécutée.
+								<details>
+									<summary>Requêtes SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> UPDATE kdo SET date_cad = SYSDATE WHERE receveur = 'titi';<br><br>
+											1 ligne mise a jour.<br><br>
+											SQL> ALTER TABLE kdo MODIFY (date_cad date NOT NULL);<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Supprimer la colonne date_cad.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE kdo DROP COLUMN date_cad;<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Passer à 25 la taille possible pour la colonne cadeau.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE kdo MODIFY (cadeau varchar(25));<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Vérifier la prise en compte en affichant la structure de la table.
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> DESC kdo;<br>
+											<table class="table">
+												<tr class="row">
+													<th class="title">Nom</th>
+													<th class="title">NULL ?</th>
+													<th class="title">Type</th>
+												</tr>
+												<tr class="row">
+													<td class="column">--------------------</td>
+													<td class="column">--------</td>
+													<td class="column">--------------------</td>
+												</tr>
+												<tr class="row">
+													<td class="column">RECEVEUR</td>
+													<td class="column">NOT NULL</td>
+													<td class="column">VARCHAR2(30)</td>
+												</tr>
+												<tr class="row">
+													<td class="column">CADEAU</td>
+													<td class="column">NOT NULL</td>
+													<td class="column">VARCHAR2(25)</td>
+												</tr>
+											</table>
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Réduire la taille de la colonne cadeau à 15.
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											Aucun problème !
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE kdo MODIFY (cadeau varchar(15));<br><br>
+											Table modifiee.
+										</code>
+									</div>
+								</details>
+							</li><br>
+
+							<li class="item">
+								Réduire la taille de la colonne cadeau à 3.
+								<details>
+									<summary>Réponse</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											Impossible car des valeurs pour cadeau dépassent les 3 caractères !
+										</code>
+									</div>
+								</details>
+								<details>
+									<summary>Requête SQL</summary>
+									<div class="d11answer">
+										<code class="d11sql">
+											SQL> ALTER TABLE kdo MODIFY (cadeau varchar(3));<br>
+											ALTER TABLE kdo MODIFY (cadeau varchar(3))<br>
+											<span class="tab"></span><span class="tab"></span>*<br>
+											ERREUR a la ligne 1 :<br>
+											ORA-01441: impossible de diminuer la largeur de colonne : certaines valeurs sont trop elevees
+										</code>
+									</div>
+								</details>
+							</li><br>
+						</ol>
+
+					</article>
 
 				</section>
 
