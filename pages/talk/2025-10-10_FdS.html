@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>𝓡𝓟&nbsp;&nbsp;Dr Romain PERRIN, PhD</title>
 		<link rel="stylesheet" href="../../styles/style.css"/>
+		<script src="./FDS2025.js"></script>
 	</head>
 
 	<body>
@@ -36,12 +37,181 @@
 
 					<article class="article">
 						<h3 class="heading-3">Background</h3>
+						<hr>
 						<p class="paragraph">
 							I participated to the 2025 edition of the <em>Fête de la Science</em> at the University of Strasbourg.
 							I animated a stand destined to teach the concepts of artificial intelligence using no computed of any device of any sort.
 							Our stand was called <a href="https://www.fetedelascience.fr/viens-defier-nos-ia-en-carton">Viens défier nos IA en carton !</a> (come defy our cardboard AI).
-
 						</p>
+					</article>
+
+					<article class="article">
+						<h3 class="heading-3">Tic-tac-toe</h3>
+						<hr>
+					</article>
+
+					<article class="article">
+						<h3 class="heading-3">Nim (1/3) - Trained AI</h3>
+						<hr>
+
+						<p class="paragraph">
+							TODO
+						</p>
+
+						<div class="FDS2025Nim1">
+							<!--Buttons to move the token or restart a game-->
+							<div class="FDS2025Nim1Buttons">
+								<div class="FDS2025Nim1Button">
+									<button id="FDS2025Nim1ButtonStart" type="button" onclick="Nim1Reset()">Start/Reset</button>
+									<button id="FDS2025Nim1ButtonMove1" type="button" onclick="Nim1Move1()">Move +1</button>
+									<button id="FDS2025Nim1ButtonMove2" type="button" onclick="Nim1Move2()">Move +2</button>
+									<button id="FDS2025Nim1ButtonMove3" type="button" onclick="Nim1Move3()">Move +3</button>
+									<label id="FDS2025Nim1Display">It's your turn</label>
+								</div>
+							</div>
+							<!--Token to move-->
+							<div class="FDS2025Nim1MovableToken">
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025NimToken.png" id="FDS2025NimTokenPosition9">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025NimTokenEmpty.png" id="FDS2025NimTokenPosition8">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025NimTokenEmpty.png" id="FDS2025NimTokenPosition7">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025NimTokenEmpty.png" id="FDS2025NimTokenPosition6">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025NimTokenEmpty.png" id="FDS2025NimTokenPosition5">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025NimTokenEmpty.png" id="FDS2025NimTokenPosition4">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025NimTokenEmpty.png" id="FDS2025NimTokenPosition3">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025NimTokenEmpty.png" id="FDS2025NimTokenPosition2">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025NimTokenEmpty.png" id="FDS2025NimTokenPosition1">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025NimTokenEmpty.png" id="FDS2025NimTokenPosition0">
+								</div>
+							</div>
+							<!--Board-->
+							<div class="FDS2025Nim1Board">
+								<div class="FDS2025Nim1BoardPiece">
+									<img src="../../images/talk/FDS2025Board9.png">
+								</div>
+								<div class="FDS2025Nim1BoardPiece">
+									<img src="../../images/talk/FDS2025Board8.png">
+								</div>
+								<div class="FDS2025Nim1BoardPiece">
+									<img src="../../images/talk/FDS2025Board7.png">
+								</div>
+								<div class="FDS2025Nim1BoardPiece">
+									<img src="../../images/talk/FDS2025Board6.png">
+								</div>
+								<div class="FDS2025Nim1BoardPiece">
+									<img src="../../images/talk/FDS2025Board5.png">
+								</div>
+								<div class="FDS2025Nim1BoardPiece">
+									<img src="../../images/talk/FDS2025Board4.png">
+								</div>
+								<div class="FDS2025Nim1BoardPiece">
+									<img src="../../images/talk/FDS2025Board3.png">
+								</div>
+								<div class="FDS2025Nim1BoardPiece">
+									<img src="../../images/talk/FDS2025Board2.png">
+								</div>
+								<div class="FDS2025Nim1BoardPiece">
+									<img src="../../images/talk/FDS2025Board1.png">
+								</div>
+								<div class="FDS2025Nim1BoardPiece">
+									<img src="../../images/talk/FDS2025Board0.png">
+								</div>
+							</div>
+							<!--Picked tokens from the cups-->
+							<div class="FDS2025Nim1Tokens">
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025EmptyToken.png" id="FDS2025NimTokenImage9">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025EmptyToken.png" id="FDS2025NimTokenImage8">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025EmptyToken.png" id="FDS2025NimTokenImage7">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025EmptyToken.png" id="FDS2025NimTokenImage6">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025EmptyToken.png" id="FDS2025NimTokenImage5">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025EmptyToken.png" id="FDS2025NimTokenImage4">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025EmptyToken.png" id="FDS2025NimTokenImage3">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025EmptyToken.png" id="FDS2025NimTokenImage2">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025EmptyToken.png" id="FDS2025NimTokenImage1">
+								</div>
+								<div class="FDS2025Nim1Token">
+									<img src="../../images/talk/FDS2025EmptyToken.png" id="FDS2025NimTokenImage0">
+								</div>
+							</div>
+							<!--Cups-->
+							<div class="FDS2025Nim1Cups">
+								<div class="FDS2025Nim1Cup">
+									
+								</div>
+								<div class="FDS2025Nim1Cup">
+									<img src="../../images/talk/FDS2025Cup.png">
+								</div>
+								<div class="FDS2025Nim1Cup">
+									<img src="../../images/talk/FDS2025Cup.png">
+								</div>
+								<div class="FDS2025Nim1Cup">
+									<img src="../../images/talk/FDS2025Cup.png">
+								</div>
+								<div class="FDS2025Nim1Cup">
+									<img src="../../images/talk/FDS2025Cup.png">
+								</div>
+								<div class="FDS2025Nim1Cup">
+									<img src="../../images/talk/FDS2025Cup.png">
+								</div>
+								<div class="FDS2025Nim1Cup">
+									<img src="../../images/talk/FDS2025Cup.png">
+								</div>
+								<div class="FDS2025Nim1Cup">
+									<img src="../../images/talk/FDS2025Cup.png">
+								</div>
+								<div class="FDS2025Nim1Cup">
+									<img src="../../images/talk/FDS2025Cup.png">
+								</div>
+								<div class="FDS2025Nim1Cup">
+									
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<article class="article">
+						<h3 class="heading-3">Nim (2/3)</h3>
+						<hr>
+					</article>
+
+					<article class="article">
+						<h3 class="heading-3">Nim (3/3)</h3>
+						<hr>
 					</article>
 
 				</section>
