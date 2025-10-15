@@ -732,7 +732,94 @@ details summary {
 	height: 100%;
 }
 
+.FDS2025Nim2 {
+	width: 100%;
+}
 
+.FDS2025Nim2 .FDS2025Nim2Buttons {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Buttons .FDS2025Nim2Button {
+	flex: 1;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Buttons .FDS2025Nim2Button button {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.FDS2025Nim2 .FDS2025Nim2MovableToken {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025Nim2 .FDS2025Nim2MovableToken .FDS2025Nim2Token {
+	flex: 1;
+	justify-content: center;
+}
+
+.FDS2025Nim2 .FDS2025Nim2MovableToken .FDS2025Nim2Token img {
+	width: 100%;
+	height: 100%;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Board {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Board .FDS2025Nim2BoardPiece {
+	flex: 1;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Board .FDS2025Nim2BoardPiece img {
+	width: 100%;
+	height: 100%;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Tokens {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Tokens .FDS2025Nim2Token {
+	flex: 1;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Tokens .FDS2025Nim2Token img {
+	width: 100%;
+	height: 100%;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Cups {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Cups .FDS2025Nim2Cup {
+	flex: 1;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Cups .FDS2025Nim2Cup img {
+	width: 100%;
+	height: 100%;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Choices {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Choices .FDS2025Nim2Choice {
+	flex: 1;
+}
+
+.FDS2025Nim2 .FDS2025Nim2Choices .FDS2025Nim2Choice img {
+	width: 100%;
+	height: 100%;
+}
 
 .FDS2025Nim3 {
 	width: 100%;

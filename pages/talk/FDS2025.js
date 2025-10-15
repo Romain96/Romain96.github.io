@@ -7,25 +7,25 @@ function Nim1Reset()
     Nim1EnableMove();
     document.getElementById("FDS2025Nim1Display").innerText = "It's your turn";
     // all token position images to blank except the number 9 where the toke is displayed
-    document.getElementById("FDS2025NimTokenPosition9").src = "../../images/talk/FDS2025NimToken.png";
-    document.getElementById("FDS2025NimTokenPosition8").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025NimTokenPosition7").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025NimTokenPosition6").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025NimTokenPosition5").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025NimTokenPosition4").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025NimTokenPosition3").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025NimTokenPosition2").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025NimTokenPosition1").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025NimTokenPosition0").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition9").src = "../../images/talk/FDS2025NimToken.png";
+    document.getElementById("FDS2025Nim1TokenPosition8").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition7").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition6").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition5").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition4").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition3").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition2").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition1").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition0").src = "../../images/talk/FDS2025NimTokenEmpty.png";
     // all token images to blank
-    document.getElementById("FDS2025NimTokenImage1").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025NimTokenImage2").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025NimTokenImage3").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025NimTokenImage4").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025NimTokenImage5").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025NimTokenImage6").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025NimTokenImage7").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025NimTokenImage8").src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage1").src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage2").src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage3").src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage4").src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage5").src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage6").src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage7").src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage8").src = "../../images/talk/FDS2025EmptyToken.png";
 }
 
 function Sleep(ms)
@@ -67,7 +67,7 @@ function Nim1MoveTokenToPosition()
 {
     for (i = 9; i >= 0; i--)
     {
-        let id = "FDS2025NimTokenPosition" + i;
+        let id = "FDS2025Nim1TokenPosition" + i;
         if (i == nim1TokenPosition)
         {
             document.getElementById(id).src = "../../images/talk/FDS2025NimToken.png";
@@ -107,7 +107,7 @@ async function Nim1AIMove()
 function Nim1PickTokenFromCup(tokenValue, cupIndex)
 {
     let tokenImage = "../../images/talk/FDS2025Token" + tokenValue + ".png";
-    let tokenId = "FDS2025NimTokenImage" + cupIndex;
+    let tokenId = "FDS2025Nim1TokenImage" + cupIndex;
     document.getElementById(tokenId).src = tokenImage;
 }
 
