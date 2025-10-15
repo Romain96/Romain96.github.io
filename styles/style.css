@@ -654,6 +654,70 @@ details summary {
 	font-size: 0.8em;
 }
 
+/* FDS 2025 Tic-Tac-Toe */
+
+.FDS2025TicTacToe1 {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left {
+	flex: 1;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Choices {
+	width: 100%;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Choices .table {
+	border-collapse: collapse;
+	border: 2px solid black;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Choices .table .row {
+	border: 2px solid black;
+	margin: 0px;
+	padding: 0px;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Choices .table .row button {
+	padding: 2px;
+	margin: 2px;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board {
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board .FDS2025TicTacToe1Display {
+	width: 100%;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board .FDS2025TicTacToe1Display .FDS2025TicTacToe1DisplayLine {
+	display: flex;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board .FDS2025TicTacToe1Display .FDS2025TicTacToe1DisplayLine .FDS2025TicTacToe1DisplayLineImage {
+	flex: 1;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board .FDS2025TicTacToe1Display .FDS2025TicTacToe1DisplayLine .FDS2025TicTacToe1DisplayLineImage img {
+	width: 100%;
+	height: 100%;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Right {
+	flex: 1;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Right img {
+	width: 100%;
+	overflow: visible;
+}
+
+
 /* FDS 2025 Nim */
 .FDS2025Nim1 {
 	width: 100%;
