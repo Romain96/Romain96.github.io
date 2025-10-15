@@ -77,6 +77,11 @@ body {
 }
 
 /* Article styling */
+
+.article {
+	width: 100%;
+}
+
 .article .heading-3 {
 	font-size: 1.5em;
 	margin-bottom: 10px;
@@ -723,6 +728,54 @@ details summary {
 }
 
 .FDS2025Nim1 .FDS2025Nim1Tokens .FDS2025Nim1Token img {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+.FDS2025Nim3 {
+	width: 100%;
+}
+
+.FDS2025Nim3 .FDS2025Nim3Board {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025Nim3 .FDS2025Nim3Board .FDS2025Nim3BoardPiece {
+	flex: 1;
+}
+
+.FDS2025Nim3 .FDS2025Nim3Board .FDS2025Nim3BoardPiece img {
+	width: 100%;
+	height: 100%;
+}
+
+.FDS2025Nim3 .FDS2025Nim3Tokens {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025Nim3 .FDS2025Nim3Tokens .FDS2025Nim3Token {
+	flex: 1;
+}
+
+.FDS2025Nim3 .FDS2025Nim3Tokens .FDS2025Nim3Token img {
+	width: 100%;
+	height: 100%;
+}
+
+.FDS2025Nim3 .FDS2025Nim3Cups {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025Nim3 .FDS2025Nim3Cups .FDS2025Nim3Cup {
+	flex: 1;
+}
+
+.FDS2025Nim3 .FDS2025Nim3Cups .FDS2025Nim3Cup img {
 	width: 100%;
 	height: 100%;
 }
