@@ -693,6 +693,7 @@ details summary {
 
 .FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board .FDS2025TicTacToe1Display {
 	width: 100%;
+	border: 2px solid black;
 }
 
 .FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board .FDS2025TicTacToe1Display .FDS2025TicTacToe1DisplayLine {
@@ -700,6 +701,7 @@ details summary {
 }
 
 .FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board .FDS2025TicTacToe1Display .FDS2025TicTacToe1DisplayLine .FDS2025TicTacToe1DisplayLineImage {
+	border: 2px solid black;
 	flex: 1;
 }
 

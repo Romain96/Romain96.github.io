@@ -13,25 +13,25 @@ function Nim1Reset()
     Nim1EnableMove();
     document.getElementById("FDS2025Nim1Display").innerText = "It's your turn";
     // all token position images to blank except the number 9 where the toke is displayed
-    document.getElementById("FDS2025Nim1TokenPosition9").src = "../../images/talk/FDS2025NimToken.png";
-    document.getElementById("FDS2025Nim1TokenPosition8").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim1TokenPosition7").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim1TokenPosition6").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim1TokenPosition5").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim1TokenPosition4").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim1TokenPosition3").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim1TokenPosition2").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim1TokenPosition1").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim1TokenPosition0").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition9").src = "../../images/talk/FDS2025/Nim/NimToken.png";
+    document.getElementById("FDS2025Nim1TokenPosition8").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition7").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition6").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition5").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition4").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition3").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition2").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition1").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim1TokenPosition0").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
     // all token images to blank
-    document.getElementById("FDS2025Nim1TokenImage1").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim1TokenImage2").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim1TokenImage3").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim1TokenImage4").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim1TokenImage5").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim1TokenImage6").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim1TokenImage7").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim1TokenImage8").src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage1").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage2").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage3").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage4").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage5").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage6").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage7").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim1TokenImage8").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
 }
 
 function Sleep(ms)
@@ -76,11 +76,11 @@ function Nim1MoveTokenToPosition()
         let id = "FDS2025Nim1TokenPosition" + i;
         if (i == nim1TokenPosition)
         {
-            document.getElementById(id).src = "../../images/talk/FDS2025NimToken.png";
+            document.getElementById(id).src = "../../images/talk/FDS2025/Nim/NimToken.png";
         }
         else
         {
-            document.getElementById(id).src = "../../images/talk/FDS2025NimTokenEmpty.png";
+            document.getElementById(id).src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
         }
     }
 }
@@ -112,7 +112,7 @@ async function Nim1AIMove()
 
 function Nim1PickTokenFromCup(tokenValue, cupIndex)
 {
-    let tokenImage = "../../images/talk/FDS2025Token" + tokenValue + ".png";
+    let tokenImage = "../../images/talk/FDS2025/Nim/Token" + tokenValue + ".png";
     let tokenId = "FDS2025Nim1TokenImage" + cupIndex;
     document.getElementById(tokenId).src = tokenImage;
 }
@@ -163,52 +163,52 @@ function Nim2Reset()
     Nim2EnableMove();
     document.getElementById("FDS2025Nim2Display").innerText = "It's your turn\nStats : played 0, Player won 0/0, AI won 0/0";
     // all token position images to blank except the number 9 where the toke is displayed
-    document.getElementById("FDS2025Nim2TokenPosition9").src = "../../images/talk/FDS2025NimToken.png";
-    document.getElementById("FDS2025Nim2TokenPosition8").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition7").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition6").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition5").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition4").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition3").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition2").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition1").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition0").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition9").src = "../../images/talk/FDS2025/Nim/NimToken.png";
+    document.getElementById("FDS2025Nim2TokenPosition8").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition7").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition6").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition5").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition4").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition3").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition2").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition1").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition0").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
     // all token images to blank
-    document.getElementById("FDS2025Nim2TokenImage0").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage1").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage2").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage3").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage4").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage5").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage6").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage7").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage8").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage9").src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage0").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage1").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage2").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage3").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage4").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage5").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage6").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage7").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage8").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage9").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
     // all cup tokens to 1,2,3
-    document.getElementById("FDS2025Nim2Cup8Token1").src = "../../images/talk/FDS2025Token1.png";
-    document.getElementById("FDS2025Nim2Cup8Token2").src = "../../images/talk/FDS2025Token2.png";
-    document.getElementById("FDS2025Nim2Cup8Token3").src = "../../images/talk/FDS2025Token3.png";
-    document.getElementById("FDS2025Nim2Cup7Token1").src = "../../images/talk/FDS2025Token1.png";
-    document.getElementById("FDS2025Nim2Cup7Token2").src = "../../images/talk/FDS2025Token2.png";
-    document.getElementById("FDS2025Nim2Cup7Token3").src = "../../images/talk/FDS2025Token3.png";
-    document.getElementById("FDS2025Nim2Cup6Token1").src = "../../images/talk/FDS2025Token1.png";
-    document.getElementById("FDS2025Nim2Cup6Token2").src = "../../images/talk/FDS2025Token2.png";
-    document.getElementById("FDS2025Nim2Cup6Token3").src = "../../images/talk/FDS2025Token3.png";
-    document.getElementById("FDS2025Nim2Cup5Token1").src = "../../images/talk/FDS2025Token1.png";
-    document.getElementById("FDS2025Nim2Cup5Token2").src = "../../images/talk/FDS2025Token2.png";
-    document.getElementById("FDS2025Nim2Cup5Token3").src = "../../images/talk/FDS2025Token3.png";
-    document.getElementById("FDS2025Nim2Cup4Token1").src = "../../images/talk/FDS2025Token1.png";
-    document.getElementById("FDS2025Nim2Cup4Token2").src = "../../images/talk/FDS2025Token2.png";
-    document.getElementById("FDS2025Nim2Cup4Token3").src = "../../images/talk/FDS2025Token3.png";
-    document.getElementById("FDS2025Nim2Cup3Token1").src = "../../images/talk/FDS2025Token1.png";
-    document.getElementById("FDS2025Nim2Cup3Token2").src = "../../images/talk/FDS2025Token2.png";
-    document.getElementById("FDS2025Nim2Cup3Token3").src = "../../images/talk/FDS2025Token3.png";
-    document.getElementById("FDS2025Nim2Cup2Token1").src = "../../images/talk/FDS2025Token1.png";
-    document.getElementById("FDS2025Nim2Cup2Token2").src = "../../images/talk/FDS2025Token2.png";
-    document.getElementById("FDS2025Nim2Cup2Token3").src = "../../images/talk/FDS2025Token3.png";
-    document.getElementById("FDS2025Nim2Cup1Token1").src = "../../images/talk/FDS2025Token1.png";
-    document.getElementById("FDS2025Nim2Cup1Token2").src = "../../images/talk/FDS2025Token2.png";
-    document.getElementById("FDS2025Nim2Cup1Token3").src = "../../images/talk/FDS2025Token3.png";
+    document.getElementById("FDS2025Nim2Cup8Token1").src = "../../images/talk/FDS2025/Nim/Token1.png";
+    document.getElementById("FDS2025Nim2Cup8Token2").src = "../../images/talk/FDS2025/Nim/Token2.png";
+    document.getElementById("FDS2025Nim2Cup8Token3").src = "../../images/talk/FDS2025/Nim/Token3.png";
+    document.getElementById("FDS2025Nim2Cup7Token1").src = "../../images/talk/FDS2025/Nim/Token1.png";
+    document.getElementById("FDS2025Nim2Cup7Token2").src = "../../images/talk/FDS2025/Nim/Token2.png";
+    document.getElementById("FDS2025Nim2Cup7Token3").src = "../../images/talk/FDS2025/Nim/Token3.png";
+    document.getElementById("FDS2025Nim2Cup6Token1").src = "../../images/talk/FDS2025/Nim/Token1.png";
+    document.getElementById("FDS2025Nim2Cup6Token2").src = "../../images/talk/FDS2025/Nim/Token2.png";
+    document.getElementById("FDS2025Nim2Cup6Token3").src = "../../images/talk/FDS2025/Nim/Token3.png";
+    document.getElementById("FDS2025Nim2Cup5Token1").src = "../../images/talk/FDS2025/Nim/Token1.png";
+    document.getElementById("FDS2025Nim2Cup5Token2").src = "../../images/talk/FDS2025/Nim/Token2.png";
+    document.getElementById("FDS2025Nim2Cup5Token3").src = "../../images/talk/FDS2025/Nim/Token3.png";
+    document.getElementById("FDS2025Nim2Cup4Token1").src = "../../images/talk/FDS2025/Nim/Token1.png";
+    document.getElementById("FDS2025Nim2Cup4Token2").src = "../../images/talk/FDS2025/Nim/Token2.png";
+    document.getElementById("FDS2025Nim2Cup4Token3").src = "../../images/talk/FDS2025/Nim/Token3.png";
+    document.getElementById("FDS2025Nim2Cup3Token1").src = "../../images/talk/FDS2025/Nim/Token1.png";
+    document.getElementById("FDS2025Nim2Cup3Token2").src = "../../images/talk/FDS2025/Nim/Token2.png";
+    document.getElementById("FDS2025Nim2Cup3Token3").src = "../../images/talk/FDS2025/Nim/Token3.png";
+    document.getElementById("FDS2025Nim2Cup2Token1").src = "../../images/talk/FDS2025/Nim/Token1.png";
+    document.getElementById("FDS2025Nim2Cup2Token2").src = "../../images/talk/FDS2025/Nim/Token2.png";
+    document.getElementById("FDS2025Nim2Cup2Token3").src = "../../images/talk/FDS2025/Nim/Token3.png";
+    document.getElementById("FDS2025Nim2Cup1Token1").src = "../../images/talk/FDS2025/Nim/Token1.png";
+    document.getElementById("FDS2025Nim2Cup1Token2").src = "../../images/talk/FDS2025/Nim/Token2.png";
+    document.getElementById("FDS2025Nim2Cup1Token3").src = "../../images/talk/FDS2025/Nim/Token3.png";
 }
 
 function Nim2ResetGame()
@@ -219,27 +219,27 @@ function Nim2ResetGame()
     // enabling all buttons
     Nim2EnableMove();
     // all token position images to blank except the number 9 where the toke is displayed
-    document.getElementById("FDS2025Nim2TokenPosition9").src = "../../images/talk/FDS2025NimToken.png";
-    document.getElementById("FDS2025Nim2TokenPosition8").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition7").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition6").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition5").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition4").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition3").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition2").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition1").src = "../../images/talk/FDS2025NimTokenEmpty.png";
-    document.getElementById("FDS2025Nim2TokenPosition0").src = "../../images/talk/FDS2025NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition9").src = "../../images/talk/FDS2025/Nim/NimToken.png";
+    document.getElementById("FDS2025Nim2TokenPosition8").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition7").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition6").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition5").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition4").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition3").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition2").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition1").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
+    document.getElementById("FDS2025Nim2TokenPosition0").src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
     // all token images to blank
-    document.getElementById("FDS2025Nim2TokenImage0").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage1").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage2").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage3").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage4").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage5").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage6").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage7").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage8").src = "../../images/talk/FDS2025EmptyToken.png";
-    document.getElementById("FDS2025Nim2TokenImage9").src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage0").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage1").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage2").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage3").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage4").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage5").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage6").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage7").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage8").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
+    document.getElementById("FDS2025Nim2TokenImage9").src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
 }
 
 function Nim2EnableMove()
@@ -303,11 +303,11 @@ function Nim2MoveTokenToPosition()
         let id = "FDS2025Nim2TokenPosition" + i;
         if (i == nim2TokenPosition)
         {
-            document.getElementById(id).src = "../../images/talk/FDS2025NimToken.png";
+            document.getElementById(id).src = "../../images/talk/FDS2025/Nim/NimToken.png";
         }
         else
         {
-            document.getElementById(id).src = "../../images/talk/FDS2025NimTokenEmpty.png";
+            document.getElementById(id).src = "../../images/talk/FDS2025/Nim/NimTokenEmpty.png";
         }
     }
 }
@@ -332,7 +332,7 @@ async function Nim2AIMove()
         nim2LastChoiceValue = pick;
         let newPosition = Math.max(0, nim2TokenPosition - pick);
         let imageID = "FDS2025Nim2TokenImage" + nim2TokenPosition;
-        document.getElementById(imageID).src = "../../images/talk/FDS2025Token" + pick + ".png";
+        document.getElementById(imageID).src = "../../images/talk/FDS2025/Nim/Token" + pick + ".png";
         nim2TokenPosition = newPosition;
         Nim2MoveTokenToPosition();
         await Sleep(1000);
@@ -368,7 +368,7 @@ function Nim2LearnFromMistake()
     let index = nim2CupTokens[nim2LastChoiceIndex].indexOf(nim2LastChoiceValue);
     nim2CupTokens[nim2LastChoiceIndex].splice(index, 1);
     let imageID = "FDS2025Nim2Cup" + (nim2LastChoiceIndex + 1) + "Token" + nim2LastChoiceValue;
-    document.getElementById(imageID).src = "../../images/talk/FDS2025EmptyToken.png";
+    document.getElementById(imageID).src = "../../images/talk/FDS2025/Nim/EmptyToken.png";
     nim2LastChoicesIndex = [];
     nim2LastChoicesValue = [];
 }
