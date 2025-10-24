@@ -1,0 +1,44 @@
+
+/* Talks specific */
+
+#talks .article .talkContent {
+	display: flex;
+	padding-top: 1.0em;
+}
+
+#talks .article .talkContent .talkText .heading-3 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#talks .article .talkContent .talkText .list {
+	list-style: none;
+	padding-top: 0;
+	margin-top: 0;
+	font-size: 1.0em;
+}
+
+#talks .article .talkContent .talkLogo .logo
+{
+	width: 10em;
+	padding-right: 2em;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	vertical-align: top;
+}
+
+#talks hr {
+	border-width: 1px;
+	border-style: solid;
+	color: #e0e0e0;
+}
+
+.logoLink {
+	height: 1.0em;
+	vertical-align: middle;
+}
+
+.logoLang {
+	height: 1.0em;
+	vertical-align: middle;
+}

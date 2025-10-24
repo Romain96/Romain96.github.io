@@ -1,0 +1,128 @@
+/* Publication specific */
+
+#internationalJournal .list {
+	list-style: none;
+}
+
+#internationalJournal .list .item {
+	font-size: 1.0em;
+}
+
+#internationalJournal .list .sublist {
+	list-style: none;
+}
+
+#internationalJournal .list .sublist .item {
+	font-size: 0.8em;;
+}
+
+#internationalConference .list {
+	list-style: none;
+}
+
+#internationalConference .list .item {
+	font-size: 1.0em;
+}
+
+#internationalConference .list .sublist {
+	list-style: none;
+}
+
+#internationalConference .list .sublist .item {
+	font-size: 0.8em;;
+}
+
+#nationalConference .list {
+	list-style: none;
+}
+
+#nationalConference .list .item {
+	font-size: 1.0em;
+}
+
+#nationalConference .list .sublist {
+	list-style: none;
+}
+
+#nationalConference .list .sublist .item {
+	font-size: 0.8em;;
+}
+
+#thesis .list {
+	list-style: none;
+}
+
+#thesis .list .item {
+	font-size: 1.0em;
+}
+
+#thesis .list .sublist {
+	list-style: none;
+}
+
+#thesis .list .sublist .item {
+	font-size: 0.8em;;
+}
+
+.article .list .paper
+{
+	height: 2em;
+	padding-right: 5px;
+	vertical-align: bottom;
+}
+
+.article .list .thesis
+{
+	height: 2em;
+	padding-right: 5px;
+	vertical-align: bottom;
+}
+
+.article .sublist .pdf
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .online
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .poster
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .presentation
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .ecrin
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .thesesfr
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}
+
+.article .sublist .hal
+{
+	height: 1.5em;
+	padding-right: 2px;
+	vertical-align: bottom;
+}

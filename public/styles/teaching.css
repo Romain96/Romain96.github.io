@@ -1,0 +1,251 @@
+/* teaching specific */
+
+#teaching .article .teachingContent {
+	display: flex;
+	padding-top: 1em;
+}
+
+#teaching .article .teachingContent .teachingText .heading-3 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#teaching .article .teachingContent .teachingText .list {
+	list-style: none;
+	padding-top: 0;
+	margin-top: 0;
+	font-size: 1.0em;
+}
+
+#teaching .article .teachingContent .teachingLogo .logo
+{
+	width: 10em;
+	padding-right: 1em;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	vertical-align: top;
+}
+
+#teaching hr {
+	border-width: 1px;
+	border-style: solid;
+	color: #e0e0e0;
+}
+
+.table {
+	font-size: 0.9em;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.table .title {
+	text-align: left;
+	border: 1px solid black;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.table .row {
+	border: 1px solid black;
+}
+
+.table .row .column {
+	border: 1px solid black;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.table .row .column .logo {
+	height: 1.25em;
+	padding-right: 0.25em;
+	vertical-align: middle;
+}
+
+.table .row .column a {
+	color: blue;
+	outline: none;
+	text-decoration: none;
+}
+
+.resource a {
+	color: blue;
+	outline: none;
+	text-decoration: none;
+}
+
+.resource .logo {
+	height: 1.25em;
+	padding-right: 0.25em;
+	vertical-align: middle;
+}
+
+hr {
+	border-width: 1px;
+	border-style: solid;
+	color: #e0e0e0;
+}
+
+.p11pseudocode2024 .variable {
+	color: black;
+}
+
+.p11pseudocode2024 .parametre {
+	color: gray;
+}
+
+.p11pseudocode2024 .type {
+	color: violet;
+	font-weight: bold;
+}
+
+.p11pseudocode2024 .fonction {
+	color: green;
+	font-weight: bold;
+}
+
+.p11pseudocode2024 .motclef {
+	color: red;
+	font-weight: bold;
+}
+
+.p11pseudocode2025 {
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 0.8em;
+	line-height: 125%;
+	background-color: lightgray;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	width: 80%;
+}
+
+.p11pseudocode2025 .variable {
+	color: black;
+}
+
+.p11pseudocode2025 .parametre {
+	color: blue;
+}
+
+.p11pseudocode2025 .type {
+	color: violet;
+	font-weight: bold;
+}
+
+.p11pseudocode2025 .chaine {
+	color: gray;
+}
+
+.p11pseudocode2025 .fonction {
+	color: green;
+	font-weight: bold;
+}
+
+.p11pseudocode2025 .motclef {
+	color: red;
+	font-weight: bold;
+}
+
+.p11pseudocode2025 .tab {
+	margin-left: 2em;
+}
+
+.p11csharp {
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 0.8em;
+	line-height: 125%;
+	background-color: lightgray;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	width: 80%;
+}
+
+.p11csharp .tab {
+	margin-left: 2em;
+}
+
+.p11csharp .variable {
+	color: blueviolet;
+}
+
+.p11csharp .fonction {
+	color: red;
+	font-weight: bold;
+}
+
+.p11csharp .motclef {
+	color: blue;
+	font-weight: bold;
+}
+
+.p11csharp .type {
+	color: blue;
+	font-weight: bold;
+}
+
+.p11csharp .number {
+	color: yellowgreen;
+}
+
+.p11csharp .chaine {
+	color: orange;
+}
+
+.p11csharp .class {
+	color: green;
+}
+
+.d11answer {
+	width: 80%;
+	background-color: lightgray;
+	padding-bottom: 0.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.d11sql {
+	line-height: 0.8;
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 0.8em;
+}
+
+.d11sql .tab {
+	margin-left: 4em;
+}
+
+.d11sql .table {
+	border: none;
+	margin-top: 1em;
+}
+
+.d11sql .table .title {
+	border: none;
+	text-align: left;
+	padding-left: 0em;
+	padding-right: 1em;
+}
+
+.d11sql .table .row {
+	border: none;
+}
+
+.d11sql .table .row .column {
+	border: none;
+	padding-left: 0em;
+	padding-right: 1em;
+}
+
+details {
+	line-height: 1.0;
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 1em;
+}
+
+details summary {
+	line-height: 1.0;
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 0.8em;
+	padding-bottom: 0.5em;
+	color: blue;
+}
