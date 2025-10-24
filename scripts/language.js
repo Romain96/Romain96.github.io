@@ -33,7 +33,6 @@ function setLanguagePreference(lang)
 
 async function fetchLanguageData(lang)
 {
-	alert(`public/${lang}.json`);
 	const response = await fetch(`public/${lang}.json`);
 	return response.json();
 }
