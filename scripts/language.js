@@ -10,11 +10,6 @@ function changeLanguageListener()
 	{
 		changeLanguage('fr');
 	}
-	else
-	{
-		// by default in English
-		changeLanguage('en');
-	}
 }
 
 function updateContent(langData)
