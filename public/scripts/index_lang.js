@@ -1,3 +1,16 @@
+let prefLang = localStorage.getItem('language') || 'en';
+
+if (prefLang == 'fr')
+{
+	var selector = document.querySelector(".languageSelector");
+	selector.value = 'fr';
+}
+else
+{
+	var selector = document.querySelector(".languageSelector");
+	selector.value = 'en';
+}
+
 function changeLanguageListener(value)
 {
 	if (value == "en")
