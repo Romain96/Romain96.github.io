@@ -1,3 +1,15 @@
+let prefLang = localStorage.getItem('language') || 'en';
+
+if (prefLang == 'fr')
+{
+	document.getElementById('langSelect').value = 'fr';
+}
+else
+{
+	document.getElementById('langSelect').value = 'en';
+}
+
+
 function changeLanguageListener(value)
 {
 	if (value == "en")
