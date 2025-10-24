@@ -2,12 +2,12 @@ let prefLang = localStorage.getItem('language') || 'en';
 
 if (prefLang == 'fr')
 {
-	var selector = document.getElementById('langSelect');
+	var selector = document.querySelector(".languageSelector");
 	selector.value = 'fr';
 }
 else
 {
-	var selector = document.getElementById('langSelect');
+	var selector = document.querySelector(".languageSelector");
 	selector.value = 'en';
 }
 
