@@ -1,24 +1,14 @@
-const changeToEnglish = (e) => {
-	const $select = document.querySelector('#langSelect');
-	$select.value = 'en';
-};
-
-const changeToFrench = (e) => {
-	const $select = document.querySelector('#langSelect');
-	$select.value = 'fr';
-};
-
 let prefLang = localStorage.getItem('language') || 'en';
 
 if (prefLang == 'fr')
 {
-	changeToFrench();
-	changeLanguage('fr');
+	var selector = document.getElementById('langSelect');
+	selector.value = 'fr';
 }
 else
 {
-	changeToEnglish()
-	changeLanguage('en');
+	var selector = document.getElementById('langSelect');
+	selector.value = 'en';
 }
 
 function changeLanguageListener(value)
