@@ -1,6 +1,7 @@
 function changeLanguageListener()
 {
 	var value = this.value;
+	alert(value);
 	if (value == "en")
 	{
 		changeLanguage('en');
