@@ -2,15 +2,24 @@ let prefLang = localStorage.getItem('language') || 'en';
 
 if (prefLang == 'fr')
 {
-	document.getElementById('langSelect').value = 'fr';
+	changeToFrench();
 	changeLanguage('fr');
 }
 else
 {
-	document.getElementById('langSelect').value = 'en';
+	changeToEnglish()
 	changeLanguage('en');
 }
 
+const changeToEnglish = (e) => {
+	const $select = document.querySelector('#langSelect');
+	$select.value = 'en';
+};
+
+const changeToFrench = (e) => {
+	const $select = document.querySelector('#langSelect');
+	$select.value = 'fr';
+};
 
 function changeLanguageListener(value)
 {
