@@ -11,7 +11,7 @@
 	"details_name": "Nom complet : Romain Bruno PERRIN",
 	"details_nationality": "Nationalité : Française",
 	"details_birth": "Lieu de naissance : Strasbourg, France",
-	"details_address": "Adresse personnells : 12 Rue des Petites Fermes, 67200, Strasbourg, France",
+	"details_address": "Adresse personnelle : 12 Rue des Petites Fermes, 67200, Strasbourg, France",
 	"details_word_address": "Adresse de travail (recherche) : ICube UMR 7357, 300 Bd Sébastien Brant, 67412 Illkirch-Graffenstaden, France",
 	"details_teaching_address": "Adresse de travail (enseignement) : IUT Robert Schuman, 72 Route du Rhin, 67411 Illkirch-Graffenstaden, France",
 	"title_employment": "Expérience",
@@ -45,7 +45,7 @@
 	"qualification_phd_title": "Thèse : Structures hiérarchiques multi-échelles pour l'analyse d'images histologiques",
 	"qualification_phd_advisor": "Directeurs : Pr Cédric WEMMERT, Pr Benoît NAEGEL",
 	"qualification_phd_supervisor": "Superviseur : Dr Aurélie LEBORGNE",
-	"qualification_master_entry": "<b>Master Informatique et 3D</b> (2019)",
+	"qualification_master_entry": "<b>Master I3D - Informatique et 3D</b> (2019)",
 	"qualification_master_school": "UFR de Mathématique et d'Informatique, Université de Strasbourg, France",
 	"qualification_master_major": "Majeure : Informatique généraliste, traitement d'images, informatique graphique",
 	"qualification_master_minor": "Mineure : Compilation, conception assistée par ordinateur (CAD)",
@@ -59,5 +59,5 @@
 	"responsability_ajci_admin": "Membre élu du Conseil d'Admninistration de l'<b>AJCI</b> (2021/10/07 - 2024/04/23)",
 	"responsability_ajci_deputy_sdc": "Représentant de l'<b>AJCI</b> auprès de l'équipe <i>Science des Données et Connaissances</i> du laboratoire ICube (2021/10-07 - 2024/04/23)",
 	"responsability_ajci_secretary": "Secrétaire de l'<b>AJCI</b> (2021/10/07 - 2022/12/31)",
-	"footer_copyright": "&copy; 2025 Romain Perrin. All rights reserved."
+	"footer_copyright": "&copy; 2025 Romain Perrin. Tous droits réservés."
 }
