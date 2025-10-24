@@ -3,10 +3,12 @@ let prefLang = localStorage.getItem('language') || 'en';
 if (prefLang == 'fr')
 {
 	document.getElementById('langSelect').value = 'fr';
+	changeLanguage('fr');
 }
 else
 {
 	document.getElementById('langSelect').value = 'en';
+	changeLanguage('en');
 }
 
 
