@@ -53,6 +53,17 @@ body {
 	vertical-align: bottom;
 }
 
+.languageSelector {
+	border-radius: 10px;
+	background: #eeeeee;
+	margin: 0 15px;
+	font-size: 1.2em;
+}
+
+.languageOption {
+	font-size: 1.2em;
+}
+
 /* Main content styling */
 .content {
 	display: flex;
