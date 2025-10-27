@@ -41,7 +41,7 @@ function updateContent(langData)
 function setLanguagePreference(lang)
 {
 	localStorage.setItem('language', lang);
-	location.reload();
+	//location.reload();
 }
 
 async function fetchLanguageData(lang)
