@@ -6,76 +6,63 @@
 	"nav_publication": "Publications",
 	"nav_teaching": "Teaching",
 	"nav_project": "Projects",
-
     "talks_title": "Talks with resources",
     "talks_description": "This page lists all talks I gave sorted by chronological order. For each talk, a dedicated page contains the resources (slides, posters, published articles...).",
     "talk_dedicated_page": "dedicated page",
-
     "talk_2025_10_10_title": "Come defy our cardboard AI !",
     "talk_2025_10_10_event": "Mediation for the <em>Fête de la Science 2025<\/em>",
     "talk_2025_10_10_date": "Date : 2025-10-10",
     "talk_2025_10_10_location": "Location : Palais Universitaire, Strasbourg, France",
     "talk_2025_10_10_language": "Language : <img class=\"logoLang\" src=\"..\/images\/flag\/FRA.png\" alt=\"French\">",
-
     "talk_2025_04_01_title": "L'arbre des coupes multi-échelles dans le contexte de l'imagerie histologique",
     "talk_2025_04_01_event": "Seminary for the IMAGeS team of the ICube UMR 7357 laboratory",
     "talk_2025_04_01_date": "Date : 2025-04-01",
     "talk_2025_04_01_location": "Location : ICube UMR 7357, Illkirch-Graffenstaden, France",
     "talk_2025_04_01_language": "Language : <img class=\"logoLang\" src=\"..\/images\/flag\/FRA.png\" alt=\"French\">",
-
     "talk_2024_09_27_title": "Structures hiérarchiques multi-échelles pour l'analyse d'images histologiques",
     "talk_2024_09_27_event": "Thesis defense",
     "talk_2024_09_27_date": "Date : 2024-09-27",
     "talk_2024_09_27_location": "Location : ICube UMR 7357, Illkirch-Graffenstaden, France",
     "talk_2024_09_27_language": "Language : <img class=\"logoLang\" src=\"..\/images\/flag\/FRA.png\" alt=\"French\">",
-
     "talk_2024_05_27_title" : "Multi-Scale Component-Trees for Enhanced Representation in Multiplex Immunohistochemistry Imaging",
     "talk_2024_05_27_event": "21st International Symposium on Biomedical Imaging (ISBI 2024)",
     "talk_2024_05_27_date" : "Date : 2024-05-27",
     "talk_2024_05_27_location": "Location : Megaron Athens International Conference Centre, Athens, Greece",
     "talk_2024_05_27_language": "Language : <img class=\"logoLang\" src=\"..\/images\/flag\/UK.png\" alt=\"English\">",
-
     "talk_2024_04_15_title": "Multi-Scale Component-Tree: A Hierarchical Representation for Sparse Objects",
     "talk_2024_04_15_event": "IAPR Third International Conference on Discrete Geometry and Mathematical Morphology (DGMM 2024)",
     "talk_2024_04_15_date": "Date : 2024-04-15",
     "talk_2024_04_15_location": "Location : Villa Ruspoli, Firenze, Italy",
     "talk_2024_04_15_language": "Language : <img class=\"logoLang\" src=\"..\/images\/flag\/UK.png\" alt=\"English\">",
-
     "talk_2024_03_25_title": "L'arbre des coupes multi-échelles pour une meilleure représentation dans l'imagerie immunohistochimique multiplex",
     "talk_2024_03_25_event": "Colloque Français d'Intelligence Artificielle en Imagerie Biomédicale (IABM 2024)",
     "talk_2024_03_25_date": "Date : 2024-03-25",
     "talk_2024_03_25_location": "Location : Maison MINATEC, Grenoble, France",
     "talk_2024_03_25_language": "Language : <img class=\"logoLang\" src=\"..\/images\/flag\/FRA.png\" alt=\"English\">",
-
     "talk_2023_12_01_title": "Evaluation de l’infiltrat immunitaire dans le microenvironnement de l’adénocarcinome pancréatique : nouvelle approche de quantification cellulaire",
     "talk_2023_12_01_event": "Journée <i>Cancer du pancréas<\/i> du Cancéropôle Est",
     "talk_2023_12_01_date": "Date : 2023-12-01",
     "talk_2023_12_01_location": "Location : Besançon, France",
     "talk_2023_12_01_language": "Language : <img class=\"logoLang\" src=\"..\/images\/flag\/FRA.png\" alt=\"French\">",
-
     "talk_2023_02_28_title": "Apprentissage profond ensembliste robuste pour segmentation de cellules d'images histopathologiques multiplex",
     "talk_2023_02_28_event": "Journée Scientifique autour de l'IA",
     "talk_2023_02_28_date": "Date : 2023-02-28",
     "talk_2023_02_28_location": "Location : Nancy, France",
     "talk_2023_02_28_language": "Language : <img class=\"logoLang\" src=\"..\/images\/flag\/FRA.png\" alt=\"French\">",
-
     "talk_2019_08_31_title": "L'arbre des coupes multivalué pour l'analyse d'images",
     "talk_2019_08_31_event": "Master 2 - Research internship",
     "talk_2019_08_31_date": "Date : 2019-08-31",
     "talk_2019_08_31_location": "Location : ICube UMR 7357, Illkirch-Graffenstaden, France",
     "talk_2019_08_31_language": "Language : <img class=\"logoLang\" src=\"..\/images\/flag\/FRA.png\" alt=\"French\">",
-
     "talk_2019_01_10_title": "Outil de démonstration pour l'algorithme du dual",
     "talk_2019_01_10_event": "Master 1 - 150h project",
     "talk_2019_01_10_date": "Date : 2019-01-10",
     "talk_2019_01_10_location": "Location : ICube UMR 7357, Illkirch-Graffenstaden, France",
     "talk_2019_01_10_language": "Language : <img class=\"logoLang\" src=\"..\/images\/flag\/FRA.png\" alt=\"French\">",
-
     "talk_2018_05_29_title": "Graphe des coupes sur image de labels",
     "talk_2018_05_29_event": "Master 1 - Travail d'Étude et de Recherche (TER)",
     "talk_2018_05_29_date": "Date : 2018-05-29",
     "talk_2018_05_29_location": "Location : ICube UMR 7357, Illkirch-Graffenstaden, France",
     "talk_2018_05_29_language": "Language : <img class=\"logoLang\" src=\"..\/images\/flag\/FRA.png\" alt=\"French\">",
-
 	"footer_copyright": "&copy; 2025 Romain Perrin. All rights reserved."
 }

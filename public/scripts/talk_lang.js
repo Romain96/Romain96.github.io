@@ -46,7 +46,7 @@ function setLanguagePreference(lang)
 
 async function fetchLanguageData(lang)
 {
-	const response = await fetch(`public/languages/talk_${lang}.json`);
+	const response = await fetch(`../public/languages/talk_${lang}.json`);
 	return response.json();
 }
 
