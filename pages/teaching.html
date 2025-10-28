@@ -9,6 +9,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?">
 		<link rel="stylesheet" href="../public/styles/index.css"/>
 		<link rel="stylesheet" href="../public/styles/teaching.css"/>
+		<script src="../public/scripts/teaching_lang.js" defer></script>
 	</head>
 
 	<body>
@@ -19,13 +20,19 @@
 				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
 				<nav class="nav">
 					<ul class="list">
-						<li class="item" id="home"><img class="navlogo" src="../images/navigation/home.png"><a href="../index.html">Home</a></li>
-						<li class="item" id="about"><img class="navlogo" src="../images/navigation/cv.png"><a href="../pages/cv.html">CV</a></li>
-						<li class="item" id="research"><img class="navlogo" src="../images/navigation/research.png"><a href="../pages/research.html">Research</a></li>
-						<li class="item" id="talk"><img class="navlogo" src="../images/navigation/talk.png"><a href="../pages/talk.html">Talks</a></li>
-						<li class="item" id="publication"><img class="navlogo" src="../images/navigation/publication.png"><a href="../pages/publication.html">Publication</a></li>
-						<li class="item" id="teaching"><img class="navlogo" src="../images/navigation/teaching.png"><a href="../pages/teaching.html">Teaching</a></li>
-						<li class="item" id="project"><img class="navlogo" src="../images/navigation/project.png"><a href="../pages/project.html">Projects</a></li>
+						<li class="item">
+							<select name="languageSelection" class="languageSelector" onchange="changeLanguageListener(this.value)">
+								<option class="languageOption" value="en" selected>🇬🇧&nbsp;English</option>
+								<option class="languageOption" value="fr">🇫🇷&nbsp;Français</option>
+							</select>
+						</li>
+						<li class="item" id="home"><img class="navlogo" src="../images/navigation/home.png"><a href="../index.html"><span data-i18n="nav_home"></span></a></li>
+						<li class="item" id="about"><img class="navlogo" src="../images/navigation/cv.png"><a href="../pages/cv.html"><span data-i18n="nav_about"></span></a></li>
+						<li class="item" id="research"><img class="navlogo" src="../images/navigation/research.png"><a href="../pages/research.html"><span data-i18n="nav_research"></span></a></li>
+						<li class="item" id="talk"><img class="navlogo" src="../images/navigation/talk.png"><a href="../pages/talk.html"><span data-i18n="nav_talk"></span></a></li>
+						<li class="item" id="publication"><img class="navlogo" src="../images/navigation/publication.png"><a href="../pages/publication.html"><span data-i18n="nav_publication"></span></a></li>
+						<li class="item" id="teaching"><img class="navlogo" src="../images/navigation/teaching.png"><a href="../pages/teaching.html"><span data-i18n="nav_teaching"></span></a></li>
+						<li class="item" id="project"><img class="navlogo" src="../images/navigation/project.png"><a href="../pages/project.html"><span data-i18n="nav_project"></span></a></li>
 					</ul>
 				</nav>
 			</header>
@@ -33,9 +40,8 @@
 			<main class="content">
 
 				<section class="section" id="teaching">
-					<h2 class="heading-2">Teaching</h2>
-					This page lists all teaching activities I took part of sorted by chronological order.
-					Some of these entries have a dedicated page with lectures, exercices with corrections and even some past exam subjects.
+					<h2 class="heading-2" data-i18n="teaching_title"></h2>
+					<p class="paragraph" data-i18n="teaching_description"></p>
 					<hr>
 
 					<article class="article">
@@ -44,14 +50,14 @@
 								<img class="logo" src="../images/teaching/iutRobertSchuman.png">
 							</div>
 							<div class="teachingText">
-								<h3 class="heading-3">BUT Informatique, IUT Robert Schuman (2025 - 2026)</h3>
+								<h3 class="heading-3" data-i18n="teaching_2025_2026_title"></h3>
 								<ul class="list">
-									<li class="item"><a href="../pages/teaching/2025-P11.html">P11 - Initiation au développement</a></li>
-									<li class="item"><a href="../pages/teaching/2025-D11.html">D11 - Introduction aux bases de données et SQL</a></li>
-									<li class="item">P21 - Développement orienté objets</li>
-									<li class="item">P22 - Qualité de développement</li>
-									<li class="item">M21 - Méthodes numériques</li>
-									<li class="item">M22 - Outils numériques pour les statistiques descriptives</li>
+									<li class="item"><a href="../pages/teaching/2025-P11.html" data-i18n="teaching_2025_2026_p11"></a></li>
+									<li class="item"><a href="../pages/teaching/2025-D11.html" data-i18n="teaching_2025_2026_d11"></a></li>
+									<li class="item"><a href="." data-i18n="teaching_2025_2026_p21"></a></li>
+									<li class="item"><a href="." data-i18n="teaching_2025_2026_p22"></a></li>
+									<li class="item"><a href="." data-i18n="teaching_2025_2026_m21"></a></li>
+									<li class="item"><a href="." data-i18n="teaching_2025_2026_m22"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -63,12 +69,12 @@
 								<img class="logo" src="../images/teaching/iutRobertSchuman.png">
 							</div>
 							<div class="teachingText">
-								<h3 class="heading-3">BUT Informatique, IUT Robert Schuman (2024 - 2025)</h3>
+								<h3 class="heading-3" data-i18n="teaching_2024_2025_title"></h3>
 								<ul class="list">
-									<li class="item"><a href="../pages/teaching/2024-P11.html">P11 - Initiation au développement</a></li>
-									<li class="item"><a href="../pages/teaching/2024-A31.html">A31 - Analyse</a></li>
-									<li class="item"><a href="../pages/teaching/2024-A31.html">A32 - Qualité de développement</a></li>
-									<li class="item">P41 - Méthodes d'optimisation</li>
+									<li class="item"><a href="../pages/teaching/2024-P11.html" data-i18n="teaching_2024_2025_p11"></a></li>
+									<li class="item"><a href="../pages/teaching/2024-A31.html" data-i18n="teaching_2024_2025_a31"></a></li>
+									<li class="item"><a href="../pages/teaching/2024-A31.html" data-i18n="teaching_2024_2025_a32"></a></li>
+									<li class="item"><a href="." data-i18n="teaching_2024_2025_p41"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -80,12 +86,12 @@
 								<img class="logo" src="../images/teaching/iutRobertSchuman.png">
 							</div>
 							<div class="teachingText">
-								<h3 class="heading-3">BUT Informatique, IUT Robert Schuman (2023 - 2024)</h3>
+								<h3 class="heading-3" data-i18n="teaching_2023_2024_title"></h3>
 								<ul class="list">
-									<li class="item"><a href="../pages/teaching/2023-P11.html">P11 - initiation au développement</a></li>
-									<li class="item"><a href="../pages/teaching/2023-A31.html">A31 - Analyse</a></li>
-									<li class="item"><a href="../pages/teaching/2023-A31.html">A32 - Qualité de développement</a></li>
-									<li class="item">P41 - Méthodes d'optimisation</li>
+									<li class="item"><a href="../pages/teaching/2023-P11.html" data-i18n="teaching_2023_2024_p11"></a></li>
+									<li class="item"><a href="../pages/teaching/2023-A31.html" data-i18n="teaching_2023_2024_a31"></a></li>
+									<li class="item"><a href="../pages/teaching/2023-A31.html" data-i18n="teaching_2023_2024_a32"></a></li>
+									<li class="item"><a href="." data-i18n="teaching_2023_2024_p41"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -97,11 +103,11 @@
 								<img class="logo" src="../images/teaching/iutRobertSchuman.png">
 							</div>
 							<div class="teachingText">
-								<h3 class="heading-3">BUT Informatique, IUT Robert Schuman (2022 - 2023)</h3>
+								<h3 class="heading-3" data-i18n="teaching_2022_2023_title"></h3>
 								<ul class="list">
-									<li class="item"><a href="../pages/teaching/2022-A31.html">A31 - Analyse</a></li>
-									<li class="item"><a href="../pages/teaching/2022-A31.html">A32 - Qualité de développement</a></li>
-									<li class="item">P41 - Méthodes d'optimisation</li>
+									<li class="item"><a href="../pages/teaching/2022-A31.html" data-i18n="teaching_2022_2023_a31"></a></li>
+									<li class="item"><a href="../pages/teaching/2022-A31.html" data-i18n="teaching_2022_2023_a32"></a></li>
+									<li class="item"><a href="." data-i18n="teaching_2022_2023_p41"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -113,9 +119,9 @@
 								<img class="logo" src="../images/teaching/iutRobertSchuman.png">
 							</div>
 							<div class="teachingText">
-								<h3 class="heading-3">DUT Informatique, IUT Robert Schuman (2021 - 2022)</h3>
+								<h3 class="heading-3" data-i18n="teaching_2021_2022_title"></h3>
 								<ul class="list">
-									<li class="item"><a href="../pages/teaching/2021-A31.html">A31 - Conception et Programmation Objet Avancées</a></li>
+									<li class="item"><a href="../pages/teaching/2021-A31.html" data-i18n="teaching_2021_2022_a31"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -127,9 +133,9 @@
 								<img class="logo" src="../images/teaching/iutRobertSchuman.png">
 							</div>
 							<div class="teachingText">
-								<h3 class="heading-3">DUT Informatique, IUT Robert Schuman (2020 - 2021)</h3>
+								<h3 class="heading-3" data-i18n="teaching_2020_2021_title"></h3>
 								<ul class="list">
-									<li class="item"><a href="../pages/teaching/2020-A31.html">A31 - Conception et Programmation Objet Avancées</a></li>
+									<li class="item"><a href="../pages/teaching/2020-A31.html" data-i18n="teaching_2020_2021_a31"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -152,7 +158,7 @@
 			</main>
 
 			<footer class="footer">
-				<p class="paragraph">&copy; 2025 Romain PERRIN (@Romain96)</p>
+				<p class="paragraph" data-i18n="footer_copyright"></p>
 			</footer>
 
 		</div>
