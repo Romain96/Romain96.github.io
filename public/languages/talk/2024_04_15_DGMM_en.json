@@ -1,0 +1,17 @@
+{
+	"nav_home": "Home",
+	"nav_about": "CV",
+	"nav_research": "Research",
+	"nav_talk": "Talks",
+	"nav_publication": "Publications",
+	"nav_teaching": "Teaching",
+	"nav_project": "Projects",
+	"dgmm_2024_title": "",
+	"dgmm_2024_background_title": "Background",
+	"dgmm_2024_background_paragraph_1": "The IAPR Third International Conference of Discrete Geometry and Mathematical Morphology (DGMM 2024) took place between the 15th and 19th April 2024 in Firenze (Florence), Italy. The official website of the conference can be consulted through <a href=\"https:\/\/dgmm2024.dimai.unifi.it\/\">this link<\/a>.",
+	"dgmm_2024_background_paragraph_2": "I gave a talk to support the publication of the article <i>Multi-Scale Component-Tree: A Hierarchical Representation for Sparse Objects<\/i> published in the conference proceedings (see <a href=\"https:\/\/link.springer.com\/chapter\/10.1007\/978-3-031-57793-2_24\">this link<\/a>). The main contribution of the MSCT is the addition of a new multi-scale decomposition (in spatial terms) in the structure of the <em>component-tree<\/em>. The newly-created tree is thus multi-scale in the spectral sense (as is the case for all component-trees) and in the spatial sense. The core idea is the keep as much as possible the pixel in non objects of interest (background) at low scale while iteratively enhancing the scale of objects of interest though successive partial component-tree computation. The MSCT if illustrated in the context of cell segmentation (and binary classification) on H&E Immunohistochemistry images.",
+	"dgmm_2024_resources_title": "Resources",
+	"dgmm_2024_resource_paper": "Published conference paper",
+	"dgmm_2024_resource_presentation": "Powerpoint presentation slides",
+	"footer_copyright": "&copy; 2025 Romain Perrin. All rights reserved."
+}

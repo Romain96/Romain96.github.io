@@ -1,0 +1,17 @@
+{
+	"nav_home": "Accueil",
+	"nav_about": "CV",
+	"nav_research": "Recherche",
+	"nav_talk": "Événements",
+	"nav_publication": "Publications",
+	"nav_teaching": "Enseignement",
+	"nav_project": "Projets",
+	"dgmm_2024_title": "DGMM 2024 - Multi-Scale Component-Tree: A Hierarchical Representation for Sparse Objects",
+	"dgmm_2024_background_title": "Contexte",
+	"dgmm_2024_background_paragraph_1": "L'IAPR Third International Conference of Discrete Geometry and Mathematical Morphology (DGMM 2024) s'est tenue du 15 au 19 avril 2024 à Florence (Firenze), en Italie. Le site web officiel de la conférence est disponible en suivant <a href=\"https:\/\/dgmm2024.dimai.unifi.it\/\">ce lien<\/a>.",
+	"dgmm_2024_background_paragraph_2": "Je suis intervenu en support de la publication d'un article intitulé <i>Multi-Scale Component-Tree: A Hierarchical Representation for Sparse Objects<\/i> et publié dans les proceedings de la conférence (voir <a href=\"https:\/\/link.springer.com\/chapter\/10.1007\/978-3-031-57793-2_24\">ce lien<\/a>). La principale contribution du MSCT est l'ajout d'une nouvelle décomposition multi-échelles (au sens spatial) dans la structute d'<em>arbre des coupes<\/em>. La nouvel arbre ainsi construit est alors multi-échelles au sens spectral (une propriété découlante de sa construction) mais également au sens spatial (ce qui est nouveau). L'idée principale guidant la construction est de maintenir autant que faire se peut les pixel à l'extérieur des objets d'intérêt (le fond) à des échelles de résolution grossières tout en augmentant itérativement et automatiquement les pixels à l'intérieur desdits objets d'intérêt à des résolutions de plus en plus fines à travers le calcul d'arbres des coupes partiels (locaux). Le MSCT est ici illustré sur deux applications : la segmentation de cellules sur des images en niveaux de gris et la classification de cellules sur des images immunohistochimique multiplex couleurs.",
+	"dgmm_2024_resources_title": "Ressources",
+	"dgmm_2024_resource_paper": "Article de conférence publié (en Anglais)",
+	"dgmm_2024_resource_presentation": "Présentation powerpoint (en Anglais)",
+	"footer_copyright": "&copy; 2025 Romain Perrin. Tous droits réservés."
+}
