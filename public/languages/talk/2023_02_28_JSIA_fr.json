@@ -1,0 +1,16 @@
+{
+	"nav_home": "Accueil",
+	"nav_about": "CV",
+	"nav_research": "Recherche",
+	"nav_talk": "Événements",
+	"nav_publication": "Publications",
+	"nav_teaching": "Enseignement",
+	"nav_project": "Projets",
+	"jsia_2023_title": "JSIA 2023 - Journée Scientifique autour de l'IA",
+    "jsia_2023_background_title": "Background",
+    "jsia_2023_background_paragraph_1": "J'ai participé à la <em>Journée Scientifique autour de l'IA<\/em> (JSIA), un événement d'une journée organisé par l'Université de Lorraine le 28 février 2023 à Nancy. J'y ai présenté un poster détaillant mes premiers travaux de thèse. Le poster illustre un modèle d'apprentissage profond permettant de traiter des images issues de l'immunohistochimie multiplex (mIHC). Le modèle intitulé <em>Color-AE-UNet<\/em> a été adapté pour mes besoin afin d'être appliqué sur des images plus complexes issues de l'immunofluorescence multiplex (mIF).",
+    "jsia_2023_resources_title": "Resources",
+    "jsia_2023_resources_description": "Downloadable files",
+    "jsia_2023_resource_poster": "A1 Poster (in French)",
+	"footer_copyright": "&copy; 2025 Romain Perrin. Tous droits réservés."
+}
