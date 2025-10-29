@@ -1,0 +1,17 @@
+{
+	"nav_home": "Home",
+	"nav_about": "CV",
+	"nav_research": "Research",
+	"nav_talk": "Talks",
+	"nav_publication": "Publications",
+	"nav_teaching": "Teaching",
+	"nav_project": "Projects",
+	"journee_cancer_du_pancreas_title": "Journée Cancer du pancréas",
+	"journee_cancer_du_pancreas_background_title": "Background",
+	"journee_cancer_du_pancreas_background_paragraph_1": "I was invited by the <a href=\"https:\/\/www.canceropole-est.org\/\">Cancéropôle Est<\/a> to deliver a talk during the <em>Journée Cancer du Pancréas<\/em> (Pancreatic Cancer Day). The event took place during one day on the 1st of December 2023 in Besançon, France. The webpage of the event is available using <a href=\"https:\/\/www.canceropole-est.org\/journee-cancer-du-pancreas\/\">this link<\/a>.",
+	"journee_cancer_du_pancreas_background_paragraph_2": "I presented a work made in collaboration with the <a href=\"https:\/\/www.chru-strasbourg.fr\/\">CHU de Strasbourg<\/a> (Strasbourg's hospital) under the the supervision of Dr Gerlinde LANG-AVÉROUS, MD. The talk was co-presented with Dr Arthur BÉNÉDIC, Medical Intern at the Department of Pathology of the CHU de Strasbourg. Together, we presented a workflow intended to evaluate the immune infiltrate the the tumor micro-environment of the pancreatic cancer. Our new appoach focused on cell quantification with the introduction of mathematical morphology.",
+	"journee_cancer_du_pancreas_resources_title": "Resources",
+	"journee_cancer_du_pancreas_resources_description": "Downloadable files",
+	"journee_cancer_du_pancreas_resource_presentation": "Powerpoint presentation slides (in French)",
+	"footer_copyright": "&copy; 2025 Romain Perrin. All rights reserved."
+}
