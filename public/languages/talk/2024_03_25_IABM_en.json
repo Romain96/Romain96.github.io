@@ -1,0 +1,16 @@
+{
+	"nav_home": "Home",
+	"nav_about": "CV",
+	"nav_research": "Research",
+	"nav_talk": "Talks",
+	"nav_publication": "Publications",
+	"nav_teaching": "Teaching",
+	"nav_project": "Projects",
+	"iabm_2024_title": "IABM 2024 : The multi-scale component-tree for a better representation in multiplex immunohistochemistry imaging",
+    "iabm_2024_background_title": "Background",
+    "iabm_2024_background_paragraph_1": "The <em>Colloque Français d'Intelligence Artificielle en Imagerie Biomédicale<\/em> (IABM 2024) is the second edition of the French seminar for AI in biomedical imaging. It took place for three day, between the 25th and 27th March 2024 in Grenoble, France. The official website of the seminar is available though <a href=\"https:\/\/iabm2024.sciencesconf.org\/\">this link<\/a>.",
+    "iabm_2024_background_paragraph_2": "I presented a poster showcasing the <em>Multi-Scale Component-Tree<\/em> (MSCT), a new multi-scale, hierarchical structure in mathematical morphology that I introduced alongside its construction algorithm and demonstration in cell segmentation. The MSCT has been formally published during the DGMM 2024 conference. The poster can be consulted in the seminar official <a href=\"https:\/\/iabm2024.sciencesconf.org\/resource\/page\/id\/7\">poster page</a> (poster #111) and in the resources below.",
+    "iabm_2024_resources_title": "Resources",
+    "iabm_2024_resource_poster": "A1 poster (in French)",
+	"footer_copyright": "&copy; 2025 Romain Perrin. All rights reserved."
+}
