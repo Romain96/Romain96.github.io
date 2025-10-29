@@ -1,0 +1,17 @@
+{
+	"nav_home": "Accueil",
+	"nav_about": "CV",
+	"nav_research": "Recherche",
+	"nav_talk": "Événements",
+	"nav_publication": "Publications",
+	"nav_teaching": "Enseignement",
+	"nav_project": "Projets",
+	"isbi_2024_title": "ISBI 2024 - Multi-Scale Component-Tree for Enhanced Representation in Multiplex Immunohistochemistry Imaging",
+	"isbi_2024_background_title": "Contexte",
+	"isbi_2024_background_paragraph_1": "Le 21st International Symposium on Biomedical Imaging (ISBI 2024) s'est tenu du 27 au 30 mai 2024 à Athènes (Athina) en Grèce. Le site web officiel de la conférence est disponible en suivant <a href=\"https:\/\/biomedicalimaging.org\/2024\/\">ce lien<\/a>.",
+	"isbi_2024_background_paragraph_2": "J'ai présenté un poster pour appuyer la publication d'un article court intitulé <i>Multi-Scale Component-Tree for Enhanced Representation in Multiplex Immunohistochemistry Imaging<\/i> publié dans les proceedings de la conférence (voir <a href=\"https:\/\/ieeexplore.ieee.org\/document\/10635272\">ce lien<\/a>). L'article et le poster mettent en avant la structure d'<em>arbre des coupes multi-échelles<\/em> (MSCT) dans le but de mieux représenter les images issues de l'immunohistochimie multiplex (mIHC) et uniplex (IHC). La capacité du MSCT a segmenté et classifier les noyaux de cellules au moyen d'un approche basée sur des \"vecteurs de caractéristiques\" est l'objet de ces travaux.",
+	"isbi_2024_resources_title": "Ressources",
+	"isbi_2024_resource_paper": "Article court publié (en Anglais)",
+	"isbi_2024_resource_poster": "Poster de conférence au format A1 (en Anglais)",
+	"footer_copyright": "&copy; 2025 Romain Perrin. Tous droits réservés."
+}
