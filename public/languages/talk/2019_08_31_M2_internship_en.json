@@ -1,0 +1,18 @@
+{
+	"nav_home": "Home",
+	"nav_about": "CV",
+	"nav_research": "Research",
+	"nav_talk": "Talks",
+	"nav_publication": "Publications",
+	"nav_teaching": "Teaching",
+	"nav_project": "Projects",
+	"m2_intership_title": "M2 - Research internship presentation",
+	"m2_intership_background_title": "Background",
+	"m2_intership_background_paragraph_1": "This page is dedicated to the research internship I was involded with during the last 6 months of my conputer science Master's program. I worked as part of the IMAGeS team of the ICube UMR 7357 laboratory under the supervision of Drs Benoit NAEGEL and Adrien KRÄHENBÜHL, Assitant Professors at the University of Strasbourg and Senior Researchers in the IMAGeS team.",
+	"m2_intership_background_paragraph_2": "My work was two fold : acquire the required knowledge in mathematical morphology (<em>component-trees<\/em>, <em>component-graphs<\/em> and <em>multivalued component-trees<\/em>) and develop a Python codebase to implement a newly-proposed efficient algorithm designed to compute a <em>multivalued component-tree<\/em> from a colour image.",
+	"m2_intership_resources_title": "Resources",
+	"m2_intership_resources_description": "Downloadable files",
+	"m2_intership_resource_report": "Final report (in French)",
+	"m1_150h_resource_presentation": "Powerpoint presententation slides (in French)",
+	"footer_copyright": "&copy; 2025 Romain Perrin. All rights reserved."
+}
