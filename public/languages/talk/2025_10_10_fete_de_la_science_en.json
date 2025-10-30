@@ -1,0 +1,23 @@
+{
+	"nav_home": "Home",
+	"nav_about": "CV",
+	"nav_research": "Research",
+	"nav_talk": "Talks",
+	"nav_publication": "Publications",
+	"nav_teaching": "Teaching",
+	"nav_project": "Projects",
+	"fds_2025_title": "Science Feast 2025 : Come defy our cardboard AI !",
+	"fds_2025_background_title": "Background",
+	"fds_2025_background_paragraph_1": "I participated to the 2025 edition of the <em>Fête de la Science<\/em> at the University of Strasbourg. I animated a stand destined to teach the concepts of artificial intelligence using no computed of any device of any sort. Our stand was called <a href=\"https:\/\/www.fetedelascience.fr\/viens-defier-nos-ia-en-carton\">Viens défier nos IA en carton !<\/a> (come defy our cardboard AI).",
+	"fds_2025_tic_tac_toe_1_title": "Tic-tac-toe (1/2) : AI first",
+	"fds_2025_tic_tac_toe_1_description": "TODO",
+	"fds_2025_tic_tac_toe_2_title": "Tic-tac-toe (2/2) : Player first",
+	"fds_2025_tic_tac_toe_2_description": "TODO",
+	"fds_2025_nim_1_title": "Nim (1/3) - Fully-trained AI",
+	"fds_2025_nim_1_description": "TODO",
+	"fds_2025_nim_2_title": "Nim (2/3) - Untrained AI",
+	"fds_2025_nim_2_description": "TODO",
+	"fds_2025_nim_3_title": "Nim (3/3) - Exposed fully-trained AI",
+	"fds_2025_nim_3_description": "TODO",
+	"footer_copyright": "&copy; 2025 Romain Perrin. All rights reserved."
+}

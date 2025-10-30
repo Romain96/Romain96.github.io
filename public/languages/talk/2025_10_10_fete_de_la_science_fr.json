@@ -1,0 +1,23 @@
+{
+	"nav_home": "Accueil",
+	"nav_about": "CV",
+	"nav_research": "Recherche",
+	"nav_talk": "Événements",
+	"nav_publication": "Publications",
+	"nav_teaching": "Enseignement",
+	"nav_project": "Projets",
+	"fds_2025_title": "Fête de la Science 2025 : Viens défier nos IA en carton !",
+	"fds_2025_background_title": "Contexte",
+	"fds_2025_background_paragraph_1": "J'ai particitipé à l'édition 2025 de la <em>Fête de la Science<\/em> à l'Université de Strasbourg. J'ai animé le stand d'informatique qui avait pour objectif d'initier les intéressés aux concepts de l'apprentissage automatique (IA) à travers de l'<i>informatique débranchée</i> (sans machine ni écran). Notre stand s'intitulé <a href=\"https:\/\/www.fetedelascience.fr\/viens-defier-nos-ia-en-carton\">Viens défier nos IA en carton !<\/a>.",
+	"fds_2025_tic_tac_toe_1_title": "Jeu du morpion (1/2) : L'IA commence",
+	"fds_2025_tic_tac_toe_1_description": "TODO",
+	"fds_2025_tic_tac_toe_2_title": "Jeu du morpion (2/2) : L'humain commence",
+	"fds_2025_tic_tac_toe_2_description": "TODO",
+	"fds_2025_nim_1_title": "Jeu de Nim (1/3) - IA entraînée",
+	"fds_2025_nim_1_description": "TODO",
+	"fds_2025_nim_2_title": "Jeu de Nim (2/3) - IA non entraînée",
+	"fds_2025_nim_2_description": "TODO",
+	"fds_2025_nim_3_title": "Jeu de Nim (3/3) - IA entraînée illustrée",
+	"fds_2025_nim_3_description": "TODO",
+	"footer_copyright": "&copy; 2025 Romain Perrin. Tous droits réservés."
+}
