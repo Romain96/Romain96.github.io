@@ -5,8 +5,11 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>𝓡𝓟&nbsp;&nbsp;Dr Romain PERRIN, PhD</title>
-		<link rel="stylesheet" href="../../styles/style.css"/>
+		<title>Dr Romain PERRIN, PhD</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico?">
+		<link rel="stylesheet" href="../../public/styles/index.css"/>
+		<link rel="stylesheet" href="../../public/styles/teaching.css"/>
+		<script src="../../public/scripts/languages.js" defer></script>
 	</head>
 
 	<body>
@@ -17,465 +20,440 @@
 				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
 				<nav class="nav">
 					<ul class="list">
-						<li class="item" id="home"><img class="navlogo" src="../../images/navigation/home.png"><a href="../../index.html">Home</a></li>
-						<li class="item" id="about"><img class="navlogo" src="../../images/navigation/cv.png"><a href="../../pages/cv.html">CV</a></li>
-						<li class="item" id="research"><img class="navlogo" src="../../images/navigation/research.png"><a href="../../pages/research.html">Research</a></li>
-						<li class="item" id="talk"><img class="navlogo" src="../../images/navigation/talk.png"><a href="../../pages/talk.html">Talks</a></li>
-						<li class="item" id="publication"><img class="navlogo" src="../../images/navigation/publication.png"><a href="../../pages/publication.html">Publication</a></li>
-						<li class="item" id="teaching"><img class="navlogo" src="../../images/navigation/teaching.png"><a href="../../pages/teaching.html">Teaching</a></li>
-						<li class="item" id="project"><img class="navlogo" src="../../images/navigation/project.png"><a href="../../pages/project.html">Projects</a></li>
+						<li class="item">
+							<select name="languageSelection" class="languageSelector" onchange="changeLanguageListener(this.value)">
+								<option class="languageOption" value="en" selected>🇬🇧&nbsp;English</option>
+								<option class="languageOption" value="fr">🇫🇷&nbsp;Français</option>
+							</select>
+						</li>
+						<li class="item" id="home"><img class="navlogo" src="../../images/navigation/home.png"><a href="../../index.html" data-i18n="nav_home"></a></li>
+						<li class="item" id="about"><img class="navlogo" src="../../images/navigation/cv.png"><a href="../../pages/cv.html" data-i18n="nav_about"></a></li>
+						<li class="item" id="research"><img class="navlogo" src="../../images/navigation/research.png"><a href="../../pages/research.html" data-i18n="nav_research"></a></li>
+						<li class="item" id="talk"><img class="navlogo" src="../../images/navigation/talk.png"><a href="../../pages/talk.html" data-i18n="nav_talk"></a></li>
+						<li class="item" id="publication"><img class="navlogo" src="../../images/navigation/publication.png"><a href="../../pages/publication.html" data-i18n="nav_publication"></a></li>
+						<li class="item" id="teaching"><img class="navlogo" src="../../images/navigation/teaching.png"><a href="../../pages/teaching.html" data-i18n="nav_teaching"></a></li>
+						<li class="item" id="project"><img class="navlogo" src="../../images/navigation/project.png"><a href="../../pages/project.html" data-i18n="nav_project"></a></li>
 					</ul>
 				</nav>
 			</header>
 
-			<main class="content">
+			<main class="main">
 
-				<section class="section">
-					<h2 class="heading-2">P11 - Initiation au développement (2025-2026)</h2>
-					<hr>
+				<div class="content">
+					
+					<h1 class="heading-1" data-i18n="p11_2025_title"></h1>
+					<label id="languageJSONPath" hidden>../../public/languages/teaching/2025_P11</label>
+					
+					<section class="section">
 
-					<article class="article">
-						<h3 class="heading-3">📖 Introduction : Algorithmique et notations</h3>
-						<hr>
+						<h2 class="heading-2" data-i18n="p11_2025_td_tp_title"></h2>
 
-						<p class="paragraph">
-							Voici un exemple d'algorithme afin d'illustrer le formalisme que j'utilise dans mes corrigés.
-						</p>
-						<p class="p11pseudocode2025">
-							<b>Fonction :</b> <span class="fonction">CalculerIMC()</span><br>
-							<b>Entrée :</b> <span class="parametre">taille</span> : <span class="type">réel</span>, <span class="parametre">poids</span> : <span class="type">réel</span><br>
-							<b>Sortie :</b> <span class="type">void</span><br>
-							<b>Constantes :</b> <span class="variable">TAILLE_MIN</span> : <span class="type">réel</span> = 1.50, <span class="variable">TAILLE_MAX</span> : <span class="type">réel</span> = 2.10<br>
-							<b>Variables :</b> <span class="variable">imc</span> : <span class="type">réel</span><br>
-							<b>Début</b><br>
-							<b>|</b><span class="tab"></span><span class="motclef">Si</span> <span class="parametre">taille</span> < TAILLE_MIN <span class="motclef">Alors</span><br>
-							<b>|</b><span class="tab"></span>|<span class="tab"></span><span class="fonction">Afficher(</span><span class="chaine">"La taille doit être entre "</span> + TAILLE_MIN + <span class="chaine">" et "</span> + TAILLE_MAX + <span class="chaine">"."</span><span class="fonction">)</span><br>
-							<b>|</b><span class="tab"></span><span class="motclef">Sinon</span><br>
-							<b>|</b><span class="tab"></span>|<span class="tab"></span>imc = poids / (<span class="parametre">taille</span> * <span class="parametre">taille</span>);<br>
-							<b>|</b><span class="tab"></span>|<span class="tab"></span><span class="fonction">Afficher(</span><span class="chaine">"Votre IMC est de "</span> + imc<span class="fonction">)</span><br>
-							<b>|</b>   <span class="motclef">Fin Si</span><br>
-							<b>Fin</b>
-						</p>
+						<article class="article">
 
-						<p class="paragraph">
-							Pour démarrer, voici un programme basique en C#.<br>
-						</p>
-						<p class="p11csharp">
-							<span class="motclef">using</span> <span class="class">System</span>;<br>
-							<br>
-							<span class="motclef">class</span> <span class="class">HelloWorld</span><br>
-							{<br>
-							<span class="tab"></span><span class="motclef">public static</span> <span class="type">void</span> <span class="fonction">Main</span>()<br>
-							<span class="tab"></span>{<br>
-							<span class="tab"></span><span class="tab"></span><span class="variable">Console</span>.<span class="fonction">WriteLine</span>(<span class="chaine">"Hello World !"</span>);<br>
-							<span class="tab"></span>}<br>
-							}
-						</p>
-						<p class="paragraph">
-							La première étape est la <em>compilation</em> du notre programme.<br>
-							Pour ce faire, on utilise le compilateur <em>mono</em> (à installer avec "<i>sudo apt install mono-mcs</i>" sous Linux).<br>
-							La compilation d'un fichier <em>test.cs</em> s'effectue à l'aide de la commande "<i>mcs test.cs</i>".<br>
-							S'il n'y a pas d'erreur de compilation, le compilateur génère un fichier exécutable <em>test.exe</em><br>
-							Pour lancer l'exécution, on utilise la commande "<i>mono test.exe</i>".
+							<h3 class="heading-3" data-i18n="p11_2025_td1_title"></h3>
 							
-						</p>
-					</article>
+							<p class="paragraph" data-i18n="p11_2025_td1_resources"></p>
 
-					<article class="article">
-						<h3 class="heading-3">📖 TD/TP 1 : Conditions et structures de code</h3>
-						<hr>
-						<p class="paragraph">
-							<div class="resource">
-								Les ressources complètes du TD1 sont disponible en téléchargant l'archive suivante :
-								<img class="logo" src="../../images/teaching/zip.png"> <a href="../../files/teaching/2025/P11/1_TD1.zip">1_TD1.zip</a>
-								<br>
-								Les ressources individuelles (sujets, algorithmes en pseudo-code et codes C#) sont disponibles ci-dessous.
-							</div>
-						</p>
-						<table class="table">
-							<tr class="row">
-								<th class="title">Sujets</th>
-								<th class="title">Exercices</th>
-								<th class="title">Algorithmes</th>
-								<th class="title">Codes C#</th>
-							</tr>
-							<tr class="row">
-								<td class="column" rowspan="11"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_TD1.pdf">1_TD1.pdf</a></td>
-								<td class="column">Exercice 1</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_1.pdf">1_algo_1.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_1.cs">1_exo_1.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 2</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_2.pdf">1_algo_2.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_2.cs">1_exo_2.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column" rowspan="2">Exercice 3</td>
-								<td class="column" rowspan="2"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_3.pdf">1_algo_3.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_3a.cs">1_exo_3a.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_3b.cs">1_exo_3b.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 4</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_4.pdf">1_algo_4.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_4.cs">1_exo_4.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 5</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_5.pdf">1_algo_5.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_5.cs">1_exo_5.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 6</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_6.pdf">1_algo_6.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_6.cs">1_exo_6.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 7</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_7.pdf">1_algo_7.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_7.cs">1_exo_7.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 8</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_8.pdf">1_algo_8.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_8.cs">1_exo_8.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 9</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_9.pdf">1_algo_9.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_9.cs">1_exo_9.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 10</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_10.pdf">1_algo_10.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_10.cs">1_exo_10.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Programme à saisir</td>
-								<td class="column">Bouteille</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_bouteille.pdf">1_algo_bouteille.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_bouteille.cs">1_bouteille.cs</a></td>
-							</tr>
-						</table>
-					</article>
+							<table class="table">
+								<tr class="row">
+									<th class="title" data-i18n="p11_2025_table_title_1"></th>
+									<th class="title" data-i18n="p11_2025_table_title_2"></th>
+									<th class="title" data-i18n="p11_2025_table_title_3"></th>
+									<th class="title" data-i18n="p11_2025_table_title_4"></th>
+								</tr>
+								<tr class="row">
+									<td class="column" rowspan="11"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_TD1.pdf">1_TD1.pdf</a></td>
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;1</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_1.pdf">1_algo_1.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_1.cs">1_exo_1.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;2</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_2.pdf">1_algo_2.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_2.cs">1_exo_2.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column" rowspan="2"><span data-i18n="p11_2025_exercise"></span>&nbsp;3</td>
+									<td class="column" rowspan="2"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_3.pdf">1_algo_3.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_3a.cs">1_exo_3a.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_3b.cs">1_exo_3b.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;4</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_4.pdf">1_algo_4.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_4.cs">1_exo_4.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;5</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_5.pdf">1_algo_5.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_5.cs">1_exo_5.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;6</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_6.pdf">1_algo_6.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_6.cs">1_exo_6.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;7</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_7.pdf">1_algo_7.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_7.cs">1_exo_7.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;8</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_8.pdf">1_algo_8.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_8.cs">1_exo_8.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;9</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_9.pdf">1_algo_9.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_9.cs">1_exo_9.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;10</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_10.pdf">1_algo_10.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_exo_10.cs">1_exo_10.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column" data-i18n="p11_2025_td1_prog_a_saisir"></td>
+									<td class="column" data-i18n="p11_2025_td1_bouteille"></td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/1_algo_bouteille.pdf">1_algo_bouteille.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/1_bouteille.cs">1_bouteille.cs</a></td>
+								</tr>
+							</table>
+						</article>
 
-					<article class="article">
-						<h3 class="heading-3">📖 TD/TP 2 : Les structures itératives (boucles)</h3>
-						<hr>
-						<p class="paragraph">
-							<div class="resource">
-								Les ressources complètes du TD2 sont disponible en téléchargant l'archive suivante :
-								<img class="logo" src="../../images/teaching/zip.png"> <a href="../../files/teaching/2025/P11/2_TD2.zip">2_TD2.zip</a>
-								<br>
-								Les ressources individuelles (sujets, algorithmes en pseudo-code et codes C#) sont disponibles ci-dessous.
-							</div>
-						</p>
-						<table class="table">
-							<tr class="row">
-								<th class="title">Sujets</th>
-								<th class="title">Exercices</th>
-								<th class="title">Algorithmes</th>
-								<th class="title">Codes C#</th>
-							</tr>
-							<tr class="row">
-								<td class="column" rowspan="15"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_TD2.pdf">2_TD2.pdf</a></td>
-								<td class="column" rowspan="3">Exercice 1</td>
-								<td class="column" rowspan="3"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_1.pdf">2_algo_1.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_1_pour.cs">2_exo_1_pour.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_1_tantque.cs">2_exo_1_tantque.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_1_fairetantque.cs">2_exo_1_fairetantque.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 2</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_2.pdf">2_algo_2.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_2.cs">2_exo_2.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 3</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_3.pdf">2_algo_3.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_3.cs">2_exo_3.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 4</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_4.pdf">2_algo_4.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_4.cs">2_exo_4.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 5</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_5.pdf">2_algo_5.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_5.cs">2_exo_5.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 6</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_6.pdf">2_algo_6.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_6.cs">2_exo_6.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 7</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_7.pdf">2_algo_7.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_7.cs">2_exo_7.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 8</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_8.pdf">2_algo_8.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_8.cs">2_exo_8.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 9</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_9.pdf">2_algo_9.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_9.cs">2_exo_9.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 10</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_10.pdf">2_algo_10.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_10.cs">2_exo_10.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 11</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_11.pdf">2_algo_11.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_11.cs">2_exo_11.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 12</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_12.pdf">2_algo_12.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_12.cs">2_exo_12.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 13</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_13.pdf">2_algo_13.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_13.cs">2_exo_13.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column" rowspan="6"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_TD2_suite.pdf">2_TD2_suite.pdf</a></td>
-								<td class="column">Exercice 14</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_14.pdf">2_algo_14.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_14.cs">2_exo_14.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 15</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_15.pdf">2_algo_15.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_15.cs">2_exo_15.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 16</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_16.pdf">2_algo_16.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_16.cs">2_exo_16.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 17</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_17.pdf">2_algo_17.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_17.cs">2_exo_17.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 18</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_18.pdf">2_algo_18.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_18.cs">2_exo_18.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 19</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_19.pdf">2_algo_19.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_19.cs">2_exo_19.cs</a></td>
-							</tr>
-						</table>
-					</article>
+						<article class="article">
 
-					<article class="article">
-						<h3 class="heading-3">📖 TD/TP 3 : Les procédures et fonctions</h3>
-						<hr>
-						<p class="paragraph">
-							<div class="resource">
-								Les ressources complètes du TD3 sont disponible en téléchargant l'archive suivante :
-								<img class="logo" src="../../images/teaching/zip.png"> <a href="../../files/teaching/2025/P11/3_TD3.zip">3_TD3.zip</a>
-								<br>
-								Les ressources individuelles (sujets, algorithmes en pseudo-code et codes C#) sont disponibles ci-dessous.
-								<br>
-								<b>Note : </b> Pour compiler les sources suffixées par <i>biginteger</i>, il faut utiliser la commande <em>mcs [fichier]_biginteger.cs -r:System.Numerics.dll</em>.
-							</div>
-						</p>
-						<table class="table">
-							<tr class="row">
-								<th class="title">Sujets</th>
-								<th class="title">Exercices</th>
-								<th class="title">Algorithmes</th>
-								<th class="title">Codes C#</th>
-							</tr>
-							<tr class="row">
-								<td class="column" rowspan="11"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_TD3.pdf">3_TD3.pdf</a></td>
-								<td class="column">Exercice 1</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_1.pdf">3_algo_1.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_1.cs">3_exo_1.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 2</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_2.pdf">3_algo_2.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_2.cs">3_exo_2.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 3</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_3.pdf">3_algo_3.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_3.cs">3_exo_3.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 4</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_4.pdf">3_algo_4.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_4.cs">3_exo_4.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 5</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_5.pdf">3_algo_5.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_5.cs">3_exo_5.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column" rowspan="2">Exercice 6</td>
-								<td class="column" rowspan="2"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_6.pdf">3_algo_6.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_6.cs">3_exo_6.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_6_biginteger.cs">3_exo_6_biginteger.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column" rowspan="2">Exercice 7</td>
-								<td class="column" rowspan="2"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_7.pdf">3_algo_7.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_7.cs">3_exo_7.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_7_biginteger.cs">3_exo_7_biginteger.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 8</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_8.pdf">3_algo_8.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_8.cs">3_exo_8.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 9</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_9.pdf">3_algo_9.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_9.cs">3_exo_9.cs</a></td>
-							</tr>
-						</table>
-					</article>
+							<h3 class="heading-3" data-i18n="p11_2025_td2_title"></h3>
 
-					<article class="article">
-						<h3 class="heading-3">📖 TD/TP 4 : Les tableaux à une dimension</h3>
-						<hr>
-						<p class="paragraph">
-							<div class="resource">
-								Les ressources complètes du TD4 sont disponible en téléchargant l'archive suivante :
-								<img class="logo" src="../../images/teaching/zip.png"> <a href="../../files/teaching/2025/P11/4_TD4.zip">4_TD4.zip</a>
-								<br>
-								Les ressources individuelles (sujets, algorithmes en pseudo-code et codes C#) sont disponibles ci-dessous.
-							</div>
-						</p>
-						<table class="table">
-							<tr class="row">
-								<th class="title">Sujets</th>
-								<th class="title">Exercices</th>
-								<th class="title">Algorithmes</th>
-								<th class="title">Codes C#</th>
-							</tr>
-							<tr class="row">
-								<td class="column" rowspan="9"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_TD4.pdf">4_TD4.pdf</a></td>
-								<td class="column">Exercice 1</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_1.pdf">4_algo_1.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_1.cs">4_exo_1.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 2</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_2.pdf">4_algo_2.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_2.cs">4_exo_2.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 3</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_3.pdf">4_algo_3.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_3.cs">4_exo_3.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 4</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_4.pdf">4_algo_4.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_4.cs">4_exo_4.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 5</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_5.pdf">4_algo_5.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_5.cs">4_exo_5.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 6</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_6.pdf">4_algo_6.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_6.cs">4_exo_6.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 7</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_7.pdf">4_algo_7.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_7.cs">4_exo_7.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 8</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_8.pdf">4_algo_8.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_8.cs">4_exo_8.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 9</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_9.pdf">4_algo_9.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_9.cs">4_exo_9.cs</a></td>
-							</tr>
-						</table>
-					</article>
+							<p class="paragraph" data-i18n="p11_2025_td2_resources"></p>
 
-					<article class="article">
-						<h3 class="heading-3">📖 TD/TP 5 : Les tableaux à deux dimensions</h3>
-						<hr>
-						<p class="paragraph">
-							<div class="resource">
-								Les ressources complètes du TD5 sont disponible en téléchargant l'archive suivante :
-								<img class="logo" src="../../images/teaching/zip.png"> <a href="../../files/teaching/2025/P11/5_TD5.zip">5_TD5.zip</a>
-								<br>
-								Les ressources individuelles (sujets, algorithmes en pseudo-code et codes C#) sont disponibles ci-dessous.
-							</div>
-						</p>
-						<table class="table">
-							<tr class="row">
-								<th class="title">Sujets</th>
-								<th class="title">Exercices</th>
-								<th class="title">Algorithmes</th>
-								<th class="title">Codes C#</th>
-							</tr>
-							<tr class="row">
-								<td class="column" rowspan="5"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_TD5.pdf">5_TD5.pdf</a></td>
-								<td class="column">Exercice 1</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_algo_1.pdf">5_algo_1.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/5_exo_1.cs">5_exo_1.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 2</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_algo_2.pdf">5_algo_2.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/5_exo_2.cs">5_exo_2.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 3</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_algo_3.pdf">5_algo_3.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/5_exo_3.cs">5_exo_3.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 4</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_algo_4.pdf">5_algo_4.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/5_exo_4.cs">5_exo_4.cs</a></td>
-							</tr>
-							<tr class="row">
-								<td class="column">Exercice 5</td>
-								<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_algo_5.pdf">5_algo_5.pdf</a></td>
-								<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/5_exo_5.cs">5_exo_5.cs</a></td>
-							</tr>
-						</table>
-					</article>
+							<table class="table">
+								<tr class="row">
+									<th class="title" data-i18n="p11_2025_table_title_1"></th>
+									<th class="title" data-i18n="p11_2025_table_title_2"></th>
+									<th class="title" data-i18n="p11_2025_table_title_3"></th>
+									<th class="title" data-i18n="p11_2025_table_title_4"></th>
+								</tr>
+								<tr class="row">
+									<td class="column" rowspan="15"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_TD2.pdf">2_TD2.pdf</a></td>
+									<td class="column" rowspan="3"><span data-i18n="p11_2025_exercise"></span>&nbsp;1</td>
+									<td class="column" rowspan="3"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_1.pdf">2_algo_1.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_1_pour.cs">2_exo_1_pour.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_1_tantque.cs">2_exo_1_tantque.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_1_fairetantque.cs">2_exo_1_fairetantque.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;2</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_2.pdf">2_algo_2.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_2.cs">2_exo_2.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;3</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_3.pdf">2_algo_3.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_3.cs">2_exo_3.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;4</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_4.pdf">2_algo_4.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_4.cs">2_exo_4.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;5</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_5.pdf">2_algo_5.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_5.cs">2_exo_5.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;6</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_6.pdf">2_algo_6.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_6.cs">2_exo_6.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;7</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_7.pdf">2_algo_7.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_7.cs">2_exo_7.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;8</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_8.pdf">2_algo_8.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_8.cs">2_exo_8.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;9</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_9.pdf">2_algo_9.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_9.cs">2_exo_9.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;10</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_10.pdf">2_algo_10.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_10.cs">2_exo_10.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;11</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_11.pdf">2_algo_11.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_11.cs">2_exo_11.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;12</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_12.pdf">2_algo_12.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_12.cs">2_exo_12.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;13</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_13.pdf">2_algo_13.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_13.cs">2_exo_13.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column" rowspan="6"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_TD2_suite.pdf">2_TD2_suite.pdf</a></td>
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;14</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_14.pdf">2_algo_14.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_14.cs">2_exo_14.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;15</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_15.pdf">2_algo_15.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_15.cs">2_exo_15.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;16</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_16.pdf">2_algo_16.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_16.cs">2_exo_16.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;17</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_17.pdf">2_algo_17.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_17.cs">2_exo_17.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;18</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_18.pdf">2_algo_18.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_18.cs">2_exo_18.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;19</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/2_algo_19.pdf">2_algo_19.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/2_exo_19.cs">2_exo_19.cs</a></td>
+								</tr>
+							</table>
+						</article>
 
-				</section>
+						<article class="article">
+
+							<h3 class="heading-3" data-i18n="p11_2025_td3_title"></h3>
+							
+							<p class="paragraph" data-i18n="p11_2025_td3_resources"></p>
+
+							<table class="table">
+								<tr class="row">
+									<th class="title" data-i18n="p11_2025_table_title_1"></th>
+									<th class="title" data-i18n="p11_2025_table_title_2"></th>
+									<th class="title" data-i18n="p11_2025_table_title_3"></th>
+									<th class="title" data-i18n="p11_2025_table_title_4"></th>
+								</tr>
+								<tr class="row">
+									<td class="column" rowspan="11"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_TD3.pdf">3_TD3.pdf</a></td>
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;1</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_1.pdf">3_algo_1.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_1.cs">3_exo_1.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;2</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_2.pdf">3_algo_2.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_2.cs">3_exo_2.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;3</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_3.pdf">3_algo_3.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_3.cs">3_exo_3.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;4</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_4.pdf">3_algo_4.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_4.cs">3_exo_4.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;5</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_5.pdf">3_algo_5.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_5.cs">3_exo_5.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column" rowspan="2"><span data-i18n="p11_2025_exercise"></span>&nbsp;6</td>
+									<td class="column" rowspan="2"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_6.pdf">3_algo_6.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_6.cs">3_exo_6.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_6_biginteger.cs">3_exo_6_biginteger.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column" rowspan="2"><span data-i18n="p11_2025_exercise"></span>&nbsp;7</td>
+									<td class="column" rowspan="2"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_7.pdf">3_algo_7.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_7.cs">3_exo_7.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_7_biginteger.cs">3_exo_7_biginteger.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;8</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_8.pdf">3_algo_8.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_8.cs">3_exo_8.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;9</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/3_algo_9.pdf">3_algo_9.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/3_exo_9.cs">3_exo_9.cs</a></td>
+								</tr>
+							</table>
+						</article>
+
+						<article class="article">
+
+							<h3 class="heading-3" data-i18n="p11_2025_td4_title"></h3>
+							
+							<p class="paragraph" data-i18n="p11_2025_td4_resources"></p>
+
+							<table class="table">
+								<tr class="row">
+									<th class="title" data-i18n="p11_2025_table_title_1"></th>
+									<th class="title" data-i18n="p11_2025_table_title_2"></th>
+									<th class="title" data-i18n="p11_2025_table_title_3"></th>
+									<th class="title" data-i18n="p11_2025_table_title_4"></th>
+								</tr>
+								<tr class="row">
+									<td class="column" rowspan="9"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_TD4.pdf">4_TD4.pdf</a></td>
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;1</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_1.pdf">4_algo_1.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_1.cs">4_exo_1.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;2</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_2.pdf">4_algo_2.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_2.cs">4_exo_2.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;3</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_3.pdf">4_algo_3.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_3.cs">4_exo_3.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;4</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_4.pdf">4_algo_4.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_4.cs">4_exo_4.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;5</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_5.pdf">4_algo_5.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_5.cs">4_exo_5.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;6</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_6.pdf">4_algo_6.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_6.cs">4_exo_6.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;7</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_7.pdf">4_algo_7.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_7.cs">4_exo_7.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;8</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_8.pdf">4_algo_8.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_8.cs">4_exo_8.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;9</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/4_algo_9.pdf">4_algo_9.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/4_exo_9.cs">4_exo_9.cs</a></td>
+								</tr>
+							</table>
+						</article>
+
+						<article class="article">
+
+							<h3 class="heading-3" data-i18n="p11_2025_td5_title"></h3>
+							
+							<p class="paragraph" data-i18n="p11_2025_td5_resources"></p>
+
+							<table class="table">
+								<tr class="row">
+									<th class="title" data-i18n="p11_2025_table_title_1"></th>
+									<th class="title" data-i18n="p11_2025_table_title_2"></th>
+									<th class="title" data-i18n="p11_2025_table_title_3"></th>
+									<th class="title" data-i18n="p11_2025_table_title_4"></th>
+								</tr>
+								<tr class="row">
+									<td class="column" rowspan="5"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_TD5.pdf">5_TD5.pdf</a></td>
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;1</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_algo_1.pdf">5_algo_1.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/5_exo_1.cs">5_exo_1.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;2</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_algo_2.pdf">5_algo_2.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/5_exo_2.cs">5_exo_2.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;3</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_algo_3.pdf">5_algo_3.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/5_exo_3.cs">5_exo_3.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;4</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_algo_4.pdf">5_algo_4.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/5_exo_4.cs">5_exo_4.cs</a></td>
+								</tr>
+								<tr class="row">
+									<td class="column"><span data-i18n="p11_2025_exercise"></span>&nbsp;5</td>
+									<td class="column"><img class="logo" src="../../images/teaching/pdf.png"><a href="../../files/teaching/2025/P11/5_algo_5.pdf">5_algo_5.pdf</a></td>
+									<td class="column"><img class="logo" src="../../images/teaching/csharp.png"><a href="../../files/teaching/2025/P11/5_exo_5.cs">5_exo_5.cs</a></td>
+								</tr>
+							</table>
+						</article>
+
+					</section>
+
+					<section class="section">
+
+						<h2 class="heading-2" data-i18n="p11_2025_controles_title"></h2>
+
+						<article class="article">
+
+							<h3 class="heading-3" data-i18n="p11_2025_test_1_title"></h3>
+
+						</article>
+
+						<article class="article">
+
+							<h3 class="heading-3" data-i18n="p11_2025_test_2_title"></h3>
+
+						</article>
+
+						<article class="article">
+
+							<h3 class="heading-3" data-i18n="p11_2025_test_3_title"></h3>
+
+						</article>
+
+						<article class="article">
+
+							<h3 class="heading-3" data-i18n="p11_2025_controle_intermediaire_title"></h3>
+
+						</article>
+
+						<article class="article">
+
+							<h3 class="heading-3" data-i18n="p11_2025_controle_final_title"></h3>
+
+						</article>
+
+					</section>
+
+				</div>
 
 				<aside class="sidebar">
 					<h3 class="heading-3">Contact</h3>
@@ -492,7 +470,7 @@
 			</main>
 
 			<footer class="footer">
-				<p class="paragraph">&copy; 2025 Romain PERRIN (@Romain96)</p>
+				<p class="paragraph" data-i18n="footer_copyright"></p>
 			</footer>
 
 		</div>
