@@ -76,6 +76,11 @@ body {
 	flex: 0 0 80%;
 }
 
+.content .heading-1 {
+	flex: 0 0 100%;
+	margin-bottom: 0;
+}
+
 .section {
 	flex: 0 0 95%;
 	border-radius: 10px;
