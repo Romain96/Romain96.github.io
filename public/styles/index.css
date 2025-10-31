@@ -65,14 +65,24 @@ body {
 }
 
 /* Main content styling */
+.main {
+	display: flex;
+	flex-wrap: nowrap;
+	flex: 0 0 100%;
+}
+
 .content {
 	display: flex;
-	margin: 20px 0 20px 5%;
+	flex-wrap: wrap;
+	flex: 0 0 80%;
 }
 
 .section {
-	flex: 3;
-	margin-right: 20px;
+	flex: 0 0 100%;
+	border-radius: 10px;
+	background-color: #236AB9;
+	margin-bottom: 2em;
+	padding: 10px;
 }
 
 .section .heading-2 {
@@ -96,12 +106,10 @@ hr {
 }
 
 .article {
-	width: 100%;
 	border-radius: 10px;
 	background-color: #D4E4F7;
 	margin-bottom: 1em;
-	padding-left: 10px;
-	padding-bottom: 10px;
+	padding: 10px;
 }
 
 .article hr {
@@ -127,7 +135,7 @@ a:hover {
 
 /* Sidebar styling */
 .sidebar {
-	flex: 0.7;
+	flex: 0 0 20%;
 	background-color: #f9f9f9;
 	padding: 20px;
 	border-left: 2px solid #e0e0e0;

@@ -1,5 +1,21 @@
 /* Publication specific */
 
+#internationalJournalSection {
+	flex: 0 0 95%;
+}
+
+#internationalConferenceSection {
+	flex: 0 0 95%;
+}
+
+#nationalConferenceSection {
+	flex: 0 0 95%;
+}
+
+#phdThesisSection {
+	flex: 0 0 95%;
+}
+
 #internationalJournal .list {
 	list-style: none;
 }
