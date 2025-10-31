@@ -3,7 +3,7 @@
 
 #talks .article .talkContent {
 	display: flex;
-	padding-top: 1.0em;
+	padding-top: 1em;
 }
 
 #talks .article .talkContent .talkText .heading-3 {
@@ -15,7 +15,7 @@
 	list-style: none;
 	padding-top: 0;
 	margin-top: 0;
-	font-size: 1.0em;
+	font-size: 1em;
 }
 
 #talks .article .talkContent .talkLogo .logo
