@@ -63,9 +63,15 @@
 .article .personalDetails #personalDetailsList
 {
 	list-style: none;
+	line-height: 0.50%;
 }
 
 .article .personalDetails #personalDetailsList .item
 {
 	margin-bottom: 0.25em;
+}
+
+#responsabilities .list {
+	list-style: none;
+	line-height: 0.50%;
 }
