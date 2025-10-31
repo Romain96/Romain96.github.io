@@ -9,6 +9,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?">
 		<link rel="stylesheet" href="../public/styles/index.css"/>
 		<link rel="stylesheet" href="../public/styles/project.css"/>
+		<script src="./public/scripts/languages.js" defer></script>
 	</head>
 
 	<body>
@@ -19,28 +20,34 @@
 				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
 				<nav class="nav">
 					<ul class="list">
-						<li class="item" id="home"><img class="navlogo" src="../images/navigation/home.png"><a href="../index.html">Home</a></li>
-						<li class="item" id="about"><img class="navlogo" src="../images/navigation/cv.png"><a href="../pages/cv.html">CV</a></li>
-						<li class="item" id="research"><img class="navlogo" src="../images/navigation/research.png"><a href="../pages/research.html">Research</a></li>
-						<li class="item" id="talk"><img class="navlogo" src="../images/navigation/talk.png"><a href="../pages/talk.html">Talks</a></li>
-						<li class="item" id="publication"><img class="navlogo" src="../images/navigation/publication.png"><a href="../pages/publication.html">Publication</a></li>
-						<li class="item" id="teaching"><img class="navlogo" src="../images/navigation/teaching.png"><a href="../pages/teaching.html">Teaching</a></li>
-						<li class="item" id="project"><img class="navlogo" src="../images/navigation/project.png"><a href="../pages/project.html">Projects</a></li>
+						<li class="item">
+							<select name="languageSelection" class="languageSelector" onchange="changeLanguageListener(this.value)">
+								<option class="languageOption" value="en" selected>🇬🇧&nbsp;English</option>
+								<option class="languageOption" value="fr">🇫🇷&nbsp;Français</option>
+							</select>
+						</li>
+						<li class="item" id="home"><img class="navlogo" src="../images/navigation/home.png"><a href="../index.html"><span data-i18n="nav_home"></span></a></li>
+						<li class="item" id="about"><img class="navlogo" src="../images/navigation/cv.png"><a href="../pages/cv.html"><span data-i18n="nav_about"></span></a></li>
+						<li class="item" id="research"><img class="navlogo" src="../images/navigation/research.png"><a href="../pages/research.html"><span data-i18n="nav_research"></span></a></li>
+						<li class="item" id="talk"><img class="navlogo" src="../images/navigation/talk.png"><a href="../pages/talk.html"><span data-i18n="nav_talk"></span></a></li>
+						<li class="item" id="publication"><img class="navlogo" src="../images/navigation/publication.png"><a href="../pages/publication.html"><span data-i18n="nav_publication"></span></a></li>
+						<li class="item" id="teaching"><img class="navlogo" src="../images/navigation/teaching.png"><a href="../pages/teaching.html"><span data-i18n="nav_teaching"></span></a></li>
+						<li class="item" id="project"><img class="navlogo" src="../images/navigation/project.png"><a href="../pages/project.html"><span data-i18n="nav_project"></span></a></li>
 					</ul>
 				</nav>
 			</header>
 
-			<main class="content">
+			<main class="main">
 
-				<section class="section">
-					<h2 class="heading-2">Personal projects</h2>
+				<div class="content">
+					<h1 class="heading-1">Personal projects</h1>
 					<p class="paragraph">
 						This page lists various personal projects not neccessarily related to research of teaching.
 					</p>
-					<hr>
+					<label id="languageJSONPath" hidden>../public/languages/project</label>
 
-					<div id="personalProjects">
-
+					<section class="section" id="personalProjects">
+						
 						<article class="article">
 							<h3 class="heading-3">➤ Building the component-tree in quasi-linear time (M2S3)</h3>
 							<p class="paragraph">
@@ -150,9 +157,8 @@
 							</p>
 						</article>
 
-					</div>
-
-				</section>
+					</section>
+				</div>
 
 				<aside class="sidebar">
 					<h3 class="heading-3">Contact</h3>
