@@ -1,26 +1,25 @@
 /* CV specific */
 
-.article #employment
-{
-	list-style: none;
+.article {
+	display: flex;
 }
 
-.article #employment .item:first-child
+.article .list .item:first-child
 {
 	margin-top: 0.5em;
 }
 
-.article #employment .item {
+.article .list .item {
 	font-size: 1.0em;
 	margin-top: 2em;
 	display: flex;
 }
 
-#employment .sublist {
+.sublist {
 	list-style: none;
 }
 
-#employment .sublist .item
+.sublist .item
 {
 	font-size: 0.9em;
 	margin-top: 0px;
@@ -35,45 +34,12 @@
 	vertical-align: top;
 }
 
-.article #qualifications {
-	list-style: none;
-}
-
-.article #qualifications .item .sublist {
-	list-style: none;
-}
-
-.article #qualifications .item {
-	font-size: 1em;
-	margin-top: 2em;
-	display: flex;
-}
-.article #qualifications .item:first-child
-{
-	margin-top: 0.5em;
-}
-
 .qualificationsLogo .logo {
 	width: 8em;
 	padding-right: 2em;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 	vertical-align: top;
-}
-
-.article #qualifications .sublist .item
-{
-	font-size: 0.9em;
-	margin-top: 0px;
-	margin-left: 2em;
-}
-
-.article #qualifications .item .qualificationsText .sublist .item .a {
-	padding-left: 10em;
-}
-
-.article #responsabilities {
-	list-style: inside;
 }
 
 .article hr {
