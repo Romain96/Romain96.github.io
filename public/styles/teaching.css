@@ -9,6 +9,10 @@
 	padding-top: 1em;
 }
 
+.teachingText {
+	flex: 1 0 80%;
+}
+
 #teaching .article .teachingContent .teachingText .heading-3 {
 	margin-top: 0;
 	padding-top: 0;
