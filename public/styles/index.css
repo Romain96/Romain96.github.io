@@ -79,6 +79,7 @@ body {
 .content .heading-1 {
 	flex: 0 0 100%;
 	margin-bottom: 0;
+	color: #333;
 }
 
 .section {
@@ -130,6 +131,7 @@ hr {
 .article .heading-3 {
 	font-size: 1.25em;
 	margin-bottom: 10px;
+	color: #333;
 }
 
 a {
