@@ -84,7 +84,9 @@ body {
 .section {
 	flex: 0 0 95%;
 	border-radius: 10px;
-	background-color: #236AB9;
+	/*background-color: #236AB9;*/
+	background-color: #e8e0cc;
+	background-image: url(../../images/background/paper-1.png);
 	margin-bottom: 2em;
 	padding: 10px;
 }
@@ -112,7 +114,9 @@ hr {
 
 .article {
 	border-radius: 10px;
-	background-color: #D4E4F7;
+	/*background-color: #D4E4F7;*/
+	background-color: #e8e0cc;
+	background-image: url(../../images/background/lined-paper-2.png);
 	margin-bottom: 1em;
 	padding: 10px;
 }
