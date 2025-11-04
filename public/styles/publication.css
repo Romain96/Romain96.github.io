@@ -1,66 +1,66 @@
 /* Publication specific */
 
 #internationalJournalSection {
-	flex: 0 0 95%;
+	flex: 0 0 100%;
 }
 
 #internationalConferenceSection {
-	flex: 0 0 95%;
+	flex: 0 0 100%;
 }
 
 #nationalConferenceSection {
-	flex: 0 0 95%;
+	flex: 0 0 100%;
 }
 
 #phdThesisSection {
-	flex: 0 0 95%;
+	flex: 0 0 100%;
 }
 
-#internationalJournal .article .list {
+#internationalJournalSection .article .list {
 	list-style: none;
 }
 
-#internationalJournal .article .list .item {
+#internationalJournalSection .article .list .item {
 	font-size: 1em;
 }
 
-#internationalJournal .article .list .sublist {
+#internationalJournalSection .article .list .sublist {
 	list-style: none;
 }
 
-#internationalJournal .article .list .sublist .item {
+#internationalJournalSection .article .list .sublist .item {
 	font-size: 0.8em;;
 }
 
-#internationalConference .article .list {
+#internationalConferenceSection .article .list {
 	list-style: none;
 }
 
-#internationalConference .article .list .item {
-	font-size: 1.0em;
-}
-
-#internationalConference .article .list .sublist {
-	list-style: none;
-}
-
-#internationalConference .article .list .sublist .item {
-	font-size: 0.8em;
-}
-
-#nationalConference .article .list {
-	list-style: none;
-}
-
-#nationalConference .article .list .item {
+#internationalConferenceSection .article .list .item {
 	font-size: 1em;
 }
 
-#nationalConference .article .list .sublist {
+#internationalConferenceSection .article .list .sublist {
 	list-style: none;
 }
 
-#nationalConference .article .list .sublist .item {
+#internationalCointernationalConferenceSectionnference .article .list .sublist .item {
+	font-size: 0.8em;
+}
+
+#nationalConferenceSection .article .list {
+	list-style: none;
+}
+
+#nationalConferenceSection .article .list .item {
+	font-size: 1em;
+}
+
+#nationalConferenceSection .article .list .sublist {
+	list-style: none;
+}
+
+#nationalConferenceSection .article .list .sublist .item {
 	font-size: 0.8em;
 }
 
