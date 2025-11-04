@@ -1,19 +1,19 @@
 /* Publication specific */
 
 #internationalJournalSection {
-	flex: 0 0 100%;
+	flex: 0 1 100%;
 }
 
 #internationalConferenceSection {
-	flex: 0 0 100%;
+	flex: 0 1 100%;
 }
 
 #nationalConferenceSection {
-	flex: 0 0 100%;
+	flex: 0 1 100%;
 }
 
 #phdThesisSection {
-	flex: 0 0 100%;
+	flex: 0 1 100%;
 }
 
 #internationalJournalSection .article .list {
