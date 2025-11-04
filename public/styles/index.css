@@ -151,6 +151,7 @@ a:hover {
 .sidebarLeft {
 	flex: 0 0 15%;
 	background-color: #dd7575;
+	background-image: url(../../images/background/cardboard.png);
 	border-right: 0.25rem solid #333;
 	border-left: 0.25rem solid #333;
 }
