@@ -81,7 +81,8 @@ body {
 
 .content .heading-1 {
 	flex: 0 0 100%;
-	margin-bottom: 0;
+	margin-bottom: 1em;
+	text-align: center;
 	color: #333;
 }
 
