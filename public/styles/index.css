@@ -4,18 +4,21 @@ body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.5;
-	background-color: #fbfbfb;
+	/*background-color: #db55c7;*/
+	background-color: #ff55ff;
+	background-image: url(../../images/background/black-linen.png);
 }
 
 .wrapper {
-	max-width: 90%;
+	max-width: 100%;
 	margin: 0 auto;
-	padding: 20px;
 }
 
 /* Header and navigation styling */
 .header {
-	background-color: #333;
+	/*background-color: #333;*/
+	background-color: #333333;
+	background-image: url(../../images/background/black-paper.png);
 	color: white;
 	padding: 10px 0;
 	text-align: center;
@@ -73,7 +76,9 @@ body {
 .content {
 	display: flex;
 	flex-wrap: wrap;
-	flex: 0 0 80%;
+	flex: 0 1 70%;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .content .heading-1 {
@@ -83,10 +88,10 @@ body {
 }
 
 .section {
-	flex: 0 0 95%;
+	flex: 0 1 100%;
 	border-radius: 10px;
 	/*background-color: #236AB9;*/
-	background-color: #e8e0cc;
+	background-color: #5555ff;
 	background-image: url(../../images/background/paper-1.png);
 	margin-bottom: 2em;
 	padding: 10px;
@@ -116,7 +121,7 @@ hr {
 .article {
 	border-radius: 10px;
 	/*background-color: #D4E4F7;*/
-	background-color: #e8e0cc;
+	background-color: #ffffff;
 	background-image: url(../../images/background/lined-paper-2.png);
 	margin-bottom: 1em;
 	padding: 10px;
@@ -144,25 +149,32 @@ a:hover {
 	text-decoration: underline;
 }
 
-/* Sidebar styling */
-.sidebar {
-	flex: 0 0 20%;
-	background-color: #f9f9f9;
-	padding: 20px;
-	border-left: 2px solid #e0e0e0;
+/* left sidebar - placeholder */
+.sidebarLeft {
+	flex: 0 0 15%;
+	background-color: #ff5555;
+	background-image: url(../../images/background/cardboard.png);
 }
 
-.sidebar .heading-3 {
+/* Sidebar styling */
+.sidebarRight {
+	flex: 0 0 15%;
+	padding: 20px;
+	background-color: #ff5555;
+	background-image: url(../../images/background/cardboard.png);
+}
+
+.sidebarRight .heading-3 {
 	font-size: 1.25em;
 	margin-bottom: 10px;
 }
 
-.sidebar .list {
+.sidebarRight .list {
 	list-style: none;
 	padding: 0;
 }
 
-.sidebar .list .item {
+.sidebarRight .list .item {
 	/*background-color: #333;
 	color: white;*/
 	padding: 5px;
@@ -171,17 +183,17 @@ a:hover {
 	vertical-align: middle;
 }
 
-.sidebar .list .item a {
+.sidebarRight .list .item a {
 	color: blue;
 	outline: none;
 	text-decoration: none;
 }
 
-.sidebar .list .item:hover {
+.sidebarRight .list .item:hover {
 	text-decoration: underline;
 }
 
-.sidebar .list .logo {
+.sidebarRight .list .logo {
 	height: 1.2em;
 	width: 1.2em;
 	padding-right: 10px;
@@ -190,7 +202,8 @@ a:hover {
 
 /* Footer styling */
 .footer {
-	background-color: #333;
+	background-color: #333333;
+	background-image: url(../../images/background/black-paper.png);
 	color: white;
 	text-align: center;
 	padding: 20px 0;
