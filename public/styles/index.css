@@ -4,9 +4,7 @@ body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.5;
-	/*background-color: #db55c7;*/
-	background-color: #ff55ff;
-	background-image: url(../../images/background/black-linen.png);
+	background-color: #eeeeee;
 }
 
 .wrapper {
@@ -152,16 +150,19 @@ a:hover {
 /* left sidebar - placeholder */
 .sidebarLeft {
 	flex: 0 0 15%;
-	background-color: #ff5555;
-	background-image: url(../../images/background/cardboard.png);
+	background-color: #dd7575;
+	border-right: 0.25rem solid #333;
+	border-left: 0.25rem solid #333;
 }
 
 /* Sidebar styling */
 .sidebarRight {
 	flex: 0 0 15%;
 	padding: 20px;
-	background-color: #ff5555;
+	background-color: #dd7575;
 	background-image: url(../../images/background/cardboard.png);
+	border-right: 0.25rem solid #333;
+	border-left: 0.25rem solid #333;
 }
 
 .sidebarRight .heading-3 {
