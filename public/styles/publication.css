@@ -44,7 +44,7 @@
 	list-style: none;
 }
 
-#internationalCointernationalConferenceSectionnference .article .list .sublist .item {
+#internationalConferenceSection .article .list .sublist .item {
 	font-size: 0.8em;
 }
 
@@ -64,19 +64,19 @@
 	font-size: 0.8em;
 }
 
-#thesis .article .list {
+#thesis .list {
 	list-style: none;
 }
 
-#thesis .article .list .item {
+#thesis .list .item {
 	font-size: 1.0em;
 }
 
-#thesis .article .list .sublist {
+#thesis .list .sublist {
 	list-style: none;
 }
 
-#thesis .article .list .sublist .item {
+#thesis .list .sublist .item {
 	font-size: 0.8em;
 }
 
