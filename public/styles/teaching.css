@@ -222,6 +222,10 @@ hr {
 	font-size: 0.8em;
 }
 
+span .list {
+	list-style: none;
+}
+
 .d11sql .tab {
 	margin-left: 4em;
 }
@@ -252,6 +256,7 @@ details {
 	line-height: 1.0;
 	font-family: "Lucida Console", Courier, monospace;
 	font-size: 1em;
+	padding-top: 0.5em;
 }
 
 details summary {
