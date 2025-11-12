@@ -70,142 +70,25 @@
 }
 
 .table .row .column a {
-	color: blue;
+	color: #ef9000;
 	outline: none;
 	text-decoration: none;
 }
 
 .paragraph a {
-	color: blue;
+	color: #ef9000;
 	outline: none;
 	text-decoration: none;
 }
 
 .paragraph a :hover {
-	color: blue;
+	color: #ef9000;
 	outline: none;
 	text-decoration: none;
 }
 
 .paragraph .logo {
 	height: 1em;
-}
-
-hr {
-	border-width: 1px;
-	border-style: solid;
-	color: #e0e0e0;
-}
-
-.p11pseudocode2024 .variable {
-	color: black;
-}
-
-.p11pseudocode2024 .parametre {
-	color: gray;
-}
-
-.p11pseudocode2024 .type {
-	color: violet;
-	font-weight: bold;
-}
-
-.p11pseudocode2024 .fonction {
-	color: green;
-	font-weight: bold;
-}
-
-.p11pseudocode2024 .motclef {
-	color: red;
-	font-weight: bold;
-}
-
-.p11pseudocode2025 {
-	font-family: "Lucida Console", Courier, monospace;
-	font-size: 0.8em;
-	line-height: 125%;
-	background-color: lightgray;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	padding-left: 1em;
-	width: 80%;
-}
-
-.p11pseudocode2025 .variable {
-	color: black;
-}
-
-.p11pseudocode2025 .parametre {
-	color: blue;
-}
-
-.p11pseudocode2025 .type {
-	color: violet;
-	font-weight: bold;
-}
-
-.p11pseudocode2025 .chaine {
-	color: gray;
-}
-
-.p11pseudocode2025 .fonction {
-	color: green;
-	font-weight: bold;
-}
-
-.p11pseudocode2025 .motclef {
-	color: red;
-	font-weight: bold;
-}
-
-.p11pseudocode2025 .tab {
-	margin-left: 2em;
-}
-
-.p11csharp {
-	font-family: "Lucida Console", Courier, monospace;
-	font-size: 0.8em;
-	line-height: 125%;
-	background-color: lightgray;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	padding-left: 1em;
-	width: 80%;
-}
-
-.p11csharp .tab {
-	margin-left: 2em;
-}
-
-.p11csharp .variable {
-	color: blueviolet;
-}
-
-.p11csharp .fonction {
-	color: red;
-	font-weight: bold;
-}
-
-.p11csharp .motclef {
-	color: blue;
-	font-weight: bold;
-}
-
-.p11csharp .type {
-	color: blue;
-	font-weight: bold;
-}
-
-.p11csharp .number {
-	color: yellowgreen;
-}
-
-.p11csharp .chaine {
-	color: orange;
-}
-
-.p11csharp .class {
-	color: green;
 }
 
 .d11answer {
