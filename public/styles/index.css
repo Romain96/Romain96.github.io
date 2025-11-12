@@ -4,20 +4,24 @@ body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.5;
-	background-color: #eeeeee;
+	background-color: #453534;
+	box-sizing: border-box;
+	height: 100%;
 }
 
 .wrapper {
-	max-width: 100%;
-	margin: 0 auto;
+	/*max-width: 100%;
+	margin: 0 auto;*/
+	box-sizing: border-box;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 /* Header and navigation styling */
 .header {
-	/*background-color: #333;*/
-	background-color: #333333;
-	background-image: url(../../images/background/black-paper.png);
-	color: white;
+	background-color: #291f1f;
+	color: #eeeeee;
 	padding: 10px 0;
 	text-align: center;
 }
@@ -38,7 +42,7 @@ body {
 }
 
 .nav .list .item a {
-	color: white;
+	color: #ef9000;
 	text-decoration: none;
 	font-size: 1em;
 }
@@ -67,46 +71,70 @@ body {
 
 /* Main content styling */
 .main {
+	/*display: flex;
+	flex-wrap: nowrap;*/
 	display: flex;
-	flex-wrap: nowrap;
+	flex-shrink: 0;
+	flex-grow: 1;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+	background-color: #453534;
+	color: #eeeeee;
 }
 
 .content {
 	display: flex;
-	flex-wrap: wrap;
-	flex: 0 1 70%;
+	flex-shrink: 0;
+	flex-grow: 1;
+	flex-direction: row;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+.mainContent {
+	flex-shrink: 1;
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	box-sizing: border-box;
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
 .content .heading-1 {
-	flex: 0 0 100%;
+	flex-grow: 1;
+	flex-shrink: 1;
 	margin-bottom: 1em;
+	font-size: 3em;
+	padding: 0;
+	margin: 0 0 1rem 0;
 	text-align: center;
-	color: #333;
+	color: #ef9000;
 }
 
 .section {
-	flex: 0 1 100%;
+	flex-grow: 0;
+	flex-shrink: 0;
 	border-radius: 10px;
-	/*background-color: #236AB9;*/
-	background-color: #5555ff;
-	background-image: url(../../images/background/paper-1.png);
 	margin-bottom: 2em;
 	padding: 10px;
+	color: #eeeeee;
 }
 
 .section .heading-2 {
 	font-size: 1.5em;
 	margin-top: 0;
 	margin-bottom: 10px;
-	color: #333;
+	color: #ef9000;
 }
 
 .section .paragraph {
 	font-size: 1em;
 	margin-bottom: 20px;
 	width: 95%;
+	color: #eeeeee;
 }
 
 /* Article styling */
@@ -118,12 +146,12 @@ hr {
 }
 
 .article {
+	flex-grow: 0;
+	flex-shrink: 0;
 	border-radius: 10px;
-	/*background-color: #D4E4F7;*/
-	background-color: #ffffff;
-	background-image: url(../../images/background/lined-paper-2.png);
 	margin-bottom: 1em;
 	padding: 10px;
+	color: #eeeeee;
 }
 
 .article hr {
@@ -135,7 +163,7 @@ hr {
 .article .heading-3 {
 	font-size: 1.25em;
 	margin-bottom: 10px;
-	color: #333;
+	color: #ef9000;
 }
 
 a {
@@ -150,36 +178,39 @@ a:hover {
 
 /* left sidebar - placeholder */
 .sidebarLeft {
-	flex: 0 0 15%;
-	background-color: #dd7575;
-	background-image: url(../../images/background/cardboard.png);
-	border-right: 0.25rem solid #333;
-	border-left: 0.25rem solid #333;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 17.5%;
+	background-color: #291f1f;
+	border: 2px solid #ef9000;
+	border-radius: 8px;
 }
 
 /* Sidebar styling */
 .sidebarRight {
-	flex: 0 0 15%;
-	padding: 20px;
-	background-color: #dd7575;
-	background-image: url(../../images/background/cardboard.png);
-	border-right: 0.25rem solid #333;
-	border-left: 0.25rem solid #333;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 17.5%;
+	background-color: #291f1f;
+	color: #eeeeee;
+	border: 2px solid #ef9000;
+	border-radius: 8px;
 }
 
 .sidebarRight .heading-3 {
 	font-size: 1.25em;
 	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 20px;
+	color: #ef9000;
 }
 
 .sidebarRight .list {
 	list-style: none;
-	padding: 0;
+	padding-left: 20px;
 }
 
 .sidebarRight .list .item {
-	/*background-color: #333;
-	color: white;*/
 	padding: 5px;
 	margin-bottom: 10px;
 	font-size: 1.0em;
@@ -187,12 +218,12 @@ a:hover {
 }
 
 .sidebarRight .list .item a {
-	color: blue;
+	color: #ef9000;
 	outline: none;
 	text-decoration: none;
 }
 
-.sidebarRight .list .item:hover {
+.sidebarRight .list .item a:hover {
 	text-decoration: underline;
 }
 
@@ -205,9 +236,10 @@ a:hover {
 
 /* Footer styling */
 .footer {
-	background-color: #333333;
-	background-image: url(../../images/background/black-paper.png);
-	color: white;
+	flex-grow: 0;
+	flex-shrink: 0;
+	background-color: #291f1f;
+	color: #eeeeee;
 	text-align: center;
 	padding: 20px 0;
 }
