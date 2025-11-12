@@ -37,14 +37,13 @@
 
 .employmentText {
 	margin-left: 2em;
-	color: #eeeeee;
 }
 
 .employmentText span {
 	color: #ef9000;
 }
 
-.employmentText .list {
+.employmentText .sublist .item span {
 	color: #eeeeee;
 }
 
