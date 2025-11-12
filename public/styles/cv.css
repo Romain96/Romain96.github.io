@@ -28,10 +28,24 @@
 
 .employmentLogo .logo {
 	width: 8em;
-	padding-right: 2em;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
+	margin: 0;
 	vertical-align: top;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #eeeeee;
+}
+
+.employmentText {
+	margin-left: 2em;
+	color: #eeeeee;
+}
+
+.employmentText span {
+	color: #ef9000;
+}
+
+.employmentText .list {
+	color: #eeeeee;
 }
 
 .qualificationsLogo .logo {
@@ -45,7 +59,7 @@
 .article hr {
 	border-width: 1px;
 	border-style: solid;
-	color: #e0e0e0;
+	color: #eeeeee;
 }
 
 .article .paragraph {

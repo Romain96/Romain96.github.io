@@ -31,7 +31,8 @@
 #teaching .article .teachingContent .teachingLogo .logo
 {
 	width: 10em;
-	padding: 0;
+	padding: 10px;
+	border-radius: 5px;
 	margin: 0;
 	vertical-align: top;
 	background-color: #eeeeee;
