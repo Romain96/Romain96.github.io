@@ -3,11 +3,13 @@
 #personalProjects {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 }
 
 .article {
-	flex: 1 0 46%;
-	max-width: 46%;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: 45%;
 	border: 1px solid #afafaf;
 	margin: 10px;
 	padding-left: 1em;
