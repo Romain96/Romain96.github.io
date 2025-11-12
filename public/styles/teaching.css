@@ -10,7 +10,10 @@
 }
 
 .teachingText {
-	flex: 1 0 80%;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: 80%;
+	margin-left: 2em;
 }
 
 #teaching .article .teachingContent .teachingText .heading-3 {
@@ -28,16 +31,16 @@
 #teaching .article .teachingContent .teachingLogo .logo
 {
 	width: 10em;
-	padding-right: 1em;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
+	padding: 0;
+	margin: 0;
 	vertical-align: top;
+	background-color: #eeeeee;
 }
 
 #teaching hr {
 	border-width: 1px;
 	border-style: solid;
-	color: #e0e0e0;
+	color: #eeeeee;
 }
 
 .table {
