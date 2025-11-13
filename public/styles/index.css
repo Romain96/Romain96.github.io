@@ -103,7 +103,7 @@ body {
 	padding-right: 10px;
 }
 
-.content .heading-1 {
+.mainContent .heading-1 {
 	flex-grow: 1;
 	flex-shrink: 1;
 	margin-bottom: 1em;
@@ -113,6 +113,12 @@ body {
 	text-align: center;
 	color: #ef9000;
 }
+
+.mainContent .paragraph {
+	text-align: center;
+}
+
+/* Section styling */
 
 .section {
 	flex-grow: 0;
