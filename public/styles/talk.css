@@ -14,6 +14,7 @@
 #talks .article .talkContent .talkText .list {
 	list-style: none;
 	padding-top: 0;
+	margin-left: 2em;
 	margin-top: 0;
 	font-size: 1em;
 }
@@ -21,10 +22,11 @@
 #talks .article .talkContent .talkLogo .logo
 {
 	width: 10em;
-	padding-right: 2em;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
+	margin: 0;
 	vertical-align: top;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #eeeeee;
 }
 
 #talks hr {
