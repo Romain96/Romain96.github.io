@@ -124,7 +124,6 @@ body {
 	flex-grow: 0;
 	flex-shrink: 0;
 	border-radius: 10px;
-	margin-bottom: 2em;
 	padding: 10px;
 	color: #eeeeee;
 }
@@ -141,6 +140,7 @@ body {
 	margin-bottom: 20px;
 	width: 95%;
 	color: #eeeeee;
+	text-align: justify;
 }
 
 /* Article styling */
@@ -155,7 +155,6 @@ hr {
 	flex-grow: 0;
 	flex-shrink: 0;
 	border-radius: 10px;
-	margin-bottom: 1em;
 	padding: 10px;
 	color: #eeeeee;
 }
@@ -170,6 +169,10 @@ hr {
 	font-size: 1.5em;
 	margin-bottom: 10px;
 	color: #ef9000;
+}
+
+.article .paragraph {
+	text-align: justify;
 }
 
 a {
