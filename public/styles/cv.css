@@ -60,6 +60,14 @@
 	margin-left: 2em;
 }
 
+.qualificationsText span {
+	color: #ef9000;
+}
+
+.qualificationsText .sublist .item span {
+	color: #eeeeee;
+}
+
 .article hr {
 	border-width: 1px;
 	border-style: solid;
