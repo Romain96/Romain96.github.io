@@ -107,7 +107,7 @@ body {
 	flex-grow: 1;
 	flex-shrink: 1;
 	margin-bottom: 1em;
-	font-size: 3em;
+	font-size: 2.5em;
 	padding: 0;
 	margin: 0 0 1rem 0;
 	text-align: center;
@@ -124,7 +124,7 @@ body {
 }
 
 .section .heading-2 {
-	font-size: 1.5em;
+	font-size: 2em;
 	margin-top: 0;
 	margin-bottom: 10px;
 	color: #ef9000;
@@ -161,7 +161,7 @@ hr {
 }
 
 .article .heading-3 {
-	font-size: 1.25em;
+	font-size: 1.5em;
 	margin-bottom: 10px;
 	color: #ef9000;
 }
