@@ -18,8 +18,8 @@ class Exercice4
 			// évaluer la sous-expression
 			if (caractere == '+' || caractere == '-' || caractere == '*' || caractere == '/')
 			{
-				double v1 = pile.Pop();
 				double v2 = pile.Pop();
+				double v1 = pile.Pop();
 				
 				if (caractere == '+')
 				{
