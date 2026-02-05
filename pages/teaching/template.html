@@ -81,7 +81,11 @@
 			</main>
 
 			<footer class="footer">
-				<p class="paragraph">&copy; 2025 Romain PERRIN (@Romain96)</p>
+				&copy;&nbsp;<span id="footer_year"></span>&nbsp;<p class="paragraph" data-i18n="footer_copyright"></p>
+				<script>
+					// Set the current year in the footer
+					document.getElementById('footer_year').textContent = new Date().getFullYear();
+				</script>
 			</footer>
 
 		</div>

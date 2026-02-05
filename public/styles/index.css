@@ -245,8 +245,10 @@ a:hover {
 
 /* Footer styling */
 .footer {
+	display: flex;
 	flex-grow: 0;
 	flex-shrink: 0;
+	justify-content: center;
 	background-color: #291f1f;
 	color: #eeeeee;
 	text-align: center;

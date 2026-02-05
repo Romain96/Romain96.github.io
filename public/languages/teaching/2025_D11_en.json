@@ -288,5 +288,5 @@
 	"d11_2025_td6_q37_rep": "No problem !",
 	"d11_2025_td6_q38": "Reduce again the size of the cadeau column to 3 maximum characters.",
 	"d11_2025_td6_q38_rep": "Not possible as there are values for cadeau longer than 3 characters !",
-	"footer_copyright": "&copy; 2025 Romain Perrin. All rights reserved."
+	"footer_copyright": "Romain Perrin. All rights reserved."
 }
