@@ -154,3 +154,33 @@ details summary {
 	padding-bottom: 0.5em;
 	color: #ef9000;
 }
+
+.p21_svg_viewer {
+	display: flex;
+	flex-direction: column;
+}
+
+.p21_svg_buttons {
+	display: flex;
+	flex-direction: row;
+	margin: 5px 0px 0px 0px;
+}
+
+.p21_svg_button_show {
+	display: flex;
+	margin: 1px;
+	height: 2em;
+}
+
+.p21_svg_button_hide {
+	display: flex;
+	margin: 1px;
+	height: 2em;
+}
+
+.p21_svg_buttons .paragraph {
+	display: flex;
+	padding: 0px;
+	margin: 0px 0px 0px 5px;
+	height: 2em;
+}
