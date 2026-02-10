@@ -185,6 +185,12 @@ a:hover {
 	text-decoration: underline;
 }
 
+.heading-4 {
+	font-size: 1.25em;
+	margin-bottom: 10px;
+	color: #ef9000;
+}
+
 /* left sidebar - placeholder */
 .sidebarLeft {
 	flex-grow: 0;

@@ -9,5 +9,17 @@
 	"footer_copyright": "Romain Perrin. Tous droits réservés.",
 	"m21_2025_title": "M21 - Méthodes numériques (2025-2026)",
 	"m21_2025_td_tp_title": "Exercices",
-	"m21_2025_td1_title": "TD/TP 1 : "
+	"m21_2025_td1_title": "TP 1 : représentation des flottants",
+	"m21_union_floatint": "Définitions (exo1.h)",
+	"m21_i_code": "Fonction i_code (exo1.c)",
+	"m21_u_code": "Fonction u_code (exo1.c)",
+	"m21_f_code": "Fonction f_code (exo1.c)",
+	"m21_get_info": "Fonction get_info (exo1.c)",
+	"m21_get_info_2": "Fonction get_info_2 (exo1.c)",
+	"m21_exposant": "Fonction exposant (exo1.c)",
+	"m21_mantisse": "Fonction mantisse (exo1.c)",
+	"m21_mantisse_b": "Fonction mantisse_b (exo1.c)",
+	"m21_compute_float": "Fonction compute_float (exo1.c)",
+	"m21_print_encoding": "Fonction print_encoding (exo1.c)",
+	"m21_main_1": "Fonction main (main.c)"
 }

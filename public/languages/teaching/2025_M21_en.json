@@ -9,5 +9,17 @@
 	"footer_copyright": "Romain Perrin. All rights reserved.",
 	"m21_2025_title": "M21 - Numerical methods (2025-2026)",
 	"m21_2025_td_tp_title": "Exercises",
-	"m21_2025_td1_title": "TD/TP 1 : "
+	"m21_2025_td1_title": "TP 1 : floating point representation",
+	"m21_union_floatint": "Definitions (exo1.h)",
+	"m21_i_code": "i_code function (exo1.c)",
+	"m21_u_code": "u_code function (exo1.c)",
+	"m21_f_code": "f_code function (exo1.c)",
+	"m21_get_info": "get_info function (exo1.c)",
+	"m21_get_info_2": "get_info_2 function (exo1.c)",
+	"m21_exposant": "exposant function (exo1.c)",
+	"m21_mantisse": "mantisse function (exo1.c)",
+	"m21_mantisse_b": "mantisse_b function (exo1.c)",
+	"m21_compute_float": "compute_float function (exo1.c)",
+	"m21_print_encoding": "print_encoding function (exo1.c)",
+	"m21_main_1": "Main function (main.c)"
 }

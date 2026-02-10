@@ -184,3 +184,57 @@ details summary {
 	margin: 0px 0px 0px 5px;
 	height: 2em;
 }
+
+.codeblock {
+	margin: 5px 2px 5px 2px;
+	padding: 2px 5px 2px 1em;
+	background-color: #333333;
+}
+
+code .tab {
+	margin-left: 4em;
+}
+
+.language-c {
+	font-family: "Lucida Console", Courier, monospace;
+}
+
+.language-c .comment {
+	color: #357040;
+}
+
+.language-c .function {
+	color: #b5b525;
+}
+
+.language-c .conditional {
+	color: #aa00aa;
+}
+
+.language-c .loop {
+	color: #aa00aa;
+}
+
+.language-c .return {
+	color: #aa00aa;
+}
+
+.language-c .type {
+	color: #5f5fcf;
+}
+
+.language-c .string {
+	color: #cc6000;
+}
+
+.language-c .number {
+	color: #24dda9;
+}
+
+.language-c .define {
+	color: #fa2525;
+}
+
+.language-c .proc {
+	color: #f56e6e;
+}
