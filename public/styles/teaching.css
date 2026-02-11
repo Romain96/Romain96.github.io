@@ -4,6 +4,10 @@
 	margin-bottom: 10px;
 }
 
+.section .heading-2 {
+	text-decoration: underline;
+}
+
 #teaching .article .teachingContent {
 	display: flex;
 	padding-top: 1em;

@@ -38,89 +38,66 @@
 			</header>
 
 			<main class="main">
-
-				<div class="content">
-
-					<!-- Left sidebar -->
-					<aside class="sidebarLeft"></aside>
-
-					<!-- Page content -->
-					<div class="mainContent">
 					
-						<h1 class="heading-1" data-i18n="p21_2025_title"></h1>
-						<label id="languageJSONPath" hidden>../../public/languages/teaching/2025_P21</label>
-						
-						<section class="section">
+				<h1 class="heading-1" data-i18n="p21_2025_title"></h1>
+				<label id="languageJSONPath" hidden>../../public/languages/teaching/2025_P21</label>
+				
+				<section class="section">
 
-							<h2 class="heading-2" data-i18n="p21_2025_td_tp_title"></h2>
-							<hr>
+					<h2 class="heading-2" data-i18n="p21_2025_td_tp_title"></h2>
+					<hr>
 
-							<!-- TD/TP 1 -->
-							<article class="article">
+					<!-- TD/TP 1 -->
+					<article class="article">
 
-								<h3 class="heading-3" data-i18n="p21_2025_td1_title"></h3>
-								<p class="paragraph" data-i18n="p21_2025_td1_paragraph"></p>
+						<h3 class="heading-3" data-i18n="p21_2025_td1_title"></h3>
+						<p class="paragraph" data-i18n="p21_2025_td1_paragraph"></p>
 
-								<!-- UML 1 : Account -->
-								<div class="p21_svg_viewer">
-									<div class="p21_svg_buttons">
-										<button class="p21_svg_button_show" id=button_show_1 onclick="Show(1)">🔽</button>
-										<button class="p21_svg_button_hide" id=button_hide_1 onclick="Hide(1)" disabled>🔼</button>
-										<p class="paragraph">UML 1: Account</p>
-									</div>
-									<div class="p21_svg_image_viewer" id="svg_1" hidden>
-										<img src="../../files/teaching/2025/P21/TD1_uml_1.svg"/>
-									</div>
-								</div>
+						<!-- UML 1 : Account -->
+						<div class="p21_svg_viewer">
+							<div class="p21_svg_buttons">
+								<button class="p21_svg_button_show" id=button_show_1 onclick="Show(1)">🔽</button>
+								<button class="p21_svg_button_hide" id=button_hide_1 onclick="Hide(1)" disabled>🔼</button>
+								<p class="paragraph">UML 1: Account</p>
+							</div>
+							<div class="p21_svg_image_viewer" id="svg_1" hidden>
+								<img src="../../files/teaching/2025/P21/TD1_uml_1.svg"/>
+							</div>
+						</div>
 
-								<!-- UML 2 : Date -->
-								<div class="p21_svg_viewer">
-									<div class="p21_svg_buttons">
-										<button class="p21_svg_button_show" id=button_show_2 onclick="Show(2)">🔽</button>
-										<button class="p21_svg_button_hide" id=button_hide_2 onclick="Hide(2)" disabled>🔼</button>
-										<p class="paragraph">UML 2 : Date</p>
-									</div>
-									<div class="p21_svg_image_viewer" id="svg_2" hidden>
-										<img src="../../files/teaching/2025/P21/TD1_uml_2.svg"/>
-									</div>
-								</div>
+						<!-- UML 2 : Date -->
+						<div class="p21_svg_viewer">
+							<div class="p21_svg_buttons">
+								<button class="p21_svg_button_show" id=button_show_2 onclick="Show(2)">🔽</button>
+								<button class="p21_svg_button_hide" id=button_hide_2 onclick="Hide(2)" disabled>🔼</button>
+								<p class="paragraph">UML 2 : Date</p>
+							</div>
+							<div class="p21_svg_image_viewer" id="svg_2" hidden>
+								<img src="../../files/teaching/2025/P21/TD1_uml_2.svg"/>
+							</div>
+						</div>
 
-							</article>
+					</article>
 
-						</section>
+				</section>
 
-					</div>
-
-					<!-- Script for showing/hiding SVGs -->
-					<script>
-						function Show(id)
-						{
-							document.getElementById("svg_" + id).style.display = "block";
-							document.getElementById("button_show_" + id).disabled = true;
-							document.getElementById("button_hide_" + id).disabled = false;
-						}
-						function Hide(id)
-						{
-							document.getElementById("svg_" + id).style.display = "none";
-							document.getElementById("button_show_" + id).disabled = false;
-							document.getElementById("button_hide_" + id).disabled = true;
-						}
-					</script>
-
-					<!-- Right sidebar -->
-					<aside class="sidebarRight">
-						<h3 class="heading-3">Contact</h3>
-						<ul class="list" id="contact">
-							<li class="item"><img class="logo" src="../../images/cv/email.png"><a href=mailto:romain.perrin@unistra.fr>romain.perrin@unistra.fr</a></li>
-							<li class="item"><img class="logo" src="../../images/cv/gmail.png"><a href=mailto:romainperrin67@gmail.com>romainperrin67@gmail.com</a></li>
-							<li class="item"><img class="logo" src="../../images/cv/github.png" alt="github logo"><a href="https://github.com/Romain96">Github</a></li>
-							<li class="item"><img class="logo" src="../../images/cv/orcid.png" alt="orcid logo"><a href="https://orcid.org/0009-0001-6534-9727">ORCID</a></li>
-							<li class="item"><img class="logo" src="../../images/cv/scholar.png" alt="Google scholar logo"><a href="https://scholar.google.com/citations?user=HXjAJR4AAAAJ&hl=fr">Google scholar</a></li>
-							<li class="item"><img class="logo" src="../../images/cv/linkedin.png" alt="linkedin logo"><a href="https://www.linkedin.com/in/romain-perrin-213270356">LinkedIn</a></li>
-						</ul>
-					</aside>
-
-				</div>
+				<!-- Script for showing/hiding SVGs -->
+				<script>
+					function Show(id)
+					{
+						//document.getElementById("svg_" + id).style.display = "block";
+						document.getElementById("svg_" + id).hidden = false;
+						document.getElementById("button_show_" + id).disabled = true;
+						document.getElementById("button_hide_" + id).disabled = false;
+					}
+					function Hide(id)
+					{
+						//document.getElementById("svg_" + id).style.display = "none";
+						document.getElementById("svg_" + id).hidden = true;
+						document.getElementById("button_show_" + id).disabled = false;
+						document.getElementById("button_hide_" + id).disabled = true;
+					}
+				</script>
 
 			</main>
 

@@ -38,270 +38,245 @@
 			</header>
 
 			<main class="main">
-
-				<div class="content">
-
-					<!-- Left sidebar -->
-					<aside class="sidebarLeft"></aside>
-
-					<!-- Page content -->
-					<div class="mainContent">
 					
-						<h1 class="heading-1" data-i18n="m21_2025_title"></h1>
-						<label id="languageJSONPath" hidden>../../public/languages/teaching/2025_M21</label>
+				<h1 class="heading-1" data-i18n="m21_2025_title"></h1>
+				<label id="languageJSONPath" hidden>../../public/languages/teaching/2025_M21</label>
 						
-						<section class="section">
+				<section class="section">
 
-							<h2 class="heading-2" data-i18n="m21_2025_td_tp_title"></h2>
-							<hr>
+					<h2 class="heading-2" data-i18n="m21_2025_td_tp_title"></h2>
+					<hr>
 
-							<!-- TD/TP 1 -->
-							<article class="article">
+					<!-- TD/TP 1 -->
+					<article class="article">
 
-								<h3 class="heading-3" data-i18n="m21_2025_td1_title"></h3>
+						<h3 class="heading-3" data-i18n="m21_2025_td1_title"></h3>
 
-								<!-- union floatint -->
-								<h4 class="heading-4" data-i18n="m21_union_floatint"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="proc">#define</span> <span class="define">SIZE_SIGN_CODE</span> <span class="number">1</span><br>
-										<span class="proc">#define</span> <span class="define">SIZE_EXP_CODE</span> <span class="number">8</span><br>
-										<span class="proc">#define</span> <span class="define">SIZE_MANTISSE_CODE</span> <span class="number">23</span><br>
-										<br>
-										<span class="type">union floatint</span><br>
-										{<br>
-											<span class="tab"></span><span class="type">uint32_t</span> i;<span class="tab"></span><span class="comment">// entier non signé sur 32 bits</span><br>
-											<span class="tab"></span><span class="type">float</span> f;<span class="tab"></span><span class="comment">// flottant sur 32 bits</span><br>
-										}
-									</code>
-								</div>
+						<!-- union floatint -->
+						<h4 class="heading-4" data-i18n="m21_union_floatint"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="proc">#define</span> <span class="define">SIZE_SIGN_CODE</span> <span class="number">1</span><br>
+								<span class="proc">#define</span> <span class="define">SIZE_EXP_CODE</span> <span class="number">8</span><br>
+								<span class="proc">#define</span> <span class="define">SIZE_MANTISSE_CODE</span> <span class="number">23</span><br>
+								<br>
+								<span class="type">union floatint</span><br>
+								{<br>
+									<span class="tab"></span><span class="type">uint32_t</span> i;<span class="tab"></span><span class="comment">// entier non signé sur 32 bits</span><br>
+									<span class="tab"></span><span class="type">float</span> f;<span class="tab"></span><span class="comment">// flottant sur 32 bits</span><br>
+								}
+							</code>
+						</div>
 								
 
-								<!-- i_code -->
-								<h4 class="heading-4" data-i18n="m21_i_code"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="type">void</span> <span class="function">i_code</span> (<span class="type">uint32_t</span> nb, <span class="type">uint8_t *</span>bits)<br>
-										{<br>
-											<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="number">32</span>; i++)<br>
-											<span class="tab"></span>{<br>
-											<span class="tab"></span><span class="tab"></span><span class="type">uint32_t*</span> bit_i = (<span class="number">1</span> << (<span class="number">31</span> - i));<span class="tab"></span><span class="comment">// masque avec le ième bit à 1 et les autres à 0</span><br>
-											<span class="tab"></span><span class="tab"></span>bits[i] = (nb & bit_i) ? <span class="number">1</span> : <span class="number">0</span>;<span class="tab"></span><span class="comment">// extraction du ième bit de nb</span><br>
-											<span class="tab"></span>}<br>
-										}
-									</code>
-								</div>
+						<!-- i_code -->
+						<h4 class="heading-4" data-i18n="m21_i_code"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">void</span> <span class="function">i_code</span> (<span class="type">uint32_t</span> nb, <span class="type">uint8_t *</span>bits)<br>
+								{<br>
+									<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="number">32</span>; i++)<br>
+									<span class="tab"></span>{<br>
+									<span class="tab"></span><span class="tab"></span><span class="type">uint32_t*</span> bit_i = (<span class="number">1</span> << (<span class="number">31</span> - i));<span class="tab"></span><span class="comment">// masque avec le ième bit à 1 et les autres à 0</span><br>
+									<span class="tab"></span><span class="tab"></span>bits[i] = (nb & bit_i) ? <span class="number">1</span> : <span class="number">0</span>;<span class="tab"></span><span class="comment">// extraction du ième bit de nb</span><br>
+									<span class="tab"></span>}<br>
+								}
+							</code>
+						</div>
 								
 
-								<!-- u_code -->
-								<h4 class="heading-4" data-i18n="m21_u_code"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="type">void</span> <span class="function">u_code</span> (<span class="type">union floatint</span> fi, <span class="type">uint8_t *</span>bits)<br>
-										{<br>
-											<span class="tab"></span><span class="function">i_code</span>(fi.i, bits);<br>
-										}
-									</code>
-								</div>
+						<!-- u_code -->
+						<h4 class="heading-4" data-i18n="m21_u_code"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">void</span> <span class="function">u_code</span> (<span class="type">union floatint</span> fi, <span class="type">uint8_t *</span>bits)<br>
+								{<br>
+									<span class="tab"></span><span class="function">i_code</span>(fi.i, bits);<br>
+								}
+							</code>
+						</div>
 								
 
-								<!-- f_code -->
-								<h4 class="heading-4" data-i18n="m21_f_code"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="type">void</span> <span class="function">f_code</span> (<span class="type">float</span> f, <span class="type">uint8_t *</span>bits)<br>
-										{<br>
-											<span class="tab"></span><span class="type">union floatint</span> fi;<br>
-											<span class="tab"></span>fi.f = f;<br>
-											<span class="tab"></span><span class="function">u_code</span>(fi, bits);<br>
-										}
-									</code>
-								</div>
+						<!-- f_code -->
+						<h4 class="heading-4" data-i18n="m21_f_code"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">void</span> <span class="function">f_code</span> (<span class="type">float</span> f, <span class="type">uint8_t *</span>bits)<br>
+								{<br>
+									<span class="tab"></span><span class="type">union floatint</span> fi;<br>
+									<span class="tab"></span>fi.f = f;<br>
+									<span class="tab"></span><span class="function">u_code</span>(fi, bits);<br>
+								}
+							</code>
+						</div>
 								
 
-								<!-- get_info -->
-								<h4 class="heading-4" data-i18n="m21_get_info"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="type">void</span> <span class="function">get_info</span>(<span class="type">uint8_t const *</span>bits, <span class="type">uint8_t *</span>code_sign, <span class="type">uint8_t *</span>code_exp, <span class="type">uint8_t *</span>code_mantisse)<br>
-										{<br>
-											<span class="tab"></span><span class="function">memcpy</span>(code_sign, bits, <span class="define">SIZE_SIGN_CODE</span>);<br>
-											<span class="tab"></span><span class="function">memcpy</span>(code_exp, bits + <span class="define">SIZE_SIGN_CODE</span>, <span class="define">SIZE_EXP_CODE</span>);<br>
-											<span class="tab"></span><span class="function">memcpy</span>(code_mantisse, bits + <span class="define">SIZE_SIGN_CODE</span> + <span class="define">SIZE_EXP_CODE</span>, <span class="define">SIZE_MANTISSE_CODE</span>);<br>
-										}
-									</code>
-								</div>
+						<!-- get_info -->
+						<h4 class="heading-4" data-i18n="m21_get_info"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">void</span> <span class="function">get_info</span>(<span class="type">uint8_t const *</span>bits, <span class="type">uint8_t *</span>code_sign, <span class="type">uint8_t *</span>code_exp, <span class="type">uint8_t *</span>code_mantisse)<br>
+								{<br>
+									<span class="tab"></span><span class="function">memcpy</span>(code_sign, bits, <span class="define">SIZE_SIGN_CODE</span>);<br>
+									<span class="tab"></span><span class="function">memcpy</span>(code_exp, bits + <span class="define">SIZE_SIGN_CODE</span>, <span class="define">SIZE_EXP_CODE</span>);<br>
+									<span class="tab"></span><span class="function">memcpy</span>(code_mantisse, bits + <span class="define">SIZE_SIGN_CODE</span> + <span class="define">SIZE_EXP_CODE</span>, <span class="define">SIZE_MANTISSE_CODE</span>);<br>
+								}
+							</code>
+						</div>
 								
 
-								<!-- get_info_2 -->
-								<h4 class="heading-4" data-i18n="m21_get_info_2"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="type">void</span> <span class="function">get_info_2</span>(<span class="type">uint8_t *</span>bits, <span class="type">uint8_t *</span>code_sign, <span class="type">uint8_t **</span>code_exp, <span class="type">uint8_t **</span>code_mantisse)<br>
-										{<br>
-											<span class="tab"></span>*code_sign = bits[<span class="number">0</span>];<br>
-											<span class="tab"></span>*code_exp = bits + <span class="define">SIZE_SIGN_CODE</span>;<br>
-											<span class="tab"></span>*code_mantisse = bits + <span class="define">SIZE_SIGN_CODE</span> + <span class="define">SIZE_EXP_CODE</span>;<br>
-										}
-									</code>
-								</div>
+						<!-- get_info_2 -->
+						<h4 class="heading-4" data-i18n="m21_get_info_2"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">void</span> <span class="function">get_info_2</span>(<span class="type">uint8_t *</span>bits, <span class="type">uint8_t *</span>code_sign, <span class="type">uint8_t **</span>code_exp, <span class="type">uint8_t **</span>code_mantisse)<br>
+								{<br>
+									<span class="tab"></span>*code_sign = bits[<span class="number">0</span>];<br>
+									<span class="tab"></span>*code_exp = bits + <span class="define">SIZE_SIGN_CODE</span>;<br>
+									<span class="tab"></span>*code_mantisse = bits + <span class="define">SIZE_SIGN_CODE</span> + <span class="define">SIZE_EXP_CODE</span>;<br>
+								}
+							</code>
+						</div>
 								
 
-								<!-- exposant -->
-								<h4 class="heading-4" data-i18n="m21_exposant"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="type">int</span> <span class="function">exposant</span> (<span class="type">uint8_t const *</span>code)<br>
-										{<br>
-											<span class="tab"></span><span class="type">int</span> exp = <span class="number">0</span>;<br>
-											<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="define">SIZE_EXP_CODE</span>; i++)<br>
-											<span class="tab"></span>{<br>
-											<span class="tab"></span><span class="tab"></span>exp = exp << <span class="number">1</span>;<span class="tab"></span><span class="comment">// ou exp *= 2;</span><br>
-											<span class="tab"></span><span class="tab"></span>exp += code[i];<br>
-											<span class="tab"></span>}<br>
-											<span class="tab"></span><span class="return">return</span> exp - <span class="number">127</span>;<span class="tab"></span><span class="comment">// norme IEEE 754</span><br>
-										}
-									</code>
-								</div>
+						<!-- exposant -->
+						<h4 class="heading-4" data-i18n="m21_exposant"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">int</span> <span class="function">exposant</span> (<span class="type">uint8_t const *</span>code)<br>
+								{<br>
+									<span class="tab"></span><span class="type">int</span> exp = <span class="number">0</span>;<br>
+									<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="define">SIZE_EXP_CODE</span>; i++)<br>
+									<span class="tab"></span>{<br>
+									<span class="tab"></span><span class="tab"></span>exp = exp << <span class="number">1</span>;<span class="tab"></span><span class="comment">// ou exp *= 2;</span><br>
+									<span class="tab"></span><span class="tab"></span>exp += code[i];<br>
+									<span class="tab"></span>}<br>
+									<span class="tab"></span><span class="return">return</span> exp - <span class="number">127</span>;<span class="tab"></span><span class="comment">// norme IEEE 754</span><br>
+								}
+							</code>
+						</div>
 								
 
-								<!-- mantisse -->
-								<h4 class="heading-4" data-i18n="m21_mantisse"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="type">float</span> <span class="function">mantisse</span>(<span class="type">uint8_t const *</span>code)<br>
-										{<br>
-											<span class="tab"></span><span class="type">float</span> mant = <span class="number">1.0f</span>;<br>
-											<span class="tab"></span><span class="type">float</span> puissance_positionnelle = <span class="number">0.5f</span>;<span class="tab"></span><span class="comment">// première fraction binaire :  1 / 2^1 = 2^-1 = 0.5</span><br>
-											<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="define">SIZE_MANTISSE_CODE</span>; i++)<br>
-											<span class="tab"></span>{<br>
-											<span class="tab"></span><span class="tab"></span>mant += code[i] * puissance_positionnelle;<br>
-											<span class="tab"></span><span class="tab"></span>puissance_positionnelle /= <span class="number">2</span>;<span class="tab"></span><span class="comment">// passage de 2^-i à 2^(-i-1) en divisant par 2</span><br>
-											<span class="tab"></span>}<br>
-											<span class="tab"></span><span class="return">return</span> mant;<br>
-										}
-									</code>
-								</div>
+						<!-- mantisse -->
+						<h4 class="heading-4" data-i18n="m21_mantisse"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">float</span> <span class="function">mantisse</span>(<span class="type">uint8_t const *</span>code)<br>
+								{<br>
+									<span class="tab"></span><span class="type">float</span> mant = <span class="number">1.0f</span>;<br>
+									<span class="tab"></span><span class="type">float</span> puissance_positionnelle = <span class="number">0.5f</span>;<span class="tab"></span><span class="comment">// première fraction binaire :  1 / 2^1 = 2^-1 = 0.5</span><br>
+									<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="define">SIZE_MANTISSE_CODE</span>; i++)<br>
+									<span class="tab"></span>{<br>
+									<span class="tab"></span><span class="tab"></span>mant += code[i] * puissance_positionnelle;<br>
+									<span class="tab"></span><span class="tab"></span>puissance_positionnelle /= <span class="number">2</span>;<span class="tab"></span><span class="comment">// passage de 2^-i à 2^(-i-1) en divisant par 2</span><br>
+									<span class="tab"></span>}<br>
+									<span class="tab"></span><span class="return">return</span> mant;<br>
+								}
+							</code>
+						</div>
 								
 
-								<!-- mantisse_b -->
-								<h4 class="heading-4" data-i18n="m21_mantisse_b"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="type">char *</span><span class="function">mantisse_b</span>(<span class="type">uint8_t const *</span>code, <span class="type">char *</span>str)<br>
-										{<br>
-											<span class="tab"></span><span class="function">memcpy</span>(str, <span class="string">"(1."</span>, <span class="number">3</span>);<br>
-											<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="define">SIZE_MANTISSE_CODE</span>; i++)<br>
-											<span class="tab"></span>{<br>
-											<span class="tab"></span><span class="tab"></span>str[<span class="number">3</span> + i] = code[i] + <span class="string">'0'</span>;<span class="tab"></span><span class="comment">// utilisation de la table ASCII</span><br>
-											<span class="tab"></span>}<br>
-											<span class="tab"></span><span class="function">strcpy</span>(str + <span class="number">3</span> + <span class="define">SIZE_MANTISSE_CODE</span>, <span class="string">")_2"</span>);<br>
-											<span class="tab"></span><span class="return">return</span> str;<br>
-										}
-									</code>
-								</div>
+						<!-- mantisse_b -->
+						<h4 class="heading-4" data-i18n="m21_mantisse_b"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">char *</span><span class="function">mantisse_b</span>(<span class="type">uint8_t const *</span>code, <span class="type">char *</span>str)<br>
+								{<br>
+									<span class="tab"></span><span class="function">memcpy</span>(str, <span class="string">"(1."</span>, <span class="number">3</span>);<br>
+									<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="define">SIZE_MANTISSE_CODE</span>; i++)<br>
+									<span class="tab"></span>{<br>
+									<span class="tab"></span><span class="tab"></span>str[<span class="number">3</span> + i] = code[i] + <span class="string">'0'</span>;<span class="tab"></span><span class="comment">// utilisation de la table ASCII</span><br>
+									<span class="tab"></span>}<br>
+									<span class="tab"></span><span class="function">strcpy</span>(str + <span class="number">3</span> + <span class="define">SIZE_MANTISSE_CODE</span>, <span class="string">")_2"</span>);<br>
+									<span class="tab"></span><span class="return">return</span> str;<br>
+								}
+							</code>
+						</div>
 								
 
-								<!-- compute_float -->
-								<h4 class="heading-4" data-i18n="m21_compute_float"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="type">float</span> <span class="function">compute_float</span>(<span class="type">uint8_t const *</span>bits)<br>
-										{<br>
-											<span class="tab"></span><span class="type">uint8_t</span> code_sign;<br>
-											<span class="tab"></span><span class="type">uint8_t</span> code_exp[<span class="define">SIZE_EXP_CODE</span>];<br>
-											<span class="tab"></span><span class="type">uint8_t</span> code_mantisse[<span class="define">SIZE_MANTISSE_CODE</span>];<br>
-											<span class="tab"></span><span class="function">get_info</span>(code_float, &code_sign, code_exp, code_mantisse);<br>
-											<span class="tab"></span><span class="type">int</span> exp = <span class="function">exposant</span>(code_exp);<br>
-											<span class="tab"></span><span class="type">float</span> mant = <span class="function">mantisse</span>(code_mantisse);<br>
-											<span class="tab"></span><span class="type">float</span> f = mant * <span class="function">pow</span>(<span class="number">2</span>, exp);<span class="tab"></span><span class="comment">// calcul du nombre sans le signe</span><br>
-											<span class="tab"></span><span class="return">return</span> (code_sign == <span class="number">0</span>) ? f : -f;<span class="tab"></span><span class="comment">// application du signe (opérateur ternaire)</span><br>
-										}
-									</code>
-								</div>
+						<!-- compute_float -->
+						<h4 class="heading-4" data-i18n="m21_compute_float"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">float</span> <span class="function">compute_float</span>(<span class="type">uint8_t const *</span>bits)<br>
+								{<br>
+									<span class="tab"></span><span class="type">uint8_t</span> code_sign;<br>
+									<span class="tab"></span><span class="type">uint8_t</span> code_exp[<span class="define">SIZE_EXP_CODE</span>];<br>
+									<span class="tab"></span><span class="type">uint8_t</span> code_mantisse[<span class="define">SIZE_MANTISSE_CODE</span>];<br>
+									<span class="tab"></span><span class="function">get_info</span>(code_float, &code_sign, code_exp, code_mantisse);<br>
+									<span class="tab"></span><span class="type">int</span> exp = <span class="function">exposant</span>(code_exp);<br>
+									<span class="tab"></span><span class="type">float</span> mant = <span class="function">mantisse</span>(code_mantisse);<br>
+									<span class="tab"></span><span class="type">float</span> f = mant * <span class="function">pow</span>(<span class="number">2</span>, exp);<span class="tab"></span><span class="comment">// calcul du nombre sans le signe</span><br>
+									<span class="tab"></span><span class="return">return</span> (code_sign == <span class="number">0</span>) ? f : -f;<span class="tab"></span><span class="comment">// application du signe (opérateur ternaire)</span><br>
+								}
+							</code>
+						</div>
 								
 
-								<!-- print_encoding -->
-								<h4 class="heading-4" data-i18n="m21_print_encoding"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="type">void</span> <span class="function">print_encoding</span>(<span class="type">float</span> f);
-										{<br>
-											<span class="tab"></span><span class="function">printf</span>(<span class="string">"Décomposition de %f :\n\n"</span>, f);<br>
-											<span class="tab"></span><span class="comment">// utilisation de la structure floatint</span><br>
-											<span class="tab"></span><span class="type">union floatint</span> fi;<br>
-											<span class="tab"></span>fi.f = f;<br>
-											<span class="tab"></span><span class="type">uint8_t</span> bits[<span class="number">32</span>];<br>
-											<span class="tab"></span><span class="function">u_code</span>(fi, bits);<br>
-											<span class="tab"></span><span class="comment">// extraction du signe, de l'exposant et de la mantisse</span><br>
-											<span class="tab"></span><span class="type">uint8_t</span> code_sign;<br>
-											<span class="tab"></span><span class="type">uint8_t</span> code_exp[<span class="define">SIZE_EXP_CODE</span>];<br>
-											<span class="tab"></span><span class="type">uint8_t</span> code_mantisse[<span class="define">SIZE_MANTISSE_CODE</span>];<br>
-											<span class="tab"></span><span class="function">get_info</span>(bits, &code_sign, code_exp, code_mantisse);<br>
-											<span class="tab"></span><span class="comment">// Affichage du signe sous forme numérique (binaire)</span><br>
-											<span class="tab"></span><span class="function">printf</span>(<span class="string">"Code signe : %d\n"</span>, code_sign);<br>
-											<span class="tab"></span><span class="comment">// Affichage de l'exposant sour forme numérique (binaire)</span><br>
-											<span class="tab"></span><span class="function">printf</span>(<span class="string">"Code exposant : "</span>);<br>
-											<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="define">SIZE_EXP_CODE</span>; i++)<br>
-											<span class="tab"></span>{<br>
-											<span class="tab"></span><span class="tab"></span><span class="function">printf</span>(<span class="string">"%d"</span>, code_exp[i]);<br>
-											<span class="tab"></span>}<br>
-											<span class="tab"></span><span class="function">printf</span>(<span class="string">"\n"</span>);<br>
-											<span class="tab"></span><span class="comment">// Affichage de la mantisse sous forme numérique (binaire)</span><br>
-											<span class="tab"></span><span class="function">printf</span>(<span class="string">"Code mantisse : "</span>);<br>
-											<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="define">SIZE_MANTISSE_CODE</span>; i++)<br>
-											<span class="tab"></span>{<br>
-											<span class="tab"></span><span class="tab"></span><span class="function">printf</span>(<span class="string">"%d"</span>, code_mantisse[i]);<br>
-											<span class="tab"></span>}<br>
-											<span class="tab"></span><span class="function">printf</span>(<span class="string">"\n\n"</span>);<br>
-											<span class="tab"></span><span class="comment">// Affichage du signe sous forme de caractère</span><br>
-											<span class="tab"></span><span class="function">printf</span>(<span class="string">"Signe : %c\n"</span>, (code_sign == <span class="number">0</span>) ? <span class="string">'+'</span> : <span class="string">'-'</span>);<br>
-											<span class="tab"></span><span class="comment">// Affichage de l'exposant sous forme numérique (décimal)</span><br>
-											<span class="tab"></span><span class="function">printf</span>(<span class="string">"Exposant : %d\n"</span>, exposant(code_exp));<br>
-											<span class="tab"></span><span class="comment">// Affichage de la mantisse sous forme numérique (décimale)</span><br>
-											<span class="tab"></span><span class="type">char</span> mantisse_str[<span class="number">30</span>];<br>
-											<span class="tab"></span><span class="function">printf</span>(<span class="string">"Mantisse : %s\n\n"</span>,<br>
-											<span class="tab"></span><span class="function">mantisse_b</span>(code_mantisse, mantisse_str));<br>
-											<span class="tab"></span><span class="comment">// Affichage dy nombre flottant calculé et signé (décimal)</span><br>
-											<span class="tab"></span><span class="function">printf</span>(<span class="string">"Valeur : %f\n"</span>, <span class="function">compute_float</span>(bits));<br>
-										}
-									</code>
-								</div>
+						<!-- print_encoding -->
+						<h4 class="heading-4" data-i18n="m21_print_encoding"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">void</span> <span class="function">print_encoding</span>(<span class="type">float</span> f);
+								{<br>
+									<span class="tab"></span><span class="function">printf</span>(<span class="string">"Décomposition de %f :\n\n"</span>, f);<br>
+									<span class="tab"></span><span class="comment">// utilisation de la structure floatint</span><br>
+									<span class="tab"></span><span class="type">union floatint</span> fi;<br>
+									<span class="tab"></span>fi.f = f;<br>
+									<span class="tab"></span><span class="type">uint8_t</span> bits[<span class="number">32</span>];<br>
+									<span class="tab"></span><span class="function">u_code</span>(fi, bits);<br>
+									<span class="tab"></span><span class="comment">// extraction du signe, de l'exposant et de la mantisse</span><br>
+									<span class="tab"></span><span class="type">uint8_t</span> code_sign;<br>
+									<span class="tab"></span><span class="type">uint8_t</span> code_exp[<span class="define">SIZE_EXP_CODE</span>];<br>
+									<span class="tab"></span><span class="type">uint8_t</span> code_mantisse[<span class="define">SIZE_MANTISSE_CODE</span>];<br>
+									<span class="tab"></span><span class="function">get_info</span>(bits, &code_sign, code_exp, code_mantisse);<br>
+									<span class="tab"></span><span class="comment">// Affichage du signe sous forme numérique (binaire)</span><br>
+									<span class="tab"></span><span class="function">printf</span>(<span class="string">"Code signe : %d\n"</span>, code_sign);<br>
+									<span class="tab"></span><span class="comment">// Affichage de l'exposant sour forme numérique (binaire)</span><br>
+									<span class="tab"></span><span class="function">printf</span>(<span class="string">"Code exposant : "</span>);<br>
+									<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="define">SIZE_EXP_CODE</span>; i++)<br>
+									<span class="tab"></span>{<br>
+									<span class="tab"></span><span class="tab"></span><span class="function">printf</span>(<span class="string">"%d"</span>, code_exp[i]);<br>
+									<span class="tab"></span>}<br>
+									<span class="tab"></span><span class="function">printf</span>(<span class="string">"\n"</span>);<br>
+									<span class="tab"></span><span class="comment">// Affichage de la mantisse sous forme numérique (binaire)</span><br>
+									<span class="tab"></span><span class="function">printf</span>(<span class="string">"Code mantisse : "</span>);<br>
+									<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="define">SIZE_MANTISSE_CODE</span>; i++)<br>
+									<span class="tab"></span>{<br>
+									<span class="tab"></span><span class="tab"></span><span class="function">printf</span>(<span class="string">"%d"</span>, code_mantisse[i]);<br>
+									<span class="tab"></span>}<br>
+									<span class="tab"></span><span class="function">printf</span>(<span class="string">"\n\n"</span>);<br>
+									<span class="tab"></span><span class="comment">// Affichage du signe sous forme de caractère</span><br>
+									<span class="tab"></span><span class="function">printf</span>(<span class="string">"Signe : %c\n"</span>, (code_sign == <span class="number">0</span>) ? <span class="string">'+'</span> : <span class="string">'-'</span>);<br>
+									<span class="tab"></span><span class="comment">// Affichage de l'exposant sous forme numérique (décimal)</span><br>
+									<span class="tab"></span><span class="function">printf</span>(<span class="string">"Exposant : %d\n"</span>, exposant(code_exp));<br>
+									<span class="tab"></span><span class="comment">// Affichage de la mantisse sous forme numérique (décimale)</span><br>
+									<span class="tab"></span><span class="type">char</span> mantisse_str[<span class="number">30</span>];<br>
+									<span class="tab"></span><span class="function">printf</span>(<span class="string">"Mantisse : %s\n\n"</span>,<br>
+									<span class="tab"></span><span class="function">mantisse_b</span>(code_mantisse, mantisse_str));<br>
+									<span class="tab"></span><span class="comment">// Affichage dy nombre flottant calculé et signé (décimal)</span><br>
+									<span class="tab"></span><span class="function">printf</span>(<span class="string">"Valeur : %f\n"</span>, <span class="function">compute_float</span>(bits));<br>
+								}
+							</code>
+						</div>
 								
 
-								<!-- main exo 1 -->
-								<h4 class="heading-4" data-i18n="m21_main_1"></h4>
-								<div class="codeblock">
-									<code class="language-c">
-										<span class="type">void</span> <span class="function">print_encoding</span>(<span class="type">float</span> f);
-										{<br>
-											<span class="tab"></span><span class="type">float</span> f = <span class="number">-10023.099609</span>;<br>
-											<span class="tab"></span><span class="function">print_encoding</span>(f);<br>
-										}
-									</code>
-								</div>
+						<!-- main exo 1 -->
+						<h4 class="heading-4" data-i18n="m21_main_1"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">void</span> <span class="function">print_encoding</span>(<span class="type">float</span> f);
+								{<br>
+									<span class="tab"></span><span class="type">float</span> f = <span class="number">-10023.099609</span>;<br>
+									<span class="tab"></span><span class="function">print_encoding</span>(f);<br>
+								}
+							</code>
+						</div>
 								
 
-							</article>
+					</article>
 
-						</section>
-
-					</div>
-
-					<!-- Right sidebar -->
-					<aside class="sidebarRight">
-						<h3 class="heading-3">Contact</h3>
-						<ul class="list" id="contact">
-							<li class="item"><img class="logo" src="../../images/cv/email.png"><a href=mailto:romain.perrin@unistra.fr>romain.perrin@unistra.fr</a></li>
-							<li class="item"><img class="logo" src="../../images/cv/gmail.png"><a href=mailto:romainperrin67@gmail.com>romainperrin67@gmail.com</a></li>
-							<li class="item"><img class="logo" src="../../images/cv/github.png" alt="github logo"><a href="https://github.com/Romain96">Github</a></li>
-							<li class="item"><img class="logo" src="../../images/cv/orcid.png" alt="orcid logo"><a href="https://orcid.org/0009-0001-6534-9727">ORCID</a></li>
-							<li class="item"><img class="logo" src="../../images/cv/scholar.png" alt="Google scholar logo"><a href="https://scholar.google.com/citations?user=HXjAJR4AAAAJ&hl=fr">Google scholar</a></li>
-							<li class="item"><img class="logo" src="../../images/cv/linkedin.png" alt="linkedin logo"><a href="https://www.linkedin.com/in/romain-perrin-213270356">LinkedIn</a></li>
-						</ul>
-					</aside>
-
-				</div>
+				</section>
 
 			</main>
 
