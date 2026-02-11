@@ -9,7 +9,7 @@
 	"footer_copyright": "Romain Perrin. Tous droits réservés.",
 	"m21_2025_title": "M21 - Méthodes numériques (2025-2026)",
 	"m21_2025_td_tp_title": "Exercices",
-	"m21_2025_td1_title": "💻 TP 1 : représentation des flottants",
+	"m21_2025_td1_title": "💻 TP 1 : affichage d'un nombre à virgule flottante",
 	"m21_union_floatint": "Définitions (exo1.h)",
 	"m21_i_code": "Fonction i_code (exo1.c)",
 	"m21_u_code": "Fonction u_code (exo1.c)",
@@ -21,5 +21,16 @@
 	"m21_mantisse_b": "Fonction mantisse_b (exo1.c)",
 	"m21_compute_float": "Fonction compute_float (exo1.c)",
 	"m21_print_encoding": "Fonction print_encoding (exo1.c)",
-	"m21_main_1": "Fonction main (main.c)"
+	"m21_main_1": "Fonction main (main.c)",
+	"m21_resultat_1": "Exécution du main",
+	"m21_2025_td2_title": "💻 TP 2 : Algorithmes",
+	"m21_heron": "Fonction heron : méthode de Héron (exo2.c)",
+	"m21_dichotomie": "Fonction dichotomie (exo2.c)",
+	"m21_dichotomie_p": "Fonction dichotomie_p : dichotomie avec pointeur de fonction (exo2.c)",
+	"m21_newton": "Fonction newton : méthode de Newton-Raphson (exo2.c)",
+	"m21_newton_p": "Fonction Newton_^: méthode de Newton-Raphson avec pointers de fonctions (exo2.c)",
+	"m21_descente_de_gradient": "Fonction descente_de_gradient : descente de gradient (exo2.c)",
+	"m21_descente_de_gradient_p": "Fonction descente_de_gradient_p : descente de gradient avec poineurs de fonctions (exo2.c)",
+	"m21_main_2": "Fonction main (main.c)",
+	"m21_resultat_2": "Exécution du main"
 }

@@ -9,7 +9,7 @@
 	"footer_copyright": "Romain Perrin. All rights reserved.",
 	"m21_2025_title": "M21 - Numerical methods (2025-2026)",
 	"m21_2025_td_tp_title": "Exercises",
-	"m21_2025_td1_title": "💻 TP 1 : floating point representation",
+	"m21_2025_td1_title": "💻 TP 1 : Printing a floating point number",
 	"m21_union_floatint": "Definitions (exo1.h)",
 	"m21_i_code": "i_code function (exo1.c)",
 	"m21_u_code": "u_code function (exo1.c)",
@@ -21,5 +21,16 @@
 	"m21_mantisse_b": "mantisse_b function (exo1.c)",
 	"m21_compute_float": "compute_float function (exo1.c)",
 	"m21_print_encoding": "print_encoding function (exo1.c)",
-	"m21_main_1": "Main function (main.c)"
+	"m21_main_1": "Main function (main.c)",
+	"m21_resultat_1": "Main execution",
+	"m21_2025_td2_title": "💻 TP 2 : Algorithms",
+	"m21_heron": "heron function : Heron's method (exo2.c)",
+	"m21_dichotomie": "dichotomy function (exo2.c)",
+	"m21_dichotomie_p": "dichotomy_p function : dichotomy with function pointer (exo2.c)",
+	"m21_newton": "Newton function : Newton-Raphson method (exo2.c)",
+	"m21_newton_p": "Newton_p function : Newton-Raphson method with function pointers (exo2.c)",
+	"m21_descente_de_gradient": "descente_de_gradient function : gradient descent method (exo2.c)",
+	"m21_descente_de_gradient_p": "descente_de_gradient_p function : gradient descent method with function pointers (exo2.c)",
+	"m21_main_2": "Main function (main.c)",
+	"m21_resultat_2": "Main execution"
 }

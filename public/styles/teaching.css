@@ -201,6 +201,7 @@ code .tab {
 
 .language-c {
 	font-family: "Lucida Console", Courier, monospace;
+	font-size: 1em;
 }
 
 .language-c .comment {

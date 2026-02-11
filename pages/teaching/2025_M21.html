@@ -40,12 +40,12 @@
 			<main class="main">
 					
 				<h1 class="heading-1" data-i18n="m21_2025_title"></h1>
+				<hr>
 				<label id="languageJSONPath" hidden>../../public/languages/teaching/2025_M21</label>
 						
 				<section class="section">
 
 					<h2 class="heading-2" data-i18n="m21_2025_td_tp_title"></h2>
-					<hr>
 
 					<!-- TD/TP 1 -->
 					<article class="article">
@@ -217,7 +217,7 @@
 						<h4 class="heading-4" data-i18n="m21_print_encoding"></h4>
 						<div class="codeblock">
 							<code class="language-c">
-								<span class="type">void</span> <span class="function">print_encoding</span>(<span class="type">float</span> f);
+								<span class="type">void</span> <span class="function">print_encoding</span>(<span class="type">float</span> f)<br>
 								{<br>
 									<span class="tab"></span><span class="function">printf</span>(<span class="string">"Décomposition de %f :\n\n"</span>, f);<br>
 									<span class="tab"></span><span class="comment">// utilisation de la structure floatint</span><br>
@@ -265,16 +265,258 @@
 						<h4 class="heading-4" data-i18n="m21_main_1"></h4>
 						<div class="codeblock">
 							<code class="language-c">
-								<span class="type">void</span> <span class="function">print_encoding</span>(<span class="type">float</span> f);
+								<span class="type">void</span> <span class="function">main</span>(<span class="type">int</span> argc, <span class="type">char **</span>argv)<br>
 								{<br>
 									<span class="tab"></span><span class="type">float</span> f = <span class="number">-10023.099609</span>;<br>
 									<span class="tab"></span><span class="function">print_encoding</span>(f);<br>
 								}
 							</code>
 						</div>
-								
 
+						<!-- résultat exo 1 -->
+						<h4 class="heading-4" data-i18n="m21_resultat_1"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								Décomposition de -10023.099609 :<br>
+								<br>
+								Code signe : 1<br>
+								Code exposant : 10001100<br>
+								Code mantisse : 00111001001110001100110<br>
+								<br>
+								Signe : -<br>
+								Exposant : 13<br>
+								Mantisse : (1.00111001001110001100110)_2<br>
+								<br>
+								Valeur : 10023.099609
+							</code>
+						</div>
+								
 					</article>
+
+					<!-- TD/TP 2 -->
+					<article class="article">
+
+						<h3 class="heading-3" data-i18n="m21_2025_td2_title"></h3>
+
+						<!-- algorithme de Héron -->
+						<h4 class="heading-4" data-i18n="m21_heron"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">float</span> <span class="function">heron</span>(<span class="type">float</span> square, <span class="type">float</span> init, <span class="type">unsigned int</span> n)<br>
+								{<br>
+									<span class="tab"></span><span class="type">float</span> return_value = init;<span class="tab"></span><span class="comment">// dans le cours : return_value est x</span><br>
+									<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<span class="tab"></|span><span class="comment">// dans le cours : pour n de 0 à N - 1</span><br>
+									<span class="tab"></span>{<br>
+									<span class="tab"></span><span class="tab"></span>return_value = (return_value + square / return_value) / 2;<span class="tab"></span><span class="comment">// dans le cours : x <- (x + a / x) / 2</span><br>
+									<span class="tab"></span>}<br>
+									<span class="tab"></span><span class="return">return</span> x;<br>
+								}
+							</code>
+						</div>
+
+						<!-- algorithme de dichotomie (fonction fixée) -->
+						<h4 class="heading-4" data-i18n="m21_dichotomie"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="comment">// la fonction utilisée dans dichotomie</span><br>
+								<span class="type">float</span> <span class="function">f_dicho</span>(<span class="type">float</span> x)<br>
+								{<br>
+								<span class="tab"></span><span class="return">return</span> x * x - <span class="number">3</span>;<br>
+								}<br>
+								<br>
+								<span class="type">float</span> <span class="function">dichotomie</span>(<span class="type">float</span> a, <span class="type">float</span> b, <span class="type">unsigned int</span> n)<br>
+								{<br>
+								<span class="tab"></span><span class="type">float</span> return_value = (a + b) / <span class="number">2</span>;<br>
+								<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<br>
+								<span class="tab"></span>{<br>
+								<span class="tab"></span><span class="tab"></span><span class="conditional">if</span> (<span class="function">f_dicho</span>(return_value) == <span class="number">0</span>)<br>
+								<span class="tab"></span><span class="tab"></span>{<br>
+								<span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="return">return</span> return_value;<br>
+								<span class="tab"></span><span class="tab"></span>}<br>
+								<span class="tab"></span><span class="tab"></span><span class="conditional">if</span> (<span class="function">f_dicho</span>(return_value) * <span class="function">f_dicho</span>(a) > <span class="number">0</span>)<br>
+								<span class="tab"></span><span class="tab"></span>{<br>
+								<span class="tab"></span><span class="tab"></span><span class="tab"></span>a = return_value;<br>
+								<span class="tab"></span><span class="tab"></span>}<br>
+								<span class="tab"></span><span class="tab"></span><span class="conditional"></span>else<br>
+								<span class="tab"></span><span class="tab"></span>{<br>
+								<span class="tab"></span><span class="tab"></span><span class="tab"></span>b = return_value;<br>
+								<span class="tab"></span><span class="tab"></span>}<br>
+								<span class="tab"></span><span class="tab"></span>return_value = (a + b) / <span class="number">2</span>;<br>
+								<span class="tab"></span>}<br>
+								<span class="tab"></span><span class="return">return</span> return_value;<br>
+								}
+							</code>
+						</div>
+
+						<!-- algorithme de dichotomie_f (fonction fixée) -->
+						<h4 class="heading-4" data-i18n="m21_dichotomie_p"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="comment">// à définir dans le header exo2.h</span><br>
+								<span class="return">typedef</span> <span class="type">float</span> (*function)(<span class="type">float</span>);<span class="tab"></span><span class="comment">// function : pointeur de fonction de type float -> float</span><br>
+								<br>
+								<span class="type">float</span> <span class="function">dichotomie_p</span>(<span class="type">function</span> <span class="function">f</span>, <span class="type">float</span> a, <span class="type">float</span> b, <span class="type">unsigned int</span> n)<br>
+								{<br>
+								<span class="tab"></span><span class="type">float</span> return_value = (a + b) / <span class="number">2</span>;<br>
+								<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<br>
+								<span class="tab"></span>{<br>
+								<span class="tab"></span><span class="tab"></span><span class="conditional">if</span> (<span class="function">f</span>(return_value) * <span class="function">f</span>(a) > <span class="number">0</span>)<br>
+								<span class="tab"></span><span class="tab"></span>{<br>
+								<span class="tab"></span><span class="tab"></span><span class="tab"></span>a = return_value;<br>
+								<span class="tab"></span><span class="tab"></span>}<br>
+								<span class="tab"></span><span class="tab"></span><span class="conditional">else</span><br>
+								<span class="tab"></span><span class="tab"></span>{<br>
+								<span class="tab"></span><span class="tab"></span><span class="tab"></span>b = return_value;<br>
+								<span class="tab"></span><span class="tab"></span>}<br>
+								<span class="tab"></span><span class="tab"></span>return_value = (a + b) / <sppan class="number">2</sppan>;<br>
+								<span class="tab"></span>}<br>
+								<span class="tab"></span><span class="return">return</span> return_value;<br>
+								}
+							</code>
+						</div>
+
+						<!-- algorithme de Newton-Raphson (fonctions fixées) -->
+						<h4 class="heading-4" data-i18n="m21_newton"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="comment">// fonction f utilisée par Newton</span><br>
+								<span class="type">float</span> <span class="function">function_Newton</span>(<span class="type">float</span> x)<br>
+								{<br>
+								<span class="tab"></span><span class="return">return</span> x * x * x * x * x - <span class="number">3</span> * x + <span class="number">1</span>;<span class="tab"></span><span class="comment">// f(x) = x^5 - 3x + 1</span><br>
+								}<br>
+								<br>
+								<span class="comment">// fonction f' utilisée par Newton</span><br>
+								<span class="type">float</span> <span class="function">function_Newton_prime</span>(<span class="type">float</span> x)<br>
+								{<br>
+								<span class="tab"></span><span class="return">return</span> <span class="number">5</span> * x * x * x * x - <span class="number">3</span>;<span class="tab"></span><span class="comment">// f'(x) = 5x^4 - 3</span><br>
+								}<br>
+								<br>
+								<span class="type">float</span> <span class="function">Newton</span>(<span class="type">float</span> init, <span class="type">unsigned int</span> n)<br>
+								{<br>
+								<span class="tab"></span><span class="type">float</span> return_value = init;<br>
+								<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<br>
+								<span class="tab"></span>{<br>
+								<span class="tab"></span><span class="tab"></span>return_value = return_value - <span class="function">function_Newton</span>(return_value) / <span class="function">function_Newton_prime</span>(return_value);<br>
+								<span class="tab"></span>}<br>
+								<span class="tab"></span><span class="return">return</span> return_value;<br>
+								}
+							</code>
+						</div>
+
+						<!-- algorithme de Newton-Raphson (fonctions en paramètre) -->
+						<h4 class="heading-4" data-i18n="m21_newton_p"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">float</span> <span class="function">Newton_p</span>(<span class="type">function</span> <span class="function">f</span>, <span class="type">function</span> <span class="function">f_prime</span>, <span class="type">float</span> init, <span class="type">unsigned int</span> n)<br>
+								{<br>
+								<span class="tab"></span><span class="type">float</span> return_value = init;<br>
+								<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<br>
+								<span class="tab"></span>{<br>
+								<span class="tab"></span><span class="tab"></span>return_value = return_value - <span class="function">f</span>(return_value) / <span class="function">f_prime</span>(return_value);<br>
+								<span class="tab"></span>}<br>
+								<span class="tab"></span><span class="return">return</span> return_value;<br>
+								}
+							</code>
+						</div>
+
+						<!-- algorithme de descente_de_gradient (fonctions fixées) -->
+						<h4 class="heading-4" data-i18n="m21_descente_de_gradient"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">float</span> <span class="function">descente_de_gradient</span>(<span class="type">float</span> init, <span class="type">float</span> alpha, <span class="type">unsigned int</span> n)<br>
+								{<br>
+								<span class="tab"></span><span class="type">float</span> x = init;<br>
+								<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<br>
+								<span class="tab"></span>{<br>
+								<span class="tab"></span><span class="tab"></span>x = x - alpha * <span class="function">function_Newton_prime</span>(x);<br>
+								<span class="tab"></span>}<br>
+								<span class="tab"></span><span class="return">return</span> <span class="function">function_Newton</span>(x);<br>
+								}
+							</code>
+						</div>
+
+						<!-- algorithme de dichotomie_f (fonctions en paramètre) -->
+						<h4 class="heading-4" data-i18n="m21_descente_de_gradient_p"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="type">float</span> <span class="function">descente_de_gradient_p</span>(<span class="type">function</span> <span class="function">f</span>, <span class="type">function</span> <span class="function">f_prime</span>, <span class="type">float</span> init, <span class="type">float</span> alpha, <span class="type">unsigned int</span> n)<br>
+								{<br>
+								<span class="tab"></span><span class="type">float</span> x = init;<br>
+								<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<br>
+								<span class="tab"></span>{<br>
+								<span class="tab"></span><span class="tab"></span>x = x - alpha * <span class="function">f_prime</span>(x);<br>
+								<span class="tab"></span>}<br>
+								<span class="tab"></span><span class="return">return</span> <span class="function">f</span>(x);<br>
+								}
+							</code>
+						</div>
+
+						<!-- main exo 2 -->
+						<h4 class="heading-4" data-i18n="m21_main_2"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="comment">// fonctions pour les tests à définir avant main()</span><br>
+								<span class="type">float</span> <span class="function">f1</span>(<span class="type">float</span> x)<br>
+								{<br>
+								<br>
+								<span class="tab"></span><span class="return">return</span> x * x - <span class="number">3</span>;<span class="tab"></span><span class="comment">// f1(x) = x^2 - 3</span><br>
+								}<br>
+								<br>
+								<span class="type">float</span> <span class="function">f1_prime</span>(<span class="type">float</span> x)<br>
+								{<br>
+								<span class="tab"></span><span class="return">return</span> <span class="number">2</span> * x;<span class="tab"></span><span class="comment">// f1'(x) = 2x</span><br>
+								}<br>
+								<br>
+								<span class="type">float</span> <span class="function">f2</span>(<span class="type">float</span> x);<br>
+								{<br>
+								<span class="tab"></span><span class="return">return</span> -(-<span class="number">3</span> * x * x * x * x * x / <span class="number">16</span> + x * x * x / <span class="number">2</span> + <span class="number">3</span> * x / <span class="number">4</span>);<span class="tab"></span><span class="comment">// f(sqrt(2)) = -sqrt(2) (minimum)</span><br>
+								}<br>
+								<br>
+								<span class="type">float</span> <span class="function">f2_prime</span>(<span class="type">float</span> x)<br>
+								{<br>
+									<span class="tab"></span><span class="return">return</span> -(-<span class="number">15</span> * x * x * x * x / <span class="number">16</span> + <span class="number">3</span> * x * x / <span class="number">2</span> + <span class="number">3.</span> / <span class="number">4.</span>);<span class="tab"></span><span class="comment">// f'(sqrt(2)) = 0</span><br>
+								}<br>
+								<br>
+								<span class="type">float</span> <span class="function">f2_prime_prime</span>(<span class="type">float</span> x)<br>
+								{<br>
+									<span class="tab"></span><span class="return">return</span> -(-<span class="number">15</span> * x * x * x / <span class="number">4</span> + <span class="number">3</span> * x);<br>
+								}<br>
+								<br>
+								<br>
+								<span class="comment">// Fonction principale pour les tests</span><br>
+								<span class="type">void</span> <span class="function">main</span>(<span class="type">int</span> argc, <span class="type">char **</span>argv)<br>
+								{<br>
+								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Calculs de racine carée de 3 :\n"</span>);<br>
+    							<span class="tab"></span><span class="function">printf</span>(<span class="string">"Heron : %f\n"</span>, <span class="function">heron</span>(<span class="number">3</span>, <span class="number">1</span>, <span class="number">10</span>));<br>
+								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Dichotomie : %f\n"</span>, <span class="function">dichotomie</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">10</span>));<br>
+								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Dichotomie_p : %f\n"</span>, <span class="function">dichotomie_p</span>(<span class="function">f1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">10</span>));<br>
+								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Newton_p : %f\n"</span>, <span class="function">Newton_p</span>(<span class="function">f1</span>, <span class="function">f1_prime</span>, <span class="number">1</span>, <span class="number">10</span>));<br>
+								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Calculs de +/-racine(2) :\n"</span>);<br>
+								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Héron : %f\n"</span>, <span class="function">heron</span>(<span class="number">2</span>, <span class="number">1</span>, <span class="number">10</span>));<br>
+								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Dichotomie_p : %f\n"</span>, <span class="function">dichotomie_p</span>(<span class="function">f2_prime</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">10</span>));<br>
+								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Newton_p : %f\n"</span>, <span class="function">Newton_p</span>(<span class="function">f2_prime</span>, <span class="function">f2_prime_prime</span>, <span class="number">1</span>, <span class="number">10</span>));<br>
+								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Descente de gradient : %f\n"</span>, <span class="function">descente_de_gradient_p</span>(<span class="function">f2</span>, <span class="function">f2_prime</span>, <span class="number">1.8</span>, <span class="number">0.1</span>, <span class="number">10</span>));<br>
+								<span class="tab"></span><span class="function">exit</span>(<span class="define">EXIT_SUCCESS</span>);<br>
+								}
+							</code>
+						</div>
+
+						<!-- résultat exo 2 -->
+						<h4 class="heading-4" data-i18n="m21_resultat_2"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								Calculs de racine carée de 3 :<br>
+								Heron : 1.732051<br>
+								Dichotomie : 1.731934<br>
+								Dichotomie_p : 1.731934<br>
+								Newton_p : 1.732051<br>
+								Calculs de +/-racine(2) :<br>
+								Héron : 1.414214<br>
+								Dichotomie_p : 1.414551<br>
+								Newton_p : 1.414214<br>
+								Descente de gradient : -1.414214
+							</code>
+						</div>
 
 				</section>
 
