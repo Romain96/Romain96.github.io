@@ -10,6 +10,7 @@
 	"m21_2025_title": "M21 - Numerical methods (2025-2026)",
 	"m21_2025_td_tp_title": "Exercises",
 	"m21_2025_td1_title": "💻 TP 1 : Printing a floating point number",
+	"m21_2025_td_tp_paragraph": "The solutions to both TP are available by downloading the following archive: <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/M21\/m21_tp_solutions.zip\">m21_tp_solutions.zip<\/a>",
 	"m21_union_floatint": "Definitions (exo1.h)",
 	"m21_i_code": "i_code function (exo1.c)",
 	"m21_u_code": "u_code function (exo1.c)",
