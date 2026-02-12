@@ -8,7 +8,7 @@
 	"nav_project": "Projects",
 	"footer_copyright": "Romain Perrin. All rights reserved.",
 	"p21_2025_title": "P21 - Object-oriented development (2025-2026)",
-	"p21_2025_td_tp_title": "Exercises",
+	"p21_2025_td_tp_title": "• Exercises",
 	"p21_2025_td1_title": "📖💻 TD/TP 1 : Classes and instances",
 	"p21_2025_td1_paragraph": "The source project containing both packages (<i>bank<\/i> for <b>Account<\/b> and <i>date<\/i> for <b>Date<\/b>), javadoc documentation and PlantUML files are available by downloading the following archive : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/P21\/TD1.zip\">TD1.zip<\/a>. The UML class diagrams can be viewed below.",
 	"p21_2025_td2_title": "📖💻 TD/TP 2 : References and packages",
