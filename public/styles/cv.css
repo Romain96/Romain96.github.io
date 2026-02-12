@@ -121,5 +121,9 @@
 
 #responsabilities {
 	list-style: none;
-	line-height: 0.50%;
+	line-height: 1em;
+}
+
+#responsabilities .item{
+	margin: 0.5em 0px 0.5em 0px;
 }

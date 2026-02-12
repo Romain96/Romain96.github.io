@@ -5,21 +5,28 @@ body {
 	padding: 0;
 	line-height: 1.5;
 	background-color: #453534;
-	box-sizing: border-box;
-	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 .wrapper {
-	/*max-width: 100%;
-	margin: 0 auto;*/
-	box-sizing: border-box;
-	min-height: 100%;
 	display: flex;
-	flex-direction: column;
+	flex: 0 0 75%;
+	flex-direction: row;
+	align-self: center;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 /* Header and navigation styling */
 .header {
+	display: flex;
+	flex: 0 1 100%;
+	flex-direction: column;
 	background-color: #291f1f;
 	color: #eeeeee;
 	padding: 10px 0;
@@ -44,7 +51,7 @@ body {
 .nav .list .item a {
 	color: #ef9000;
 	text-decoration: none;
-	font-size: 1em;
+	font-size: 1.2em;
 }
 
 .nav .list .item a:hover {
@@ -72,12 +79,9 @@ body {
 /* Main content styling */
 .main {
 	display: flex;
-	flex-shrink: 0;
-	flex-grow: 1;
-	width: 75%;
-	align-self: center;
-	justify-content: center;
+	flex: 0 1 100%;
 	flex-direction: column;
+	justify-content: center;
 	margin: 10px 0px 10px 0px;;
 	padding: 10px;
 	background-color: #453534;
@@ -182,8 +186,8 @@ a:hover {
 /* Footer styling */
 .footer {
 	display: flex;
-	flex-grow: 0;
-	flex-shrink: 0;
+	flex: 0 0 auto;
+	width: 100%;
 	justify-content: center;
 	background-color: #291f1f;
 	color: #eeeeee;
