@@ -21,7 +21,7 @@
 
 .sublist .item
 {
-	font-size: 0.9em;
+	font-size: 1em;
 	margin-top: 0px;
 	margin-left: 2em;
 }
@@ -84,7 +84,20 @@
 }
 
 .article .personalDetails .portrait img {
-	width: 10em;
+	margin: 0px;
+	padding: 0px;
+	width: 12em;
+}
+
+.article .personalDetails table
+{
+	margin-left: 2em;
+	border-collapse: collapse;
+}
+
+.article .personalDetails table tr td .logo {
+	height: 1em;
+	margin-right: 0.5em;
 }
 
 .article .personalDetails .list
@@ -94,7 +107,7 @@
 
 .article .personalDetails .list .item
 {
-	line-height: 1em;
+	line-height: 1.5em;
 	margin: 1em 0px 0px 0px;
 }
 
