@@ -29,7 +29,7 @@
 	"m21_dichotomie": "Fonction dichotomie (exo2.c)",
 	"m21_dichotomie_p": "Fonction dichotomie_p : dichotomie avec pointeur de fonction (exo2.c)",
 	"m21_newton": "Fonction newton : méthode de Newton-Raphson (exo2.c)",
-	"m21_newton_p": "Fonction Newton_^: méthode de Newton-Raphson avec pointers de fonctions (exo2.c)",
+	"m21_newton_p": "Fonction Newton_p: méthode de Newton-Raphson avec pointers de fonctions (exo2.c)",
 	"m21_descente_de_gradient": "Fonction descente_de_gradient : descente de gradient (exo2.c)",
 	"m21_descente_de_gradient_p": "Fonction descente_de_gradient_p : descente de gradient avec poineurs de fonctions (exo2.c)",
 	"m21_main_2": "Fonction main (main.c)",
