@@ -78,7 +78,7 @@
 								{<br>
 									<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="number">32</span>; i++)<br>
 									<span class="tab"></span>{<br>
-									<span class="tab"></span><span class="tab"></span><span class="type">uint32_t*</span> bit_i = (<span class="number">1</span> << (<span class="number">31</span> - i));<span class="tab"></span><span class="comment">// masque avec le ième bit à 1 et les autres à 0</span><br>
+									<span class="tab"></span><span class="tab"></span><span class="type">uint32_t</span> bit_i = (<span class="number">1</span> << (<span class="number">31</span> - i));<span class="tab"></span><span class="comment">// masque avec le ième bit à 1 et les autres à 0</span><br>
 									<span class="tab"></span><span class="tab"></span>bits[i] = (nb & bit_i) ? <span class="number">1</span> : <span class="number">0</span>;<span class="tab"></span><span class="comment">// extraction du ième bit de nb</span><br>
 									<span class="tab"></span>}<br>
 								}
