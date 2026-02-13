@@ -303,12 +303,12 @@
 						<h4 class="heading-4" data-i18n="m21_heron"></h4>
 						<div class="codeblock">
 							<code class="language-c">
-								<span class="type">float</span> <span class="function">heron</span>(<span class="type">float</span> square, <span class="type">float</span> init, <span class="type">unsigned int</span> n)<br>
+								<span class="type">float</span> <span class="function">heron</span>(<span class="type">float</span> a, <span class="type">float</span> init, <span class="type">unsigned int</span> n)<br>
 								{<br>
-									<span class="tab"></span><span class="type">float</span> return_value = init;<span class="tab"></span><span class="comment">// dans le cours : return_value est x</span><br>
+									<span class="tab"></span><span class="type">float</span> x = init;<br>
 									<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<span class="tab"></|span><span class="comment">// dans le cours : pour n de 0 à N - 1</span><br>
 									<span class="tab"></span>{<br>
-									<span class="tab"></span><span class="tab"></span>return_value = (return_value + square / return_value) / 2;<span class="tab"></span><span class="comment">// dans le cours : x <- (x + a / x) / 2</span><br>
+									<span class="tab"></span><span class="tab"></span>x = (x + a / x) / 2;<br>
 									<span class="tab"></span>}<br>
 									<span class="tab"></span><span class="return">return</span> x;<br>
 								}
@@ -327,24 +327,24 @@
 								<br>
 								<span class="type">float</span> <span class="function">dichotomie</span>(<span class="type">float</span> a, <span class="type">float</span> b, <span class="type">unsigned int</span> n)<br>
 								{<br>
-								<span class="tab"></span><span class="type">float</span> return_value = (a + b) / <span class="number">2</span>;<br>
+								<span class="tab"></span><span class="type">float</span> m = (a + b) / <span class="number">2</span>;<br>
 								<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<br>
 								<span class="tab"></span>{<br>
-								<span class="tab"></span><span class="tab"></span><span class="conditional">if</span> (<span class="function">f_dicho</span>(return_value) == <span class="number">0</span>)<br>
+								<span class="tab"></span><span class="tab"></span><span class="conditional">if</span> (<span class="function">f_dicho</span>(m) == <span class="number">0</span>)<br>
 								<span class="tab"></span><span class="tab"></span>{<br>
-								<span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="return">return</span> return_value;<br>
+								<span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="return">return</span> m;<br>
 								<span class="tab"></span><span class="tab"></span>}<br>
-								<span class="tab"></span><span class="tab"></span><span class="conditional">if</span> (<span class="function">f_dicho</span>(return_value) * <span class="function">f_dicho</span>(a) > <span class="number">0</span>)<br>
+								<span class="tab"></span><span class="tab"></span><span class="conditional">if</span> (<span class="function">f_dicho</span>(m) * <span class="function">f_dicho</span>(a) > <span class="number">0</span>)<br>
 								<span class="tab"></span><span class="tab"></span>{<br>
-								<span class="tab"></span><span class="tab"></span><span class="tab"></span>a = return_value;<br>
+								<span class="tab"></span><span class="tab"></span><span class="tab"></span>a = m;<br>
 								<span class="tab"></span><span class="tab"></span>}<br>
 								<span class="tab"></span><span class="tab"></span><span class="conditional">else</span><br>
 								<span class="tab"></span><span class="tab"></span>{<br>
-								<span class="tab"></span><span class="tab"></span><span class="tab"></span>b = return_value;<br>
+								<span class="tab"></span><span class="tab"></span><span class="tab"></span>b = m;<br>
 								<span class="tab"></span><span class="tab"></span>}<br>
-								<span class="tab"></span><span class="tab"></span>return_value = (a + b) / <span class="number">2</span>;<br>
+								<span class="tab"></span><span class="tab"></span>m = (a + b) / <span class="number">2</span>;<br>
 								<span class="tab"></span>}<br>
-								<span class="tab"></span><span class="return">return</span> return_value;<br>
+								<span class="tab"></span><span class="return">return</span> m;<br>
 								}
 							</code>
 						</div>
@@ -358,20 +358,20 @@
 								<br>
 								<span class="type">float</span> <span class="function">dichotomie_p</span>(<span class="type">function</span> <span class="function">f</span>, <span class="type">float</span> a, <span class="type">float</span> b, <span class="type">unsigned int</span> n)<br>
 								{<br>
-								<span class="tab"></span><span class="type">float</span> return_value = (a + b) / <span class="number">2</span>;<br>
+								<span class="tab"></span><span class="type">float</span> m = (a + b) / <span class="number">2</span>;<br>
 								<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<br>
 								<span class="tab"></span>{<br>
-								<span class="tab"></span><span class="tab"></span><span class="conditional">if</span> (<span class="function">f</span>(return_value) * <span class="function">f</span>(a) > <span class="number">0</span>)<br>
+								<span class="tab"></span><span class="tab"></span><span class="conditional">if</span> (<span class="function">f</span>(m) * <span class="function">f</span>(a) > <span class="number">0</span>)<br>
 								<span class="tab"></span><span class="tab"></span>{<br>
-								<span class="tab"></span><span class="tab"></span><span class="tab"></span>a = return_value;<br>
+								<span class="tab"></span><span class="tab"></span><span class="tab"></span>a = m;<br>
 								<span class="tab"></span><span class="tab"></span>}<br>
 								<span class="tab"></span><span class="tab"></span><span class="conditional">else</span><br>
 								<span class="tab"></span><span class="tab"></span>{<br>
-								<span class="tab"></span><span class="tab"></span><span class="tab"></span>b = return_value;<br>
+								<span class="tab"></span><span class="tab"></span><span class="tab"></span>b = m;<br>
 								<span class="tab"></span><span class="tab"></span>}<br>
-								<span class="tab"></span><span class="tab"></span>return_value = (a + b) / <sppan class="number">2</sppan>;<br>
+								<span class="tab"></span><span class="tab"></span>m = (a + b) / <sppan class="number">2</sppan>;<br>
 								<span class="tab"></span>}<br>
-								<span class="tab"></span><span class="return">return</span> return_value;<br>
+								<span class="tab"></span><span class="return">return</span> m;<br>
 								}
 							</code>
 						</div>
@@ -394,12 +394,12 @@
 								<br>
 								<span class="type">float</span> <span class="function">Newton</span>(<span class="type">float</span> init, <span class="type">unsigned int</span> n)<br>
 								{<br>
-								<span class="tab"></span><span class="type">float</span> return_value = init;<br>
+								<span class="tab"></span><span class="type">float</span> x = init;<br>
 								<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<br>
 								<span class="tab"></span>{<br>
-								<span class="tab"></span><span class="tab"></span>return_value = return_value - <span class="function">function_Newton</span>(return_value) / <span class="function">function_Newton_prime</span>(return_value);<br>
+								<span class="tab"></span><span class="tab"></span>x = x - <span class="function">function_Newton</span>(x) / <span class="function">function_Newton_prime</span>(x);<br>
 								<span class="tab"></span>}<br>
-								<span class="tab"></span><span class="return">return</span> return_value;<br>
+								<span class="tab"></span><span class="return">return</span> x;<br>
 								}
 							</code>
 						</div>
@@ -410,12 +410,12 @@
 							<code class="language-c">
 								<span class="type">float</span> <span class="function">Newton_p</span>(<span class="type">function</span> <span class="function">f</span>, <span class="type">function</span> <span class="function">f_prime</span>, <span class="type">float</span> init, <span class="type">unsigned int</span> n)<br>
 								{<br>
-								<span class="tab"></span><span class="type">float</span> return_value = init;<br>
+								<span class="tab"></span><span class="type">float</span> x = init;<br>
 								<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<br>
 								<span class="tab"></span>{<br>
-								<span class="tab"></span><span class="tab"></span>return_value = return_value - <span class="function">f</span>(return_value) / <span class="function">f_prime</span>(return_value);<br>
+								<span class="tab"></span><span class="tab"></span>x = x - <span class="function">f</span>(x) / <span class="function">f_prime</span>(x);<br>
 								<span class="tab"></span>}<br>
-								<span class="tab"></span><span class="return">return</span> return_value;<br>
+								<span class="tab"></span><span class="return">return</span> x;<br>
 								}
 							</code>
 						</div>
