@@ -186,7 +186,7 @@
 									<span class="tab"></span><span class="function">memcpy</span>(str, <span class="string">"(1."</span>, <span class="number">3</span>);<br>
 									<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < <span class="define">SIZE_MANTISSE_CODE</span>; i++)<br>
 									<span class="tab"></span>{<br>
-									<span class="tab"></span><span class="tab"></span>str[<span class="number">3</span> + i] = code[i] + <span class="string">'0'</span>;<span class="tab"></span><span class="comment">// utilisation de la table ASCII</span><br>
+									<span class="tab"></span><span class="tab"></span>str[<span class="number">3</span> + i] = code[i] + <span class="string">'0'</span>;<span class="tab"></span><span class="comment">// utilisation de la table ASCII ('0' + 0 = '0', '0' + 1 = '1')</span><br>
 									<span class="tab"></span>}<br>
 									<span class="tab"></span><span class="function">strcpy</span>(str + <span class="number">3</span> + <span class="define">SIZE_MANTISSE_CODE</span>, <span class="string">")_2"</span>);<br>
 									<span class="tab"></span><span class="return">return</span> str;<br>
@@ -266,9 +266,25 @@
 						<h4 class="heading-4" data-i18n="m21_main_1"></h4>
 						<div class="codeblock">
 							<code class="language-c">
+								<span class="define">#define TAB_SIZE 32</span><br>
+								<span class="type">void</span> <span class="function">print_int_tab</span> (<span class="type">uint8_t *</span>tab, <span class="type">size_t</span> size)<br>
+								{<br>
+									<span class="tab"></span><span class="loop">for</span>(<span class="type">size_t</span> i = <span class="number">0</span>; i < size; i++)<br>
+									<span class="tab"></span>{<br>
+										<span class="tab"></span><span class="tab"></span><span class="conditional">if</span>(i % <span class="number">4</span> == <span class="number">0</span> && i != <span class="number">0</span>)<br>
+										<span class="tab"></span><span class="tab"></span>{<br>
+											<span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="function">printf</span>(<span class="string">" "</span>);<br>
+										<span class="tab"></span><span class="tab"></span>}<br>
+										<span class="tab"></span><span class="tab"></span><span class="function">printf</span>(<span class="string">"%d"</span>), tab[i]<br>
+									<span class="tab"></span>}<br>
+									<span class="tab"></span><span class="function">printf</span>(<span class="string">"\n"</span>);<br>
+								}<br><br>
 								<span class="type">void</span> <span class="function">main</span>(<span class="type">int</span> argc, <span class="type">char **</span>argv)<br>
 								{<br>
-									<span class="tab"></span><span class="type">float</span> f = <span class="number">-10023.099609</span>;<br>
+									<span class="tab"></span><span class="type">uint8_t</span> bits[<span class="define">TAB_SIZE</span>];<br>
+									<span class="tab"></span><span class="type">float</span> f = <span class="number">11.00</span>;<br>
+									<span class="tab"></span><span class="function">f_code</span>(f, bits);<br>
+									<span class="tab"></span><span class="function">print_int_tab</span>(bits, <span class="define">TAB_SIZE</span>);<br>
 									<span class="tab"></span><span class="function">print_encoding</span>(f);<br>
 								}
 							</code>
