@@ -441,14 +441,23 @@
 						<h4 class="heading-4" data-i18n="m21_descente_de_gradient"></h4>
 						<div class="codeblock">
 							<code class="language-c">
+								<span class="type">float</span> <span class="function">function_gradient</span>(<span class="type">float</span> x)<br>
+								{<br>
+									<span class="tab"></span><span class="return">return</span> -(-<span class="number">3</span> * x * x * x * x * x / <span class="number">16</span> + x * x * x / <span class="number">2</span> + <span class="number">3</span> * x / <span class="number">4</span>);<span class="tab"></span><span class="comment">// f(sqrt(2))=-sqrt(2) (minimum)</span><br>
+								}<br>
+								<span class="type">float</span> <span class="function">function_gradient_prime</span>(<span class="type">float</span> x)<br>
+								{<br>
+									<span class="tab"></span><span class="return">return</span> -(-<span class="number">15</span> * x * x * x * x / <span class="number">16</span> + <span class="number">3</span> * x * x / <span class="number">2</span> + <span class="number">3.</span> / <span class="number">4.</span>)<span class="tab"></span><span class="comment">// f'(sqrt(2))=0</span><br>
+								}<br>
+								<br>
 								<span class="type">float</span> <span class="function">descente_de_gradient</span>(<span class="type">float</span> init, <span class="type">float</span> alpha, <span class="type">unsigned int</span> n)<br>
 								{<br>
 								<span class="tab"></span><span class="type">float</span> x = init;<br>
 								<span class="tab"></span><span class="loop">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i < n; i++)<br>
 								<span class="tab"></span>{<br>
-								<span class="tab"></span><span class="tab"></span>x = x - alpha * <span class="function">function_Newton_prime</span>(x);<br>
+								<span class="tab"></span><span class="tab"></span>x = x - alpha * <span class="function">function_gradient_prime</span>(x);<br>
 								<span class="tab"></span>}<br>
-								<span class="tab"></span><span class="return">return</span> <span class="function">function_Newton</span>(x);<br>
+								<span class="tab"></span><span class="return">return</span> <span class="function">function_gradient</span>(x);<br>
 								}
 							</code>
 						</div>
@@ -476,7 +485,6 @@
 								<span class="comment">// fonctions pour les tests à définir avant main()</span><br>
 								<span class="type">float</span> <span class="function">f1</span>(<span class="type">float</span> x)<br>
 								{<br>
-								<br>
 								<span class="tab"></span><span class="return">return</span> x * x - <span class="number">3</span>;<span class="tab"></span><span class="comment">// f1(x) = x^2 - 3</span><br>
 								}<br>
 								<br>
@@ -505,7 +513,7 @@
 								<span class="type">void</span> <span class="function">main</span>(<span class="type">int</span> argc, <span class="type">char **</span>argv)<br>
 								{<br>
 								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Calculs de racine carée de 3 :\n"</span>);<br>
-    							<span class="tab"></span><span class="function">printf</span>(<span class="string">"Heron : %f\n"</span>, <span class="function">heron</span>(<span class="number">3</span>, <span class="number">1</span>, <span class="number">10</span>));<br>
+    							<span class="tab"></span><span class="function">printf</span>(<span class="string">"Héron : %f\n"</span>, <span class="function">heron</span>(<span class="number">3</span>, <span class="number">1</span>, <span class="number">10</span>));<br>
 								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Dichotomie : %f\n"</span>, <span class="function">dichotomie</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">10</span>));<br>
 								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Dichotomie_p : %f\n"</span>, <span class="function">dichotomie_p</span>(<span class="function">f1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">10</span>));<br>
 								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Newton_p : %f\n"</span>, <span class="function">Newton_p</span>(<span class="function">f1</span>, <span class="function">f1_prime</span>, <span class="number">1</span>, <span class="number">10</span>));<br>
@@ -513,7 +521,7 @@
 								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Héron : %f\n"</span>, <span class="function">heron</span>(<span class="number">2</span>, <span class="number">1</span>, <span class="number">10</span>));<br>
 								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Dichotomie_p : %f\n"</span>, <span class="function">dichotomie_p</span>(<span class="function">f2_prime</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">10</span>));<br>
 								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Newton_p : %f\n"</span>, <span class="function">Newton_p</span>(<span class="function">f2_prime</span>, <span class="function">f2_prime_prime</span>, <span class="number">1</span>, <span class="number">10</span>));<br>
-								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Descente de gradient : %f\n"</span>, <span class="function">descente_de_gradient_p</span>(<span class="function">f2</span>, <span class="function">f2_prime</span>, <span class="number">1.8</span>, <span class="number">0.1</span>, <span class="number">10</span>));<br>
+								<span class="tab"></span><span class="function">printf</span>(<span class="string">"Descente de gradient p : %f\n"</span>, <span class="function">descente_de_gradient_p</span>(<span class="function">f2</span>, <span class="function">f2_prime</span>, <span class="number">1.8</span>, <span class="number">0.1</span>, <span class="number">10</span>));<br>
 								<span class="tab"></span><span class="function">exit</span>(<span class="define">EXIT_SUCCESS</span>);<br>
 								}
 							</code>
@@ -523,16 +531,19 @@
 						<h4 class="heading-4" data-i18n="m21_resultat_2"></h4>
 						<div class="codeblock">
 							<code class="language-c">
-								Calculs de racine carée de 3 :<br>
-								Heron : 1.732051<br>
-								Dichotomie : 1.731934<br>
-								Dichotomie_p : 1.731934<br>
-								Newton_p : 1.732051<br>
-								Calculs de +/-racine(2) :<br>
+								Calculs de racine carée de 3 (math.sqrt(3) = 1.732051) :<br>
+								<br>
+								Héron : 1.732051<br>
+								Dichotomie : 1.732051<br>
+								Dichotomie_p : 1.732051<br>
+								Newton : 1.732051<br>
+								Newton_p : 1.744921<br>
+								<br>
+								Calculs de +/-racine(2) (math.sqrt(2) = 1.414214) :<br>
 								Héron : 1.414214<br>
 								Dichotomie_p : 1.414551<br>
 								Newton_p : 1.414214<br>
-								Descente de gradient : -1.414214
+								Descente de gradient_p : -1.414214<br>
 							</code>
 						</div>
 
