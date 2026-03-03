@@ -99,6 +99,10 @@
 	height: 1em;
 }
 
+.article .list {
+	list-style: none;
+}
+
 .d11answer {
 	width: 80%;
 	background-color: lightgray;
@@ -242,4 +246,38 @@ code .tab {
 
 .language-c .proc {
 	color: #f56e6e;
+}
+
+.details {
+	font-size: 1em;
+	color: #eeeeee;
+}
+
+.details summary {
+	font-size: 1em;
+	color: #ef9000;
+}
+
+.console_anwser {
+	padding: 0.5em 1em 0.5em 1em;
+	background-color: #333333;
+}
+
+.console {
+	font-family: "Lucida Console", Courier, monospace;
+	background-color: #333333;
+	color: #eeeeee;
+	line-height: 1.5em;
+}
+
+.text_anwser {
+	padding: 0.5em 1em 0.5em 1em;
+	background-color: #eeeeee;
+}
+
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #eeeeee;
+	color: #333333;
+	line-height: 1.5em;
 }
