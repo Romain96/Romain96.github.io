@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Dr Romain PERRIN, PhD</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico?">
+		<link rel="stylesheet" href="../../public/styles/index.css"/>
+		<link rel="stylesheet" href="../../public/styles/teaching.css"/>
+		<script src="../../public/scripts/languages.js" defer></script>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+
+			<header class="header">
+				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
+				<nav class="nav">
+					<ul class="list">
+						<li class="item">
+							<select name="languageSelection" class="languageSelector" onchange="changeLanguageListener(this.value)">
+								<option class="languageOption" value="en" selected>🇬🇧&nbsp;English</option>
+								<option class="languageOption" value="fr">🇫🇷&nbsp;Français</option>
+							</select>
+						</li>
+						<li class="item" id="home"><img class="navlogo" src="../../images/navigation/home.png"><a href="../../index.html" data-i18n="nav_home"></a></li>
+						<li class="item" id="about"><img class="navlogo" src="../../images/navigation/cv.png"><a href="../../pages/cv.html" data-i18n="nav_about"></a></li>
+						<li class="item" id="research"><img class="navlogo" src="../../images/navigation/research.png"><a href="../../pages/research.html" data-i18n="nav_research"></a></li>
+						<li class="item" id="talk"><img class="navlogo" src="../../images/navigation/talk.png"><a href="../../pages/talk.html" data-i18n="nav_talk"></a></li>
+						<li class="item" id="publication"><img class="navlogo" src="../../images/navigation/publication.png"><a href="../../pages/publication.html" data-i18n="nav_publication"></a></li>
+						<li class="item" id="teaching"><img class="navlogo" src="../../images/navigation/teaching.png"><a href="../../pages/teaching.html" data-i18n="nav_teaching"></a></li>
+						<li class="item" id="project"><img class="navlogo" src="../../images/navigation/project.png"><a href="../../pages/project.html" data-i18n="nav_project"></a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<main class="main">
+					
+				<h1 class="heading-1" data-i18n="m22_2025_title"></h1>
+				<hr>
+				<label id="languageJSONPath" hidden>../../public/languages/teaching/2025_M22</label>
+						
+				<section class="section">
+
+					<h2 class="heading-2" data-i18n="m22_2025_tp_title"></h2>
+
+					<!-- TD/TP 1 -->
+					<article class="article">
+
+						<h3 class="heading-3" data-i18n="m22_2025_tp1_title"></h3>
+
+                    </article>
+
+				</section>
+
+			</main>
+
+			<footer class="footer">
+				&copy;&nbsp;<span id="footer_year"></span>&nbsp;<p class="paragraph" data-i18n="footer_copyright"></p>
+				<script>
+					// Set the current year in the footer
+					document.getElementById('footer_year').textContent = new Date().getFullYear();
+				</script>
+			</footer>
+
+		</div>
+
+	</body>
+</html>
