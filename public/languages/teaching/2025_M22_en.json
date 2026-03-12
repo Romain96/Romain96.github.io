@@ -8,6 +8,9 @@
 	"nav_project": "Projects",
 	"footer_copyright": "Romain Perrin. All rights reserved.",
 	"m22_2025_title": "M22 - Numerical tools for descriptive statistics (2025-2026)",
-	"m22_2025_tp_title": "• Exercises",
-	"m22_2025_tp1_title": "💻 TP 1 : Statistics and Python"
+	"m22_2025_tp1_title": "💻 TP 1 : Statistics and Python",
+	"m22_2025_tp1_ex1_title": "Exercise 1 : Numpy arrays",
+	"m22_2025_tp1_ex2_title": "Exercise 2 : A little bit of Python",
+	"m22_2025_tp1_ex3_title": "Exercise 3 : Matplotlib",
+	"m22_2025_tp1_ex4_title": "Exercise 4 : Pandas DataFrame"
 }
