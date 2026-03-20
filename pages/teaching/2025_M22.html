@@ -134,10 +134,10 @@
 						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex2_q1"></h4>
 						<div class="codeblock">
 							<code class="language-c">
-								<span class="define">def</span> <span class="function">moyenne</span> (series):<br>
+								<span class="define">def</span> <span class="function">moyenne</span>(series):<br>
     							<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">mean</span>()<br>
 								<br>
-								<span class="define">def</span> <span class="function">moyenne_perso</span> (series):<br>
+								<span class="define">def</span> <span class="function">moyenne_perso</span>(series):<br>
 								<span class="tab">sum = </span><span class="number">0</span><br>
 								<span class="tab"></span><span class="loop">for</span> i <span class="define">in</span> <span class="function">range</span>(<span class="number">0</span>, <span class="function">len</span>(series), <span class="number">1</span>):<br>
 								<span class="tab"></span><span class="tab"></span>sum += series[i]<br>
@@ -149,10 +149,10 @@
 						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex2_q2"></h4>
 						<div class="codeblock">
 							<code class="language-c">
-								<span class="define">def</span> <span class="function">variance</span> (series):<br>
+								<span class="define">def</span> <span class="function">variance</span>(series):<br>
     							<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">var</span>()<br>
 								<br>
-								<span class="define">def</span> <span class="function">variance_perso</span> (series):<br>
+								<span class="define">def</span> <span class="function">variance_perso</span>(series):<br>
 								<span class="tab"></span>moy = <span class="function">moyenne_perso</span>(series)<br>
 								<span class="tab"></span>sum = <span class="number">0</span><br>
 								<span class="tab"></span><span class="loop">for</span> i <span class="define">in</span> <span class="function">range</span>(<span class="number">0</span>, <span class="function">len</span>(series), <span class="number">1</span>):<br>
@@ -165,10 +165,10 @@
 						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex2_q3"></h4>
 						<div class="codeblock">
 							<code class="language-c">
-								<span class="define">def</span> <span class="function">ecart_type</span> (series):<br>
+								<span class="define">def</span> <span class="function">ecart_type</span>(series):<br>
     							<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">std</span>()<br>
 								<br>
-								<span class="define">def</span> <span class="function">ecart_type_perso</span> (series):<br>
+								<span class="define">def</span> <span class="function">ecart_type_perso</span>(series):<br>
 								<span class="tab"></span>s_var = <span class="function">variance_perso</span>(series)<br>
 								<span class="tab"></span><span class="return">return</span> math.<span class="function">sqrt</span>(s_var)
 							</code>
@@ -178,7 +178,7 @@
 						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex2_q4"></h4>
 						<div class="codeblock">
 							<code class="language-c">
-								<span class="define">def</span> <span class="function">vals_norm</span> (moyenne, ecart_type, n):<br>
+								<span class="define">def</span> <span class="function">vals_norm</span>(moyenne, ecart_type, n):<br>
     							<span class="tab"></span>rng = np.random.<span class="function">default_rng</span>()<br>
     							<span class="tab"></span><span class="return">return</span> rng.<span class="function">normal</span>(loc = moyenne, scale = ecart_type, size = n)
 							</code>
@@ -188,7 +188,7 @@
 						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex2_q5"></h4>
 						<div class="codeblock">
 							<code class="language-c">
-								<span class="define">def</span> <span class="function">vals_unif</span> (min_val, max_val, n):<br>
+								<span class="define">def</span> <span class="function">vals_unif</span>(min_val, max_val, n):<br>
     							<span class="tab"></span>rng = np.random.<span class="function">default_rng</span>()<br>
     							<span class="tab"></span><span class="return">return</span> rng.<span class="function">uniform</span>(low = min_val, high = max_val, size = n)
 							</code>
@@ -200,6 +200,47 @@
 					<article class="article">
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex3_title"></h3>
+
+						<!-- Question 1 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex3_q1"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="define">def</span> <span class="function">visu_ab</span>():<br>
+								<span class="tab"></span>a = np.<span class="function">array</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>])<br>
+								<span class="tab"></span>b = np.<span class="function">array</span>([<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">10</span>, <span class="number">13</span>, <span class="number">16</span>, <span class="number">19</span>, <span class="number">22</span>, <span class="number">25</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">34</span>, <span class="number">37</span>, <span class="number">40</span>, <span class="number">43</span>])<br>
+								<br>
+								<span class="tab"></span>fig, ax = plt.<span class="function">subplots</span>()<br>
+								<span class="tab"></span>x = np.<span class="function">arange</span>(<span class="number">1</span>, a.shape[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
+								<span class="tab"></span>ax.<span class="function">plot</span>(x, a, <span class="string">'ro'</span>)<br>
+								<span class="tab"></span>ax.<span class="function">plot</span>(x, b, <span class="string">'bo'</span>)<br>
+								<span class="tab"></span>plt.<span class="function">show</span>()
+							</code>
+						</div>
+
+						<!-- Question 2 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex3_q2"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="define">def</span> <span class="function">creer_tableaux</span>():<br>
+								<span class="tab"></span>norm = np.<span class="function">sort</span>(<span class="function">vals_norm</span>(<span class="number">10</span>, <span class="number">2</span>, <span class="number">15</span>))<br>
+								<span class="tab"></span>unif = np.<span class="function">sort</span>(<span class="function">vals_unif</span>(<span class="number">0</span>, <span class="number">20</span>, <span class="number">15</span>))<br>
+								<span class="tab"></span><span class="return">return</span> (norm, unif)
+							</code>
+						</div>
+
+						<!-- Question 3 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex3_q3"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="define">def</span> <span class="function">visu_tableaux</span>(a, b):<br>
+								<span class="tab"></span>fig, ax = plt.<span class="function">subplots</span>()<br>
+								<span class="tab"></span>xa = np.<span class="function">arange</span>(<span class="number">1</span>, a.shape[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
+								<span class="tab"></span>xb = np.<span class="function">arange</span>(<span class="number">1</span>, b.shape[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
+								<span class="tab"></span>ax.<span class="function">plot</span>(xa, a, <span class="string">'ro'</span>)<br>
+								<span class="tab"></span>ax.<span class="function">plot</span>(xb, b, <span class="string">'bo'</span>)<br>
+								<span class="tab"></span>plt.<span class="function">show</span>()
+							</code>
+						</div>
 
                     </article>
 
