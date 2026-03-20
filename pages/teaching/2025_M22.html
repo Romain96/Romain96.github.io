@@ -53,6 +53,76 @@
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex1_title"></h3>
 
+						<!-- Question 1 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_q1"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>]<br>
+								b = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">10</span>, <span class="number">13</span>, <span class="number">16</span>, <span class="number">19</span>, <span class="number">22</span>, <span class="number">25</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">34</span>, <span class="number">37</span>, <span class="number">40</span>, <span class="number">43</span>]<br>
+								d = [<span class="string">"quatre"</span>, <span class="string">"chaînes"</span>, <span class="string">"de"</span>, <span class="string">"caractères"</span>]<br>
+								<span class="function">print</span>(<span class="string">"a : "</span>, a, <span class="string">"type(a) : "</span>, <span class="function">type</span>(a))<br>
+								<span class="function">print</span>(<span class="string">"b : "</span>, b, <span class="string">"type(b) : "</span>, <span class="function">type</span>(b))
+							</code>
+						</div>
+
+						<!-- Question 2 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_q2"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								a = np.<span class="function">array</span>(a, np.int32)<br>
+								b = np.<span class="function">array</span>(b, np.int32)<br>
+								<span class="function">print</span>(<span class="string">"a : "</span>, a, <span class="string">"type(a) : "</span>, <span class="function">type</span>(a))<br>
+								<span class="function">print</span>(<span class="string">"b : "</span>, b, <span class="string">"type(b) : "</span>, <span class="function">type</span>(b))
+							</code>
+						</div>
+
+						<!-- Question 3 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_q3"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								np.<span class="function">add</span>(a, <span class="number">2</span>)<br>
+								<span class="function">print</span>(<span class="string">"a + 2 : "</span>, a)<br>
+								np.<span class="function">multiply</span>(a, <span class="number">2</span>)<br>
+								<span class="function">print</span>(<span class="string">"a * 2 : "</span>, a)<br>
+							</code>
+						</div>
+
+						<!-- Question 4 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_q4"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								aplusb = a + b<br>
+								<span class="function">print</span>(<span class="string">"a + b : "</span>, aplusb)<br>
+								aprodb = a * b<br>
+								<span class="function">print</span>(<span class="string">"a * b : "</span>, aprodb)<br>
+							</code>
+						</div>
+
+						<!-- Question 5 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_q5"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								moyenne = b.<span class="function">mean</span>()<br>
+								variance = b.<span class="function">var</span>()<br>
+								ecart_type = b.<span class="function">std</span>()<br>
+								mediane = np.<span class="function">median</span>(b)<br>
+								min = b.<span class="function">min</span>()<br>
+								max = b.<span class="function">max</span>()<br>
+								q1 = np.<span class="function">quantile</span>(b, <span class="number">0.25</span>)<br>
+								q2 = np.<span class="function">quantile</span>(b, <span class="number">0.50</span>)<br>
+								q3 = np.<span class="function">quantile</span>(b, <span class="number">0.75</span>)<br>
+								<span class="function">print</span>(<span class="string">"moyenne de b : "</span>, moyenne)<br>
+								<span class="function">print</span>(<span class="string">"variance de b : "</span>, variance)<br>
+								<span class="function">print</span>(<span class="string">"écart-type de b : "</span>, ecart_type)<br>
+								<span class="function">print</span>(<span class="string">"médiane de b : "</span>, mediane)<br>
+								<span class="function">print</span>(<span class="string">"minimum de b : "</span>, min)<br>
+								<span class="function">print</span>(<span class="string">"maximum de b : "</span>, max)<br>
+								<span class="function">print</span>(<span class="string">"permier quartile de b : "</span>, q1)<br>
+								<span class="function">print</span>(<span class="string">"second quartile de b : "</span>, q2)<br>
+								<span class="function">print</span>(<span class="string">"troisième quartile de b : "</span>, q3)
+							</code>
+						</div>
+
                     </article>
 
 					<!-- Exercice 2 -->
