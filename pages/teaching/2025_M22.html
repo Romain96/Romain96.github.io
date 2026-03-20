@@ -48,6 +48,12 @@
 
 					<h2 class="heading-2" data-i18n="m22_2025_tp1_title"></h2>
 
+					<div class="codeblock">
+						<code class="language-c">
+							<span class="define">import</span> numpy <span class="define">as</span> np
+						</code>
+					</div>
+
 					<!-- Exercice 1 -->
 					<article class="article">
 
@@ -123,19 +129,25 @@
 							</code>
 						</div>
 
-                    </article>
+					</article>
 
 					<!-- Exercice 2 -->
 					<article class="article">
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex2_title"></h3>
 
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="define">import</span> numpy <span class="define">as</span> np
+							</code>
+						</div>
+
 						<!-- Question 1 -->
 						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex2_q1"></h4>
 						<div class="codeblock">
 							<code class="language-c">
 								<span class="define">def</span> <span class="function">moyenne</span>(series):<br>
-    							<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">mean</span>()<br>
+								<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">mean</span>()<br>
 								<br>
 								<span class="define">def</span> <span class="function">moyenne_perso</span>(series):<br>
 								<span class="tab">sum = </span><span class="number">0</span><br>
@@ -150,7 +162,7 @@
 						<div class="codeblock">
 							<code class="language-c">
 								<span class="define">def</span> <span class="function">variance</span>(series):<br>
-    							<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">var</span>()<br>
+								<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">var</span>()<br>
 								<br>
 								<span class="define">def</span> <span class="function">variance_perso</span>(series):<br>
 								<span class="tab"></span>moy = <span class="function">moyenne_perso</span>(series)<br>
@@ -166,7 +178,7 @@
 						<div class="codeblock">
 							<code class="language-c">
 								<span class="define">def</span> <span class="function">ecart_type</span>(series):<br>
-    							<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">std</span>()<br>
+								<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">std</span>()<br>
 								<br>
 								<span class="define">def</span> <span class="function">ecart_type_perso</span>(series):<br>
 								<span class="tab"></span>s_var = <span class="function">variance_perso</span>(series)<br>
@@ -179,8 +191,8 @@
 						<div class="codeblock">
 							<code class="language-c">
 								<span class="define">def</span> <span class="function">vals_norm</span>(moyenne, ecart_type, n):<br>
-    							<span class="tab"></span>rng = np.random.<span class="function">default_rng</span>()<br>
-    							<span class="tab"></span><span class="return">return</span> rng.<span class="function">normal</span>(loc = moyenne, scale = ecart_type, size = n)
+								<span class="tab"></span>rng = np.random.<span class="function">default_rng</span>()<br>
+								<span class="tab"></span><span class="return">return</span> rng.<span class="function">normal</span>(loc = moyenne, scale = ecart_type, size = n)
 							</code>
 						</div>
 
@@ -189,17 +201,25 @@
 						<div class="codeblock">
 							<code class="language-c">
 								<span class="define">def</span> <span class="function">vals_unif</span>(min_val, max_val, n):<br>
-    							<span class="tab"></span>rng = np.random.<span class="function">default_rng</span>()<br>
-    							<span class="tab"></span><span class="return">return</span> rng.<span class="function">uniform</span>(low = min_val, high = max_val, size = n)
+								<span class="tab"></span>rng = np.random.<span class="function">default_rng</span>()<br>
+								<span class="tab"></span><span class="return">return</span> rng.<span class="function">uniform</span>(low = min_val, high = max_val, size = n)
 							</code>
 						</div>
 
-                    </article>
+					</article>
 
 					<!-- Exercice 3 -->
 					<article class="article">
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex3_title"></h3>
+
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="define">import</span> numpy <span class="define">as</span> np<br>
+								<span class="define">import</span> matplotlib.pyplot <span class="define">as</span> plt<br>
+								<span class="define">from</span> exercice2 <span class="define">import</span> <span class="function">vals_norm</span>, <span class="function">vals_unif</span>
+							</code>
+						</div>
 
 						<!-- Question 1 -->
 						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex3_q1"></h4>
@@ -242,14 +262,147 @@
 							</code>
 						</div>
 
-                    </article>
+					</article>
 
 					<!-- Exercice 4 -->
 					<article class="article">
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex4_title"></h3>
 
-                    </article>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="define">import</span> numpy <span class="define">as</span> np<br>
+								<span class="define">import</span> pandas <span class="define">as</span> pd<br>
+								<span class="define">import</span> matplotlib.pyplot <span class="define">as</span> plt<br>
+								<span class="define">from</span> exercice2 <span class="define">import</span> <span class="function">vals_norm</span>, <span class="function">vals_unif</span>, <span class="function">ecart_type_perso</span>
+							</code>
+						</div>
+
+						<!-- Question 1 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex4_q1"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								norm = np.<span class="function">sort</span>(<span class="function">vals_norm</span>(<span class="number">10</span>, <span class="number">2</span>, <span class="number">15</span>))<br>
+								unif = np.<span class="function">sort</span>(<span class="function">vals_unif</span>(<span class="number">0</span>, <span class="number">20</span>, <span class="number">15</span>))<br>
+								df = pd.<span class="function">DataFrame</span>(data = {<span class="string">"norm"</span>: norm, <span class="string">"unif"</span>: unif})<br>
+								<span class="function">print</span>(<span class="string">"df = "</span>, df)<br>
+								<span class="function">print</span>(df.<span class="function">describe</span>())
+							</code>
+						</div>
+
+						<!-- Question 2.a -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex4_q2a"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								ecart_type_pd = df[<span class="string">"norm"</span>].<span class="function">std</span>()<br>
+								ecart_type_np = df[<span class="string">"norm"</span>].<span class="function">to_numpy</span>().<span class="function">std</span>()<br>
+								ecart_type_p = <span class="function">ecart_type_perso</span>(df[<span class="string">"norm"</span>].<span class="function">to_numpy</span>())<br>
+								<span class="function">print</span>(<span class="string">"calcul de l'écart-type de norm :"</span>)<br>
+								<span class="function">print</span>(<span class="string">"avec pandas : "</span>, ecart_type_pd)<br>
+								<span class="function">print</span>(<span class="string">"avec numpy : "</span>, ecart_type_np)<br>
+								<span class="function">print</span>(<span class="string">"à la main : "</span>, ecart_type_p)
+							</code>
+						</div>
+
+						<!-- Question 2.b -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex4_q2b"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								ecart_type_pd = df[<span class="string">"norm"</span>].<span class="function">std</span>(ddof = <span class="number">0</span>)<span class="tab"></span><span class="comment"># Delta Degrees of Freedom.</span><br>
+								<span class="function">print</span>(<span class="string">"calcul de l'écart-type de norm : "</span>)<br>
+								<span class="function">print</span>(<span class="string">"avec pandas : "</span>, ecart_type_pd)<br>
+								<span class="function">print</span>(<span class="string">"avec numpy : "</span>, ecart_type_np)<br>
+								<span class="function">print</span>(<span class="string">"à la main : "</span>, ecart_type_p)
+							</code>
+						</div>
+
+						<!-- Question 3 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex4_q3"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="function">print</span>(<span class="string">"covariance : "</span>, df.<span class="function">cov</span>())<br>
+								<span class="function">print</span>(<span class="string">"coefficient de corrélation : "</span>, df.<span class="function">corr</span>())<br>
+								<br>
+								x = np.<span class="function">arange</span>(<span class="number">1</span>, <span class="function">len</span>(df) + <span class="number">1</span>, <span class="number">1</span>)<br>
+								<br>
+								<span class="comment"># régression linéaire pour norm</span><br>
+								x_norm_bar = x.<span class="function">mean</span>()<br>
+								y_norm_bar = df[<span class="string">"norm"</span>].<span class="function">mean</span>()<br>
+								S_norm_xy = ((x - x_norm_bar) * (df[<span class="string">"norm"</span>] - y_norm_bar)).<span class="function">sum</span>() / <span class="function">len</span>(df)<br>
+								S_norm_x2 = x.<span class="function">var</span>()<br>
+								a_norm = S_norm_xy / S_norm_x2<br>
+								b_norm = y_norm_bar - a_norm * x_norm_bar<br>
+								<span class="function">print</span>(<span class="string">"coefficients de régression linaire pour norm : "</span>, a_norm, b_norm)<br>
+								<br>
+								<span class="comment"># régression linéaire pour unif</span><br>
+								x_unif_bar = x.<span class="function">mean</span>()<br>
+								y_unif_bar = df[<span class="string">"unif"</span>].<span class="function">mean</span>()<br>
+								S_unif_xy = ((x - x_unif_bar) * (df[<span class="string">"unif"</span>] - y_unif_bar)).<span class="function">sum</span>() / <span class="function">len</span>(df)<br>
+								S_unif_x2 = x.<span class="function">var</span>()<br>
+								a_unif = S_unif_xy / S_unif_x2<br>
+								b_unif = y_unif_bar - a_unif * x_unif_bar<br>
+								<span class="function">print</span>(<span class="string">"coefficients de régression linaire pour unif : "</span>, a_unif, b_unif)<br>
+								<br>
+								<span class="comment"># tracé des droites de régression linéaire</span><br>
+								fit_fn_norm = np.<span class="function">poly1d</span>([a_norm, b_norm])<br>
+								fit_fn_unif = np.<span class="function">poly1d</span>([a_unif, b_unif])<br>
+								<br>
+								fig, ax = plt.<span class="function">subplots</span>()<br>
+								plt.<span class="function">plot</span>(x, fit_fn_norm(x), <span class="string">'r-'</span>)<br>
+								plt.<span class="function">plot</span>(x, df[<span class="string">"norm"</span>], <span class="string">'ro'</span>)<br>
+								plt.<span class="function">plot</span>(x, fit_fn_unif(x), <span class="string">'b-'</span>)<br>
+								plt.<span class="function">plot</span>(x, df[<span class="string">"unif"</span>], <span class="string">'bo'</span>)<br>
+								plt.<span class="function">show</span>()
+							</code>
+						</div>
+
+						<!-- Question 4 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex4_q4"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								norm2 = np.<span class="function">sort</span>(<span class="function">vals_norm</span>(<span class="number">10</span>, <span class="number">2</span>, <span class="number">20</span>))<br>
+								unif2 = np.<span class="function">sort</span>(<span class="function">vals_unif</span>(<span class="number">0</span>, <span class="number">20</span>, <span class="number">20</span>))<br>
+								df2 = pd.<span class="function">DataFrame</span>(data = {<span class="string">"norm"</span>: norm2, <span class="string">"unif"</span>: unif2})<br>
+								<span class="function">print</span>(<span class="string">"df2 = "</span>, df2)
+							</code>
+						</div>
+
+						<!-- Question 5 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex4_q5"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="loop">for</span> i <span class="define">in</span> <span class="function">range</span>(df2[<span class="string">"norm"</span>].index.start, df2[<span class="string">"norm"</span>].index.stop, df2[<span class="string">"norm"</span>].index.step):<br>
+								<span class="tab"></span>df.<span class="function">loc</span>[<span class="function">len</span>(df)] = [df2[<span class="string">"norm"</span>].<span class="function">loc</span>[i], df2[<span class="string">"unif"</span>].<span class="function">loc</span>[i]]<br>
+								<span class="function">print</span>(<span class="string">"df + df2 = "</span>, df)
+							</code>
+						</div>
+
+						<!-- Question 6 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex4_q6"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								df[<span class="string">"somme"</span>] = df[<span class="string">"norm"</span>] + df[<span class="string">"unif"</span>]<br>
+								<span class="function">print</span>(<span class="string">"df = "</span>, df)
+							</code>
+						</div>
+
+						<!-- Question 7 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex4_q7"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="function">print</span>(df[df[<span class="string">"unif"</span>] > <span class="number">5</span>])
+							</code>
+						</div>
+
+						<!-- Question 8 -->
+						<h4 class="heading-4" data-i18n="m22_2025_tp1_ex4_q8"></h4>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="function">print</span>(df[[<span class="string">"norm"</span>, <span class="string">"somme"</span>]])
+							</code>
+						</div>
+
+					</article>
 
 				</section>
 
