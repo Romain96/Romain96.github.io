@@ -17,5 +17,6 @@
 	"p21_2025_td3_title": "📖💻 TD/TP 3 : UML",
 	"p21_2025_td3_paragraph": "The source project containing all exercices, javadoc documentation and PlantUML files (class & sequence diagrams) are available by downloading the following archive : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/P21\/TD3.zip\">TD3.zip<\/a>.<br>The UML class diagrams can be viewed below.",
 	"p21_2025_td4_title": "📖💻 TD/TP 4 : Interfaces and exceptions",
-	"p21_2025_td4_paragraph": "The source project containing all exercices, javadoc documentation and PlantUML files (class diagrams) are available by downloading the following archive : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/P21\/TD4.zip\">TD4.zip<\/a>.<br>The UML class diagrams can be viewed below."
+	"p21_2025_td4_paragraph": "The source project containing all exercices, javadoc documentation and PlantUML files (class diagrams) are available by downloading the following archive : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/P21\/TD4.zip\">TD4.zip<\/a>.<br>The UML class diagrams can be viewed below.",
+	"p21_2025_td5_title": "📖💻 TD/TP 5 : Heritage, enums and tests"
 }
