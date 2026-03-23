@@ -50,5 +50,10 @@
 	"m22_2025_tp2_ex6_q4": "Créer un tableau Numpy <b>x<\/b> contenant les valeurs de 0 à N avec N la longueur de <b>TX<\/b> et <b>TN<\/b>.",
 	"m22_2025_tp2_ex6_q5": "Visualiser <b>graphiquement<\/b> les valeurs de <b>y_max<\/b> et <b>y_min<\/b> en fonction de <b>x<\/b>.",
 	"m22_2025_tp2_ex6_q6": "Utiliser NumPy (<b>polyfit<\/b> et <b>polyval<\/b>) pour calculer les tendances des séries <b>y_max<\/b> et <b>y_min<\/b>.",
-	"m22_2025_tp2_ex6_q7": "Visualiser <b>graphiquement<\/b> les valeurs et tendances des séries."
+	"m22_2025_tp2_ex6_q7": "Visualiser <b>graphiquement<\/b> les valeurs et tendances des séries.",
+	"m22_2025_tp2_ex7_q1": "Créer un dataframe <b>df_201x<\/b> pour chaque année concernés par l’étude à partir des données téléchargées.",
+	"m22_2025_tp2_ex7_q2": "Modifier <b>df<\/b> afin de garder les lignes correspondant à l’<b>IUT Robert Schuman<\/b>.",
+	"m22_2025_tp2_ex7_q3": "Modifier <b>df<\/b> afin de garder les lignes correspondant aux formations suivantes :<br><ul class=\"list\"><li class=\"list\">a. Chimie<\/li><li class=\"list\">b. Informatique<\/li><li class=\"list\">c. Techniques de commercialisation<\/li><\/b><\/ul>",
+	"m22_2025_tp2_ex7_q4": "Modifier <b>df<\/b> pour garder les colonnes suivantes :<br><ul class=\"list\"><li class=\"list\">a. l’année de la session<\/li><li class=\"list\">b. l’intitulé de la formation<\/li><li class=\"list\">c. le pourcentage de bac techno<\/li><\/b><\/ul>",
+	"m22_2025_tp2_ex7_q5": "Afficher sous forme de <b>graphique<\/b> l’évolution du taux d'admission des étudiants provenant de bacs technologiques."
 }

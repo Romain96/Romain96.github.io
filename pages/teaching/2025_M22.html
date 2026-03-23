@@ -875,6 +875,99 @@
 							</code>
 						</div>
 
+					</article>
+
+					<!-- Exercice 6 -->
+					<article class="article">
+
+						<h3 class="heading-3" data-i18n="m22_2025_tp2_ex7_title"></h3>
+
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="define">import</span> numpy <span class="define">as</span> np<br>
+								<span class="define">import</span> pandas <span class="define">as</span> pd<br>
+								<span class="define">import</span> matplotlib.pyplot <span class="define">as</span> plt
+							</code>
+						</div>
+
+						<!-- Question 1 -->
+						<h4 class="heading-4">Question&nbsp;1</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex7_q1"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								df_2018 = pd.<span class="function">read_csv</span>(<span class="string">"fr-esr-parcoursup_2018.csv"</span>, sep=<span class="string">";"</span>)<br>
+								df_2019 = pd.<span class="function">read_csv</span>(<span class="string">"fr-esr-parcoursup_2019.csv"</span>, sep=<span class="string">";"</span>)<br>
+								df_2020 = pd.<span class="function">read_csv</span>(<span class="string">"fr-esr-parcoursup_2020.csv"</span>, sep=<span class="string">";"</span>)<br>
+								df_2021 = pd.<span class="function">read_csv</span>(<span class="string">"fr-esr-parcoursup_2021.csv"</span>, sep=<span class="string">";"</span>)<br>
+								dfs = {<br>
+									<span class="tab"></span><span class="string">"2018"</span>: df_2018,<br>
+									<span class="tab"></span><span class="string">"2019"</span>: df_2019,<br>
+									<span class="tab"></span><span class="string">"2020"</span>: df_2020,<br>
+									<span class="tab"></span><span class="string">"2021"</span>: df_2021<br>
+								}
+							</code>
+						</div>
+
+						<!-- Question 2 -->
+						<h4 class="heading-4">Question&nbsp;2</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex7_q2"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="loop">for</span> key <span class="define">in</span> dfs.<span class="function">keys</span>():<br>
+								<span class="tab"></span><span class="function"></span>df = dfs[key]<br>
+								<span class="tab"></span><span class="function"></span>dfs[key] = df[df[<span class="string">"Établissement"</span>] == <span class="string">"I.U.T. d'Illkirch"</span>]
+							</code>
+						</div>
+
+						<!-- Question 3 -->
+						<h4 class="heading-4">Question&nbsp;3</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex7_q3"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								formations = [<span class="string">"Chimie"</span>, <span class="string">"Informatique"</span>, <span class="string">"Techniques de commercialisation"</span>]<br>
+								<span class="loop">for</span> key <span class="define">in</span> dfs.<span class="function">keys</span>():<br>
+									<span class="tab"></span>df = dfs[key]<br>
+									<span class="tab"></span>dfs[key] = df[df[<span class="string">"Filière de formation détaillée"</span>].str.<span class="function">match</span>(<span class="string">".*Chimie.*|.*Informatique.*|.*Techniques de commercialisation.*"</span>)]
+							</code>
+						</div>
+
+						<!-- Question 4 -->
+						<h4 class="heading-4">Question&nbsp;4</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex7_q4"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								colonnes =  [<span class="string">"Session"</span>, <span class="string">"Filière de formation détaillée"</span>, <span class="string">"% d’admis néo bacheliers technologiques"</span>]<br>
+								<span class="loop">for</span> key <span class="define">in</span> dfs.<span class="function">keys</span>():<br>
+									<span class="tab"></span>df = dfs[key]<br>
+									<span class="tab"></span>dfs[key] = df[colonnes]
+							</code>
+						</div>
+
+						<!-- Question 5 -->
+						<h4 class="heading-4">Question&nbsp;5</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex7_q5"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								df = pd.<span class="function">concat</span>([dfs[i] <span class="loop">for</span> i <span class="define">in</span> dfs.<span class="function">keys</span>()])<br>
+								chimie = df[df[<span class="string">"Filière de formation détaillée"</span>].str.<span class="function">match</span>(<span class="string">".*Chimie.*"</span>)]<br>
+								info = df[df[<span class="string">"Filière de formation détaillée"</span>].str.<span class="function">match</span>(<span class="string">".*Informatique.*"</span>)]<br>
+								techdeco = df[df[<span class="string">"Filière de formation détaillée"</span>].str.<span class="function">match</span>(<span class="string">".*Techniques de commercialisation.*"</span>)]<br>
+								<br>
+								fig, ax = plt.<span class="function">subplots</span>()<br>
+								ax.plot(chimie[<span class="string">"Session"</span>], chimie[<span class="string">"% d’admis néo bacheliers technologiques"</span>], <span class="string">'r-'</span>, label=<span class="string">"Chimie"</span>)<br>
+								ax.<span class="function">plot</span>(info[<span class="string">"Session"</span>], info[<span class="string">"% d’admis néo bacheliers technologiques"</span>], <span class="string">'b-'</span>, label=<span class="string">"Informatique"</span>)<br>
+								ax.<span class="function">plot</span>(techdeco[<span class="string">"Session"</span>], techdeco[<span class="string">"% d’admis néo bacheliers technologiques"</span>], <span class="string">'g-'</span>, label=<span class="string">"Tech. de co."</span>)<br>
+								ax.<span class="function">set_xlim</span>(<span class="number">2017</span>, <span class="number">2022</span>)<br>
+								ax.<span class="function">set_ylim</span>(<span class="number">0</span>, <span class="number">100</span>)<br>
+								plt.<span class="function">title</span>(<span class="string">"Évolution du pourcentage de bacheliers technologiques à l'IUTRS (2018-2021)"</span>)<br>
+								plt.<span class="function">xlabel</span>(<span class="string">"Année"</span>)<br>
+								plt.<span class="function">ylabel</span>(<span class="string">"% de bachelier technologiques"</span>)<br>
+								plt.<span class="function">legend</span>()<br>
+								plt.<span class="function">tight_layout</span>()<br>
+								plt.<span class="function">show</span>()
+							</code>
+						</div>
+
 				</section>
 
 			</main>

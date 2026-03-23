@@ -50,5 +50,10 @@
 	"m22_2025_tp2_ex6_q4": "Create an <b>x<\/b> Numpy array containing the values from 0 to N with N the length of <b>TX<\/b> and <b>TN<\/b>.",
 	"m22_2025_tp2_ex6_q5": "Visualize <b>graphically<\/b> the values of <b>y_max<\/b> and <b>y_min<\/b> with respect to <b>x<\/b>.",
 	"m22_2025_tp2_ex6_q6": "Use NumPy (<b>polyfit<\/b> and <b>polyval<\/b>) to calculate the tendancies of both series <b>y_max<\/b> and <b>y_min<\/b>.",
-	"m22_2025_tp2_ex6_q7": "Visualize <b>graphically<\/b> the values and tendancies of both series."
+	"m22_2025_tp2_ex6_q7": "Visualize <b>graphically<\/b> the values and tendancies of both series.",
+	"m22_2025_tp2_ex7_q1": "Create a <b>df_201x<\/b> dataframe for each studied year from the downloaded files.",
+	"m22_2025_tp2_ex7_q2": "Modify <b>df<\/b> to only keep the lines corresponding to the <b>IUT Robert Schuman<\/b>.",
+	"m22_2025_tp2_ex7_q3": "Modify <b>df<\/b> to only keep the lines corresponding the the following formations :<br><ul class=\"list\"><li class=\"list\">a. Chimie<\/li><li class=\"list\">b. Informatique<\/li><li class=\"list\">c. Techniques de commercialisation<\/li><\/b><\/ul>",
+	"m22_2025_tp2_ex7_q4": "Modify <b>df<\/b> to only keep the following columns :<br><ul class=\"list\"><li class=\"list\">a. the session year<\/li><li class=\"list\">b. the formation name<\/li><li class=\"list\">c. the percentage of <i>bac techno<\/i><\/li><\/b><\/ul>",
+	"m22_2025_tp2_ex7_q5": "Display <b>graphically<\/b> the evolution of the admission rate of students recruited from <i>bac techno<\/i>."
 }
