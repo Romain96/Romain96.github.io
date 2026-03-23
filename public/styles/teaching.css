@@ -166,6 +166,12 @@ details summary {
 .p21_svg_viewer {
 	display: flex;
 	flex-direction: column;
+	max-width: 100%;
+}
+
+.p21_svg_viewer img
+{
+	max-width: 100%;
 }
 
 .p21_svg_buttons {
