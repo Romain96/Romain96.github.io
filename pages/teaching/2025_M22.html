@@ -680,6 +680,105 @@
 
 				</section>
 
+				<!-- TD/TP 2 -->
+				<section class="section">
+
+					<h2 class="heading-2" data-i18n="m22_2025_tp2_title"></h2>
+
+					<!-- Exercice 5 -->
+					<article class="article">
+
+						<h3 class="heading-3" data-i18n="m22_2025_tp2_ex5_title"></h3>
+
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="define">import</span> numpy <span class="define">as</span> np<br>
+								<span class="define">import</span> pandas <span class="define">as</span> pd<br>
+								<span class="define">import</span> matplotlib.pyplot <span class="define">as</span> plt
+							</code>
+						</div>
+
+						<!-- Question 1 -->
+						<h4 class="heading-4">Question&nbsp;1</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q1"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								df = pd.<span class="function">read_csv</span>(<span class="string">"fr-esr-parcoursup_2021.csv"</span>, sep=<span class="string">";"</span>)
+							</code>
+						</div>
+
+						<!-- Question 2 -->
+						<h4 class="heading-4">Question&nbsp;2</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q2"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								columns = []<br>
+								<span class="comment"># code UAI de l’établissement</span><br>
+								columns.<span class="function">append</span>(<span class="string">"Code UAI de l'établissement"</span>)<br>
+								<span class="comment"># intitulé de la formation</span><br>
+								columns.<span class="function">append</span>(<span class="string">"Filière de formation détaillée"</span>)<br>
+								<span class="comment"># taux d’admissions</span><br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis ayant reçu leur proposition d’admission à l'ouverture de la procédure principale"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis ayant reçu leur proposition d’admission avant le baccalauréat"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis ayant reçu leur proposition d’admission avant la fin de la procédure principale"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis dont filles"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers issus de la même académie"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers issus de la même académie (Paris/Créteil/Versailles réunies)"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers issus du même établissement (BTS/CPGE)"</span>)<br>
+								columns.<span class="function">append</span>("<span class="string">% d’admis néo bacheliers boursiers"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers sans information sur la mention au bac"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers sans mention au bac"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Assez Bien au bac"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Bien au bac"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Très Bien au bac"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Très Bien avec félicitations au bac"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers généraux"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers technologiques"</span>)<br>
+								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers professionnels"</span>)<br>
+								df = df[columns]<br>
+								<span class="function">print</span>(df)
+							</code>
+						</div>
+
+						<!-- Question 3 -->
+						<h4 class="heading-4">Question&nbsp;3</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q3"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								df = df[df[<span class="string">"Code UAI de l'établissement"</span>] == <span class="string">"0671557D"</span>]<br>
+								<span class="function">print</span>(df)<br>
+								print(df[<span class="string">"Filière de formation détaillée"</span>])
+							</code>
+						</div>
+
+						<!-- Question 4 -->
+						<h4 class="heading-4">Question&nbsp;4</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q4"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								df[<span class="string">"formation"</span>] = df[<span class="string">"Filière de formation détaillée"</span>].<span class="function">map</span>(<span class="define">lambda</span> x : x[:<span class="number">31</span>])<br>
+								<span class="function">print</span>(df[[<span class="string">"formation"</span>]])
+							</code>
+						</div>
+
+						<!-- Question 1 -->
+						<h4 class="heading-4">Question&nbsp;5</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q5"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								ax = df.plot.<span class="function">bar</span>(title=<span class="string">"Taux d'admission pour l'IUT Robert Schuman"</span>)<br>
+								plt.<span class="function">legend</span>(bbox_to_anchor=(<span class="number">1.04</span>, <span class="number">1</span>), loc=<span class="string">"upper left"</span>)<br>
+								plt.<span class="function">subplots_adjust</span>(right=<span class="number">0.7</span>)<br>
+								plt.<span class="function">tight_layout</span>(rect=[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0.75</span>, <span class="number">1</span>])<br>
+								plt.<span class="function">show</span>()
+							</code>
+						</div>
+
+					</article>
+
+				</section>
+
 			</main>
 
 			<footer class="footer">

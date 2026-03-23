@@ -34,5 +34,14 @@
 	"m22_2025_tp1_ex4_q5": "Ajouter les lignes de <b>df2<\/b> à <b>df<\/b>.",
 	"m22_2025_tp1_ex4_q6": "Ajouter une colonne à <b>df<\/b> que l’on nommera <b>somme<\/b> qui est la somme des deux premières colonnes.",
 	"m22_2025_tp1_ex4_q7": "Sélectionner le sous dataframe de <b>df<\/b> qui ne contient que les valeurs supérieures à 5 dans la colonne <b>unif<\/b>.",
-	"m22_2025_tp1_ex4_q8": "Sélectionner le sous dataframe de <b>df<\/b> qui ne contient que les colonnes <b>norm<\/b> et <b>somme<\/b>."
+	"m22_2025_tp1_ex4_q8": "Sélectionner le sous dataframe de <b>df<\/b> qui ne contient que les colonnes <b>norm<\/b> et <b>somme<\/b>.",
+	"m22_2025_tp2_title": "💻 TP 2 : Analyse de données",
+	"m22_2025_tp2_ex5_title": "Exercice 5 : Parcoursup",
+	"m22_2025_tp2_ex6_title": "Exercice 6 : Température et changement climatique",
+	"m22_2025_tp2_ex7_title": "Exercice 7 : Parcoursup++",
+	"m22_2025_tp2_ex5_q1": "Charger les données dans un dataframe <b>df<\/b>.",
+	"m22_2025_tp2_ex5_q2": "Modifier <b>df<\/b> afin de garder les colonnes suivantes :<br><ul class=\"list\"><li class=\"item\">a. le code UAI de l’établissement<\/li><li class=\"item\">b. l’intitulé de la formation<\/li><li class=\"item\">c. les taux d’admissions<\/li><\/ul>",
+	"m22_2025_tp2_ex5_q3": "Modifier <b>df<\/b> afin de garder les lignes correspondant à l’<b>IUT Robert Schuman<\/b>.",
+	"m22_2025_tp2_ex5_q4": "Créer une nouvelle colonne <b>formation<\/b> qui contiendra les 32 premiers caractères de l'intitulé de la formation.",
+	"m22_2025_tp2_ex5_q5": "Afficher un graphique à barres représentant les différents taux d’admission pour chaque formation."
 }

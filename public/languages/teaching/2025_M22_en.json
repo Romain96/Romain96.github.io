@@ -34,5 +34,14 @@
 	"m22_2025_tp1_ex4_q5": "Add the lines of <b>df2<\/b> to <b>df<\/b>.",
 	"m22_2025_tp1_ex4_q6": "Add a new <b>somme<\/b> column to <b>df<\/b> as the sum of both <b>norm<\/b> and <b>unif<\/b> columns.",
 	"m22_2025_tp1_ex4_q7": "Select the subdataframe of <b>df<\/b> which only contains the rows having values superior to 5 in the <b>unif<\/b> column.",
-	"m22_2025_tp1_ex4_q8": "Select the sub dataframe of <b>df<\/b> which only contains the <b>norm<\/b> and <b>somme<\/b> columns."
+	"m22_2025_tp1_ex4_q8": "Select the sub dataframe of <b>df<\/b> which only contains the <b>norm<\/b> and <b>somme<\/b> columns.",
+	"m22_2025_tp2_title": "💻 TP 2 : Data analysis",
+	"m22_2025_tp2_ex5_title": "Exercise 5 : Parcoursup",
+	"m22_2025_tp2_ex6_title": "Exercise 6 : Température and climate change",
+	"m22_2025_tp2_ex7_title": "Exercise 7 : Parcoursup++",
+	"m22_2025_tp2_ex5_q1": "Load the data into a <b>df<\/b> dataframe.",
+	"m22_2025_tp2_ex5_q2": "Modify <b>df<\/b> to only keep the following colums :<br><ul class=\"list\"><li class=\"item\">a. UAI code of the establishment<\/li><li class=\"item\">b. the formation name<\/li><li class=\"item\">c. the admission rates<\/li><\/ul>",
+	"m22_2025_tp2_ex5_q3": "Modify <b>df<\/b> to only keep the lines corresponding to the <b>IUT Robert Schuman<\/b>.",
+	"m22_2025_tp2_ex5_q4": "Create a new column <b>formation<\/b> which contains the first 32 characters of the formation name.",
+	"m22_2025_tp2_ex5_q5": "Plot the admission rates for each formation using a bar diagram."
 }
