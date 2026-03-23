@@ -55,5 +55,7 @@
 	"m22_2025_tp2_ex7_q2": "Modifier <b>df<\/b> afin de garder les lignes correspondant à l’<b>IUT Robert Schuman<\/b>.",
 	"m22_2025_tp2_ex7_q3": "Modifier <b>df<\/b> afin de garder les lignes correspondant aux formations suivantes :<br><ul class=\"list\"><li class=\"list\">a. Chimie<\/li><li class=\"list\">b. Informatique<\/li><li class=\"list\">c. Techniques de commercialisation<\/li><\/b><\/ul>",
 	"m22_2025_tp2_ex7_q4": "Modifier <b>df<\/b> pour garder les colonnes suivantes :<br><ul class=\"list\"><li class=\"list\">a. l’année de la session<\/li><li class=\"list\">b. l’intitulé de la formation<\/li><li class=\"list\">c. le pourcentage de bac techno<\/li><\/b><\/ul>",
-	"m22_2025_tp2_ex7_q5": "Afficher sous forme de <b>graphique<\/b> l’évolution du taux d'admission des étudiants provenant de bacs technologiques."
+	"m22_2025_tp2_ex7_q5": "Afficher sous forme de <b>graphique<\/b> l’évolution du taux d'admission des étudiants provenant de bacs technologiques.",
+	"m22_2025_tp1_ressources": "Les codes Python des exercices 1-4 du TP1 sont disponibles en téléchargeant l'archive suivante : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/M22\/2025_M22_TP1_codes.zip\">2025_M22_TP1_codes.zip<\/a>.",
+	"m22_2025_tp2_ressources": "Les codes Python des exercices 5-7 du TP2 sont disponibles en téléchargeant l'archive suivante : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/M22\/2025_M22_TP2_codes.zip\">2025_M22_TP2_codes.zip<\/a>.<br><b>Attention, les différents fichiers CSV sont nécessaires mais non inclus !<\/b>"
 }
