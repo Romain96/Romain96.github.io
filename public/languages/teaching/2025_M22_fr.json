@@ -43,5 +43,12 @@
 	"m22_2025_tp2_ex5_q2": "Modifier <b>df<\/b> afin de garder les colonnes suivantes :<br><ul class=\"list\"><li class=\"item\">a. le code UAI de l’établissement<\/li><li class=\"item\">b. l’intitulé de la formation<\/li><li class=\"item\">c. les taux d’admissions<\/li><\/ul>",
 	"m22_2025_tp2_ex5_q3": "Modifier <b>df<\/b> afin de garder les lignes correspondant à l’<b>IUT Robert Schuman<\/b>.",
 	"m22_2025_tp2_ex5_q4": "Créer une nouvelle colonne <b>formation<\/b> qui contiendra les 32 premiers caractères de l'intitulé de la formation.",
-	"m22_2025_tp2_ex5_q5": "Afficher un graphique à barres représentant les différents taux d’admission pour chaque formation."
+	"m22_2025_tp2_ex5_q5": "Afficher un graphique à barres représentant les différents taux d’admission pour chaque formation.",
+	"m22_2025_tp2_ex6_q1": "Importer les données dans un dataframe pandas appelé <b>df<\/b> et le modifier afin de garder les lignes correspondantes à la station de <b>Strasbourg Entzheim<\/b>.",
+	"m22_2025_tp2_ex6_q2": "Créer un tableau NumPy <b>y_max<\/b> contenant les valeurs de la colonne <b>TX<\/b>.",
+	"m22_2025_tp2_ex6_q3": "Créer un tableau NumPy <b>y_min<\/b> contenant les valeurs de la colonne <b>TN<\/b>.",
+	"m22_2025_tp2_ex6_q4": "Créer un tableau Numpy <b>x<\/b> contenant les valeurs de 0 à N avec N la longueur de <b>TX<\/b> et <b>TN<\/b>.",
+	"m22_2025_tp2_ex6_q5": "Visualiser <b>graphiquement<\/b> les valeurs de <b>y_max<\/b> et <b>y_min<\/b> en fonction de <b>x<\/b>.",
+	"m22_2025_tp2_ex6_q6": "Utiliser NumPy (<b>polyfit<\/b> et <b>polyval<\/b>) pour calculer les tendances des séries <b>y_max<\/b> et <b>y_min<\/b>.",
+	"m22_2025_tp2_ex6_q7": "Visualiser <b>graphiquement<\/b> les valeurs et tendances des séries."
 }

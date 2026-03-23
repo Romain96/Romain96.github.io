@@ -777,6 +777,104 @@
 
 					</article>
 
+					<!-- Exercice 6 -->
+					<article class="article">
+
+						<h3 class="heading-3" data-i18n="m22_2025_tp2_ex6_title"></h3>
+
+						<div class="codeblock">
+							<code class="language-c">
+								<span class="define">import</span> numpy <span class="define">as</span> np<br>
+								<span class="define">import</span> pandas <span class="define">as</span> pd<br>
+								<span class="define">import</span> matplotlib.pyplot <span class="define">as</span> plt
+							</code>
+						</div>
+
+						<!-- Question 1 -->
+						<h4 class="heading-4">Question&nbsp;1</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q1"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								df = pd.<span class="function">read_csv</span>(<span class="string">"DECADAGRO_67_previous-1950-2024.csv"</span>, sep=<span class="string">";"</span>)<br>
+								<span class="function">print</span>(df)<br>
+								df = df[df[<span class="string">"NOM_USUEL"</span>] == <span class="string">"STRASBOURG-ENTZHEIM"</span>]<br>
+								<span class="function">print</span>(df)
+							</code>
+						</div>
+
+						<!-- Question 2 -->
+						<h4 class="heading-4">Question&nbsp;2</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q2"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								y_max = df[<span class="string">"TX"</span>].<span class="function">to_numpy</span>()<br>
+								<span class="function">print</span>(y_max)
+							</code>
+						</div>
+
+						<!-- Question 3 -->
+						<h4 class="heading-4">Question&nbsp;3</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q3"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								y_min = df[<span class="string">"TN"</span>].<span class="function">to_numpy</span>()<br>
+								<span class="function">print</span>(y_min)
+							</code>
+						</div>
+
+						<!-- Question 4 -->
+						<h4 class="heading-4">Question&nbsp;4</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q4"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								x = np.<span class="function">arange</span>(<span class="number">0</span>, y_max.shape[<span class="number">0</span>], <span class="number">1</span>)<br>
+								<span class="function">print</span>(x)
+							</code>
+						</div>
+
+						<!-- Question 5 -->
+						<h4 class="heading-4">Question&nbsp;5</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q5"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								fig, ax = plt.<span class="function">subplots</span>()<br>
+								ax.<span class="function">plot</span>(x, y_max, <span class="string">'r'</span>, label=<span class="string">"y_max"</span>)<br>
+								ax.<span class="function">plot</span>(x, y_min, <span class="string">'b'</span>, label=<span class="string">"y_min"</span>)<br>
+								ax.<span class="function">legend</span>()<br>
+								ax.<span class="function">set_title</span>(<span class="string">"Température de la station de Strasbourg-Entzheim (1950-2024)"</span>)<br>
+								ax.<span class="function">set_xlabel</span>(<span class="string">"Points de mesure"</span>)<br>
+								ax.<span class="function">set_ylabel</span>(<span class="string">"Température (°c)"</span>)<br>
+								plt.<span class="function">show</span>()
+							</code>
+						</div>
+
+						<!-- Question 6 -->
+						<h4 class="heading-4">Question&nbsp;6</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q6"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								p_min = np.<span class="function">polyfit</span>(x, y_min, <span class="number">10</span>)<br>
+								p_max = np.<span class="function">polyfit</span>(x, y_max, <span class="number">10</span>)<br>
+								fit_p_min = np.<span class="function">poly1d</span>(p_min)<br>
+								fit_p_max = np.<span class="function">poly1d</span>(p_max)
+							</code>
+						</div>
+
+						<!-- Question 7 -->
+						<h4 class="heading-4">Question&nbsp;7</h4>
+						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q7"></p>
+						<div class="codeblock">
+							<code class="language-c">
+								fig, ax = plt.<span class="function">subplots</span>()<br>
+								ax.<span class="function">plot</span>(x, fit_p_max(x), <span class="string">'r'</span>)<br>
+								ax.<span class="function">plot</span>(x, fit_p_min(x), <span class="string">'b'</span>)<br>
+								ax.<span class="function">set_title</span>(<span class="string">"Extimation des tendances des température de la station de Strasbourg-Entzheim (1950-2024)"</span>)<br>
+								ax.<span class="function">set_xlabel</span>(<span class="string">"Points de mesure"</span>)<br>
+								ax.<span class="function">set_ylabel</span>(<span class="string">"Tendance de température (°c)"</span>)<br>
+								plt.<span class="function">show</span>()
+							</code>
+						</div>
+
 				</section>
 
 			</main>
