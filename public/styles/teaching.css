@@ -209,6 +209,9 @@ code .tab {
 	margin-left: 4em;
 }
 
+/*
+ * For C/C++ code, manual syntax coloring
+ */
 .language-c {
 	font-family: "Lucida Console", Courier, monospace;
 	font-size: 1em;
@@ -252,6 +255,42 @@ code .tab {
 
 .language-c .proc {
 	color: #f56e6e;
+}
+
+/*
+ * For Python code, manual syntax coloring
+ */
+.language-python {
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 1em;
+}
+
+.language-python .comment {
+	color: #54994c;
+}
+
+.language-python .method {
+	color: #dcdcaa;
+}
+
+.language-python .class {
+	color: #2ea9b0;
+}
+
+.language-python .attribute {
+	color: #9ccdc4;
+}
+
+.language-python .string {
+	color: #ce834d;
+}
+
+.language-python .number {
+	color: #a7ce9b;
+}
+
+.language-python .keyword {
+	color: #c586c0;
 }
 
 .details {

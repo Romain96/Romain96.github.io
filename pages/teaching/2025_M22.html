@@ -56,7 +56,7 @@
 
 						<div class="codeblock">
 							<code class="language-c">
-								<span class="define">import</span> numpy <span class="define">as</span> np
+								<span class="define">import</span> <span class="class">numpy</span> <span class="define">as</span> <span class="class">np</span>
 							</code>
 						</div>
 
@@ -64,12 +64,12 @@
 						<h4 class="heading-4">Question&nbsp;1</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex1_q1"></p>
 						<div class="codeblock">
-							<code class="language-c">
+							<code class="language-python">
 								a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>]<br>
 								b = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">10</span>, <span class="number">13</span>, <span class="number">16</span>, <span class="number">19</span>, <span class="number">22</span>, <span class="number">25</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">34</span>, <span class="number">37</span>, <span class="number">40</span>, <span class="number">43</span>]<br>
 								d = [<span class="string">"quatre"</span>, <span class="string">"chaînes"</span>, <span class="string">"de"</span>, <span class="string">"caractères"</span>]<br>
-								<span class="function">print</span>(<span class="string">"a : "</span>, a, <span class="string">"type(a) : "</span>, <span class="function">type</span>(a))<br>
-								<span class="function">print</span>(<span class="string">"b : "</span>, b, <span class="string">"type(b) : "</span>, <span class="function">type</span>(b))
+								<span class="method">print</span>(<span class="string">"a : "</span>, a, <span class="string">"type(a) : "</span>, <span class="method">type</span>(a))<br>
+								<span class="method">print</span>(<span class="string">"b : "</span>, b, <span class="string">"type(b) : "</span>, <span class="method">type</span>(b))
 							</code>
 						</div>
 
@@ -77,11 +77,11 @@
 						<h4 class="heading-4">Question&nbsp;2</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex1_q2"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								a = np.<span class="function">array</span>(a, np.<span class="type">int32</span>)<br>
-								b = np.<span class="function">array</span>(b, np.<span class="type">int32</span>)<br>
-								<span class="function">print</span>(<span class="string">"a : "</span>, a, <span class="string">"type(a) : "</span>, <span class="function">type</span>(a))<br>
-								<span class="function">print</span>(<span class="string">"b : "</span>, b, <span class="string">"type(b) : "</span>, <span class="function">type</span>(b))
+							<code class="language-python">
+								a = <span class="class">np</span>.<span class="method">array</span>(a, <span class="class">np</span>.<span class="attribute">int32</span>)<br>
+								b = <span class="class">np</span>.<span class="method">array</span>(b, <span class="class">np</span>.<span class="attribute">int32</span>)<br>
+								<span class="method">print</span>(<span class="string">"a : "</span>, a, <span class="string">"type(a) : "</span>, <span class="method">type</span>(a))<br>
+								<span class="method">print</span>(<span class="string">"b : "</span>, b, <span class="string">"type(b) : "</span>, <span class="method">type</span>(b))
 							</code>
 						</div>
 
@@ -89,11 +89,11 @@
 						<h4 class="heading-4">Question&nbsp;3</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex1_q3"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								np.<span class="function">add</span>(a, <span class="number">2</span>)<br>
-								<span class="function">print</span>(<span class="string">"a + 2 : "</span>, a)<br>
-								np.<span class="function">multiply</span>(a, <span class="number">2</span>)<br>
-								<span class="function">print</span>(<span class="string">"a * 2 : "</span>, a)<br>
+							<code class="language-python">
+								<span class="class">np</span>.<span class="method">add</span>(a, <span class="number">2</span>)<br>
+								<span class="method">print</span>(<span class="string">"a + 2 : "</span>, a)<br>
+								<span class="class">np</span>.<span class="method">multiply</span>(a, <span class="number">2</span>)<br>
+								<span class="method">print</span>(<span class="string">"a * 2 : "</span>, a)<br>
 							</code>
 						</div>
 
@@ -101,11 +101,11 @@
 						<h4 class="heading-4">Question&nbsp;4</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex1_q4"></p>
 						<div class="codeblock">
-							<code class="language-c">
+							<code class="language-python">
 								aplusb = a + b<br>
-								<span class="function">print</span>(<span class="string">"a + b : "</span>, aplusb)<br>
+								<span class="method">print</span>(<span class="string">"a + b : "</span>, aplusb)<br>
 								aprodb = a * b<br>
-								<span class="function">print</span>(<span class="string">"a * b : "</span>, aprodb)<br>
+								<span class="method">print</span>(<span class="string">"a * b : "</span>, aprodb)<br>
 							</code>
 						</div>
 
@@ -113,25 +113,25 @@
 						<h4 class="heading-4">Question&nbsp;5</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex1_q5"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								moyenne = b.<span class="function">mean</span>()<br>
-								variance = b.<span class="function">var</span>()<br>
-								ecart_type = b.<span class="function">std</span>()<br>
-								mediane = np.<span class="function">median</span>(b)<br>
-								min = b.<span class="function">min</span>()<br>
-								max = b.<span class="function">max</span>()<br>
-								q1 = np.<span class="function">quantile</span>(b, <span class="number">0.25</span>)<br>
-								q2 = np.<span class="function">quantile</span>(b, <span class="number">0.50</span>)<br>
-								q3 = np.<span class="function">quantile</span>(b, <span class="number">0.75</span>)<br>
-								<span class="function">print</span>(<span class="string">"moyenne de b : "</span>, moyenne)<br>
-								<span class="function">print</span>(<span class="string">"variance de b : "</span>, variance)<br>
-								<span class="function">print</span>(<span class="string">"écart-type de b : "</span>, ecart_type)<br>
-								<span class="function">print</span>(<span class="string">"médiane de b : "</span>, mediane)<br>
-								<span class="function">print</span>(<span class="string">"minimum de b : "</span>, min)<br>
-								<span class="function">print</span>(<span class="string">"maximum de b : "</span>, max)<br>
-								<span class="function">print</span>(<span class="string">"permier quartile de b : "</span>, q1)<br>
-								<span class="function">print</span>(<span class="string">"second quartile de b : "</span>, q2)<br>
-								<span class="function">print</span>(<span class="string">"troisième quartile de b : "</span>, q3)
+							<code class="language-python">
+								moyenne = b.<span class="method">mean</span>()<br>
+								variance = b.<span class="method">var</span>()<br>
+								ecart_type = b.<span class="method">std</span>()<br>
+								mediane = <span class="class">np</span>.<span class="method">median</span>(b)<br>
+								min = b.<span class="method">min</span>()<br>
+								max = b.<span class="method">max</span>()<br>
+								q1 = <span class="class">np</span>.<span class="method">quantile</span>(b, <span class="number">0.25</span>)<br>
+								q2 = <span class="class">np</span>.<span class="method">quantile</span>(b, <span class="number">0.50</span>)<br>
+								q3 = <span class="class">np</span>.<span class="method">quantile</span>(b, <span class="number">0.75</span>)<br>
+								<span class="method">print</span>(<span class="string">"moyenne de b : "</span>, moyenne)<br>
+								<span class="method">print</span>(<span class="string">"variance de b : "</span>, variance)<br>
+								<span class="method">print</span>(<span class="string">"écart-type de b : "</span>, ecart_type)<br>
+								<span class="method">print</span>(<span class="string">"médiane de b : "</span>, mediane)<br>
+								<span class="method">print</span>(<span class="string">"minimum de b : "</span>, min)<br>
+								<span class="method">print</span>(<span class="string">"maximum de b : "</span>, max)<br>
+								<span class="method">print</span>(<span class="string">"permier quartile de b : "</span>, q1)<br>
+								<span class="method">print</span>(<span class="string">"second quartile de b : "</span>, q2)<br>
+								<span class="method">print</span>(<span class="string">"troisième quartile de b : "</span>, q3)
 							</code>
 						</div>
 
@@ -143,8 +143,9 @@
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex2_title"></h3>
 
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">import</span> numpy <span class="define">as</span> np
+							<code class="language-python">
+								<span class="keyword">import</span> <span class="class">numpy</span> <span class="keyword">as</span> <span class="class">np</span><br>
+								<span class="keyword">import</span> <span class="class">math</span>
 							</code>
 						</div>
 
@@ -179,15 +180,15 @@
 							</math>
 						</p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">def</span> <span class="function">moyenne</span>(series):<br>
-								<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">mean</span>()<br>
+							<code class="language-python">
+								<span class="keyword">def</span> <span class="method">moyenne</span>(series):<br>
+								<span class="tab"></span><span class="keyword">return</span> <span class="class">np</span>.<span class="method">array</span>(series).<span class="method">mean</span>()<br>
 								<br>
-								<span class="define">def</span> <span class="function">moyenne_perso</span>(series):<br>
+								<span class="keyword">def</span> <span class="method">moyenne_perso</span>(series):<br>
 								<span class="tab">sum = </span><span class="number">0</span><br>
-								<span class="tab"></span><span class="loop">for</span> i <span class="define">in</span> <span class="function">range</span>(<span class="number">0</span>, <span class="function">len</span>(series), <span class="number">1</span>):<br>
+								<span class="tab"></span><span class="keyword">for</span> i <span class="keyword">in</span> <span class="method">range</span>(<span class="number">0</span>, <span class="method">len</span>(series), <span class="number">1</span>):<br>
 								<span class="tab"></span><span class="tab"></span>sum += series[i]<br>
-								<span class="tab"></span><span class="return">return</span> sum / <span class="function">len</span>(series)
+								<span class="tab"></span><span class="keyword">return</span> sum / <span class="method">len</span>(series)
 							</code>
 						</div>
 
@@ -237,16 +238,16 @@
 							</math>
 						</p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">def</span> <span class="function">variance</span>(series):<br>
-								<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">var</span>()<br>
+							<code class="language-python">
+								<span class="keyword">def</span> <span class="method">variance</span>(series):<br>
+								<span class="tab"></span><span class="keyword">return</span> <span class="class">np</span>.<span class="method">array</span>(series).<span class="method">var</span>()<br>
 								<br>
-								<span class="define">def</span> <span class="function">variance_perso</span>(series):<br>
-								<span class="tab"></span>moy = <span class="function">moyenne_perso</span>(series)<br>
+								<span class="keyword">def</span> <span class="method">variance_perso</span>(series):<br>
+								<span class="tab"></span>moy = <span class="method">moyenne_perso</span>(series)<br>
 								<span class="tab"></span>sum = <span class="number">0</span><br>
-								<span class="tab"></span><span class="loop">for</span> i <span class="define">in</span> <span class="function">range</span>(<span class="number">0</span>, <span class="function">len</span>(series), <span class="number">1</span>):<br>
+								<span class="tab"></span><span class="keyword">for</span> i <span class="keyword">in</span> <span class="method">range</span>(<span class="number">0</span>, <span class="method">len</span>(series), <span class="number">1</span>):<br>
 								<span class="tab"></span><span class="tab"></span>sum += (series[i] - moy) * (series[i] - moy)<br>
-								<span class="tab"></span><span class="return">return</span> sum / <span class="function">len</span>(series)
+								<span class="tab"></span><span class="keyword">return</span> sum / <span class="method">len</span>(series)
 							</code>
 						</div>
 
@@ -306,13 +307,13 @@
 							</math>
 						</p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">def</span> <span class="function">ecart_type</span>(series):<br>
-								<span class="tab"></span><span class="return">return</span> np.<span class="function">array</span>(series).<span class="function">std</span>()<br>
+							<code class="language-python">
+								<span class="keyword">def</span> <span class="method">ecart_type</span>(series):<br>
+								<span class="tab"></span><span class="keyword">return</span> <span class="class">np</span>.<span class="method">array</span>(series).<span class="method">std</span>()<br>
 								<br>
-								<span class="define">def</span> <span class="function">ecart_type_perso</span>(series):<br>
-								<span class="tab"></span>s_var = <span class="function">variance_perso</span>(series)<br>
-								<span class="tab"></span><span class="return">return</span> math.<span class="function">sqrt</span>(s_var)
+								<span class="keyword">def</span> <span class="method">ecart_type_perso</span>(series):<br>
+								<span class="tab"></span>s_var = <span class="method">variance_perso</span>(series)<br>
+								<span class="tab"></span><span class="keyword">return</span> <span class="class">math</span>.<span class="method">sqrt</span>(s_var)
 							</code>
 						</div>
 
@@ -320,10 +321,10 @@
 						<h4 class="heading-4">Question&nbsp;4</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex2_q4"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">def</span> <span class="function">vals_norm</span>(moyenne, ecart_type, n):<br>
-								<span class="tab"></span>rng = np.random.<span class="function">default_rng</span>()<br>
-								<span class="tab"></span><span class="return">return</span> rng.<span class="function">normal</span>(loc = moyenne, scale = ecart_type, size = n)
+							<code class="language-python">
+								<span class="keyword">def</span> <span class="method">vals_norm</span>(moyenne, ecart_type, n):<br>
+								<span class="tab"></span>rng = <span class="class">np</span>.<span class="attribute">random</span>.<span class="method">default_rng</span>()<br>
+								<span class="tab"></span><span class="keyword">return</span> rng.<span class="method">normal</span>(loc = moyenne, scale = ecart_type, size = n)
 							</code>
 						</div>
 
@@ -331,10 +332,10 @@
 						<h4 class="heading-4">Question&nbsp;5</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex2_q5"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">def</span> <span class="function">vals_unif</span>(min_val, max_val, n):<br>
-								<span class="tab"></span>rng = np.random.<span class="function">default_rng</span>()<br>
-								<span class="tab"></span><span class="return">return</span> rng.<span class="function">uniform</span>(low = min_val, high = max_val, size = n)
+							<code class="language-python">
+								<span class="keyword">def</span> <span class="method">vals_unif</span>(min_val, max_val, n):<br>
+								<span class="tab"></span>rng = <span class="class">np</span>.<span class="attribute">random</span>.<span class="method">default_rng</span>()<br>
+								<span class="tab"></span><span class="keyword">return</span> rng.<span class="method">uniform</span>(low = min_val, high = max_val, size = n)
 							</code>
 						</div>
 
@@ -346,10 +347,10 @@
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex3_title"></h3>
 
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">import</span> numpy <span class="define">as</span> np<br>
-								<span class="define">import</span> matplotlib.pyplot <span class="define">as</span> plt<br>
-								<span class="define">from</span> exercice2 <span class="define">import</span> <span class="function">vals_norm</span>, <span class="function">vals_unif</span>
+							<code class="language-python">
+								<span class="keyword">import</span> <span class="class">numpy</span> <span class="keyword">as</span> <span class="class">np</span><br>
+								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="attribute">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span><br>
+								<span class="keyword">from</span> exercice2 <span class="keyword">import</span> <span class="method">vals_norm</span>, <span class="method">vals_unif</span>
 							</code>
 						</div>
 
@@ -357,16 +358,17 @@
 						<h4 class="heading-4">Question&nbsp;1</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex3_q1"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">def</span> <span class="function">visu_ab</span>():<br>
-								<span class="tab"></span>a = np.<span class="function">array</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>])<br>
-								<span class="tab"></span>b = np.<span class="function">array</span>([<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">10</span>, <span class="number">13</span>, <span class="number">16</span>, <span class="number">19</span>, <span class="number">22</span>, <span class="number">25</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">34</span>, <span class="number">37</span>, <span class="number">40</span>, <span class="number">43</span>])<br>
+							<code class="language-python">
+								<span class="keyword">def</span> <span class="method">visu_ab</span>():<br>
+								<span class="tab"></span>a = <span class="class">np</span>.<span class="method">array</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>])<br>
+								<span class="tab"></span>b = <span class="class">np</span>.<span class="method">array</span>([<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">10</span>, <span class="number">13</span>, <span class="number">16</span>, <span class="number">19</span>, <span class="number">22</span>, <span class="number">25</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">34</span>, <span class="number">37</span>, <span class="number">40</span>, <span class="number">43</span>])<br>
 								<br>
-								<span class="tab"></span>fig, ax = plt.<span class="function">subplots</span>()<br>
-								<span class="tab"></span>x = np.<span class="function">arange</span>(<span class="number">1</span>, a.shape[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
-								<span class="tab"></span>ax.<span class="function">plot</span>(x, a, <span class="string">'ro'</span>)<br>
-								<span class="tab"></span>ax.<span class="function">plot</span>(x, b, <span class="string">'bo'</span>)<br>
-								<span class="tab"></span>plt.<span class="function">show</span>()
+								<span class="tab"></span>fig, ax = <span class="class">plt</span>.<span class="method">subplots</span>()<br>
+								<span class="tab"></span>x = <span class="class">np</span>.<span class="method">arange</span>(<span class="number">1</span>, a.<span class="attribute">shape</span>[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
+								<span class="tab"></span>ax.<span class="method">plot</span>(x, a, color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">"o"</span>, label=<span class="string">"a"</span>)<br>
+								<span class="tab"></span>ax.<span class="method">plot</span>(x, b, color=<span class="string">"blue"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">"o"</span>, label=<span class="string">"b"</span>)<br>
+								<span class="tab"></span><span class="class">plt</span>.<span class="method">legend</span>()<br>
+								<span class="tab"></span><span class="class">plt</span>.<span class="method">show</span>()
 							</code>
 						</div>
 
@@ -374,11 +376,11 @@
 						<h4 class="heading-4">Question&nbsp;2</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex3_q2"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">def</span> <span class="function">creer_tableaux</span>():<br>
-								<span class="tab"></span>norm = np.<span class="function">sort</span>(<span class="function">vals_norm</span>(<span class="number">10</span>, <span class="number">2</span>, <span class="number">15</span>))<br>
-								<span class="tab"></span>unif = np.<span class="function">sort</span>(<span class="function">vals_unif</span>(<span class="number">0</span>, <span class="number">20</span>, <span class="number">15</span>))<br>
-								<span class="tab"></span><span class="return">return</span> (norm, unif)
+							<code class="language-python">
+								<span class="keyword">def</span> <span class="method">creer_tableaux</span>():<br>
+								<span class="tab"></span>norm = <span class="class">np</span>.<span class="method">sort</span>(<span class="method">vals_norm</span>(<span class="number">10</span>, <span class="number">2</span>, <span class="number">15</span>))<br>
+								<span class="tab"></span>unif = <span class="class">np</span>.<span class="method">sort</span>(<span class="method">vals_unif</span>(<span class="number">0</span>, <span class="number">20</span>, <span class="number">15</span>))<br>
+								<span class="tab"></span><span class="keyword">return</span> (norm, unif)
 							</code>
 						</div>
 
@@ -386,14 +388,15 @@
 						<h4 class="heading-4">Question&nbsp;3</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex3_q3"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">def</span> <span class="function">visu_tableaux</span>(a, b):<br>
-								<span class="tab"></span>fig, ax = plt.<span class="function">subplots</span>()<br>
-								<span class="tab"></span>xa = np.<span class="function">arange</span>(<span class="number">1</span>, a.shape[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
-								<span class="tab"></span>xb = np.<span class="function">arange</span>(<span class="number">1</span>, b.shape[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
-								<span class="tab"></span>ax.<span class="function">plot</span>(xa, a, <span class="string">'ro'</span>)<br>
-								<span class="tab"></span>ax.<span class="function">plot</span>(xb, b, <span class="string">'bo'</span>)<br>
-								<span class="tab"></span>plt.<span class="function">show</span>()
+							<code class="language-python">
+								<span class="keyword">def</span> <span class="method">visu_tableaux</span>(a, b):<br>
+								<span class="tab"></span>fig, ax = <span class="class">plt</span>.<span class="method">subplots</span>()<br>
+								<span class="tab"></span>xa = <span class="class">np</span>.<span class="method">arange</span>(<span class="number">1</span>, a.<span class="attribute">shape</span>[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
+								<span class="tab"></span>xb = <span class="class">np</span>.<span class="method">arange</span>(<span class="number">1</span>, b.<span class="attribute">shape</span>[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
+								<span class="tab"></span>ax.<span class="method">plot</span>(xa, a, color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">"o"</span>, label=<span class="string">"a"</span>)<br>
+								<span class="tab"></span>ax.<span class="method">plot</span>(xb, b, color=<span class="string">"blue"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">"o"</span>, label=<span class="string">"b"</span>)<br>
+								<span class="tab"></span><span class="class">plt</span>.<span class="method">legend</span>()<br>
+								<span class="tab"></span><span class="class">plt</span>.<span class="method">show</span>()
 							</code>
 						</div>
 
@@ -405,11 +408,11 @@
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex4_title"></h3>
 
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">import</span> numpy <span class="define">as</span> np<br>
-								<span class="define">import</span> pandas <span class="define">as</span> pd<br>
-								<span class="define">import</span> matplotlib.pyplot <span class="define">as</span> plt<br>
-								<span class="define">from</span> exercice2 <span class="define">import</span> <span class="function">vals_norm</span>, <span class="function">vals_unif</span>, <span class="function">ecart_type_perso</span>
+							<code class="language-python">
+								<span class="keyword">import</span> <span class="class">numpy</span> <span class="keyword">as</span> <span class="class">np</span><br>
+								<span class="keyword">import</span> <span class="class">pandas</span> <span class="keyword">as</span> <span class="class">pd</span><br>
+								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="attribute">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span><br>
+								<span class="keyword">from</span> exercice2 <span class="keyword">import</span> <span class="method">vals_norm</span>, <span class="method">vals_unif</span>, <span class="method">ecart_type_perso</span>
 							</code>
 						</div>
 
@@ -417,12 +420,12 @@
 						<h4 class="heading-4">Question&nbsp;1</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex4_q1"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								norm = np.<span class="function">sort</span>(<span class="function">vals_norm</span>(<span class="number">10</span>, <span class="number">2</span>, <span class="number">15</span>))<br>
-								unif = np.<span class="function">sort</span>(<span class="function">vals_unif</span>(<span class="number">0</span>, <span class="number">20</span>, <span class="number">15</span>))<br>
-								df = pd.<span class="function">DataFrame</span>(data = {<span class="string">"norm"</span>: norm, <span class="string">"unif"</span>: unif})<br>
-								<span class="function">print</span>(<span class="string">"df = "</span>, df)<br>
-								<span class="function">print</span>(df.<span class="function">describe</span>())
+							<code class="language-python">
+								norm = <span class="class">np</span>.<span class="method">sort</span>(<span class="method">vals_norm</span>(<span class="number">10</span>, <span class="number">2</span>, <span class="number">15</span>))<br>
+								unif = <span class="class">np</span>.<span class="method">sort</span>(<span class="method">vals_unif</span>(<span class="number">0</span>, <span class="number">20</span>, <span class="number">15</span>))<br>
+								df = <span class="class">pd</span>.<span class="method">DataFrame</span>(data = {<span class="string">"norm"</span>: norm, <span class="string">"unif"</span>: unif})<br>
+								<span class="method">print</span>(<span class="string">"df = "</span>, df)<br>
+								<span class="method">print</span>(df.<span class="method">describe</span>())
 							</code>
 						</div>
 
@@ -430,14 +433,14 @@
 						<h4 class="heading-4">Question&nbsp;2.a</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex4_q2a"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								ecart_type_pd = df[<span class="string">"norm"</span>].<span class="function">std</span>()<br>
-								ecart_type_np = df[<span class="string">"norm"</span>].<span class="function">to_numpy</span>().<span class="function">std</span>()<br>
-								ecart_type_p = <span class="function">ecart_type_perso</span>(df[<span class="string">"norm"</span>].<span class="function">to_numpy</span>())<br>
-								<span class="function">print</span>(<span class="string">"calcul de l'écart-type de norm :"</span>)<br>
-								<span class="function">print</span>(<span class="string">"avec pandas : "</span>, ecart_type_pd)<br>
-								<span class="function">print</span>(<span class="string">"avec numpy : "</span>, ecart_type_np)<br>
-								<span class="function">print</span>(<span class="string">"à la main : "</span>, ecart_type_p)
+							<code class="language-python">
+								ecart_type_pd = df[<span class="string">"norm"</span>].<span class="method">std</span>()<br>
+								ecart_type_np = df[<span class="string">"norm"</span>].<span class="method">to_numpy</span>().<span class="method">std</span>()<br>
+								ecart_type_p = <span class="method">ecart_type_perso</span>(df[<span class="string">"norm"</span>].<span class="method">to_numpy</span>())<br>
+								<span class="method">print</span>(<span class="string">"calcul de l'écart-type de norm :"</span>)<br>
+								<span class="method">print</span>(<span class="string">"avec pandas : "</span>, ecart_type_pd)<br>
+								<span class="method">print</span>(<span class="string">"avec numpy : "</span>, ecart_type_np)<br>
+								<span class="method">print</span>(<span class="string">"à la main : "</span>, ecart_type_p)
 							</code>
 						</div>
 
@@ -445,12 +448,12 @@
 						<h4 class="heading-4">Question&nbsp;2.b</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex4_q2b"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								ecart_type_pd = df[<span class="string">"norm"</span>].<span class="function">std</span>(ddof = <span class="number">0</span>)<span class="tab"></span><span class="comment"># Delta Degrees of Freedom.</span><br>
-								<span class="function">print</span>(<span class="string">"calcul de l'écart-type de norm : "</span>)<br>
-								<span class="function">print</span>(<span class="string">"avec pandas : "</span>, ecart_type_pd)<br>
-								<span class="function">print</span>(<span class="string">"avec numpy : "</span>, ecart_type_np)<br>
-								<span class="function">print</span>(<span class="string">"à la main : "</span>, ecart_type_p)
+							<code class="language-python">
+								ecart_type_pd = df[<span class="string">"norm"</span>].<span class="method">std</span>(ddof = <span class="number">0</span>)<span class="tab"></span><span class="comment"># Delta Degrees of Freedom.</span><br>
+								<span class="method">print</span>(<span class="string">"calcul de l'écart-type de norm : "</span>)<br>
+								<span class="method">print</span>(<span class="string">"avec pandas : "</span>, ecart_type_pd)<br>
+								<span class="method">print</span>(<span class="string">"avec numpy : "</span>, ecart_type_np)<br>
+								<span class="method">print</span>(<span class="string">"à la main : "</span>, ecart_type_p)
 							</code>
 						</div>
 
@@ -589,40 +592,40 @@
 							</math>
 						</p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="function">print</span>(<span class="string">"covariance : "</span>, df.<span class="function">cov</span>())<br>
-								<span class="function">print</span>(<span class="string">"coefficient de corrélation : "</span>, df.<span class="function">corr</span>())<br>
+							<code class="language-python">
+								<span class="method">print</span>(<span class="string">"covariance : "</span>, df.<span class="method">cov</span>())<br>
+								<span class="method">print</span>(<span class="string">"coefficient de corrélation : "</span>, df.<span class="method">corr</span>())<br>
 								<br>
-								x = np.<span class="function">arange</span>(<span class="number">1</span>, <span class="function">len</span>(df) + <span class="number">1</span>, <span class="number">1</span>)<br>
+								x = <span class="class">np</span>.<span class="method">arange</span>(<span class="number">1</span>, <span class="method">len</span>(df) + <span class="number">1</span>, <span class="number">1</span>)<br>
 								<br>
 								<span class="comment"># régression linéaire pour norm</span><br>
-								x_norm_bar = x.<span class="function">mean</span>()<br>
-								y_norm_bar = df[<span class="string">"norm"</span>].<span class="function">mean</span>()<br>
-								S_norm_xy = ((x - x_norm_bar) * (df[<span class="string">"norm"</span>] - y_norm_bar)).<span class="function">sum</span>() / <span class="function">len</span>(df)<br>
-								S_norm_x2 = x.<span class="function">var</span>()<br>
+								x_norm_bar = x.<span class="method">mean</span>()<br>
+								y_norm_bar = df[<span class="string">"norm"</span>].<span class="method">mean</span>()<br>
+								S_norm_xy = ((x - x_norm_bar) * (df[<span class="string">"norm"</span>] - y_norm_bar)).<span class="method">sum</span>() / <span class="method">len</span>(df)<br>
+								S_norm_x2 = x.<span class="method">var</span>()<br>
 								a_norm = S_norm_xy / S_norm_x2<br>
 								b_norm = y_norm_bar - a_norm * x_norm_bar<br>
-								<span class="function">print</span>(<span class="string">"coefficients de régression linaire pour norm : "</span>, a_norm, b_norm)<br>
+								<span class="method">print</span>(<span class="string">"coefficients de régression linaire pour norm : "</span>, a_norm, b_norm)<br>
 								<br>
 								<span class="comment"># régression linéaire pour unif</span><br>
-								x_unif_bar = x.<span class="function">mean</span>()<br>
-								y_unif_bar = df[<span class="string">"unif"</span>].<span class="function">mean</span>()<br>
-								S_unif_xy = ((x - x_unif_bar) * (df[<span class="string">"unif"</span>] - y_unif_bar)).<span class="function">sum</span>() / <span class="function">len</span>(df)<br>
-								S_unif_x2 = x.<span class="function">var</span>()<br>
+								x_unif_bar = x.<span class="method">mean</span>()<br>
+								y_unif_bar = df[<span class="string">"unif"</span>].<span class="method">mean</span>()<br>
+								S_unif_xy = ((x - x_unif_bar) * (df[<span class="string">"unif"</span>] - y_unif_bar)).<span class="method">sum</span>() / <span class="method">len</span>(df)<br>
+								S_unif_x2 = x.<span class="method">var</span>()<br>
 								a_unif = S_unif_xy / S_unif_x2<br>
 								b_unif = y_unif_bar - a_unif * x_unif_bar<br>
-								<span class="function">print</span>(<span class="string">"coefficients de régression linaire pour unif : "</span>, a_unif, b_unif)<br>
+								<span class="method">print</span>(<span class="string">"coefficients de régression linaire pour unif : "</span>, a_unif, b_unif)<br>
 								<br>
 								<span class="comment"># tracé des droites de régression linéaire</span><br>
-								fit_fn_norm = np.<span class="function">poly1d</span>([a_norm, b_norm])<br>
-								fit_fn_unif = np.<span class="function">poly1d</span>([a_unif, b_unif])<br>
+								fit_fn_norm = <span class="class">np</span>.<span class="method">poly1d</span>([a_norm, b_norm])<br>
+								fit_fn_unif = <span class="class">np</span>.<span class="method">poly1d</span>([a_unif, b_unif])<br>
 								<br>
-								fig, ax = plt.<span class="function">subplots</span>()<br>
-								plt.<span class="function">plot</span>(x, fit_fn_norm(x), <span class="string">'r-'</span>)<br>
-								plt.<span class="function">plot</span>(x, df[<span class="string">"norm"</span>], <span class="string">'ro'</span>)<br>
-								plt.<span class="function">plot</span>(x, fit_fn_unif(x), <span class="string">'b-'</span>)<br>
-								plt.<span class="function">plot</span>(x, df[<span class="string">"unif"</span>], <span class="string">'bo'</span>)<br>
-								plt.<span class="function">show</span>()
+								fig, ax = <span class="class">plt</span>.<span class="method">subplots</span>()<br>
+								plt.<span class="method">plot</span>(x, df[<span class="string">"norm"</span>], color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, alpha=<span class="number">0.25</span>, label=<span class="string">"norm"</span>)<br>
+								plt.<span class="method">plot</span>(x, df[<span class="string">"unif"</span>], color=<span class="string">"blue"</span>, linestyle=<span class="string">""</span>, marker=<span class="string">"o"</span>, alpha=<span class="number">0.25</span>, label=<span class="string">"unif"</span>)<br>
+								plt.<span class="method">plot</span>(x, fit_fn_norm(x), color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, label=<span class="string">"régression linéaire norm"</span>)<br>
+								plt.<span class="method">plot</span>(x, fit_fn_unif(x), color=<span class="string">"blue"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, label=<span class="string">"régression linéaire unif"</span>)<br>
+								plt.<span class="method">show</span>()
 							</code>
 						</div>
 
@@ -630,11 +633,11 @@
 						<h4 class="heading-4">Question&nbsp;4</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex4_q4"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								norm2 = np.<span class="function">sort</span>(<span class="function">vals_norm</span>(<span class="number">10</span>, <span class="number">2</span>, <span class="number">20</span>))<br>
-								unif2 = np.<span class="function">sort</span>(<span class="function">vals_unif</span>(<span class="number">0</span>, <span class="number">20</span>, <span class="number">20</span>))<br>
-								df2 = pd.<span class="function">DataFrame</span>(data = {<span class="string">"norm"</span>: norm2, <span class="string">"unif"</span>: unif2})<br>
-								<span class="function">print</span>(<span class="string">"df2 = "</span>, df2)
+							<code class="language-python">
+								norm2 = <span class="class">np</span>.<span class="method">sort</span>(<span class="method">vals_norm</span>(<span class="number">10</span>, <span class="number">2</span>, <span class="number">20</span>))<br>
+								unif2 = <span class="class">np</span>.<span class="method">sort</span>(<span class="method">vals_unif</span>(<span class="number">0</span>, <span class="number">20</span>, <span class="number">20</span>))<br>
+								df2 = <span class="class">pd</span>.<span class="method">DataFrame</span>(data = {<span class="string">"norm"</span>: norm2, <span class="string">"unif"</span>: unif2})<br>
+								<span class="method">print</span>(<span class="string">"df2 = "</span>, df2)
 							</code>
 						</div>
 
@@ -642,10 +645,10 @@
 						<h4 class="heading-4">Question&nbsp;5</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex4_q5"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="loop">for</span> i <span class="define">in</span> <span class="function">range</span>(df2[<span class="string">"norm"</span>].index.start, df2[<span class="string">"norm"</span>].index.stop, df2[<span class="string">"norm"</span>].index.step):<br>
-								<span class="tab"></span>df.<span class="function">loc</span>[<span class="function">len</span>(df)] = [df2[<span class="string">"norm"</span>].<span class="function">loc</span>[i], df2[<span class="string">"unif"</span>].<span class="function">loc</span>[i]]<br>
-								<span class="function">print</span>(<span class="string">"df + df2 = "</span>, df)
+							<code class="language-python">
+								<span class="keyword">for</span> i <span class="keyword">in</span> <span class="method">range</span>(df2[<span class="string">"norm"</span>].<span class="attribute">index</span>.<span class="attribute">start</span>, df2[<span class="string">"norm"</span>].<span class="attribute">index</span>.<span class="attribute">stop</span>, df2[<span class="string">"norm"</span>].<span class="attribute">index</span>.<span class="attribute">step</span>):<br>
+								<span class="tab"></span>df.<span class="method">loc</span>[<span class="method">len</span>(df)] = [df2[<span class="string">"norm"</span>].<span class="method">loc</span>[i], df2[<span class="string">"unif"</span>].<span class="method">loc</span>[i]]<br>
+								<span class="method">print</span>(<span class="string">"df + df2 = "</span>, df)
 							</code>
 						</div>
 
@@ -653,9 +656,9 @@
 						<h4 class="heading-4">Question&nbsp;6</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex4_q6"></p>
 						<div class="codeblock">
-							<code class="language-c">
+							<code class="language-python">
 								df[<span class="string">"somme"</span>] = df[<span class="string">"norm"</span>] + df[<span class="string">"unif"</span>]<br>
-								<span class="function">print</span>(<span class="string">"df = "</span>, df)
+								<span class="method">print</span>(<span class="string">"df = "</span>, df)
 							</code>
 						</div>
 
@@ -663,8 +666,8 @@
 						<h4 class="heading-4">Question&nbsp;7</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex4_q7"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="function">print</span>(df[df[<span class="string">"unif"</span>] > <span class="number">5</span>])
+							<code class="language-python">
+								<span class="method">print</span>(df[df[<span class="string">"unif"</span>] > <span class="number">5</span>])
 							</code>
 						</div>
 
@@ -672,8 +675,8 @@
 						<h4 class="heading-4">Question&nbsp;8</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex4_q8"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="function">print</span>(df[[<span class="string">"norm"</span>, <span class="string">"somme"</span>]])
+							<code class="language-python">
+								<span class="method">print</span>(df[[<span class="string">"norm"</span>, <span class="string">"somme"</span>]])
 							</code>
 						</div>
 
@@ -693,10 +696,10 @@
 						<h3 class="heading-3" data-i18n="m22_2025_tp2_ex5_title"></h3>
 
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">import</span> numpy <span class="define">as</span> np<br>
-								<span class="define">import</span> pandas <span class="define">as</span> pd<br>
-								<span class="define">import</span> matplotlib.pyplot <span class="define">as</span> plt
+							<code class="language-python">
+								<span class="keyword">import</span> <span class="class">numpy</span> <span class="keyword">as</span> <span class="class">np</span><br>
+								<span class="keyword">import</span> <span class="class">pandas</span> <span class="keyword">as</span> <span class="class">pd</span><br>
+								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="attribute">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span>
 							</code>
 						</div>
 
@@ -704,8 +707,8 @@
 						<h4 class="heading-4">Question&nbsp;1</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q1"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								df = pd.<span class="function">read_csv</span>(<span class="string">"fr-esr-parcoursup_2021.csv"</span>, sep=<span class="string">";"</span>)
+							<code class="language-python">
+								df = <span class="class">pd</span>.<span class="method">read_csv</span>(<span class="string">"fr-esr-parcoursup_2021.csv"</span>, sep=<span class="string">";"</span>)
 							</code>
 						</div>
 
@@ -713,33 +716,33 @@
 						<h4 class="heading-4">Question&nbsp;2</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q2"></p>
 						<div class="codeblock">
-							<code class="language-c">
+							<code class="language-python">
 								columns = []<br>
 								<span class="comment"># code UAI de l’établissement</span><br>
-								columns.<span class="function">append</span>(<span class="string">"Code UAI de l'établissement"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"Code UAI de l'établissement"</span>)<br>
 								<span class="comment"># intitulé de la formation</span><br>
-								columns.<span class="function">append</span>(<span class="string">"Filière de formation détaillée"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"Filière de formation détaillée"</span>)<br>
 								<span class="comment"># taux d’admissions</span><br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis ayant reçu leur proposition d’admission à l'ouverture de la procédure principale"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis ayant reçu leur proposition d’admission avant le baccalauréat"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis ayant reçu leur proposition d’admission avant la fin de la procédure principale"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis dont filles"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers issus de la même académie"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers issus de la même académie (Paris/Créteil/Versailles réunies)"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers issus du même établissement (BTS/CPGE)"</span>)<br>
-								columns.<span class="function">append</span>("<span class="string">% d’admis néo bacheliers boursiers"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers sans information sur la mention au bac"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers sans mention au bac"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Assez Bien au bac"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Bien au bac"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Très Bien au bac"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Très Bien avec félicitations au bac"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers généraux"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers technologiques"</span>)<br>
-								columns.<span class="function">append</span>(<span class="string">"% d’admis néo bacheliers professionnels"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis ayant reçu leur proposition d’admission à l'ouverture de la procédure principale"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis ayant reçu leur proposition d’admission avant le baccalauréat"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis ayant reçu leur proposition d’admission avant la fin de la procédure principale"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis dont filles"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers issus de la même académie"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers issus de la même académie (Paris/Créteil/Versailles réunies)"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers issus du même établissement (BTS/CPGE)"</span>)<br>
+								columns.<span class="method">append</span>("<span class="string">% d’admis néo bacheliers boursiers"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers sans information sur la mention au bac"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers sans mention au bac"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Assez Bien au bac"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Bien au bac"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Très Bien au bac"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers avec mention Très Bien avec félicitations au bac"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers généraux"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers technologiques"</span>)<br>
+								columns.<span class="method">append</span>(<span class="string">"% d’admis néo bacheliers professionnels"</span>)<br>
 								df = df[columns]<br>
-								<span class="function">print</span>(df)
+								<span class="method">print</span>(df)
 							</code>
 						</div>
 
@@ -747,9 +750,9 @@
 						<h4 class="heading-4">Question&nbsp;3</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q3"></p>
 						<div class="codeblock">
-							<code class="language-c">
+							<code class="language-python">
 								df = df[df[<span class="string">"Code UAI de l'établissement"</span>] == <span class="string">"0671557D"</span>]<br>
-								<span class="function">print</span>(df)<br>
+								<span class="method">print</span>(df)<br>
 								print(df[<span class="string">"Filière de formation détaillée"</span>])
 							</code>
 						</div>
@@ -758,9 +761,9 @@
 						<h4 class="heading-4">Question&nbsp;4</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q4"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								df[<span class="string">"formation"</span>] = df[<span class="string">"Filière de formation détaillée"</span>].<span class="function">map</span>(<span class="define">lambda</span> x : x[:<span class="number">31</span>])<br>
-								<span class="function">print</span>(df[[<span class="string">"formation"</span>]])
+							<code class="language-python">
+								df[<span class="string">"formation"</span>] = df[<span class="string">"Filière de formation détaillée"</span>].<span class="method">map</span>(<span class="keyword">lambda</span> x : x[:<span class="number">31</span>])<br>
+								<span class="method">print</span>(df[[<span class="string">"formation"</span>]])
 							</code>
 						</div>
 
@@ -768,12 +771,12 @@
 						<h4 class="heading-4">Question&nbsp;5</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q5"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								ax = df.plot.<span class="function">bar</span>(title=<span class="string">"Taux d'admission pour l'IUT Robert Schuman"</span>)<br>
-								plt.<span class="function">legend</span>(bbox_to_anchor=(<span class="number">1.04</span>, <span class="number">1</span>), loc=<span class="string">"upper left"</span>)<br>
-								plt.<span class="function">subplots_adjust</span>(right=<span class="number">0.7</span>)<br>
-								plt.<span class="function">tight_layout</span>(rect=[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0.75</span>, <span class="number">1</span>])<br>
-								plt.<span class="function">show</span>()
+							<code class="language-python">
+								ax = df.<span class="attribute">plot</span>.<span class="method">bar</span>(title=<span class="string">"Taux d'admission pour l'IUT Robert Schuman"</span>)<br>
+								<span class="class">plt</span>.<span class="method">legend</span>(bbox_to_anchor=(<span class="number">1.04</span>, <span class="number">1</span>), loc=<span class="string">"upper left"</span>)<br>
+								<span class="class">plt</span>.<span class="method">subplots_adjust</span>(right=<span class="number">0.7</span>)<br>
+								<span class="class">plt</span>.<span class="method">tight_layout</span>(rect=[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0.75</span>, <span class="number">1</span>])<br>
+								<span class="class">plt</span>.<span class="method">show</span>()
 							</code>
 						</div>
 
@@ -785,10 +788,10 @@
 						<h3 class="heading-3" data-i18n="m22_2025_tp2_ex6_title"></h3>
 
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">import</span> numpy <span class="define">as</span> np<br>
-								<span class="define">import</span> pandas <span class="define">as</span> pd<br>
-								<span class="define">import</span> matplotlib.pyplot <span class="define">as</span> plt
+							<code class="language-python">
+								<span class="keyword">import</span> <span class="class">numpy</span> <span class="keyword">as</span> <span class="class">np</span><br>
+								<span class="keyword">import</span> <span class="class">pandas</span> <span class="keyword">as</span> <span class="class">pd</span><br>
+								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="attribute">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span>
 							</code>
 						</div>
 
@@ -796,11 +799,11 @@
 						<h4 class="heading-4">Question&nbsp;1</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q1"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								df = pd.<span class="function">read_csv</span>(<span class="string">"DECADAGRO_67_previous-1950-2024.csv"</span>, sep=<span class="string">";"</span>)<br>
-								<span class="function">print</span>(df)<br>
+							<code class="language-python">
+								df = <span class="class">pd</span>.<span class="method">read_csv</span>(<span class="string">"DECADAGRO_67_previous-1950-2024.csv"</span>, sep=<span class="string">";"</span>)<br>
+								<span class="method">print</span>(df)<br>
 								df = df[df[<span class="string">"NOM_USUEL"</span>] == <span class="string">"STRASBOURG-ENTZHEIM"</span>]<br>
-								<span class="function">print</span>(df)
+								<span class="method">print</span>(df)
 							</code>
 						</div>
 
@@ -808,9 +811,9 @@
 						<h4 class="heading-4">Question&nbsp;2</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q2"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								y_max = df[<span class="string">"TX"</span>].<span class="function">to_numpy</span>()<br>
-								<span class="function">print</span>(y_max)
+							<code class="language-python">
+								y_max = df[<span class="string">"TX"</span>].<span class="method">to_numpy</span>()<br>
+								<span class="method">print</span>(y_max)
 							</code>
 						</div>
 
@@ -818,9 +821,9 @@
 						<h4 class="heading-4">Question&nbsp;3</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q3"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								y_min = df[<span class="string">"TN"</span>].<span class="function">to_numpy</span>()<br>
-								<span class="function">print</span>(y_min)
+							<code class="language-python">
+								y_min = df[<span class="string">"TN"</span>].<span class="method">to_numpy</span>()<br>
+								<span class="method">print</span>(y_min)
 							</code>
 						</div>
 
@@ -828,9 +831,9 @@
 						<h4 class="heading-4">Question&nbsp;4</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q4"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								x = np.<span class="function">arange</span>(<span class="number">0</span>, y_max.shape[<span class="number">0</span>], <span class="number">1</span>)<br>
-								<span class="function">print</span>(x)
+							<code class="language-python">
+								x = <span class="class">np</span>.<span class="method">arange</span>(<span class="number">0</span>, y_max.<span class="attribute">shape</span>[<span class="number">0</span>], <span class="number">1</span>)<br>
+								<span class="method">print</span>(x)
 							</code>
 						</div>
 
@@ -838,15 +841,15 @@
 						<h4 class="heading-4">Question&nbsp;5</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q5"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								fig, ax = plt.<span class="function">subplots</span>()<br>
-								ax.<span class="function">plot</span>(x, y_max, <span class="string">'r'</span>, label=<span class="string">"y_max"</span>)<br>
-								ax.<span class="function">plot</span>(x, y_min, <span class="string">'b'</span>, label=<span class="string">"y_min"</span>)<br>
-								ax.<span class="function">legend</span>()<br>
-								ax.<span class="function">set_title</span>(<span class="string">"Température de la station de Strasbourg-Entzheim (1950-2024)"</span>)<br>
-								ax.<span class="function">set_xlabel</span>(<span class="string">"Points de mesure"</span>)<br>
-								ax.<span class="function">set_ylabel</span>(<span class="string">"Température (°c)"</span>)<br>
-								plt.<span class="function">show</span>()
+							<code class="language-python">
+								fig, ax = <span class="class">plt</span>.<span class="method">subplots</span>()<br>
+								ax.<span class="method">plot</span>(x, y_max, color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, label=<span class="string">"y_max"</span>)<br>
+								ax.<span class="method">plot</span>(x, y_min, color=<span class="string">"blue"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, label=<span class="string">"y_min"</span>)<br>
+								ax.<span class="method">legend</span>()<br>
+								ax.<span class="method">set_title</span>(<span class="string">"Température de la station de Strasbourg-Entzheim (1950-2024)"</span>)<br>
+								ax.<span class="method">set_xlabel</span>(<span class="string">"Points de mesure"</span>)<br>
+								ax.<span class="method">set_ylabel</span>(<span class="string">"Température (°c)"</span>)<br>
+								<span class="class">plt</span>.<span class="method">show</span>()
 							</code>
 						</div>
 
@@ -854,11 +857,11 @@
 						<h4 class="heading-4">Question&nbsp;6</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q6"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								p_min = np.<span class="function">polyfit</span>(x, y_min, <span class="number">10</span>)<br>
-								p_max = np.<span class="function">polyfit</span>(x, y_max, <span class="number">10</span>)<br>
-								fit_p_min = np.<span class="function">poly1d</span>(p_min)<br>
-								fit_p_max = np.<span class="function">poly1d</span>(p_max)
+							<code class="language-python">
+								p_min = <span class="class">np</span>.<span class="method">polyfit</span>(x, y_min, <span class="number">10</span>)<br>
+								p_max = <span class="class">np</span>.<span class="method">polyfit</span>(x, y_max, <span class="number">10</span>)<br>
+								fit_p_min = <span class="class">np</span>.<span class="method">poly1d</span>(p_min)<br>
+								fit_p_max = <span class="class">np</span>.<span class="method">poly1d</span>(p_max)
 							</code>
 						</div>
 
@@ -866,14 +869,14 @@
 						<h4 class="heading-4">Question&nbsp;7</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q7"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								fig, ax = plt.<span class="function">subplots</span>()<br>
-								ax.<span class="function">plot</span>(x, fit_p_max(x), <span class="string">'r'</span>)<br>
-								ax.<span class="function">plot</span>(x, fit_p_min(x), <span class="string">'b'</span>)<br>
-								ax.<span class="function">set_title</span>(<span class="string">"Extimation des tendances des température de la station de Strasbourg-Entzheim (1950-2024)"</span>)<br>
-								ax.<span class="function">set_xlabel</span>(<span class="string">"Points de mesure"</span>)<br>
-								ax.<span class="function">set_ylabel</span>(<span class="string">"Tendance de température (°c)"</span>)<br>
-								plt.<span class="function">show</span>()
+							<code class="language-python">
+								fig, ax = <span class="class">plt</span>.<span class="method">subplots</span>()<br>
+								ax.<span class="method">plot</span>(x, fit_p_max(x), <span class="string">'r'</span>)<br>
+								ax.<span class="method">plot</span>(x, fit_p_min(x), <span class="string">'b'</span>)<br>
+								ax.<span class="method">set_title</span>(<span class="string">"Extimation des tendances des température de la station de Strasbourg-Entzheim (1950-2024)"</span>)<br>
+								ax.<span class="method">set_xlabel</span>(<span class="string">"Points de mesure"</span>)<br>
+								ax.<span class="method">set_ylabel</span>(<span class="string">"Tendance de température (°c)"</span>)<br>
+								<span class="class">plt</span>.<span class="method">show</span>()
 							</code>
 						</div>
 
@@ -885,10 +888,10 @@
 						<h3 class="heading-3" data-i18n="m22_2025_tp2_ex7_title"></h3>
 
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">import</span> numpy <span class="define">as</span> np<br>
-								<span class="define">import</span> pandas <span class="define">as</span> pd<br>
-								<span class="define">import</span> matplotlib.pyplot <span class="define">as</span> plt
+							<code class="language-python">
+								<span class="keyword">import</span> <span class="class">numpy</span> <span class="keyword">as</span> <span class="class">np</span><br>
+								<span class="keyword">import</span> <span class="class">pandas</span> <span class="keyword">as</span> <span class="class">pd</span><br>
+								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="class">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span>
 							</code>
 						</div>
 
@@ -896,11 +899,11 @@
 						<h4 class="heading-4">Question&nbsp;1</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex7_q1"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								df_2018 = pd.<span class="function">read_csv</span>(<span class="string">"fr-esr-parcoursup_2018.csv"</span>, sep=<span class="string">";"</span>)<br>
-								df_2019 = pd.<span class="function">read_csv</span>(<span class="string">"fr-esr-parcoursup_2019.csv"</span>, sep=<span class="string">";"</span>)<br>
-								df_2020 = pd.<span class="function">read_csv</span>(<span class="string">"fr-esr-parcoursup_2020.csv"</span>, sep=<span class="string">";"</span>)<br>
-								df_2021 = pd.<span class="function">read_csv</span>(<span class="string">"fr-esr-parcoursup_2021.csv"</span>, sep=<span class="string">";"</span>)<br>
+							<code class="language-python">
+								df_2018 = <span class="class">pd</span>.<span class="method">read_csv</span>(<span class="string">"fr-esr-parcoursup_2018.csv"</span>, sep=<span class="string">";"</span>)<br>
+								df_2019 = <span class="class">pd</span>.<span class="method">read_csv</span>(<span class="string">"fr-esr-parcoursup_2019.csv"</span>, sep=<span class="string">";"</span>)<br>
+								df_2020 = <span class="class">pd</span>.<span class="method">read_csv</span>(<span class="string">"fr-esr-parcoursup_2020.csv"</span>, sep=<span class="string">";"</span>)<br>
+								df_2021 = <span class="class">pd</span>.<span class="method">read_csv</span>(<span class="string">"fr-esr-parcoursup_2021.csv"</span>, sep=<span class="string">";"</span>)<br>
 								dfs = {<br>
 									<span class="tab"></span><span class="string">"2018"</span>: df_2018,<br>
 									<span class="tab"></span><span class="string">"2019"</span>: df_2019,<br>
@@ -914,10 +917,10 @@
 						<h4 class="heading-4">Question&nbsp;2</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex7_q2"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="loop">for</span> key <span class="define">in</span> dfs.<span class="function">keys</span>():<br>
-								<span class="tab"></span><span class="function"></span>df = dfs[key]<br>
-								<span class="tab"></span><span class="function"></span>dfs[key] = df[df[<span class="string">"Établissement"</span>] == <span class="string">"I.U.T. d'Illkirch"</span>]
+							<code class="language-python">
+								<span class="keyword">for</span> key <span class="keyword">in</span> dfs.<span class="method">keys</span>():<br>
+								<span class="tab"></span><span class="method"></span>df = dfs[key]<br>
+								<span class="tab"></span><span class="method"></span>dfs[key] = df[df[<span class="string">"Établissement"</span>] == <span class="string">"I.U.T. d'Illkirch"</span>]
 							</code>
 						</div>
 
@@ -925,11 +928,11 @@
 						<h4 class="heading-4">Question&nbsp;3</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex7_q3"></p>
 						<div class="codeblock">
-							<code class="language-c">
+							<code class="language-python">
 								formations = [<span class="string">"Chimie"</span>, <span class="string">"Informatique"</span>, <span class="string">"Techniques de commercialisation"</span>]<br>
-								<span class="loop">for</span> key <span class="define">in</span> dfs.<span class="function">keys</span>():<br>
+								<span class="keyword">for</span> key <span class="keyword">in</span> dfs.<span class="method">keys</span>():<br>
 									<span class="tab"></span>df = dfs[key]<br>
-									<span class="tab"></span>dfs[key] = df[df[<span class="string">"Filière de formation détaillée"</span>].str.<span class="function">match</span>(<span class="string">".*Chimie.*|.*Informatique.*|.*Techniques de commercialisation.*"</span>)]
+									<span class="tab"></span>dfs[key] = df[df[<span class="string">"Filière de formation détaillée"</span>].str.<span class="method">match</span>(<span class="string">".*Chimie.*|.*Informatique.*|.*Techniques de commercialisation.*"</span>)]
 							</code>
 						</div>
 
@@ -937,9 +940,9 @@
 						<h4 class="heading-4">Question&nbsp;4</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex7_q4"></p>
 						<div class="codeblock">
-							<code class="language-c">
+							<code class="language-python">
 								colonnes =  [<span class="string">"Session"</span>, <span class="string">"Filière de formation détaillée"</span>, <span class="string">"% d’admis néo bacheliers technologiques"</span>]<br>
-								<span class="loop">for</span> key <span class="define">in</span> dfs.<span class="function">keys</span>():<br>
+								<span class="keyword">for</span> key <span class="keyword">in</span> dfs.<span class="method">keys</span>():<br>
 									<span class="tab"></span>df = dfs[key]<br>
 									<span class="tab"></span>dfs[key] = df[colonnes]
 							</code>
@@ -949,24 +952,24 @@
 						<h4 class="heading-4">Question&nbsp;5</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex7_q5"></p>
 						<div class="codeblock">
-							<code class="language-c">
-								df = pd.<span class="function">concat</span>([dfs[i] <span class="loop">for</span> i <span class="define">in</span> dfs.<span class="function">keys</span>()])<br>
-								chimie = df[df[<span class="string">"Filière de formation détaillée"</span>].str.<span class="function">match</span>(<span class="string">".*Chimie.*"</span>)]<br>
-								info = df[df[<span class="string">"Filière de formation détaillée"</span>].str.<span class="function">match</span>(<span class="string">".*Informatique.*"</span>)]<br>
-								techdeco = df[df[<span class="string">"Filière de formation détaillée"</span>].str.<span class="function">match</span>(<span class="string">".*Techniques de commercialisation.*"</span>)]<br>
+							<code class="language-python">
+								df = <span class="class">pd</span>.<span class="method">concat</span>([dfs[i] <span class="keyword">for</span> i <span class="keyword">in</span> dfs.<span class="method">keys</span>()])<br>
+								chimie = df[df[<span class="string">"Filière de formation détaillée"</span>].<span class="class">str</span>.<span class="method">match</span>(<span class="string">".*Chimie.*"</span>)]<br>
+								info = df[df[<span class="string">"Filière de formation détaillée"</span>].<span class="class">str</span>.<span class="method">match</span>(<span class="string">".*Informatique.*"</span>)]<br>
+								techdeco = df[df[<span class="string">"Filière de formation détaillée"</span>].<span class="class">str</span>.<span class="method">match</span>(<span class="string">".*Techniques de commercialisation.*"</span>)]<br>
 								<br>
-								fig, ax = plt.<span class="function">subplots</span>()<br>
+								fig, ax = <span class="class">plt</span>.<span class="method">subplots</span>()<br>
 								ax.plot(chimie[<span class="string">"Session"</span>], chimie[<span class="string">"% d’admis néo bacheliers technologiques"</span>], <span class="string">'r-'</span>, label=<span class="string">"Chimie"</span>)<br>
-								ax.<span class="function">plot</span>(info[<span class="string">"Session"</span>], info[<span class="string">"% d’admis néo bacheliers technologiques"</span>], <span class="string">'b-'</span>, label=<span class="string">"Informatique"</span>)<br>
-								ax.<span class="function">plot</span>(techdeco[<span class="string">"Session"</span>], techdeco[<span class="string">"% d’admis néo bacheliers technologiques"</span>], <span class="string">'g-'</span>, label=<span class="string">"Tech. de co."</span>)<br>
-								ax.<span class="function">set_xlim</span>(<span class="number">2017</span>, <span class="number">2022</span>)<br>
-								ax.<span class="function">set_ylim</span>(<span class="number">0</span>, <span class="number">100</span>)<br>
-								plt.<span class="function">title</span>(<span class="string">"Évolution du pourcentage de bacheliers technologiques à l'IUTRS (2018-2021)"</span>)<br>
-								plt.<span class="function">xlabel</span>(<span class="string">"Année"</span>)<br>
-								plt.<span class="function">ylabel</span>(<span class="string">"% de bachelier technologiques"</span>)<br>
-								plt.<span class="function">legend</span>()<br>
-								plt.<span class="function">tight_layout</span>()<br>
-								plt.<span class="function">show</span>()
+								ax.<span class="method">plot</span>(info[<span class="string">"Session"</span>], info[<span class="string">"% d’admis néo bacheliers technologiques"</span>], <span class="string">'b-'</span>, label=<span class="string">"Informatique"</span>)<br>
+								ax.<span class="method">plot</span>(techdeco[<span class="string">"Session"</span>], techdeco[<span class="string">"% d’admis néo bacheliers technologiques"</span>], <span class="string">'g-'</span>, label=<span class="string">"Tech. de co."</span>)<br>
+								ax.<span class="method">set_xlim</span>(<span class="number">2017</span>, <span class="number">2022</span>)<br>
+								ax.<span class="method">set_ylim</span>(<span class="number">0</span>, <span class="number">100</span>)<br>
+								<span class="class">plt</span>.<span class="method">title</span>(<span class="string">"Évolution du pourcentage de bacheliers technologiques à l'IUTRS (2018-2021)"</span>)<br>
+								<span class="class">plt</span>.<span class="method">xlabel</span>(<span class="string">"Année"</span>)<br>
+								<span class="class">plt</span>.<span class="method">ylabel</span>(<span class="string">"% de bachelier technologiques"</span>)<br>
+								<span class="class">plt</span>.<span class="method">legend</span>()<br>
+								<span class="class">plt</span>.<span class="method">tight_layout</span>()<br>
+								<span class="class">plt</span>.<span class="method">show</span>()
 							</code>
 						</div>
 
