@@ -704,7 +704,7 @@
 							<code class="language-python">
 								<span class="keyword">import</span> <span class="class">numpy</span> <span class="keyword">as</span> <span class="class">np</span><br>
 								<span class="keyword">import</span> <span class="class">pandas</span> <span class="keyword">as</span> <span class="class">pd</span><br>
-								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="attribute">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span>
+								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="class">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span>
 							</code>
 						</div>
 
@@ -777,10 +777,19 @@
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q5"></p>
 						<div class="codeblock">
 							<code class="language-python">
-								ax = df.<span class="attribute">plot</span>.<span class="method">bar</span>(title=<span class="string">"Taux d'admission pour l'IUT Robert Schuman"</span>)<br>
-								<span class="class">plt</span>.<span class="method">legend</span>(bbox_to_anchor=(<span class="number">1.04</span>, <span class="number">1</span>), loc=<span class="string">"upper left"</span>)<br>
-								<span class="class">plt</span>.<span class="method">subplots_adjust</span>(right=<span class="number">0.7</span>)<br>
-								<span class="class">plt</span>.<span class="method">tight_layout</span>(rect=[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0.75</span>, <span class="number">1</span>])<br>
+								n_formations = <span class="method">len</span>(df)<br>
+								fig, axs = <span class="class">plt</span>.<span class="method">subplots</span>(nrows=n_formations // <span class="number">2</span>, ncols=<span class="number">2</span>, sharex=<span class="keyword">True</span>, sharey=<span class="keyword">True</span>)<br>
+								x = df.<span class="method">iloc</span>[<span class="number">0</span>].<span class="attribute">index</span>.<span class="method">to_numpy</span>()<br>
+								cmap = <span class="class">plt</span>.<span class="class">cm</span>.<span class="attribute">tab20</span><br>
+								colors = cmap(<span class="class">np</span>.<span class="method">arange</span>((n_formations - <span class="number">3</span>) % cmap.<span class="attribute">N</span>))<br>
+								<span class="keyword">for</span> formation <span class="keyword">in</span> <span class="method">range</span>(<span class="number">0</span>, n_formations):<br>
+								<span class="tab"></span>index_1 = formation // <span class="number">2</span><br>
+								<span class="tab"></span>index_2 = formation % <span class="number">2</span><br>
+								<span class="tab"></span>y = df.<span class="method">iloc</span>[formation].<span class="method">method</span>()<br>
+								<span class="tab"></span>axs[index_1][index_2].<span class="method">barh</span>(x[<span class="number">2</span>:<span class="number">19</span>], y[<span class="number">2</span>:<span class="number">19</span>], color=colors)<br>
+								<span class="tab"></span>axs[index_1][index_2].<span class="method">set_title</span>(y[<span class="number">20</span>], wrap=<span class="keyword">True</span>, fontsize=<span class="number">10</span>)<br>
+								<span class="class">plt</span>.<span class="method">legend</span>()<br>
+								<span class="class">plt</span>.<span class="method">suptitle</span>(<span class="string">"Taux d'admission pour l'IUT Robert Schuman"</span>, wrap=<span class="keyword">True</span>)<br>
 								<span class="class">plt</span>.<span class="method">show</span>()
 							</code>
 						</div>
@@ -796,7 +805,7 @@
 							<code class="language-python">
 								<span class="keyword">import</span> <span class="class">numpy</span> <span class="keyword">as</span> <span class="class">np</span><br>
 								<span class="keyword">import</span> <span class="class">pandas</span> <span class="keyword">as</span> <span class="class">pd</span><br>
-								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="attribute">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span>
+								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="class">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span>
 							</code>
 						</div>
 
@@ -863,10 +872,10 @@
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q6"></p>
 						<div class="codeblock">
 							<code class="language-python">
-								p_min = <span class="class">np</span>.<span class="method">polyfit</span>(x, y_min, <span class="number">10</span>)<br>
-								p_max = <span class="class">np</span>.<span class="method">polyfit</span>(x, y_max, <span class="number">10</span>)<br>
-								fit_p_min = <span class="class">np</span>.<span class="method">poly1d</span>(p_min)<br>
-								fit_p_max = <span class="class">np</span>.<span class="method">poly1d</span>(p_max)
+								tendance_min = <span class="class">np</span>.<span class="class">polynomial</span>.<span class="class">Polynomial</span>.<span class="method">fit</span>(x, y_min, deg=<span class="number">10</span>)<br>
+								tendance_max = <span class="class">np</span>.<span class="class">polynomial</span>.<span class="class">Polynomial</span>.<span class="method">fit</span>(x, y_max, deg=<span class="number">10</span>)<br>
+								tendance_min_x, tendance_min_y = tendance_min.<span class="method">linspace</span>(n=x.<span class="attribute">shape</span>[<span class="number">0</span>]*<span class="number">10</span>)<br>
+								tendance_max_x, tendance_max_y = tendance_max.<span class="method">linspace</span>(n=x.<span class="attribute">shape</span>[<span class="number">0</span>]*<span class="number">10</span>)
 							</code>
 						</div>
 
@@ -875,12 +884,21 @@
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex6_q7"></p>
 						<div class="codeblock">
 							<code class="language-python">
-								fig, ax = <span class="class">plt</span>.<span class="method">subplots</span>()<br>
-								ax.<span class="method">plot</span>(x, fit_p_max(x), <span class="string">'r'</span>)<br>
-								ax.<span class="method">plot</span>(x, fit_p_min(x), <span class="string">'b'</span>)<br>
-								ax.<span class="method">set_title</span>(<span class="string">"Extimation des tendances des température de la station de Strasbourg-Entzheim (1950-2024)"</span>)<br>
-								ax.<span class="method">set_xlabel</span>(<span class="string">"Points de mesure"</span>)<br>
-								ax.<span class="method">set_ylabel</span>(<span class="string">"Tendance de température (°c)"</span>)<br>
+								fig, axs = <span class="class">plt</span>.<span class="method">subplots</span>(nrows=<span class="number">2</span>, ncols=<span class="number">1</span>, sharex=<span class="keyword">True</span>, sharey<span class="keyword">True</span>)<br>
+								axs[<span class="number">0</span>].<span class="method">plot</span>(x, y_max, color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, linewidth=<span class="number">1</span>, label=<span class="string">"y_max"</span>)<br>
+								axs[<span class="number">0</span>].<span class="method">plot</span>(x, y_min, color=<span class="string">"blue"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, linewidth=<span class="number">1</span>, label=<span class="string">"y_min"</span>)<br>
+								axs[<span class="number">1</span>].<span class="method">plot</span>(tendane_max_x, tendance_max_y, color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, linewidth=<span class="number">1</span>, label=<span class="string">"tendance y_max"</span>)<br>
+								axs[<span class="number">1</span>].<span class="method">plot</span>(tendance_min_x, tendance_min_y, color=<span class="string">"blue"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, linewidth=<span class="number">1</span>, label=<span class="string">"tendance y_min"</span>)<br>
+								axs[<span class="number">0</span>].<span class="method">set_title</span>(<span class="string">"Températures mesurées"</span>)<br>
+								axs[<span class="number">1</span>].<span class="method">set_title</span>(<span class="string">"Estimation des tendances des températures"</span>)<br>
+								axs[<span class="number">0</span>].<span class="method">set_xlabel</span>(<span class="string">"Points de mesure"</span>)<br>
+								axs[<span class="number">1</span>].<span class="method">set_xlabel</span>(<span class="string">"Points de mesure"</span>)<br>
+								axs[<span class="number">0</span>].<span class="method">set_ylabel</span>(<span class="string">"Température (°C)"</span>)<br>
+								axs[<span class="number">1</span>].<span class="method">set_ylabel</span>(<span class="string">"Tendance de températures (°C)"</span>)<br>
+								<span class="class">plt</span>.<span class="method">suptitle</span>(<span class="string">"Station météo de Strasbourg-Enntzheim (1950-2024)"</span>)<br>
+								axs[<span class="number">0</span>].<span class="method">legend</span>()<br>
+								axs[<span class="number">1</span>].<span class="method">legend</span>()<br>
+								<span class="class">plt</span>.<span class="method">legend</span>()<br>
 								<span class="class">plt</span>.<span class="method">show</span>()
 							</code>
 						</div>
