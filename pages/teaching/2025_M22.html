@@ -55,8 +55,8 @@
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex1_title"></h3>
 
 						<div class="codeblock">
-							<code class="language-c">
-								<span class="define">import</span> <span class="class">numpy</span> <span class="define">as</span> <span class="class">np</span>
+							<code class="language-python">
+								<span class="keyword">import</span> <span class="class">numpy</span> <span class="keyword">as</span> <span class="class">np</span>
 							</code>
 						</div>
 
@@ -323,7 +323,7 @@
 						<div class="codeblock">
 							<code class="language-python">
 								<span class="keyword">def</span> <span class="method">vals_norm</span>(moyenne, ecart_type, n):<br>
-								<span class="tab"></span>rng = <span class="class">np</span>.<span class="attribute">random</span>.<span class="method">default_rng</span>()<br>
+								<span class="tab"></span>rng = <span class="class">np</span>.<span class="class">random</span>.<span class="method">default_rng</span>()<br>
 								<span class="tab"></span><span class="keyword">return</span> rng.<span class="method">normal</span>(loc = moyenne, scale = ecart_type, size = n)
 							</code>
 						</div>
@@ -334,7 +334,7 @@
 						<div class="codeblock">
 							<code class="language-python">
 								<span class="keyword">def</span> <span class="method">vals_unif</span>(min_val, max_val, n):<br>
-								<span class="tab"></span>rng = <span class="class">np</span>.<span class="attribute">random</span>.<span class="method">default_rng</span>()<br>
+								<span class="tab"></span>rng = <span class="class">np</span>.<span class="class">random</span>.<span class="method">default_rng</span>()<br>
 								<span class="tab"></span><span class="keyword">return</span> rng.<span class="method">uniform</span>(low = min_val, high = max_val, size = n)
 							</code>
 						</div>
@@ -349,7 +349,7 @@
 						<div class="codeblock">
 							<code class="language-python">
 								<span class="keyword">import</span> <span class="class">numpy</span> <span class="keyword">as</span> <span class="class">np</span><br>
-								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="attribute">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span><br>
+								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="class">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span><br>
 								<span class="keyword">from</span> exercice2 <span class="keyword">import</span> <span class="method">vals_norm</span>, <span class="method">vals_unif</span>
 							</code>
 						</div>
@@ -367,6 +367,7 @@
 								<span class="tab"></span>x = <span class="class">np</span>.<span class="method">arange</span>(<span class="number">1</span>, a.<span class="attribute">shape</span>[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
 								<span class="tab"></span>ax.<span class="method">plot</span>(x, a, color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">"o"</span>, label=<span class="string">"a"</span>)<br>
 								<span class="tab"></span>ax.<span class="method">plot</span>(x, b, color=<span class="string">"blue"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">"o"</span>, label=<span class="string">"b"</span>)<br>
+								<span class="tab"></span>ax.<span class="method">set_title</span>(<span class="string">"Visualisation de a et b"</span>)<br>
 								<span class="tab"></span><span class="class">plt</span>.<span class="method">legend</span>()<br>
 								<span class="tab"></span><span class="class">plt</span>.<span class="method">show</span>()
 							</code>
@@ -389,13 +390,13 @@
 						<p class="paragraph" data-i18n="m22_2025_tp1_ex3_q3"></p>
 						<div class="codeblock">
 							<code class="language-python">
-								<span class="keyword">def</span> <span class="method">visu_tableaux</span>(a, b):<br>
+								<span class="keyword">def</span> <span class="method">visu_tableaux</span>(a, b, label_a, label_b):<br>
 								<span class="tab"></span>fig, ax = <span class="class">plt</span>.<span class="method">subplots</span>()<br>
-								<span class="tab"></span>xa = <span class="class">np</span>.<span class="method">arange</span>(<span class="number">1</span>, a.<span class="attribute">shape</span>[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
-								<span class="tab"></span>xb = <span class="class">np</span>.<span class="method">arange</span>(<span class="number">1</span>, b.<span class="attribute">shape</span>[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
-								<span class="tab"></span>ax.<span class="method">plot</span>(xa, a, color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">"o"</span>, label=<span class="string">"a"</span>)<br>
-								<span class="tab"></span>ax.<span class="method">plot</span>(xb, b, color=<span class="string">"blue"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">"o"</span>, label=<span class="string">"b"</span>)<br>
-								<span class="tab"></span><span class="class">plt</span>.<span class="method">legend</span>()<br>
+								<span class="tab"></span>x = <span class="class">np</span>.<span class="method">arange</span>(<span class="number">1</span>, a.<span class="attribute">shape</span>[<span class="number">0</span>] + <span class="number">1</span>, <span class="number">1</span>)<br>
+								<span class="tab"></span>ax.<span class="method">plot</span>(x, a, color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">"o"</span>, label=label_a)<br>
+								<span class="tab"></span>ax.<span class="method">plot</span>(x, b, color=<span class="string">"blue"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">"o"</span>, label=label_b)<br>
+								<span class="tab"></span>ax.<span class="class">set_title</span>(<span class="string">np</span>)<br>
+								<span class="tab"></span><span class="class">plt</span>.<span class="method">legend</span>(<span class="string">"Visuslisation de "</span> + label_a + <span class="string">" et "</span> + label_b)<br>
 								<span class="tab"></span><span class="class">plt</span>.<span class="method">show</span>()
 							</code>
 						</div>
@@ -411,7 +412,7 @@
 							<code class="language-python">
 								<span class="keyword">import</span> <span class="class">numpy</span> <span class="keyword">as</span> <span class="class">np</span><br>
 								<span class="keyword">import</span> <span class="class">pandas</span> <span class="keyword">as</span> <span class="class">pd</span><br>
-								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="attribute">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span><br>
+								<span class="keyword">import</span> <span class="class">matplotlib</span>.<span class="class">pyplot</span> <span class="keyword">as</span> <span class="class">plt</span><br>
 								<span class="keyword">from</span> exercice2 <span class="keyword">import</span> <span class="method">vals_norm</span>, <span class="method">vals_unif</span>, <span class="method">ecart_type_perso</span>
 							</code>
 						</div>
@@ -617,14 +618,18 @@
 								<span class="method">print</span>(<span class="string">"coefficients de régression linaire pour unif : "</span>, a_unif, b_unif)<br>
 								<br>
 								<span class="comment"># tracé des droites de régression linéaire</span><br>
-								fit_fn_norm = <span class="class">np</span>.<span class="method">poly1d</span>([a_norm, b_norm])<br>
-								fit_fn_unif = <span class="class">np</span>.<span class="method">poly1d</span>([a_unif, b_unif])<br>
+								reg_norm_poly = <span class="class">np</span>.<span class="class">polynomial</span>.<span class="method">Polynomial</span>([b_norm, a_norm]).<span class="method">convert</span>()<br>
+								reg_unif_poly = <span class="class">np</span>.<span class="class">polynomial</span>.<span class="method">Polynomial</span>([b_unif, a_unif]).<span class="method">convert</span>()<br>
+								x_reg_norm, y_reg_norm = reg_norm_poly.<span class="method">linspace</span>(n=<span class="number">5000</span>, domain=[x[<span class="number">0</span>], x[<span class="number">-1</span>]])<br>
+								x_reg_unif, y_reg_unif = reg_unif_poly.<span class="method">linspace</span>(n=<span class="number">5000</span>, domain=[x[<span class="number">0</span>], x[<span class="number">-1</span>]])<br>
 								<br>
 								fig, ax = <span class="class">plt</span>.<span class="method">subplots</span>()<br>
 								plt.<span class="method">plot</span>(x, df[<span class="string">"norm"</span>], color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, alpha=<span class="number">0.25</span>, label=<span class="string">"norm"</span>)<br>
 								plt.<span class="method">plot</span>(x, df[<span class="string">"unif"</span>], color=<span class="string">"blue"</span>, linestyle=<span class="string">""</span>, marker=<span class="string">"o"</span>, alpha=<span class="number">0.25</span>, label=<span class="string">"unif"</span>)<br>
-								plt.<span class="method">plot</span>(x, fit_fn_norm(x), color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, label=<span class="string">"régression linéaire norm"</span>)<br>
-								plt.<span class="method">plot</span>(x, fit_fn_unif(x), color=<span class="string">"blue"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, label=<span class="string">"régression linéaire unif"</span>)<br>
+								plt.<span class="method">plot</span>(x_reg_norm, y_reg_norm, color=<span class="string">"red"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, label=<span class="string">"régression linéaire norm"</span>)<br>
+								plt.<span class="method">plot</span>(x_reg_unif, y_reg_unif, color=<span class="string">"blue"</span>, linestyle=<span class="string">"-"</span>, marker=<span class="string">""</span>, label=<span class="string">"régression linéaire unif"</span>)<br>
+								ax.<span class="method">set_title</span>(<span class="string">"Régression linéaire pour norm et unif"</span>)<br>
+								<span class="class">plt</span>.<span class="method">legend</span>()<br>
 								plt.<span class="method">show</span>()
 							</code>
 						</div>
