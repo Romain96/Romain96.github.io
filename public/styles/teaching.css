@@ -270,27 +270,33 @@ code .tab {
 }
 
 .language-python .method {
-	color: #dcdcaa;
+	/*color: #dcdcaa;*/
+	color: #c7c75a;
 }
 
 .language-python .class {
-	color: #2ea9b0;
+	/*color: #2ea9b0;*/
+	color: #4644c9;
 }
 
 .language-python .attribute {
-	color: #9ccdc4;
+	/*color: #9ccdc4;*/
+	color: #4fc4af;
 }
 
 .language-python .string {
-	color: #ce834d;
+	/*color: #ce834d;*/
+	color: #cf7636;
 }
 
 .language-python .number {
-	color: #a7ce9b;
+	/*olor: #a7/*e9b;*/
+	color: #77c75f;
 }
 
 .language-python .keyword {
-	color: #c586c0;
+	/*color: #c586c0;*/
+	color : #c45cbd;
 }
 
 .details {
