@@ -772,7 +772,7 @@
 							</code>
 						</div>
 
-						<!-- Question 1 -->
+						<!-- Question 5 -->
 						<h4 class="heading-4">Question&nbsp;5</h4>
 						<p class="paragraph" data-i18n="m22_2025_tp2_ex5_q5"></p>
 						<div class="codeblock">
@@ -785,7 +785,7 @@
 								<span class="keyword">for</span> formation <span class="keyword">in</span> <span class="method">range</span>(<span class="number">0</span>, n_formations):<br>
 								<span class="tab"></span>index_1 = formation // <span class="number">2</span><br>
 								<span class="tab"></span>index_2 = formation % <span class="number">2</span><br>
-								<span class="tab"></span>y = df.<span class="method">iloc</span>[formation].<span class="method">method</span>()<br>
+								<span class="tab"></span>y = df.<span class="method">iloc</span>[formation].<span class="method">to_numpy</span>()<br>
 								<span class="tab"></span>axs[index_1][index_2].<span class="method">barh</span>(x[<span class="number">2</span>:<span class="number">19</span>], y[<span class="number">2</span>:<span class="number">19</span>], color=colors)<br>
 								<span class="tab"></span>axs[index_1][index_2].<span class="method">set_title</span>(y[<span class="number">20</span>], wrap=<span class="keyword">True</span>, fontsize=<span class="number">10</span>)<br>
 								<span class="class">plt</span>.<span class="method">legend</span>()<br>
@@ -895,7 +895,7 @@
 								axs[<span class="number">1</span>].<span class="method">set_xlabel</span>(<span class="string">"Points de mesure"</span>)<br>
 								axs[<span class="number">0</span>].<span class="method">set_ylabel</span>(<span class="string">"Température (°C)"</span>)<br>
 								axs[<span class="number">1</span>].<span class="method">set_ylabel</span>(<span class="string">"Tendance de températures (°C)"</span>)<br>
-								<span class="class">plt</span>.<span class="method">suptitle</span>(<span class="string">"Station météo de Strasbourg-Enntzheim (1950-2024)"</span>)<br>
+								<span class="class">plt</span>.<span class="method">suptitle</span>(<span class="string">"Station météo de Strasbourg-Entzheim (1950-2024)"</span>)<br>
 								axs[<span class="number">0</span>].<span class="method">legend</span>()<br>
 								axs[<span class="number">1</span>].<span class="method">legend</span>()<br>
 								<span class="class">plt</span>.<span class="method">legend</span>()<br>
