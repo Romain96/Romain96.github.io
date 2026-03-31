@@ -155,6 +155,10 @@ details {
 	padding-top: 0.5em;
 }
 
+details img {
+	max-width: 100%;
+}
+
 details summary {
 	line-height: 1.0;
 	font-family: "Lucida Console", Courier, monospace;
