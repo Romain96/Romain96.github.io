@@ -16,7 +16,7 @@
 
 		<div class="wrapper">
 
-			<header class="header">
+			<header class="header" id="header">
 				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
 				<nav class="nav">
 					<ul class="list">
@@ -37,6 +37,27 @@
 				</nav>
 			</header>
 
+			<aside class="left_aside">
+				<h3 class="heading-3" data-i18n="aside_summary_title"></h3>
+				<ul class="list">
+					<li class="item"><a href="#header" data-i18n="aside_summary_header"></a></li>
+					<li class="item"><a href="#TP1" data-i18n="aside_summary_tp1"></a></li>
+					<ul class="sublist">
+						<li class="item"><a href="#Exercice1" data-i18n="aside_summary_exo1"></a></li>
+						<li class="item"><a href="#Exercice2" data-i18n="aside_summary_exo2"></a></li>
+						<li class="item"><a href="#Exercice3" data-i18n="aside_summary_exo3"></a></li>
+						<li class="item"><a href="#Exercice4" data-i18n="aside_summary_exo4"></a></li>
+					</ul>
+					<li class="item"><a href="#TP2" data-i18n="aside_summary_tp2"></a></li>
+					<ul class="sublist">
+						<li class="item"><a href="#Exercice5" data-i18n="aside_summary_exo5"></a></li>
+						<li class="item"><a href="#Exercice6" data-i18n="aside_summary_exo6"></a></li>
+						<li class="item"><a href="#Exercice7" data-i18n="aside_summary_exo7"></a></li>
+					</ul>
+					<li class="item"><a href="#footer" data-i18n="aside_summary_footer"></a></li>
+				</ul>
+			</aside>
+
 			<main class="main">
 					
 				<h1 class="heading-1" data-i18n="m22_2025_title"></h1>
@@ -44,13 +65,13 @@
 				<label id="languageJSONPath" hidden>../../public/languages/teaching/2025_M22</label>
 					
 				<!-- TD/TP 1 -->
-				<section class="section">
+				<section class="section" id="TP1">
 
 					<h2 class="heading-2" data-i18n="m22_2025_tp1_title"></h2>
 					<p class="paragraph" data-i18n="m22_2025_tp1_ressources"></p>
 
 					<!-- Exercice 1 -->
-					<article class="article">
+					<article class="article" id="Exercice1">
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex1_title"></h3>
 
@@ -138,7 +159,7 @@
 					</article>
 
 					<!-- Exercice 2 -->
-					<article class="article">
+					<article class="article" id="Exercice2">
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex2_title"></h3>
 
@@ -342,7 +363,7 @@
 					</article>
 
 					<!-- Exercice 3 -->
-					<article class="article">
+					<article class="article" id="Exercice3">
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex3_title"></h3>
 
@@ -404,7 +425,7 @@
 					</article>
 
 					<!-- Exercice 4 -->
-					<article class="article">
+					<article class="article" id="Exercice4">
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp1_ex4_title"></h3>
 
@@ -690,13 +711,13 @@
 				</section>
 
 				<!-- TD/TP 2 -->
-				<section class="section">
+				<section class="section" id="TP2">
 
 					<h2 class="heading-2" data-i18n="m22_2025_tp2_title"></h2>
 					<p class="paragraph" data-i18n="m22_2025_tp2_ressources"></p>
 
 					<!-- Exercice 5 -->
-					<article class="article">
+					<article class="article" id="Exercice5">
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp2_ex5_title"></h3>
 
@@ -797,7 +818,7 @@
 					</article>
 
 					<!-- Exercice 6 -->
-					<article class="article">
+					<article class="article" id="Exercice6">
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp2_ex6_title"></h3>
 
@@ -906,7 +927,7 @@
 					</article>
 
 					<!-- Exercice 6 -->
-					<article class="article">
+					<article class="article" id="Exercice7">
 
 						<h3 class="heading-3" data-i18n="m22_2025_tp2_ex7_title"></h3>
 
@@ -1000,7 +1021,7 @@
 
 			</main>
 
-			<footer class="footer">
+			<footer class="footer" id="footer">
 				&copy;&nbsp;<span id="footer_year"></span>&nbsp;<p class="paragraph" data-i18n="footer_copyright"></p>
 				<script>
 					// Set the current year in the footer
