@@ -20,7 +20,7 @@
 	"aside_summary_tp_note": "✅ Rated TP",
 	"aside_summary_projet": "✅ Project",
 	"aside_summary_footer": "🔽 Bottom",
-	"p21_2025_td_tp_title": "Exercises",
+	"p21_2025_td_tp_title": "📕 Exercises",
 	"p21_2025_td1_title": "📖💻 TD/TP 1 : Classes and instances",
 	"p21_2025_td1_paragraph": "The source project containing both packages (<i>bank<\/i> for <b>Account<\/b> and <i>date<\/i> for <b>Date<\/b>), javadoc documentation and PlantUML files are available by downloading the following archive : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/P21\/TD1.zip\">TD1.zip<\/a>.<br>The UML class diagrams can be viewed below.",
 	"p21_2025_td2_title": "📖💻 TD/TP 2 : References and packages",
@@ -34,6 +34,6 @@
 	"p21_2025_td5_paragraph": "The source project containing all exercices, javadoc documentation and PlantUML files (class diagrams) are available by downloading the following archive : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/P21\/TD5.zip\">TD5.zip<\/a>.<br>The UML class diagrams can be viewed below.",
 	"p21_2025_td6_title": "📖💻 TD/TP 6 : Static methods and attributes, genericity and lambda expressions",
 	"p21_2025_td6_paragraph": "The source project containing all exercices, javadoc documentation and PlantUML files (class diagrams) are available by downloading the following archive : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/P21\/TD6.zip\">TD6.zip<\/a>.<br>The UML class diagrams can be viewed below.",
-	"p21_2025_tp_note_title": "Rated TP",
-	"p21_2025_projet_title": "Project"
+	"p21_2025_tp_note_title": "📕 Rated TP",
+	"p21_2025_projet_title": "📕 Project"
 }
