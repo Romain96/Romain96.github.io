@@ -16,7 +16,7 @@
 
 		<div class="wrapper">
 
-			<header class="header">
+			<header class="header" id="header">
 				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
 				<nav class="nav">
 					<ul class="list">
@@ -37,6 +37,16 @@
 				</nav>
 			</header>
 
+			<aside class="left_aside">
+				<h3 class="heading-3" data-i18n="aside_summary_title"></h3>
+				<ul class="list">
+					<li class="item"><a href="#header" data-i18n="aside_summary_header"></a></li>
+					<li class="item"><a href="#TP1" data-i18n="aside_summary_tp1"></a></li>
+					<li class="item"><a href="#TP2" data-i18n="aside_summary_tp2"></a></li>
+					<li class="item"><a href="#footer" data-i18n="aside_summary_footer"></a></li>
+				</ul>
+			</aside>
+
 			<main class="main">
 					
 				<h1 class="heading-1" data-i18n="m21_2025_title"></h1>
@@ -49,7 +59,7 @@
 					<p class="paragraph" data-i18n="m21_2025_td_tp_paragraph"></p>
 
 					<!-- TD/TP 1 -->
-					<article class="article">
+					<article class="article" id="TP1">
 
 						<h3 class="heading-3" data-i18n="m21_2025_td1_title"></h3>
 
@@ -312,7 +322,7 @@
 					</article>
 
 					<!-- TD/TP 2 -->
-					<article class="article">
+					<article class="article" id="TP2">
 
 						<h3 class="heading-3" data-i18n="m21_2025_td2_title"></h3>
 
@@ -551,7 +561,7 @@
 
 			</main>
 
-			<footer class="footer">
+			<footer class="footer" id="footer">
 				&copy;&nbsp;<span id="footer_year"></span>&nbsp;<p class="paragraph" data-i18n="footer_copyright"></p>
 				<script>
 					// Set the current year in the footer

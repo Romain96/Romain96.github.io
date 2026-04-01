@@ -167,7 +167,6 @@ body {
 .section {
 	flex-grow: 0;
 	flex-shrink: 0;
-	border-radius: 10px;
 	padding: 10px;
 	color: #eeeeee;
 }
@@ -176,7 +175,6 @@ body {
 	font-size: 2em;
 	margin-top: 0;
 	margin-bottom: 10px;
-	margin-left: 0.5em;
 	color: #ef9000;
 }
 
@@ -186,10 +184,6 @@ body {
 	width: 95%;
 	color: #eeeeee;
 	text-align: justify;
-}
-
-.section .article {
-	margin-left: 2em;
 }
 
 /* Article styling */
@@ -203,7 +197,6 @@ hr {
 .article {
 	flex-grow: 0;
 	flex-shrink: 0;
-	border-radius: 10px;
 	padding: 10px;
 	color: #eeeeee;
 }
