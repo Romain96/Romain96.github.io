@@ -1,5 +1,9 @@
 /* Publication specific */
 
+.heading-2 {
+	padding-left: 1em;
+}
+
 #internationalJournalSection {
 	flex: 0 1 100%;
 }
