@@ -15,6 +15,8 @@
 	"aside_summary_td3": "✅ TD/TP 3",
 	"aside_summary_td4": "✅ TD/TP 4",
 	"aside_summary_controles": "✅ Contrôles",
+	"aside_summary_tp_note": "✅ TP noté",
+	"aside_summary_projet": "✅ Projet",
 	"aside_summary_footer": "🔽 Bas",
 	"a31_2020_td_tp_title": "📕 Exercices",
 	"a31_2020_td1_title": "📖💻 TD/TP 1 : Feu tricolore et voitures (<em>DP Singleton, Strategy<\/em>)",

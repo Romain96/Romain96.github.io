@@ -15,6 +15,8 @@
 	"aside_summary_td3": "✅ TD/TP 3",
 	"aside_summary_td4": "✅ TD/TP 4",
 	"aside_summary_controles": "✅ Exams",
+	"aside_summary_tp_note": "✅ Rated TP",
+	"aside_summary_projet": "✅ Project",
 	"aside_summary_footer": "🔽 Bottom",
 	"a31_2021_td_tp_title": "📕 Exercises",
 	"a31_2021_td1_title": "📖💻 TD/TP 1 : Traffic light and cars (<em>DP Singleton, Strategy<\/em>)",
