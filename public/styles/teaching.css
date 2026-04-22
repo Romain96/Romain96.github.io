@@ -299,6 +299,47 @@ code .tab {
 	color : #c45cbd;
 }
 
+/*
+ * For Java code, manual syntax coloring
+ */
+.language-java {
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 1em;
+}
+
+.language-java .comment {
+	color: #54994c;
+}
+
+.language-java .method {
+	color: #c7c75a;
+}
+
+.language-java .class {
+	color: #4644c9;
+}
+
+.language-java .attribute {
+	color: #4fc4af;
+}
+
+.language-java .string {
+	color: #cf7636;
+}
+
+.language-java .number {
+	color: #77c75f;
+}
+
+.language-java .keyword {
+	color: #fa2525;
+}
+
+.language-java .type {
+	color: #fa2525;
+}
+
+
 .details {
 	font-size: 1em;
 	color: #eeeeee;
