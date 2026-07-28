@@ -49,3 +49,32 @@
 .article .list {
 	list-style: none;
 }
+
+.article .context {
+	display: flex;
+}
+
+.article .context .figure {
+	flex: 1 1 100%;
+}
+
+.figure-v {
+	border: 5px solid #291f1f;
+	border-radius: 5px;
+	display: flex;
+	flex-flow: column;
+	max-width: 25%;
+	margin: 5px 10px 5px 10px;
+}
+
+.figcaption {
+	background-color: #291f1f;
+	color: #eeeeee;
+	font: italic smaller verdana;
+	padding: 3px;
+	text-align: center;
+}
+
+.article .context .paragraph {
+	flex: 1 1 75%;
+}
