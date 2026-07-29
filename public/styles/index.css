@@ -135,6 +135,7 @@ body {
 .main {
 	display: flex;
 	flex: 0 0 75%;
+	max-width: 75%;
 	flex-direction: column;
 	justify-content: center;
 	margin: 10px 0px 10px 0px;;

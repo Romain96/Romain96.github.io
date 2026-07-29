@@ -58,6 +58,14 @@
 	flex: 1 1 100%;
 }
 
+.article .paragraph {
+	width: 100%;
+}
+
+figure {
+	height: fit-content;
+}
+
 .figure-v {
 	border: 5px solid #291f1f;
 	border-radius: 5px;
@@ -65,6 +73,29 @@
 	flex-flow: column;
 	max-width: 25%;
 	margin: 5px 10px 5px 10px;
+}
+
+.figure-h {
+	border: 5px solid #291f1f;
+	border-radius: 5px;
+	display: flex;
+	flex-flow: column;
+	max-width: 45%;
+	margin: 5px 10px 5px 10px;
+}
+
+.figure-h-full {
+	border: 5px solid #291f1f;
+	border-radius: 5px;
+	display: flex;
+	flex-flow: column;
+	max-width: 100%;
+	margin: 5px 10px 5px 10px;
+}
+
+.figure-h-full img {
+	width: 100%;
+	background-color: #eeeeee;
 }
 
 .figcaption {
