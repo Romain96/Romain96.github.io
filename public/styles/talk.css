@@ -59,11 +59,15 @@
 }
 
 .article .paragraph {
-	width: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: auto;
+	max-width: 100%;
 }
 
 figure {
 	height: fit-content;
+	background-color: #eeeeee;
 }
 
 .figure-v {
@@ -95,7 +99,6 @@ figure {
 
 .figure-h-full img {
 	width: 100%;
-	background-color: #eeeeee;
 }
 
 .figcaption {
