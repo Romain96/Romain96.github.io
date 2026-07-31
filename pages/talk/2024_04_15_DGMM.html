@@ -16,7 +16,7 @@
 
 		<div class="wrapper">
 
-			<header class="header">
+			<header class="header" id="header">
 				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
 				<nav class="nav">
 					<ul class="list">
@@ -37,6 +37,23 @@
 				</nav>
 			</header>
 
+			<!-- LEFT PANEL - MENU -->
+			<aside class="left_aside">
+				<h3 class="heading-3" data-i18n="aside_summary_title"></h3>
+				<ul class="list" id="page-menu">
+					<li class="item"><a href="#header" data-i18n="aside_summary_header"></a></li>
+					<li class="item"><a href="#context" data-i18n="aside_summary_context"></a></li>
+					<li class="item"><a href="#msct-principle" data-i18n="aside_summary_msct_principle"></a></li>
+					<li class="item"><a href="#etape-1" data-i18n="aside_summary_etape_1"></a></li>
+					<li class="item"><a href="#etape-2" data-i18n="aside_summary_etape_2"></a></li>
+					<li class="item"><a href="#etape-3" data-i18n="aside_summary_etape_3"></a></li>
+					<li class="item"><a href="#etape-4" data-i18n="aside_summary_etape_4"></a></li>
+					<li class="item"><a href="#resources" data-i18n="aside_summary_resources"></a></li>
+					<li class="item"><a href="#footer" data-i18n="aside_summary_footer"></a></li>
+				</ul>
+			</aside>
+
+			<!-- CENTRE PANEL - CONTENT -->
 			<main class="main">
 
 				<h1 class="heading-1" data-i18n="dgmm_2024_title"></h1>
@@ -46,7 +63,7 @@
 				<!-- Some context -->
 				<section class="section">
 					<!-- Context -->
-					<article class="article">
+					<article class="article" id="context">
 						<!-- title -->
 						<h3 class="heading-3" data-i18n="dgmm_2024_background_title"></h3>
 
@@ -71,7 +88,7 @@
 				<section class="section">
 
 					<!-- general principle -->
-					<article class="article">
+					<article class="article" id="msct-principle">
 						<!-- title -->
 						<h3 class="heading-3" data-i18n="dgmm_2024_general_principle_title"></h3>
 						<!-- description -->
@@ -187,7 +204,7 @@
 
 				<!-- Resources -->
 				<section class="section">
-					<article class="article">
+					<article class="article" id="resources">
 						<h3 class="heading-3" data-i18n="dgmm_2024_resources_title"></h3>
 						<!-- Resources decription -->
 						<!-- list of resources available to download -->
@@ -200,7 +217,7 @@
 
 			</main>
 
-			<footer class="footer">
+			<footer class="footer" id="footer">
 				&copy;&nbsp;<span id="footer_year"></span>&nbsp;<p class="paragraph" data-i18n="footer_copyright"></p>
 				<script>
 					// Set the current year in the footer
