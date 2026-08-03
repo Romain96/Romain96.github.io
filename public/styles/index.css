@@ -27,7 +27,8 @@ body {
 /* Header and navigation styling */
 .header {
 	display: flex;
-	flex: 0 0 75%;
+	flex: 0 0 70%;
+	max-width: 70%;
 	flex-direction: column;
 	background-color: #291f1f;
 	color: #eeeeee;
@@ -86,8 +87,9 @@ body {
 	position: fixed;
 	top: 10%;
 	left: 25px;
-	flex: 0 0 12.5%;
-	max-width: 10%;
+	flex: 0 0 15%;
+	width: 12.5%;
+	max-width: 12.5%;
 	color: #eeeeee;
 }
 
@@ -103,7 +105,7 @@ body {
 }
 
 .left_aside .heading-3 {
-	font-size: 1.25em;
+	font-size: 1em;
 	margin-bottom: 0px;
 	color: #ef9000;
 	text-decoration: underline;
@@ -123,7 +125,7 @@ body {
 .left_aside .list .item a {
 	color: #ef9000;
 	text-decoration: none;
-	font-size: 1.0em;
+	font-size: 0.8em;
 }
 
 .left_aside .list .sublist {
@@ -147,8 +149,8 @@ body {
 /* Main content styling */
 .main {
 	display: flex;
-	flex: 0 0 75%;
-	max-width: 75%;
+	flex: 0 0 70%;
+	max-width: 70%;
 	flex-direction: column;
 	justify-content: center;
 	margin: 10px 0px 10px 0px;;
@@ -255,6 +257,7 @@ a:hover {
 	display: flex;
 	flex: 0 0 auto;
 	width: 100%;
+	max-width: 100%;
 	justify-content: center;
 	background-color: #291f1f;
 	color: #eeeeee;
