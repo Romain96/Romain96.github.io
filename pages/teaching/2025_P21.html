@@ -14,30 +14,9 @@
 
 	<body>
 
-		<div class="wrapper">
-
-			<header class="header" id="header">
-				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
-				<nav class="nav">
-					<ul class="list">
-						<li class="item">
-							<select name="languageSelection" class="languageSelector" onchange="changeLanguageListener(this.value)">
-								<option class="languageOption" value="en" selected>🇬🇧&nbsp;English</option>
-								<option class="languageOption" value="fr">🇫🇷&nbsp;Français</option>
-							</select>
-						</li>
-						<li class="item" id="home"><img class="navlogo" src="../../images/navigation/home.png"><a href="../../index.html" data-i18n="nav_home"></a></li>
-						<li class="item" id="about"><img class="navlogo" src="../../images/navigation/cv.png"><a href="../../pages/cv.html" data-i18n="nav_about"></a></li>
-						<li class="item" id="research"><img class="navlogo" src="../../images/navigation/research.png"><a href="../../pages/research.html" data-i18n="nav_research"></a></li>
-						<li class="item" id="talk"><img class="navlogo" src="../../images/navigation/talk.png"><a href="../../pages/talk.html" data-i18n="nav_talk"></a></li>
-						<li class="item" id="publication"><img class="navlogo" src="../../images/navigation/publication.png"><a href="../../pages/publication.html" data-i18n="nav_publication"></a></li>
-						<li class="item" id="teaching"><img class="navlogo" src="../../images/navigation/teaching.png"><a href="../../pages/teaching.html" data-i18n="nav_teaching"></a></li>
-						<li class="item" id="project"><img class="navlogo" src="../../images/navigation/project.png"><a href="../../pages/project.html" data-i18n="nav_project"></a></li>
-					</ul>
-				</nav>
-			</header>
-
-			<aside class="left_aside">
+		<!-- LEFT PANEL - MENU -->
+		<aside class="left_aside">
+			<div class="page-menu-container">
 				<h3 class="heading-3" data-i18n="aside_summary_title"></h3>
 				<ul class="list" id="page-menu">
 					<li class="item"><a href="#header" data-i18n="aside_summary_header"></a></li>
@@ -59,7 +38,31 @@
 					<li class="item"><a href="#P21_Projet" data-i18n="aside_summary_projet"></a></li>
 					<li class="item"><a href="#footer" data-i18n="aside_summary_footer"></a></li>
 				</ul>
-			</aside>
+			</div>
+		</aside>
+
+		<div class="centre">
+
+			<header class="header" id="header">
+				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
+				<nav class="nav">
+					<ul class="list">
+						<li class="item">
+							<select name="languageSelection" class="languageSelector" onchange="changeLanguageListener(this.value)">
+								<option class="languageOption" value="en" selected>🇬🇧&nbsp;English</option>
+								<option class="languageOption" value="fr">🇫🇷&nbsp;Français</option>
+							</select>
+						</li>
+						<li class="item" id="home"><img class="navlogo" src="../../images/navigation/home.png"><a href="../../index.html" data-i18n="nav_home"></a></li>
+						<li class="item" id="about"><img class="navlogo" src="../../images/navigation/cv.png"><a href="../../pages/cv.html" data-i18n="nav_about"></a></li>
+						<li class="item" id="research"><img class="navlogo" src="../../images/navigation/research.png"><a href="../../pages/research.html" data-i18n="nav_research"></a></li>
+						<li class="item" id="talk"><img class="navlogo" src="../../images/navigation/talk.png"><a href="../../pages/talk.html" data-i18n="nav_talk"></a></li>
+						<li class="item" id="publication"><img class="navlogo" src="../../images/navigation/publication.png"><a href="../../pages/publication.html" data-i18n="nav_publication"></a></li>
+						<li class="item" id="teaching"><img class="navlogo" src="../../images/navigation/teaching.png"><a href="../../pages/teaching.html" data-i18n="nav_teaching"></a></li>
+						<li class="item" id="project"><img class="navlogo" src="../../images/navigation/project.png"><a href="../../pages/project.html" data-i18n="nav_project"></a></li>
+					</ul>
+				</nav>
+			</header>
 
 			<main class="main">
 					
@@ -834,6 +837,12 @@
 			</footer>
 
 		</div>
+
+		<!-- RIGHT PANEL - INFOS -->
+		<aside class="right_aside">
+			<div class="page-menu-container">
+			</div>
+		</aside>
 
 	</body>
 </html>
