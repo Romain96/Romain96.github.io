@@ -74,7 +74,8 @@ body {
 .left_aside .list .sublist {
 	list-style: none;
 	padding: 0;
-	margin-left: 20px;
+	margin-left: 1rem;
+	margin-right: 1rem;
 	list-style: none;
 	line-height: 1.25;
 }
