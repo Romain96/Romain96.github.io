@@ -112,3 +112,13 @@ figure {
 .article .context .paragraph {
 	flex: 1 1 75%;
 }
+
+.year-talks {
+	margin-bottom: 25px;
+}
+
+.section .heading-2 {
+	color: #eeeeee;
+	font-size: 1.5em;
+	margin-left: 1em;
+}

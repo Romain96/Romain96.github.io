@@ -64,5 +64,20 @@
     "talk_2018_05_29_date": "Date : 29/05/2018",
     "talk_2018_05_29_location": "Lieu : ICube UMR 7357, Illkirch-Graffenstaden, France",
     "talk_2018_05_29_language": "Langue : <img class=\"logoLang\" src=\"..\/images\/flag\/FRA.png\" alt=\"French\">",
-	"footer_copyright": "Romain Perrin. Tous droits réservés."
+	"footer_copyright": "Romain Perrin. Tous droits réservés.",
+    "summary_title": "Sommaire de page",
+	"summary_header": "🔼&nbsp;En-tête",
+	"summary_2025": "📆&nbsp;2025",
+    "summary_2024": "📆&nbsp;2024",
+    "summary_2023": "📆&nbsp;2023",
+    "summary_2019": "📆&nbsp;2019",
+    "summary_2018": "📆&nbsp;2018",
+	"summary_footer": "🔽&nbsp;Pied",
+	"page_info_title": "Informations sur la page",
+	"page_info_category": "Catégorie",
+	"page_info_category_item": "Événements (accueil)",
+	"page_info_last_modified": "Dernière modification",
+	"article_info_title": "Informations sur le contenu",
+	"article_info_author": "Auteur(s)",
+	"article_info_last_modified": "Dernière modification"
 }
