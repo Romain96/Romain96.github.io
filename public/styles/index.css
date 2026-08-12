@@ -55,7 +55,7 @@ body {
 }
 
 .page-menu-container .heading-3 {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	margin-bottom: 0.75rem;
 	color: #ef9000;
 	font-variant: small-caps;
@@ -70,14 +70,13 @@ body {
 #page-menu { 
 	width:100%;
 	max-height: 50vh;
-	/*height:70vh;*/
 	overflow: hidden;
 	overflow-y: scroll;
 	scrollbar-width: thin;
 }
 
 .left_aside .heading-3 {
-	font-size: 1rem;
+	font-size: 1em;
 	margin-bottom: 0.75rem;
 	color: #ef9000;
 	font-variant: small-caps;
@@ -88,7 +87,7 @@ body {
 	padding: 0;
 	margin: 0;
 	line-height: 1.5;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	color: #ef9000;
 }
 
@@ -155,14 +154,14 @@ body {
 }
 
 .right_aside .heading-3 {
-	font-size: 1rem;
+	font-size: 1em;
 	margin-bottom: 0.75rem;
 	color: #ef9000;
 	font-variant: small-caps;
 }
 
 .right_aside .heading-4 {
-	font-size: 0.8rem;
+	font-size: 0.9em;
 	margin-bottom: 0.75rem;
 	color: #eeeeee;
 	text-align: center;
@@ -177,7 +176,7 @@ body {
 	padding: 0;
 	margin: 0;
 	line-height: 1.5;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	color: #eeeeee;
 	display: flex;
 	flex-direction: row;

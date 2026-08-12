@@ -62,5 +62,19 @@
 	"responsability_ajci_admin": "Elected member of the Administrative Council of the <b>AJCI</b> (2021/10/07 - 2024/04/23)",
 	"responsability_ajci_deputy_sdc": "Deputy of the <b>AJCI</b> for the <i>Data Science and Knowledge</i> team of the ICube laboratory (2021/10-07 - 2024/04/23)",
 	"responsability_ajci_secretary": "Secretary of the <b>AJCI</b> (2021/10/07 - 2022/12/31)",
-	"footer_copyright": "Romain Perrin. All rights reserved."
+	"footer_copyright": "Romain Perrin. All rights reserved.",
+	"summary_title": "Page summary",
+	"summary_header": "🔼&nbsp;Header",
+	"summary_personal_infos": "📝 Personal details",
+	"summary_employment": "💼 Employment",
+	"summary_qualifications": "🎓 Qualifications",
+	"summary_responsabilities": "🔑 Responsabilities",
+	"summary_footer": "🔽&nbsp;Footer",
+	"page_info_title": "Page information",
+	"page_info_category": "Category",
+	"page_info_category_item": "curriculum vitæ",
+	"page_info_last_modified": "Last modified",
+	"article_info_title": "Content information",
+	"article_info_author": "Author(s)",
+	"article_info_last_modified": "Last modified"
 }
