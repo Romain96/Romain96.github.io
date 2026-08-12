@@ -18,14 +18,34 @@
 
 		<!-- LEFT PANEL - MENU -->
 		<aside class="left_aside">
+			<div class="image-container">
+				<img src="../../images/base/rabbits.png">
+			</div>
 			<div class="page-menu-container">
-
+				<h3 class="heading-3" data-i18n="summary_title"></h3>
+				<hr>
+				<ul class="list" id="page-menu">
+					<li class="item"><a href="#header" data-i18n="summary_header"></a></li>
+					<li class="item"><a href="#context" data-i18n="summary_context"></a></li>
+					<li class="item"><a href="#tictactoe" data-i18n="summary_tictactoe"></a></li>
+					<ul class="sublist">
+						<li class="item"><a href="#tictactoe1" data-i18n="summary_tictactoe1"></a></li>
+						<li class="item"><a href="#tictactoe2" data-i18n="summary_tictactoe2"></a></li>
+					</ul>
+					<li class="item"><a href="#nim" data-i18n="summary_nim"></a></li>
+					<ul class="sublist">
+						<li class="item"><a href="#nim1" data-i18n="summary_nim1"></a></li>
+						<li class="item"><a href="#nim2" data-i18n="summary_nim2"></a></li>
+						<li class="item"><a href="#nim3" data-i18n="summary_nim3"></a></li>
+					</ul>
+					<li class="item"><a href="#footer" data-i18n="summary_footer"></a></li>
+				</ul>
 			</div>
 		</aside>
 
 		<div class="centre">
 
-			<header class="header">
+			<header class="header" id="header">
 				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
 				<nav class="nav">
 					<ul class="list">
@@ -52,16 +72,15 @@
 				<hr>
 				<label id="languageJSONPath" hidden>../../public/languages/talk/2025_10_10_fete_de_la_science</label>
 
-				<section class="section">
-					<h2 class="heading-2" data-i18n="fds_2025_tic_tac_toe_title"></h2>
-				
-					<article class="article">
-						<h3 class="heading-3" data-i18n="fds_2025_background_title"></h3>
-						<hr>
-						<p class="paragraph" data-i18n="fds_2025_background_paragraph_1"></p>
-					</article>
+				<article class="article" id="context">
+					<h3 class="heading-3" data-i18n="fds_2025_background_title"></h3>
+					<p class="paragraph" data-i18n="fds_2025_background_paragraph_1"></p>
+				</article>
 
-					<article class="article">
+				<section class="section" id="tictactoe">
+					<h2 class="heading-2" data-i18n="fds_2025_tic_tac_toe_title"></h2>
+
+					<article class="article" id="tictactoe1">
 						<h3 class="heading-3" data-i18n="fds_2025_tic_tac_toe_1_title"></h3>
 						<hr>
 						<p class="paragraph" data-i18n="fds_2025_tic_tac_toe_1_description"></p>
@@ -135,7 +154,7 @@
 						</div>
 					</article>
 
-					<article class="article">
+					<article class="article" id="tictactoe2">
 						<h3 class="heading-3" data-i18n="fds_2025_tic_tac_toe_2_title"></h3>
 						<hr>
 						<p class="paragraph" data-i18n="fds_2025_tic_tac_toe_2_description"></p>
@@ -211,10 +230,10 @@
 
 				</section>
 
-				<section class="section">
+				<section class="section" id="nim">
 					<h2 class="heading-2" data-i18n="fds_2025_nim_title"></h2>
 
-					<article class="article">
+					<article class="article" id="nim1">
 						<h3 class="heading-3" data-i18n="fds_2025_nim_1_title"></h3>
 						<hr>
 						<p class="paragraph" data-i18n="fds_2025_nim_1_description"></p>
@@ -365,7 +384,7 @@
 						</div>
 					</article>
 
-					<article class="article">
+					<article class="article" id="nim2">
 						<h3 class="heading-3" data-i18n="fds_2025_nim_2_title"></h3>
 						<hr>
 						<p class="paragraph" data-i18n="fds_2025_nim_2_description"></p>
@@ -615,7 +634,7 @@
 						
 					</article>
 
-					<article class="article">
+					<article class="article" id="nim3">
 						<h3 class="heading-3" data-i18n="fds_2025_nim_3_title"></h3>
 						<hr>
 						<p class="paragraph" data-i18n="fds_2025_nim_3_description"></p>
@@ -725,7 +744,7 @@
 
 			</main>
 
-			<footer class="footer">
+			<footer class="footer" id="footer">
 				&copy;&nbsp;<span id="footer_year"></span>&nbsp;<p class="paragraph" data-i18n="footer_copyright"></p>
 				<script>
 					// Set the current year in the footer
@@ -737,7 +756,32 @@
 
 		<!-- RIGHT PANEL - INFOS -->
 		<aside class="right_aside">
+			<div class="image-container">
+				<img src="../../images/base/rabbits.png">
+			</div>
 			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="page_info_title"></h3>
+				<hr>
+				<h4 class="heading-4" data-i18n="page_info_category"></h4>
+				<ul class="list">
+					<li class="item" data-i18n="page_info_category_item"></li>
+				</ul>
+				<h4 class="heading-4" data-i18n="page_info_last_modified"></h4>
+				<ul class="list">
+					<li class="item">2026/08/12 21:30</li>
+				</ul>
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="article_info_title"></h3>
+				<hr>
+				<h4 class="heading-4" data-i18n="article_info_author"></h4>
+				<ul class="list">
+					<li class="item">Romain PERRIN</li>
+				</ul>
+				<h4 class="heading-4" data-i18n="article_info_last_modified"></h4>
+				<ul class="list">
+					<li class="item">2025/10/30 18:09</li>
+				</ul>
 			</div>
 		</aside>
 
