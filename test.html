@@ -7,16 +7,49 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>Dr Romain PERRIN, PhD</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-		<link rel="stylesheet" href="./public/styles/index.css"/>
+		<link rel="stylesheet" href="./test.css"/>
 		<link rel="stylesheet" href="./public/styles/test.css"/>
 		<script src="public/scripts/slideshow.js" defer></script>
 	</head>
 
 	<body>
 
-		<div class="wrapper">
+		<!-- LEFT PANEL - MENU -->
+		<aside class="left_aside">
+			<div class="image-container">
+				<img src="./images/base/rabbits.png">
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3">Summary</h3>
+				<hr>
+				<ul class="list" id="page-menu">
+					<li class="item"><a href="#header">Header</a></li>
+					<li class="item"><a href="#section-1">Section&nbsp;1</a></li>
+					<ul class="sublist">
+						<li class="item"><a href="#article-1">Article&nbsp;1</a></li>
+						<li class="item"><a href="#article-2">Article&nbsp;2</a></li>
+					</ul>
+					<li class="item"><a href="#section-1">Section&nbsp;2 maybe why not ? je ne sais quoi</a></li>
+					<li class="item"><a href="#section-1">Section&nbsp;3 le retour de la revanche</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+					<li class="item"><a href="#footer">Footer</a></li>
+				</ul>
+			</div>
+		</aside>
 
-			<header class="header">
+		<div class="centre">
+
+			<header class="header" id="header">
 				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
 				<nav class="nav">
 					<ul class="list">
@@ -37,18 +70,18 @@
 				<p class="paragraph">paragraphe sous le titre</p>
 				<hr>
 
-				<section class="section">
+				<section class="section" id="section-1">
 					<h2 class="heading-2">Titre section 1</h2>
 					<hr>
 
-					<article class="article">
+					<article class="article" id="article-1">
 						<h3 class="heading-3">Titre article 1</h3>
 						<p class="paragraph">
 							un paragraphe de blabla
 						</p>
 					</article>
 
-					<article class="article">
+					<article class="article" id="article-2">
 						<h3 class="heading-3">Titre article 2</h3>
 						<ul class="list">
 							<li class="item">un item de liste</li>
@@ -57,7 +90,7 @@
 					</article>
 				</section>
 
-				<section class="section">
+				<section class="section" id="section-2">
 
 					<h2 class="heading-2">Titre section 2</h2>
 					<hr>
@@ -88,7 +121,7 @@
 				</section>
 
 				<!-- Test photos -->
-				<section class="section">
+				<section class="section"  id="section-3">
 					<h2 class="heading-2">Some photos</h2>
 					<article class="article">
 						<h3 class="heading-3">Slideshow</h3>
@@ -115,11 +148,50 @@
 
 			</main>
 
-			<footer class="footer">
-				<p class="paragraph">&copy; 2025 Romain Perrin. All rights reserved.</p>
+			<footer class="footer" id="footer">
+				&copy;&nbsp;<span id="footer_year"></span>&nbsp;<p class="paragraph">Romain PERRIN. All rights reserved.</p>
+				<script>
+					// Set the current year in the footer
+					document.getElementById('footer_year').textContent = new Date().getFullYear();
+				</script>
 			</footer>
 
 		</div>
+
+		<!-- RIGHT PANEL - INFOS -->
+		<aside class="right_aside">
+			<div class="image-container">
+				<img src="./images/base/rabbits.png">
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3">Page informations</h3>
+				<hr>
+				<h4 class="heading-4">Category</h4>
+				<ul class="list">
+					<li class="item">unreferenced</li>
+				</ul>
+				<h4 class="heading-4">Last modified</h4>
+				<ul class="list">
+					<li class="item">2026/08/12 17:56</li>
+				</ul>
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3">Article informations</h3>
+				<hr>
+				<h4 class="heading-4">Author(s)</h4>
+				<ul class="list">
+					<li class="item">Romain PERRIN</li>
+				</ul>
+				<h4 class="heading-4">Last modified</h4>
+				<ul class="list">
+					<li class="item">2026/08/12 17:56</li>
+				</ul>
+				<h4 class="heading-4">Tags</h4>
+				<ul class="list">
+					<li class="item">test</li>
+				</ul>
+			</div>
+		</aside>
 
 	</body>
 </html>
