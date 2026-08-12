@@ -13,5 +13,15 @@
 	"m1_150h_resources_title": "Ressources",
 	"m1_150h_resources_description": "Fichiers téléchargeables",
 	"m1_150h_resource_final_report": "Rapport final",
-	"footer_copyright": "Romain Perrin. All rights reserved."
+	"footer_copyright": "Romain Perrin. All rights reserved.",
+	"summary_title": "Sommaire de page",
+	"summary_header": "🔼&nbsp;En-tête",
+	"summary_footer": "🔽&nbsp;Pied",
+	"page_info_title": "Informations sur la page",
+	"page_info_category": "Catégorie",
+	"page_info_category_item": "Événements",
+	"page_info_last_modified": "Dernière modification",
+	"article_info_title": "Informations sur le contenu",
+	"article_info_author": "Auteur(s)",
+	"article_info_last_modified": "Dernière modification"
 }
