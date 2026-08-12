@@ -13,5 +13,15 @@
 	"isbi_2024_resources_title": "Ressources",
 	"isbi_2024_resource_paper": "Article court publié (en Anglais)",
 	"isbi_2024_resource_poster": "Poster de conférence au format A1 (en Anglais)",
-	"footer_copyright": "Romain Perrin. Tous droits réservés."
+	"footer_copyright": "Romain Perrin. Tous droits réservés.",
+	"summary_title": "Sommaire de page",
+	"summary_header": "🔼&nbsp;En-tête",
+	"summary_footer": "🔽&nbsp;Pied",
+	"page_info_title": "Informations sur la page",
+	"page_info_category": "Catégorie",
+	"page_info_category_item": "Événements",
+	"page_info_last_modified": "Dernière modification",
+	"article_info_title": "Informations sur le contenu",
+	"article_info_author": "Auteur(s)",
+	"article_info_last_modified": "Dernière modification"
 }
