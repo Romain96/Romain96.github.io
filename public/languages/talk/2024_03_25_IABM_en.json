@@ -12,5 +12,15 @@
     "iabm_2024_background_paragraph_2": "I presented a poster showcasing the <em>Multi-Scale Component-Tree<\/em> (MSCT), a new multi-scale, hierarchical structure in mathematical morphology that I introduced alongside its construction algorithm and demonstration in cell segmentation. The MSCT has been formally published during the DGMM 2024 conference. The poster can be consulted in the seminar official <a href=\"https:\/\/iabm2024.sciencesconf.org\/resource\/page\/id\/7\">poster page</a> (poster #111) and in the resources below.",
     "iabm_2024_resources_title": "Resources",
     "iabm_2024_resource_poster": "A1 poster (in French)",
-	"footer_copyright": "Romain Perrin. All rights reserved."
+	"footer_copyright": "Romain Perrin. All rights reserved.",
+	"summary_title": "Page summary",
+	"summary_header": "🔼&nbsp;Header",
+	"summary_footer": "🔽&nbsp;Footer",
+	"page_info_title": "Page information",
+	"page_info_category": "Category",
+	"page_info_category_item": "Talks",
+	"page_info_last_modified": "Last modified",
+	"article_info_title": "Content information",
+	"article_info_author": "Author(s)",
+	"article_info_last_modified": "Last modified"
 }

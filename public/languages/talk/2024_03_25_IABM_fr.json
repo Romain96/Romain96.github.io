@@ -12,5 +12,15 @@
     "iabm_2024_background_paragraph_2": "J'ai présenté un poster illustrant le concept d'<em>abre des coupes multi-échelles<\/em> ou MSCT de l'anglais <i>multi-scale component-tree<\/i>, une nouvelle structure hiérarchique et multi-échelles en morphologie mathématique que j'ai théorisé. Le poster détaille la méthode de construction du MSCT et montre une application possible en segmentation cellulaire. Le MSCT incluant la définition formelle et l'lgorithme de construction a été publiblé lors de conférence  DGMM 2024. Le poster est disponible sur le site du colloque sur la <a href=\"https:\/\/iabm2024.sciencesconf.org\/resource\/page\/id\/7\">page des posters<\/a> (poster #111) et dans les ressources ci-dessous.",
     "iabm_2024_resources_title": "Ressources",
     "iabm_2024_resource_poster": "Poster au format A1",
-	"footer_copyright": "Romain Perrin. Tous droits réservés."
+	"footer_copyright": "Romain Perrin. Tous droits réservés.",
+	"summary_title": "Sommaire de page",
+	"summary_header": "🔼&nbsp;En-tête",
+	"summary_footer": "🔽&nbsp;Pied",
+	"page_info_title": "Informations sur la page",
+	"page_info_category": "Catégorie",
+	"page_info_category_item": "Événements",
+	"page_info_last_modified": "Dernière modification",
+	"article_info_title": "Informations sur le contenu",
+	"article_info_author": "Auteur(s)",
+	"article_info_last_modified": "Dernière modification"
 }
