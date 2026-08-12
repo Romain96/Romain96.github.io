@@ -39,5 +39,19 @@
 	"publication_2024_thesis_romain_perrin_advisor": "<a href=\"https:\/\/wemmertc.github.io\/webpage\/\">Prof Cédric WEMMERT<\/a>, <a href=\"https:\/\/images.icube.unistra.fr\/index.php\/Beno%C3%AEt_Naegel\">Prof Benoît NAEGEL<\/a>",
 	"publication_2024_thesis_romain_perrin_jury": "Prof Nicolas PASSAT (president, examiner), Prof Beatriz MARCOTEGUI (reporter), Prof Camille KURTZ (reporter), Dr Stéphanie BRICQ (examiner), Dr Vincent NOBLET (examiner), Dr Aurélie LEBORGNE (examiner)",
 	"publication_2024_thesis_romain_perrin_date": "23rd of October 2024",
-	"footer_copyright": "Romain Perrin. All rights reserved."
+	"footer_copyright": "Romain Perrin. All rights reserved.",
+	"summary_title": "Page summary",
+	"summary_header": "🔼&nbsp;Header",
+	"summary_international_journal": "📖&nbsp;International journals or revues",
+	"summary_international_conference": "📖&nbsp;International conferences",
+	"summary_national_conference": "📖&nbsp;National conferences or workshops",
+	"summary_phd_thesis": "📖&nbsp;PhD Thesis",
+	"summary_footer": "🔽&nbsp;Footer",
+	"page_info_title": "Page information",
+	"page_info_category": "Category",
+	"page_info_category_item": "Publications",
+	"page_info_last_modified": "Last modified",
+	"article_info_title": "Content information",
+	"article_info_author": "Author(s)",
+	"article_info_last_modified": "Last modified"
 }
