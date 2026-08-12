@@ -10,5 +10,15 @@
 	"p41_2024_projet_title": "💻 Projet",
 	"p41_2024_intro_title": "Introduction",
 	"p41_2024_intro_paragraph": "TODO",
-	"footer_copyright": "Romain Perrin. Tous doits réservés."
+	"footer_copyright": "Romain Perrin. Tous doits réservés.",
+	"summary_title": "Sommaire de page",
+	"summary_header": "🔼&nbsp;En-tête",
+	"summary_footer": "🔽&nbsp;Pied",
+	"page_info_title": "Informations sur la page",
+	"page_info_category": "Catégorie",
+	"page_info_category_item": "Enseignement (2024)",
+	"page_info_last_modified": "Dernière modification",
+	"article_info_title": "Informations sur le contenu",
+	"article_info_author": "Auteur(s)",
+	"article_info_last_modified": "Dernière modification"
 }

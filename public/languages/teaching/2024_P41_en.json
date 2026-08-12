@@ -10,5 +10,15 @@
 	"p41_2024_projet_title": "💻 Project",
 	"p41_2024_intro_title": "Introduction",
 	"p41_2024_intro_paragraph": "TODO",
-	"footer_copyright": "Romain Perrin. All rights reserved."
+	"footer_copyright": "Romain Perrin. All rights reserved.",
+	"summary_title": "Page summary",
+	"summary_header": "🔼&nbsp;Header",
+	"summary_footer": "🔽&nbsp;Footer",
+	"page_info_title": "Page information",
+	"page_info_category": "Category",
+	"page_info_category_item": "Teaching (2024)",
+	"page_info_last_modified": "Last modified",
+	"article_info_title": "Content information",
+	"article_info_author": "Author(s)",
+	"article_info_last_modified": "Last modified"
 }
