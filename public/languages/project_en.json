@@ -32,5 +32,15 @@
 	"project_entry_2_tags": "<i>Tags : High school, Python, 2D game<\/i>",
 	"project_entry_1_title": "➤ Visual Basic projects from high school",
 	"project_entry_1_tags": "<i>Tags : High school, Visual Basic, 2D game, Simulation, Mathematics<\/i>",
-	"footer_copyright": "Romain Perrin. All rights reserved."
+	"footer_copyright": "Romain Perrin. All rights reserved.",
+	"summary_title": "Page summary",
+	"summary_header": "🔼&nbsp;Header",
+	"summary_footer": "🔽&nbsp;Footer",
+	"page_info_title": "Page information",
+	"page_info_category": "Category",
+	"page_info_category_item": "Projects (home)",
+	"page_info_last_modified": "Last modified",
+	"article_info_title": "Content information",
+	"article_info_author": "Author(s)",
+	"article_info_last_modified": "Last modified"
 }

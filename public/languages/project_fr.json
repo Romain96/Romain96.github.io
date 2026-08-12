@@ -32,5 +32,15 @@
 	"project_entry_2_tags": "<i>Tags : Lycée, Python, jeu 2D<\/i>",
 	"project_entry_1_title": "➤ Projets sous Visual Basic (lycée, mathématiques)",
 	"project_entry_1_tags": "<i>Tags : Lycée, Visual Basic, jeu 2D, simulation, mathématiques<\/i>",
-	"footer_copyright": "Romain Perrin. Tous droits réservés."
+	"footer_copyright": "Romain Perrin. Tous droits réservés.",
+	"summary_title": "Sommaire de page",
+	"summary_header": "🔼&nbsp;En-tête",
+	"summary_footer": "🔽&nbsp;Pied",
+	"page_info_title": "Informations sur la page",
+	"page_info_category": "Catégorie",
+	"page_info_category_item": "Projets (accueil)",
+	"page_info_last_modified": "Dernière modification",
+	"article_info_title": "Informations sur le contenu",
+	"article_info_author": "Auteur(s)",
+	"article_info_last_modified": "Dernière modification"
 }
