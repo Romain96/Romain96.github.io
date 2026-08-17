@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Dr Romain PERRIN, PhD</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico?">
+		<link rel="stylesheet" href="../../public/styles/index.css"/>
+		<script src="../../public/scripts/languages.js" defer></script>
+	</head>
+
+	<body>
+
+		<!-- LEFT PANEL - MENU -->
+		<aside class="left_aside">
+			<div class="image-container">
+				<img src="../../images/base/top_left_banner.png">
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="summary_title"></h3>
+				<hr>
+				<ul class="list" id="page-menu">
+					<li class="item"><a href="#header" data-i18n="summary_header"></a></li>
+					<li class="item"><a href="#background" data-i18n="summary_background"></a></li>
+					<li class="item"><a href="#preview" data-i18n="summary_preview"></a></li>
+					<li class="item"><a href="#resources" data-i18n="summary_resources"></a></li>
+					<li class="item"><a href="#footer" data-i18n="summary_footer"></a></li>
+				</ul>
+			</div>
+		</aside>
+
+		<div class="centre">
+
+			<header class="header" id="header">
+				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
+				<nav class="nav">
+					<ul class="list">
+						<li class="item">
+							<select name="languageSelection" class="languageSelector" onchange="changeLanguageListener(this.value)">
+								<option class="languageOption" value="en" selected>🇬🇧&nbsp;English</option>
+								<option class="languageOption" value="fr">🇫🇷&nbsp;Français</option>
+							</select>
+						</li>
+						<li class="item" id="home"><img class="navlogo" src="../../images/navigation/home.png"><a href="../../index.html" data-i18n="nav_home"></a></li>
+						<li class="item" id="about"><img class="navlogo" src="../../images/navigation/cv.png"><a href="../../pages/cv.html" data-i18n="nav_about"></a></li>
+						<li class="item" id="research"><img class="navlogo" src="../../images/navigation/research.png"><a href="../../pages/research.html" data-i18n="nav_research"></a></li>
+						<li class="item" id="talk"><img class="navlogo" src="../../images/navigation/talk.png"><a href="../../pages/talk.html" data-i18n="nav_talk"></a></li>
+						<li class="item" id="publication"><img class="navlogo" src="../../images/navigation/publication.png"><a href="../../pages/publication.html" data-i18n="nav_publication"></a></li>
+						<li class="item" id="teaching"><img class="navlogo" src="../../images/navigation/teaching.png"><a href="../../pages/teaching.html" data-i18n="nav_teaching"></a></li>
+						<li class="item" id="project"><img class="navlogo" src="../../images/navigation/project.png"><a href="../../pages/project.html" data-i18n="nav_project"></a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<main class="main">
+
+				<h1 class="heading-1" data-i18n="main_title"></h1>
+				<hr>
+				<label id="languageJSONPath" hidden>../../public/languages/project/2013_quadratic_interpolation</label>
+
+				<!-- project presentation & illustrations -->
+				<section class="section">
+					<h2 class="heading-2" data-i18n="project_section_title"></h2>
+
+					<!-- background -->
+					<article class="article" id="background">
+						<h3 class="heading-3" data-i18n="article_background_title"></h3>
+						<p class="paragraph" data-i18n="background_paragraph"></p>
+					</article>
+
+					<!-- illustrations -->
+					<article class="article" id="preview">
+						<h3 class="heading-3" data-i18n="article_illustrations_title"></h3>
+						<!-- Context with illustration -->
+						<div class="figures">
+							<figure class="figure-h-50">
+								<img src="../../images/project/2013/quadratic_interpolation/interpolation_x0_p2.png" class="image">
+								<figcaption class="figcaption" data-i18n="figure_1_caption"></figcaption>
+							</figure>
+							<figure class="figure-h-50">
+								<img src="../../images/project/2013/quadratic_interpolation/interpolation_x0_m5.png" class="image">
+								<figcaption class="figcaption" data-i18n="figure_2_caption"></figcaption>
+							</figure>
+						</div>
+						
+					</article>
+
+				</section>
+
+				<!-- project resources -->
+				<section class="section" id="resources">
+					<h2 class="heading-2" data-i18n="resources_section_title"></h2>
+					<p class="paragraph" data-i18n="resources_paragraph"></p>
+					<ul class="list">
+						<li class="item" data-i18n="resource_website"></li>
+						<li class="item" data-i18n="resource_description"></li>
+						<li class="item" data-i18n="resource_vbs_gfx"></li>
+						<li class="item" data-i18n="resource_script"></li>
+					</ul>
+				</section>
+
+			</main>
+
+			<footer class="footer" id="footer">
+				&copy;&nbsp;<span id="footer_year"></span>&nbsp;<p class="paragraph" data-i18n="footer_copyright"></p>
+				<script>
+					// Set the current year in the footer
+					document.getElementById('footer_year').textContent = new Date().getFullYear();
+				</script>
+			</footer>
+
+		</div>
+
+		<!-- RIGHT PANEL - INFOS -->
+		<aside class="right_aside">
+			<div class="image-container">
+				<img src="../../images/base/top_right_banner.png">
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="page_info_title"></h3>
+				<hr>
+				<h4 class="heading-4" data-i18n="page_info_category"></h4>
+				<ul class="list">
+					<li class="item" data-i18n="page_info_category_item"></li>
+				</ul>
+				<h4 class="heading-4" data-i18n="page_info_last_modified"></h4>
+				<ul class="list">
+					<li class="item">2026/08/17 18:30</li>
+				</ul>
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="article_info_title"></h3>
+				<hr>
+				<h4 class="heading-4" data-i18n="article_info_author"></h4>
+				<ul class="list">
+					<li class="item">Romain PERRIN</li>
+				</ul>
+				<h4 class="heading-4" data-i18n="article_info_last_modified"></h4>
+				<ul class="list">
+					<li class="item">2025/10/17 19:11</li>
+				</ul>
+			</div>
+		</aside>
+
+	</body>
+</html>

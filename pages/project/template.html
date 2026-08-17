@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Dr Romain PERRIN, PhD</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico?">
+		<link rel="stylesheet" href="../../public/styles/index.css"/>
+		<script src="../../public/scripts/languages.js" defer></script>
+	</head>
+
+	<body>
+
+		<!-- LEFT PANEL - MENU -->
+		<aside class="left_aside">
+			<div class="image-container">
+				<img src="../../images/base/top_left_banner.png">
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="summary_title"></h3>
+				<hr>
+				<ul class="list" id="page-menu">
+					<li class="item"><a href="#header" data-i18n="summary_header"></a></li>
+					<li class="item"><a href="#footer" data-i18n="summary_footer"></a></li>
+				</ul>
+			</div>
+		</aside>
+
+		<div class="centre">
+
+			<header class="header" id="header">
+				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
+				<nav class="nav">
+					<ul class="list">
+						<li class="item">
+							<select name="languageSelection" class="languageSelector" onchange="changeLanguageListener(this.value)">
+								<option class="languageOption" value="en" selected>🇬🇧&nbsp;English</option>
+								<option class="languageOption" value="fr">🇫🇷&nbsp;Français</option>
+							</select>
+						</li>
+						<li class="item" id="home"><img class="navlogo" src="../../images/navigation/home.png"><a href="../../index.html" data-i18n="nav_home"></a></li>
+						<li class="item" id="about"><img class="navlogo" src="../../images/navigation/cv.png"><a href="../../pages/cv.html" data-i18n="nav_about"></a></li>
+						<li class="item" id="research"><img class="navlogo" src="../../images/navigation/research.png"><a href="../../pages/research.html" data-i18n="nav_research"></a></li>
+						<li class="item" id="talk"><img class="navlogo" src="../../images/navigation/talk.png"><a href="../../pages/talk.html" data-i18n="nav_talk"></a></li>
+						<li class="item" id="publication"><img class="navlogo" src="../../images/navigation/publication.png"><a href="../../pages/publication.html" data-i18n="nav_publication"></a></li>
+						<li class="item" id="teaching"><img class="navlogo" src="../../images/navigation/teaching.png"><a href="../../pages/teaching.html" data-i18n="nav_teaching"></a></li>
+						<li class="item" id="project"><img class="navlogo" src="../../images/navigation/project.png"><a href="../../pages/project.html" data-i18n="nav_project"></a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<main class="main">
+
+				<h1 class="heading-1">PAGE NAME</h1>
+				<hr>
+				<label id="languageJSONPath" hidden>../../public/languages/project/</label>
+
+				<section class="section">
+					<h2 class="heading-2">SECTION NAME</h2>
+
+					<article class="article">
+						<h3 class="heading-3">ARTICLE NAME</h3>
+						<p class="paragraph">
+							TODO
+						</p>
+					</article>
+
+				</section>
+
+			</main>
+
+			<footer class="footer" id="footer">
+				&copy;&nbsp;<span id="footer_year"></span>&nbsp;<p class="paragraph" data-i18n="footer_copyright"></p>
+				<script>
+					// Set the current year in the footer
+					document.getElementById('footer_year').textContent = new Date().getFullYear();
+				</script>
+			</footer>
+
+		</div>
+
+		<!-- RIGHT PANEL - INFOS -->
+		<aside class="right_aside">
+			<div class="image-container">
+				<img src="../../images/base/top_right_banner.png">
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="page_info_title"></h3>
+				<hr>
+				<h4 class="heading-4" data-i18n="page_info_category"></h4>
+				<ul class="list">
+					<li class="item" data-i18n="page_info_category_item"></li>
+				</ul>
+				<h4 class="heading-4" data-i18n="page_info_last_modified"></h4>
+				<ul class="list">
+					<li class="item">2026/08/17 18:30</li>
+				</ul>
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="article_info_title"></h3>
+				<hr>
+				<h4 class="heading-4" data-i18n="article_info_author"></h4>
+				<ul class="list">
+					<li class="item">Romain PERRIN</li>
+				</ul>
+				<h4 class="heading-4" data-i18n="article_info_last_modified"></h4>
+				<ul class="list">
+					<li class="item">2025/10/17 10:30</li>
+				</ul>
+			</div>
+		</aside>
+
+	</body>
+</html>
