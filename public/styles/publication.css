@@ -1,148 +1,30 @@
 /* Publication specific */
 
-.heading-2 {
-	padding-left: 1em;
-}
-
-#internationalJournalSection {
-	flex: 0 1 100%;
-}
-
-#internationalConferenceSection {
-	flex: 0 1 100%;
-}
-
-#nationalConferenceSection {
-	flex: 0 1 100%;
-}
-
-#phdThesisSection {
-	flex: 0 1 100%;
-}
-
-#internationalJournalSection .article .list {
-	list-style: none;
-}
-
-#internationalJournalSection .article .list .item {
-	font-size: 1em;
-}
-
-#internationalJournalSection .article .list .sublist {
-	list-style: none;
-}
-
-#internationalJournalSection .article .list .sublist .item {
-	font-size: 0.8em;;
-}
-
-#internationalConferenceSection .article .list {
-	list-style: none;
-}
-
-#internationalConferenceSection .article .list .item {
-	font-size: 1em;
-}
-
-#internationalConferenceSection .article .list .sublist {
-	list-style: none;
-}
-
-#internationalConferenceSection .article .list .sublist .item {
+.article {
+	margin-bottom: 25px;
 	font-size: 0.8em;
 }
 
-#nationalConferenceSection .article .list {
-	list-style: none;
+.article .heading-3 {
+	font-size: 1.5em;
+	color: #eeeeee;
+	margin-left: 2em;
+	font-variant: small-caps;
 }
 
-#nationalConferenceSection .article .list .item {
-	font-size: 1em;
+.article .list {
+	display: flex;
+	flex-direction: column;
 }
 
-#nationalConferenceSection .article .list .sublist {
-	list-style: none;
+.article .list .item {
+	display: flex;
 }
 
-#nationalConferenceSection .article .list .sublist .item {
-	font-size: 0.8em;
+.all_links {
+	display: flex;
+	align-items: flex-start;
+	gap: 1%;
+	max-width: 100%;
 }
 
-#thesis .list {
-	list-style: none;
-}
-
-#thesis .list .item {
-	font-size: 1.0em;
-}
-
-#thesis .list .sublist {
-	list-style: none;
-}
-
-#thesis .list .sublist .item {
-	font-size: 0.8em;
-}
-
-.article .list .paper
-{
-	height: 2em;
-	padding-right: 5px;
-	vertical-align: bottom;
-}
-
-.article .list .thesis
-{
-	height: 2em;
-	padding-right: 5px;
-	vertical-align: bottom;
-}
-
-.article .sublist .pdf
-{
-	height: 1.5em;
-	padding-right: 2px;
-	vertical-align: bottom;
-}
-
-.article .sublist .online
-{
-	height: 1.5em;
-	padding-right: 2px;
-	vertical-align: bottom;
-}
-
-.article .sublist .poster
-{
-	height: 1.5em;
-	padding-right: 2px;
-	vertical-align: bottom;
-}
-
-.article .sublist .presentation
-{
-	height: 1.5em;
-	padding-right: 2px;
-	vertical-align: bottom;
-}
-
-.article .sublist .ecrin
-{
-	height: 1.5em;
-	padding-right: 2px;
-	vertical-align: bottom;
-}
-
-.article .sublist .thesesfr
-{
-	height: 1.5em;
-	padding-right: 2px;
-	vertical-align: bottom;
-}
-
-.article .sublist .hal
-{
-	height: 1.5em;
-	padding-right: 2px;
-	vertical-align: bottom;
-}
