@@ -1,5 +1,9 @@
 /* teaching specific */
 
+.item {
+	display: block;
+}
+
 .main .heading-1 {
 	margin-bottom: 10px;
 }
