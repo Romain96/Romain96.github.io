@@ -1,5 +1,9 @@
 /* personal projects specific */
 
+#description {
+	font-size: 0.8em;
+}
+
 #personalProjects .entries {
 	display: flex;
 	flex-wrap: wrap;
@@ -35,6 +39,7 @@
 #personalProjects .article .heading-3 {
 	font-size: 1.0em;
 	margin: 5px;
+	text-align: center;
 }
 
 #personalProjects .article .paragraph {

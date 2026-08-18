@@ -38,7 +38,7 @@
 	"tag_compiler": "Compiler",
 	"tag_2d": "2D",
 	"tag_3d": "3D",
-	"project_description": "This page lists various projects I made over the years. It includes some small early projects from high school, proper projects from university and newer projects linked to my research and/or teaching topics. There are personal projects as well. Each project has its own dedicated page with additional resources.",
+	"project_description": "This page lists various projects I made over the years. It includes some small early projects from high school, proper projects from university and newer projects linked to my research and/or teaching topics. There are personal projects as well. Each project has its own dedicated page with additional resources. It can be accesses by clicking on a project title (in yellow).",
 	"entry_2012_quadratic_interpolation": "Quadratic curve interpolation (2012)",
 	"entry_2012_curve_tangent": "A curve tangents computation (2012)",
 	"entry_2013_mortar_shot": "The mortar shot game (2013)",
