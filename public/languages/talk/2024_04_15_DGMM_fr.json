@@ -52,5 +52,12 @@
 	"summary_etape_3": "🔖&nbsp;Étape&nbsp;3 : arbres des coupes partiels",
 	"summary_etape_4": "🔖&nbsp;Étape&nbsp;4 : sur-échantillonnage et fusion des arbres",
 	"summary_resources": "📦&nbsp;Ressources",
-	"summary_footer": "🔽&nbsp;Pied&nbsp;🔽"
+	"summary_footer": "🔽&nbsp;Pied&nbsp;🔽",
+	"page_info_title": "Informations sur la page",
+	"page_info_category": "Catégorie",
+	"page_info_category_item": "Événements",
+	"page_info_created": "Date de création",
+	"article_info_title": "Informations sur le contenu",
+	"article_info_author": "Auteur(s)",
+	"article_info_last_modified": "Dernière modification"
 }

@@ -9,28 +9,52 @@
 		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?">
 		<link rel="stylesheet" href="../public/styles/index.css"/>
 		<link rel="stylesheet" href="../public/styles/404.css"/>
+		<script src="./public/scripts/languages.js" defer></script>
 	</head>
 
 	<body>
 
-		<div class="wrapper">
+		<!-- LEFT PANEL - MENU -->
+		<aside class="left_aside">
+			<div class="image-container">
+				<img src="./images/base/top_left_banner.png">
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="summary_title"></h3>
+				<hr>
+				<ul class="list" id="page-menu">
+					<li class="item"><a href="#header" data-i18n="summary_header"></a></li>
+					<li class="item"><a href="#footer" data-i18n="summary_footer"></a></li>
+				</ul>
+			</div>
+		</aside>
 
-			<header class="header">
+		<div class="centre">
+
+			<header class="header" id="header">
 				<h1 class="heading-1">Dr Romain PERRIN, PhD</h1>
 				<nav class="nav">
 					<ul class="list">
-						<li class="item" id="home"><img class="navlogo" src="../images/navigation/home.png"><a href="../index.html">Home</a></li>
-						<li class="item" id="about"><img class="navlogo" src="../images/navigation/cv.png"><a href="../pages/cv.html">CV</a></li>
-						<li class="item" id="research"><img class="navlogo" src="../images/navigation/research.png"><a href="../pages/research.html">Research</a></li>
-						<li class="item" id="talk"><img class="navlogo" src="../images/navigation/talk.png"><a href="../pages/talk.html">Talks</a></li>
-						<li class="item" id="publication"><img class="navlogo" src="../images/navigation/publication.png"><a href="../pages/publication.html">Publications</a></li>
-						<li class="item" id="teaching"><img class="navlogo" src="../images/navigation/teaching.png"><a href="../pages/teaching.html">Teaching</a></li>
-						<li class="item" id="project"><img class="navlogo" src="../images/navigation/project.png"><a href="../pages/project.html">Projects</a></li>
+						<li class="item">
+							<select name="languageSelection" class="languageSelector" onchange="changeLanguageListener(this.value)">
+								<option class="languageOption" value="en" selected>🇬🇧&nbsp;English</option>
+								<option class="languageOption" value="fr">🇫🇷&nbsp;Français</option>
+							</select>
+						</li>
+						<li class="item" id="home"><img class="navlogo" src="./images/navigation/home.png"><a href="./index.html">&nbsp;<span data-i18n="nav_home"></span></a></li>
+						<li class="item" id="about"><img class="navlogo" src="./images/navigation/cv.png"><a href="./pages/cv.html">&nbsp;<span data-i18n="nav_about"></span></a></li>
+						<li class="item" id="research"><img class="navlogo" src="./images/navigation/research.png"><a href="./pages/research.html">&nbsp;<span data-i18n="nav_research"></span></a></li>
+						<li class="item" id="talk"><img class="navlogo" src="./images/navigation/talk.png"><a href="./pages/talk.html">&nbsp;<span data-i18n="nav_talk"></span></a></li>
+						<li class="item" id="publication"><img class="navlogo" src="./images/navigation/publication.png">&nbsp;<a href="./pages/publication.html"><span data-i18n="nav_publication"></span></a></li>
+						<li class="item" id="teaching"><img class="navlogo" src="./images/navigation/teaching.png">&nbsp;<a href="./pages/teaching.html"><span data-i18n="nav_teaching"></span></a></li>
+						<li class="item" id="project"><img class="navlogo" src="./images/navigation/project.png">&nbsp;<a href="./pages/project.html"><span data-i18n="nav_project"></span></a></li>
 					</ul>
 				</nav>
 			</header>
 
 			<main class="main">
+
+				<label id="languageJSONPath" hidden>public/languages/404</label>
 
 				<div class="content">
 
@@ -47,31 +71,11 @@
 							<img src="../images/gifs/mrbean.gif">
 						</div>
 
-						<p class="paragraph">
-						Congratulation !!! You reached the hidden page !<br>
-						It seems that you tried to access a legacy page.<br>
-						Please use the navigation menu above to access valid pages.
-						</p>
-
-						<p class="paragraph">
-						Bravo !!! Vous avez atteint la page cachée !<br>
-						Il semblerait que vous avez essayé d'accéder à une page inexistante.<br>
-						Veuillez utiliser le menu de navigation ci-dessus pour retourner sur des pages valides.
+						<p class="paragraph" data-i18n="p_message">
+						
 						</p>
 
 					</div>
-
-					<aside class="sidebarRight">
-						<h3 class="heading-3">Contact</h3>
-						<ul class="list" id="contact">
-							<li class="item"><img class="logo" src="../images/cv/email.png"><a href=mailto:romain.perrin@unistra.fr>romain.perrin@unistra.fr</a></li>
-							<li class="item"><img class="logo" src="../images/cv/gmail.png"><a href=mailto:romainperrin67@gmail.com>romainperrin67@gmail.com</a></li>
-							<li class="item"><img class="logo" src="../images/cv/github.png" alt="github logo"><a href="https://github.com/Romain96">Github</a></li>
-							<li class="item"><img class="logo" src="../images/cv/orcid.png" alt="orcid logo"><a href="https://orcid.org/0009-0001-6534-9727">ORCID</a></li>
-							<li class="item"><img class="logo" src="../images/cv/scholar.png" alt="Google scholar logo"><a href="https://scholar.google.com/citations?user=HXjAJR4AAAAJ&hl=fr">Google scholar</a></li>
-							<li class="item"><img class="logo" src="../images/cv/linkedin.png" alt="linkedin logo"><a href="https://www.linkedin.com/in/romain-perrin-213270356">LinkedIn</a></li>
-						</ul>
-					</aside>
 
 				</div>	
 
@@ -86,6 +90,37 @@
 			</footer>
 
 		</div>
+
+		<!-- RIGHT PANEL - INFOS -->
+		<aside class="right_aside">
+			<div class="image-container">
+				<img src="./images/base/top_right_banner.png">
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="page_info_title"></h3>
+				<hr>
+				<h4 class="heading-4" data-i18n="page_info_category"></h4>
+				<ul class="list">
+					<li class="item" data-i18n="page_info_category_item"></li>
+				</ul>
+				<h4 class="heading-4" data-i18n="page_info_created"></h4>
+				<ul class="list">
+					<li class="item">2025/11/12 23:09</li>
+				</ul>
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="article_info_title"></h3>
+				<hr>
+				<h4 class="heading-4" data-i18n="article_info_author"></h4>
+				<ul class="list">
+					<li class="item">Romain PERRIN</li>
+				</ul>
+				<h4 class="heading-4" data-i18n="article_info_last_modified"></h4>
+				<ul class="list">
+					<li class="item">2025/10/27 10:50</li>
+				</ul>
+			</div>
+		</aside>
 
 	</body>
 </html>
