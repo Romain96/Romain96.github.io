@@ -40,7 +40,7 @@
 	"teaching_2020_2021_description": "IUT Robert Schuman, Université de Strasbourg",
 	"teaching_2020_2021_a31": "➤ <b>A31<\/b> - Object-oriented design and programming",
 	"footer_copyright": "Romain Perrin. All rights reserved.",
-	"summary_title": "Page summary",
+	"summary_title": "Summary",
 	"summary_header": "🔼&nbsp;Header",
 	"summary_2025_2026": "📅 2025-2026",
     "summary_2024_2025": "📅 2024-2025",
@@ -49,11 +49,11 @@
     "summary_2021_2022": "📅 2021-2022",
     "summary_2020_2021": "📅 2020-2021",
 	"summary_footer": "🔽&nbsp;Footer",
-	"page_info_title": "Page information",
+	"page_info_title": "Page",
 	"page_info_category": "Category",
 	"page_info_category_item": "Teaching (home)",
 	"page_info_created": "Page created",
-	"article_info_title": "Content information",
+	"article_info_title": "Content",
 	"article_info_author": "Author(s)",
 	"article_info_last_modified": "Last modified"
 }

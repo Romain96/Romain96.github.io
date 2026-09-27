@@ -60,14 +60,14 @@
 	"entry_2018_discrete_dual": "Calcul du dual de discrétisation de formes 2D (2018)",
 	"entry_2019_multivalued_component_tree": "Calcul de l'arbre des coupes multivalué (2019)",
 	"footer_copyright": "Romain Perrin. Tous droits réservés.",
-	"summary_title": "Sommaire de page",
+	"summary_title": "Sommaire",
 	"summary_header": "🔼&nbsp;En-tête",
 	"summary_footer": "🔽&nbsp;Pied",
-	"page_info_title": "Informations sur la page",
+	"page_info_title": "Page",
 	"page_info_category": "Catégorie",
 	"page_info_category_item": "Projets (accueil)",
 	"page_info_created": "Date de création",
-	"article_info_title": "Informations sur le contenu",
+	"article_info_title": "Contenu",
 	"article_info_author": "Auteur(s)",
 	"article_info_last_modified": "Dernière modification"
 }

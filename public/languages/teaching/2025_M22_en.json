@@ -58,7 +58,7 @@
 	"m22_2025_tp2_ex7_q5": "Display <b>graphically<\/b> the evolution of the admission rate of students recruited from <i>bac techno<\/i>.",
 	"m22_2025_tp1_ressources": "The Python files for exercises 1-4 of TP1 are available by downloading the following archive : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/M22\/2025_M22_TP1_codes.zip\">2025_M22_TP1_codes.zip<\/a>.",
 	"m22_2025_tp2_ressources": "The Python files for exercises 5-7 of TP2 are available by downloading the following archive : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/M22\/2025_M22_TP2_codes.zip\">2025_M22_TP2_codes.zip<\/a>.<br><b>Warning, the CSV files are required but not included !<\/b>",
-	"summary_title": "Page summary",
+	"summary_title": "Summary",
 	"summary_header": "🔼&nbsp;Header",
 	"summary_tp1": "💻&nbsp;TP&nbsp;1",
 	"summary_tp2": "💻&nbsp;TP&nbsp;2",
@@ -70,11 +70,11 @@
 	"summary_exo6": "💻&nbsp;Exercise&nbsp;6",
 	"summary_exo7": "💻&nbsp;Exercise&nbsp;7",
 	"summary_footer": "🔽&nbsp;Footer",
-	"page_info_title": "Page information",
+	"page_info_title": "Page",
 	"page_info_category": "Category",
 	"page_info_category_item": "Teaching (2025)",
 	"page_info_created": "Page created",
-	"article_info_title": "Content information",
+	"article_info_title": "Content",
 	"article_info_author": "Author(s)",
 	"article_info_last_modified": "Last modified"
 }

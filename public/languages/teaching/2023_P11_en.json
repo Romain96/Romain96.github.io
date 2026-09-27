@@ -127,7 +127,7 @@
 	"p11_2023_td14_resources": "The complete resources for the TD14 are available by downloading the following archive : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\"> <a href=\"..\/..\/files\/teaching\/2023\/P11\/14_TD14.zip\">14_TD14.zip<\/a><br>The individual resources (C# program files) are available in the table underneath.",
 	"p11_2023_td14_exo": "Solving the problem of the <i>Hanoï towers<\/i>",
 	"footer_copyright": "Romain Perrin. All rights reserved.",
-	"summary_title": "Page summary",
+	"summary_title": "Summary",
 	"summary_header": "🔼&nbsp;Header",
 	"summary_td1": "📖💻&nbsp;TD/TP&nbsp;1",
 	"summary_td2": "📖💻&nbsp;TD/TP&nbsp;2",
@@ -144,11 +144,11 @@
 	"summary_td13": "📖💻&nbsp;TD/TP&nbsp;13",
 	"summary_td14": "📖💻&nbsp;TD/TP&nbsp;14",
 	"summary_footer": "🔽&nbsp;Footer",
-	"page_info_title": "Page information",
+	"page_info_title": "Page",
 	"page_info_category": "Category",
 	"page_info_category_item": "Teaching (2023)",
 	"page_info_created": "Page created",
-	"article_info_title": "Content information",
+	"article_info_title": "Content",
 	"article_info_author": "Author(s)",
 	"article_info_last_modified": "Last modified"
 }

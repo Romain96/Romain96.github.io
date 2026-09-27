@@ -58,7 +58,7 @@
 	"m22_2025_tp2_ex7_q5": "Afficher sous forme de <b>graphique<\/b> l’évolution du taux d'admission des étudiants provenant de bacs technologiques.",
 	"m22_2025_tp1_ressources": "Les codes Python des exercices 1-4 du TP1 sont disponibles en téléchargeant l'archive suivante : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/M22\/2025_M22_TP1_codes.zip\">2025_M22_TP1_codes.zip<\/a>.",
 	"m22_2025_tp2_ressources": "Les codes Python des exercices 5-7 du TP2 sont disponibles en téléchargeant l'archive suivante : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/M22\/2025_M22_TP2_codes.zip\">2025_M22_TP2_codes.zip<\/a>.<br><b>Attention, les différents fichiers CSV sont nécessaires mais non inclus !<\/b>",
-	"aside_summary_title": "Sommaire de page",
+	"aside_summary_title": "Sommaire",
 	"aside_summary_header": "🔼&nbsp;En-tête",
 	"aside_summary_tp1": "💻&nbsp;TP&nbsp;1",
 	"aside_summary_tp2": "💻&nbsp;TP&nbsp;2",
@@ -70,11 +70,11 @@
 	"aside_summary_exo6": "💻&nbsp;Exercice&nbsp;6",
 	"aside_summary_exo7": "💻&nbsp;Exercice&nbsp;7",
 	"aside_summary_footer": "🔽&nbsp;Pied",
-	"page_info_title": "Informations sur la page",
+	"page_info_title": "Page",
 	"page_info_category": "Catégorie",
 	"page_info_category_item": "Enseignement (2025)",
 	"page_info_created": "Date de création",
-	"article_info_title": "Informations sur le contenu",
+	"article_info_title": "Contenu",
 	"article_info_author": "Auteur(s)",
 	"article_info_last_modified": "Dernière modification"
 }

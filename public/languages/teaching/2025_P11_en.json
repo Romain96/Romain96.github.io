@@ -53,7 +53,7 @@
 	"p11_2025_controle_intermediaire_paragraph": "Intermediate exam 1h correction : <img class=\"logo\" src=\"..\/..\/images\/teaching\/pdf.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/P11/06_11_2025_controle_intermediaire.pdf\">06_11_2025_controle_intermediaire.pdf<\/a>",
 	"p11_2025_controle_final_title": "🖋&nbsp;Final exam - 2026-01-21",
 	"footer_copyright": "Romain Perrin. All rights reserved.",
-	"summary_title": "Page summary",
+	"summary_title": "Summary",
 	"summary_header": "🔼&nbsp;Header",
 	"summary_td_tp": "📕&nbsp;Exercises",
 	"summary_tp1": "📖💻&nbsp;TD/TP&nbsp;1",
@@ -70,11 +70,11 @@
 	"summary_SAE": "💻&nbsp;SAE",
 	"summary_controles": "📕&nbsp;Exams",
 	"summary_footer": "🔽&nbsp;Footer",
-	"page_info_title": "Page information",
+	"page_info_title": "Page",
 	"page_info_category": "Category",
 	"page_info_category_item": "Teaching (2025)",
 	"page_info_created": "Page created",
-	"article_info_title": "Content information",
+	"article_info_title": "Content",
 	"article_info_author": "Author(s)",
 	"article_info_last_modified": "Last modified"
 }

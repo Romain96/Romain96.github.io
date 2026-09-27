@@ -69,7 +69,7 @@
 	"p21_2025_controle_ex3_title" : "🖋&nbsp;Exercice 3 - Hériter ou ne pas hériter",
 	"p21_2025_tp_note_title": "💻&nbsp;TP&nbsp;noté",
 	"p21_2025_projet_title": "💻&nbsp;Projet",
-	"summary_title": "Sommaire de page",
+	"summary_title": "Sommaire",
 	"summary_header": "🔼&nbsp;En-tête",
 	"summary_td_tp": "📕&nbsp;Exercices",
 	"summary_tp1": "📖💻&nbsp;TD/TP&nbsp;1",
@@ -85,11 +85,11 @@
 	"summary_tp_note": "💻&nbsp;TP&nbsp;noté",
 	"summary_projet": "💻&nbsp;Projet",
 	"summary_footer": "🔽&nbsp;Pied",
-	"page_info_title": "Informations sur la page",
+	"page_info_title": "Page",
 	"page_info_category": "Catégorie",
 	"page_info_category_item": "Enseignement (2025)",
 	"page_info_created": "Date de création",
-	"article_info_title": "Informations sur le contenu",
+	"article_info_title": "Contenu",
 	"article_info_author": "Auteur(s)",
 	"article_info_last_modified": "Dernière modification"
 }

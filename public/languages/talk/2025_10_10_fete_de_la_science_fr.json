@@ -22,7 +22,7 @@
 	"fds_2025_nim_3_title": "🎲&nbsp;Jeu de Nim (3/3) - IA entraînée illustrée",
 	"fds_2025_nim_3_description": "TODO",
 	"footer_copyright": "Romain Perrin. Tous droits réservés.",
-	"summary_title": "Sommaire de page",
+	"summary_title": "Sommaire",
 	"summary_header": "🔼&nbsp;En-tête",
 	"summary_context": "🔖&nbsp;Contexte",
 	"summary_tictactoe": "🎲&nbsp;Jeu du Morpion",
@@ -33,11 +33,11 @@
 	"summary_nim2" : "🎲&nbsp;IA non entraînée",
 	"summary_nim3" : "🎲&nbsp;IA entraînée illustrée",
 	"summary_footer": "🔽&nbsp;Pied",
-	"page_info_title": "Informations sur la page",
+	"page_info_title": "Page",
 	"page_info_category": "Catégorie",
 	"page_info_category_item": "Événements",
 	"page_info_created": "Date de création",
-	"article_info_title": "Informations sur le contenu",
+	"article_info_title": "Contenu",
 	"article_info_author": "Auteur(s)",
 	"article_info_last_modified": "Dernière modification"
 }

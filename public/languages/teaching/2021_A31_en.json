@@ -22,7 +22,7 @@
 	"a31_2021_projet_title": "💻&nbsp;Project&nbsp;: Kingdomino game",
 	"a31_2021_projet_paragraph": "TODO",
 	"footer_copyright": "Romain Perrin. All rights reserved.",
-	"summary_title": "Page summary",
+	"summary_title": "Summary",
 	"summary_header": "🔼&nbsp;Header",
 	"summary_td_tp": "📕&nbsp;Exercises",
 	"summary_td1": "📖💻&nbsp;TD/TP&nbsp;1",
@@ -33,11 +33,11 @@
 	"summary_tp_note": "💻&nbsp;Rated&nbsp;TP",
 	"summary_projet": "💻&nbsp;Project",
 	"summary_footer": "🔽&nbsp;Footer",
-	"page_info_title": "Page information",
+	"page_info_title": "Page",
 	"page_info_category": "Category",
 	"page_info_category_item": "Teaching (2021)",
 	"page_info_created": "Page created",
-	"article_info_title": "Content information",
+	"article_info_title": "Content",
 	"article_info_author": "Author(s)",
 	"article_info_last_modified": "Last modified"
 }

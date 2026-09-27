@@ -289,7 +289,7 @@
 	"d11_2025_td6_q38": "Reduce again the size of the cadeau column to 3 maximum characters.",
 	"d11_2025_td6_q38_rep": "Not possible as there are values for cadeau longer than 3 characters !",
 	"footer_copyright": "Romain Perrin. All rights reserved.",
-	"summary_title": "Page summary",
+	"summary_title": "Summary",
 	"summary_header": "🔼&nbsp;Header",
 	"summary_td1"	: "📖💻&nbsp;TD/TP&nbsp;1",
 	"summary_td2"	: "📖💻&nbsp;TD/TP&nbsp;2",
@@ -321,11 +321,11 @@
 	"summary_td6_ldd": "❓&nbsp;LDD",
 	"summary_td6_bonus": "🎁&nbsp;Bonus",
 	"summary_footer": "🔽&nbsp;Footer",
-	"page_info_title": "Page information",
+	"page_info_title": "Page",
 	"page_info_category": "Category",
 	"page_info_category_item": "Teaching (2025)",
 	"page_info_created": "Page created",
-	"article_info_title": "Content information",
+	"article_info_title": "Content",
 	"article_info_author": "Author(s)",
 	"article_info_last_modified": "Last modified"
 }

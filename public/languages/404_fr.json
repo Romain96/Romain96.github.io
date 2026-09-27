@@ -8,14 +8,14 @@
 	"nav_project": "Projets",
 	"title": "Erreur 404&nbsp;:<br>Page non trouvée !",
 	"p_message": "Bravo !!! Vous avez atteint la page cachée !<br>Il semblerait que vous avez essayé d'accéder à une page inexistante.<br>Veuillez utiliser le menu de navigation ci-dessus pour retourner sur des pages valides.",
-	"summary_title": "Sommaire de page",
+	"summary_title": "Sommaire",
 	"summary_header": "🔼&nbsp;En-tête",
 	"summary_footer": "🔽&nbsp;Pied",
-	"page_info_title": "Informations sur la page",
+	"page_info_title": "Page",
 	"page_info_category": "Catégorie",
 	"page_info_category_item": "Page non trouvée (erreur&nbsp;404)",
 	"page_info_created": "Date de création",
-	"article_info_title": "Informations sur le contenu",
+	"article_info_title": "Contenu",
 	"article_info_author": "Auteur(s)",
 	"article_info_last_modified": "Dernière modification"
 }

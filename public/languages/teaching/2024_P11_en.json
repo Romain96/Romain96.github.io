@@ -136,7 +136,7 @@
 	"p11_2024_controle_2_exo_1": "Exercise 1 : owls",
 	"p11_2024_controle_2_exo_2et3": "Exercises 2 and 3 : Pokémons",
 	"footer_copyright": "Romain Perrin. All rights reserved.",
-	"summary_title": "Page summary",
+	"summary_title": "Summary",
 	"summary_header": "🔼&nbsp;Header",
 	"summary_td_tp": "📕&nbsp;Exercises",
 	"summary_td1": "📖💻&nbsp;TD/TP&nbsp;1",
@@ -157,11 +157,11 @@
 	"summary_projet": "📕&nbsp;SAÉ",
 	"summary_controles": "📕&nbsp;Exams",
 	"summary_footer": "🔽&nbsp;Footer",
-	"page_info_title": "Page information",
+	"page_info_title": "Page",
 	"page_info_category": "Category",
 	"page_info_category_item": "Teaching (2024)",
 	"page_info_created": "Page created",
-	"article_info_title": "Content information",
+	"article_info_title": "Content",
 	"article_info_author": "Author(s)",
 	"article_info_last_modified": "Last modified"
 }

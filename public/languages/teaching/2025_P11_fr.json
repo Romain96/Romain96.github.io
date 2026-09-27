@@ -53,7 +53,7 @@
 	"p11_2025_controle_intermediaire_paragraph": "Corrigé du contrôle intermédiaire de 1h : <img class=\"logo\" src=\"..\/..\/images\/teaching\/pdf.png\">&nbsp;<a href=\"..\/..\/files\/teaching\/2025\/P11/06_11_2025_controle_intermediaire.pdf\">06_11_2025_controle_intermediaire.pdf<\/a>",
 	"p11_2025_controle_final_title": "🖋&nbsp;Contrôle final - 21/01/2026",
 	"footer_copyright": "Romain Perrin. Tous droits réservés.",
-	"summary_title": "Sommaire de page",
+	"summary_title": "Sommaire",
 	"summary_header": "🔼&nbsp;En-tête",
 	"summary_td_tp": "📕&nbsp;Exercices",
 	"summary_tp1": "📖💻&nbsp;TD/TP 1",
@@ -70,11 +70,11 @@
 	"summary_SAE": "💻&nbsp;SAÉ",
 	"summary_controles": "📕&nbsp;Contrôles",
 	"summary_footer": "🔽&nbsp;Pied",
-	"page_info_title": "Informations sur la page",
+	"page_info_title": "Page",
 	"page_info_category": "Catégorie",
 	"page_info_category_item": "Enseignement (2025)",
 	"page_info_created": "Date de création",
-	"article_info_title": "Informations sur le contenu",
+	"article_info_title": "Contenu",
 	"article_info_author": "Auteur(s)",
 	"article_info_last_modified": "Dernière modification"
 }

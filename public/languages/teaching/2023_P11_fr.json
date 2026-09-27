@@ -127,7 +127,7 @@
 	"p11_2023_td14_resources": "Les ressources complètes du TD14 sont disponible en téléchargeant l'archive suivante : <img class=\"logo\" src=\"..\/..\/images\/teaching\/zip.png\"> <a href=\"..\/..\/files\/teaching\/2023\/P11\/14_TD14.zip\">14_TD14.zip<\/a><br>Les ressources individuelles (codes C#) sont disponibles ci-dessous.",
 	"p11_2023_td14_exo": "Résolution du problème des <i>Tours de Hanoï<\/i>",
 	"footer_copyright": "Romain Perrin. Tous droits réservés.",
-	"summary_title": "Sommaire de page",
+	"summary_title": "Sommaire",
 	"summary_header": "🔼&nbsp;En-tête",
 	"summary_td1": "📖💻&nbsp;TD/TP&nbsp;1",
 	"summary_td2": "📖💻&nbsp;TD/TP&nbsp;2",
@@ -144,11 +144,11 @@
 	"summary_td13": "📖💻&nbsp;TD/TP&nbsp;13",
 	"summary_td14": "📖💻&nbsp;TD/TP&nbsp;14",
 	"summary_footer": "🔽&nbsp;Pied",
-	"page_info_title": "Informations sur la page",
+	"page_info_title": "Page",
 	"page_info_category": "Catégorie",
 	"page_info_category_item": "Enseignement (2023)",
 	"page_info_created": "Date de création",
-	"article_info_title": "Informations sur le contenu",
+	"article_info_title": "Contenu",
 	"article_info_author": "Auteur(s)",
 	"article_info_last_modified": "Dernière modification"
 }

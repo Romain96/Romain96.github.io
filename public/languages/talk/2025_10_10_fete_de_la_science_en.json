@@ -22,7 +22,7 @@
 	"fds_2025_nim_3_title": "🎲&nbsp;Nim (3/3) - Exposed fully-trained AI",
 	"fds_2025_nim_3_description": "TODO",
 	"footer_copyright": "Romain Perrin. All rights reserved.",
-	"summary_title": "Page summary",
+	"summary_title": "Summary",
 	"summary_header": "🔼&nbsp;Header",
 	"summary_context": "🔖&nbsp;Context",
 	"summary_tictactoe": "🎲&nbsp;Tic-tac-toe game",
@@ -33,11 +33,11 @@
 	"summary_nim2" : "🎲&nbsp;Untrained AI",
 	"summary_nim3" : "🎲&nbsp;Exposed fully-trained AI",
 	"summary_footer": "🔽&nbsp;Footer",
-	"page_info_title": "Page information",
+	"page_info_title": "Page",
 	"page_info_category": "Category",
 	"page_info_category_item": "Talks",
 	"page_info_created": "Page created",
-	"article_info_title": "Content information",
+	"article_info_title": "Content",
 	"article_info_author": "Author(s)",
 	"article_info_last_modified": "Last modified"
 }

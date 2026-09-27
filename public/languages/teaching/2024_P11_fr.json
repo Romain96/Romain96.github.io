@@ -136,7 +136,7 @@
 	"p11_2024_controle_2_exo_1": "Exercice 1 : chouettes",
 	"p11_2024_controle_2_exo_2et3": "Exercices 2 et 3 : Pokémons",
 	"footer_copyright": "Romain Perrin. Tous droits réservés.",
-	"summary_title": "Sommaire de page",
+	"summary_title": "Sommaire",
 	"summary_header": "🔼&nbsp;En-tête",
 	"summary_td_tp": "📕&nbsp;Exercices",
 	"summary_td1": "📖💻&nbsp;TD/TP&nbsp;1",
@@ -157,11 +157,11 @@
 	"summary_projet": "📕&nbsp;SAÉ",
 	"summary_controles": "📕&nbsp;Contrôles",
 	"summary_footer": "🔽&nbsp;Pied",
-	"page_info_title": "Informations sur la page",
+	"page_info_title": "Page",
 	"page_info_category": "Catégorie",
 	"page_info_category_item": "Enseignement (2024)",
 	"page_info_created": "Date de création",
-	"article_info_title": "Informations sur le contenu",
+	"article_info_title": "Contenu",
 	"article_info_author": "Auteur(s)",
 	"article_info_last_modified": "Dernière modification"
 }
