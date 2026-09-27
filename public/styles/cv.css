@@ -123,3 +123,8 @@
 	align-items: flex-start;
 	justify-content: flex-start;
 }
+
+#cv_download {
+	display: flex;
+	justify-content: center;
+}
