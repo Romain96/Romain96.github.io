@@ -75,6 +75,10 @@ body {
 	scrollbar-width: thin;
 }
 
+.smallcaps {
+	font-variant: small-caps;
+}
+
 .left_aside .page-menu-container {
 	margin-bottom: 10px;
 }
