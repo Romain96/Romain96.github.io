@@ -75,6 +75,10 @@ body {
 	scrollbar-width: thin;
 }
 
+.left_aside .page-menu-container {
+	margin-bottom: 10px;
+}
+
 .left_aside .heading-3 {
 	font-size: 1em;
 	margin-bottom: 0.75rem;
@@ -222,12 +226,18 @@ body {
 
 .nav .list {
 	list-style: none;
-	padding: 0;
+	padding: 10px 0px 0px 0px;
+	margin: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .nav .list .item {
-	display: inline;
-	margin: 0 15px;
+	display: flex;
+	flex-direction: line;
+	margin: 0px 15px 15px 15px;
+	padding: 5px;
 }
 
 .nav .list .item a {
