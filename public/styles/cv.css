@@ -80,13 +80,19 @@
 
 .article .personalDetails {
 	display: flex;
+	flex-direction: column;
 	flex: 0 1 100%;
+}
+
+.article .personalDetails .portrait_with_infos {
+	display: flex;
+	flex-direction: row;
 }
 
 .article .personalDetails .portrait img {
 	margin: 0px;
 	padding: 0px;
-	width: 12em;
+	width: 14em;
 }
 
 .article .personalDetails table
@@ -117,14 +123,19 @@
 
 .all_links {
 	display: flex;
-	gap: 2%;
-	max-width: 75%;
+	flex-direction: column;
+	gap: 2.5%;
 	flex-wrap: wrap;
 	align-items: flex-start;
 	justify-content: flex-start;
 }
 
+.all_links span {
+	margin-bottom: 5px;
+}
+
 #cv_download {
 	display: flex;
-	justify-content: center;
+	justify-content: left;
+	margin: 10px 0px 5px 0px;
 }
