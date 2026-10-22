@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Dr Romain B. PERRIN</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico?">
+		<link rel="stylesheet" href="../../public/styles/index.css"/>
+		<link rel="stylesheet" href="../../public/styles/talk.css"/>
+		<link rel="stylesheet" href="../../public/styles/tic_tac_toe_fds_2025.css"/>
+		<script src="../../public/scripts/languages.js" defer></script>
+		<script src="../../public/scripts/game/tic_tac_toe_fds_2025.js" defer></script>
+	</head>
+
+	<body>
+
+		<!-- LEFT PANEL - MENU -->
+		<aside class="left_aside">
+			<div class="image-container">
+				<img src="../../images/base/top_left_banner.png">
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="language_title"></h3>
+				<hr>
+				<select name="languageSelection" class="languageSelector" onchange="changeLanguageListener(this.value)">
+					<option class="languageOption" value="en" selected>🇬🇧&nbsp;English</option>
+					<option class="languageOption" value="fr">🇫🇷&nbsp;Français</option>
+				</select>
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="summary_title"></h3>
+				<hr>
+				<ul class="list" id="page-menu">
+					<li class="item"><a href="#header" data-i18n="summary_header"></a></li>
+					<li class="item"><a href="#context" data-i18n="summary_context"></a></li>
+					<li class="item"><a href="#rules" data-i18n="summary_rules"></a></li>
+					<li class="item"><a href="#tictactoe" data-i18n="summary_tictactoe"></a></li>
+					<ul class="sublist">
+						<li class="item"><a href="#tictactoe1" data-i18n="summary_tictactoe1"></a></li>
+						<li class="item"><a href="#tictactoe2" data-i18n="summary_tictactoe2"></a></li>
+					</ul>
+					<li class="item"><a href="#footer" data-i18n="summary_footer"></a></li>
+				</ul>
+			</div>
+		</aside>
+
+		<div class="centre">
+
+			<header class="header" id="header">
+				<h1 class="heading-1">Dr Romain B. <span class="smallcaps">Perrin</span></h1>
+				<nav class="nav">
+					<ul class="list">
+						<li class="item">
+							<span class="text_logo_link">
+								<img class="logo" src="../../images/navigation/home.png">
+								&nbsp;
+								<a href="../../index.html" data-i18n="nav_home"></a>
+							</span>
+						</li>
+						<li class="item" id="about">
+							<span class="text_logo_link">
+								<img class="logo" src="../../images/navigation/cv.png">
+								&nbsp;
+								<a href="../../pages/cv.html" data-i18n="nav_about"></a>
+							</span>
+						</li>
+						<li class="item" id="research">
+							<span class="text_logo_link">
+								<img class="logo" src="../../images/navigation/research.png">
+								&nbsp;
+								<a href="../../pages/research.html" data-i18n="nav_research"></a>
+							</span>
+						</li>
+						<li class="item" id="talk">
+							<span class="text_logo_link">
+								<img class="logo" src="../../images/navigation/talk.png">
+								&nbsp;
+								<a href="../../pages/talk.html" data-i18n="nav_talk"></a>
+							</span>
+						</li>
+						<li class="item" id="publication">
+							<span class="text_logo_link">
+								<img class="logo" src="../../images/navigation/publication.png">
+								&nbsp;
+								<a href="../../pages/publication.html" data-i18n="nav_publication"></a>
+							</span>
+						</li>
+						<li class="item" id="teaching">
+							<span class="text_logo_link">
+								<img class="logo" src="../../images/navigation/teaching.png">
+								&nbsp;
+								<a href="../../pages/teaching.html" data-i18n="nav_teaching"></a>
+							</span>
+						</li>
+						<li class="item" id="project">
+							<span class="text_logo_link">
+								<img class="logo" src="../../images/navigation/project.png">
+								&nbsp;
+								<a href="../../pages/project.html" data-i18n="nav_project"></a>
+							</span>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<main class="main">
+
+				<h1 class="heading-1" data-i18n="ttt_title"></h1>
+				<hr>
+				<label id="languageJSONPath" hidden>../../public/languages/game/tic_tac_toe_fds_2025</label>
+
+				<article class="article" id="context">
+					<h3 class="heading-3" data-i18n="ttt_background_title"></h3>
+					<p class="paragraph" data-i18n="ttt_background_paragraph"></p>
+				</article>
+
+				<section class="section" id="tictactoe">
+
+					<article class="article" id="rules">
+						<h3 class="heading-3" data-i18n="ttt_rules_title"></h3>
+						<p class="paragraph" data-i18n="ttt_rules_paragraph"></p>
+					</article>
+
+					<article class="article" id="tictactoe1">
+						<h3 class="heading-3" data-i18n="ttt_1_title"></h3>
+						<hr>
+						<p class="paragraph" data-i18n="ttt_1_description"></p>
+
+						<div class="FDS2025TicTacToe1">
+							<!--Left : board with buttons and board with display-->
+							<div class="FDS2025TicTacToe1Left">
+								<div class="FDS2025TicTacToe1Choices">
+									<table class="table">
+										<tr class="row">
+											<td class="column"><button id="ttt_1_button_00" type="button" onclick="TicTacToe1PlaceO(0,0)" data-i18n="button_play" disabled="true"></button></td>
+											<td class="column"><button id="ttt_1_button_01" type="button" onclick="TicTacToe1PlaceO(0,1)" data-i18n="button_play"></button></td>
+											<td class="column"><button id="ttt_1_button_02" type="button" onclick="TicTacToe1PlaceO(0,2)" data-i18n="button_play"></button></td>
+										</tr>
+										<tr class="row">
+											<td class="column"><button id="ttt_1_button_10" type="button" onclick="TicTacToe1PlaceO(1,0)" data-i18n="button_play"></button></td>
+											<td class="column"><button id="ttt_1_button_11" type="button" onclick="TicTacToe1PlaceO(1,1)" data-i18n="button_play"></button></td>
+											<td class="column"><button id="ttt_1_button_12" type="button" onclick="TicTacToe1PlaceO(1,2)" data-i18n="button_play"></button></td>
+										</tr>
+										<tr class="row">
+											<td class="column"><button id="ttt_1_button_20" type="button" onclick="TicTacToe1PlaceO(2,0)" data-i18n="button_play"></button></td>
+											<td class="column"><button id="ttt_1_button_21" type="button" onclick="TicTacToe1PlaceO(2,1)" data-i18n="button_play"></button></td>
+											<td class="column"><button id="ttt_1_button_22" type="button" onclick="TicTacToe1PlaceO(2,2)" data-i18n="button_play"></button></td>
+										</tr>
+										<tr class="row">
+											<td class="column" colspan="3">
+												<button id="ttt_1_reset" type="button" onclick="TicTacToe1Reset()" data-i18n="button_reset"></button>
+											</td>
+										</tr>
+									</table>
+									<span data-i18n="ttt_feedback_turn"></span>
+									<span id="ttt_1_human_turn" data-i18n="ttt_feedback_human_turn"></span>
+									<span id="ttt_1_ai_turn" data-i18n="ttt_feedback_ai_turn"></span>
+									<br>
+									<span data-i18n="ttt_feedback_status"></span>
+									<span id="ttt_1_ongoing" data-i18n="ttt_feedback_ongoing"></span>
+									<span id="ttt_1_human_victory" data-i18n="ttt_feedback_human_victory"></span>
+									<span id="ttt_1_ai_victory" data-i18n="ttt_feedback_ai_victory"></span>
+									<span id="ttt_1_tie" data-i18n="ttt_feedback_tie"></span>
+								</div>
+								<div class="FDS2025TicTacToe1Board">
+
+									<div class="FDS2025TicTacToe1Display">
+										<div class="FDS2025TicTacToe1DisplayLine">
+											<div class="FDS2025TicTacToe1DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/X.png" id="ttt_1_image_00">
+											</div>
+											<div class="FDS2025TicTacToe1DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_1_image_01">
+											</div>
+											<div class="FDS2025TicTacToe1DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_1_image_02">
+											</div>
+										</div>
+										<div class="FDS2025TicTacToe1DisplayLine">
+											<div class="FDS2025TicTacToe1DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_1_image_10">
+											</div>
+											<div class="FDS2025TicTacToe1DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_1_image_11">
+											</div>
+											<div class="FDS2025TicTacToe1DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_1_image_12">
+											</div>
+										</div>
+										<div class="FDS2025TicTacToe1DisplayLine">
+											<div class="FDS2025TicTacToe1DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_1_image_20">
+											</div>
+											<div class="FDS2025TicTacToe1DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_1_image_21">
+											</div>
+											<div class="FDS2025TicTacToe1DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_1_image_22">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Right : X first decision tree-->
+							<div class="FDS2025TicTacToe1Right">
+								<img src="../../images/talk/FDS2025/TicTacToe/DecisionTreeX.png">
+							</div>
+						</div>
+					</article>
+
+					<article class="article" id="tictactoe2">
+						<h3 class="heading-3" data-i18n="ttt_2_title"></h3>
+						<hr>
+						<p class="paragraph" data-i18n="ttt_2_description"></p>
+
+						<div class="FDS2025TicTacToe2">
+							<!--Left : board with buttons and board with display-->
+							<div class="FDS2025TicTacToe2Left">
+								<div class="FDS2025TicTacToe2Choices">
+									<table class="table">
+										<tr class="row">
+											<td class="column"><button id="ttt_2_button_00" type="button" onclick="TicTacToe2PlaceX(0,0)" data-i18n="button_play"></button></td>
+											<td class="column"><button id="ttt_2_button_01" type="button" onclick="TicTacToe2PlaceX(0,1)" data-i18n="button_play"></button></td>
+											<td class="column"><button id="ttt_2_button_02" type="button" onclick="TicTacToe2PlaceX(0,2)" data-i18n="button_play"></button></td>
+										</tr>
+										<tr class="row">
+											<td class="column"><button id="ttt_2_button_10" type="button" onclick="TicTacToe2PlaceX(1,0)" data-i18n="button_play"></button></td>
+											<td class="column"><button id="ttt_2_button_11" type="button" onclick="TicTacToe2PlaceX(1,1)" data-i18n="button_play"></button></td>
+											<td class="column"><button id="ttt_2_button_12" type="button" onclick="TicTacToe2PlaceX(1,2)" data-i18n="button_play"></button></td>
+										</tr>
+										<tr class="row">
+											<td class="column"><button id="ttt_2_button_20" type="button" onclick="TicTacToe2PlaceX(2,0)" data-i18n="button_play"></button></td>
+											<td class="column"><button id="ttt_2_button_21" type="button" onclick="TicTacToe2PlaceX(2,1)" data-i18n="button_play"></button></td>
+											<td class="column"><button id="ttt_2_button_22" type="button" onclick="TicTacToe2PlaceX(2,2)" data-i18n="button_play"></button></td>
+										</tr>
+										<tr class="row">
+											<td class="column" colspan="3">
+												<button id="ttt_2_reset" type="button" onclick="TicTacToe2Reset()" data-i18n="button_reset"></button>
+											</td>
+										</tr>
+									</table>
+									<span data-i18n="ttt_feedback_turn"></span>
+									<span id="ttt_2_human_turn" data-i18n="ttt_feedback_human_turn"></span>
+									<span id="ttt_2_ai_turn" data-i18n="ttt_feedback_ai_turn"></span>
+									<br>
+									<span data-i18n="ttt_feedback_status"></span>
+									<span id="ttt_2_ongoing" data-i18n="ttt_feedback_ongoing"></span>
+									<span id="ttt_2_human_victory" data-i18n="ttt_feedback_human_victory"></span>
+									<span id="ttt_2_ai_victory" data-i18n="ttt_feedback_ai_victory"></span>
+									<span id="ttt_2_tie" data-i18n="ttt_feedback_tie"></span>
+								</div>
+								<div class="FDS2025TicTacToe2Board">
+
+									<div class="FDS2025TicTacToe2Display">
+										<div class="FDS2025TicTacToe2DisplayLine">
+											<div class="FDS2025TicTacToe2DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_2_image_00">
+											</div>
+											<div class="FDS2025TicTacToe2DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_2_image_01">
+											</div>
+											<div class="FDS2025TicTacToe2DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_2_image_02">
+											</div>
+										</div>
+										<div class="FDS2025TicTacToe2DisplayLine">
+											<div class="FDS2025TicTacToe2DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_2_image_10">
+											</div>
+											<div class="FDS2025TicTacToe2DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_2_image_11">
+											</div>
+											<div class="FDS2025TicTacToe2DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_2_image_12">
+											</div>
+										</div>
+										<div class="FDS2025TicTacToe2DisplayLine">
+											<div class="FDS2025TicTacToe2DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_2_image_20">
+											</div>
+											<div class="FDS2025TicTacToe2DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_2_image_21">
+											</div>
+											<div class="FDS2025TicTacToe2DisplayLineImage">
+												<img src="../../images/talk/FDS2025/TicTacToe/empty.png" id="ttt_2_image_22">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Right : X first decision tree-->
+							<div class="FDS2025TicTacToe2Right">
+								<img src="../../images/talk/FDS2025/TicTacToe/DecisionTreeO.png">
+							</div>
+						</div>
+					</article>
+
+				</section>
+
+			</main>
+
+			<footer class="footer" id="footer">
+				&copy;&nbsp;<span id="footer_year"></span>&nbsp;<p class="paragraph" data-i18n="footer_copyright"></p>
+				<script>
+					// Set the current year in the footer
+					document.getElementById('footer_year').textContent = new Date().getFullYear();
+				</script>
+			</footer>
+
+		</div>
+
+		<!-- RIGHT PANEL - INFOS -->
+		<aside class="right_aside">
+			<div class="image-container">
+				<img src="../../images/base/top_right_banner.png">
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="page_info_title"></h3>
+				<hr>
+				<h4 class="heading-4" data-i18n="page_info_category"></h4>
+				<ul class="list">
+					<li class="item" data-i18n="page_info_category_item"></li>
+				</ul>
+				<h4 class="heading-4" data-i18n="page_info_created"></h4>
+				<ul class="list">
+					<li class="item">2026/10/22 15:30</li>
+				</ul>
+			</div>
+			<div class="page-menu-container">
+				<h3 class="heading-3" data-i18n="article_info_title"></h3>
+				<hr>
+				<h4 class="heading-4" data-i18n="article_info_author"></h4>
+				<ul class="list">
+					<li class="item">Romain PERRIN</li>
+				</ul>
+				<h4 class="heading-4" data-i18n="article_info_last_modified"></h4>
+				<ul class="list">
+					<li class="item">2026/10/22 22:05</li>
+				</ul>
+			</div>
+		</aside>
+
+	</body>
+</html>

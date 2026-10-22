@@ -1,0 +1,131 @@
+/* FDS 2025 Tic-Tac-Toe */
+
+.FDS2025TicTacToe1 {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left {
+	flex: 2;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Choices {
+	width: 100%;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Choices .table {
+	border-collapse: collapse;
+	border: 2px solid black;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Choices .table .row {
+	border: 2px solid black;
+	margin: 0px;
+	padding: 0px;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Choices .table .row button {
+	padding: 2px;
+	margin: 2px;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board {
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	background-color: #eeeeee;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board .FDS2025TicTacToe1Display {
+	width: 100%;
+	border: 2px solid black;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board .FDS2025TicTacToe1Display .FDS2025TicTacToe1DisplayLine {
+	display: flex;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board .FDS2025TicTacToe1Display .FDS2025TicTacToe1DisplayLine .FDS2025TicTacToe1DisplayLineImage {
+	border: 2px solid black;
+	flex: 1;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Left .FDS2025TicTacToe1Board .FDS2025TicTacToe1Display .FDS2025TicTacToe1DisplayLine .FDS2025TicTacToe1DisplayLineImage img {
+	width: 100%;
+	height: 100%;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Right {
+	flex: 3;
+	background-color: #eeeeee;
+}
+
+.FDS2025TicTacToe1 .FDS2025TicTacToe1Right img {
+	width: 100%;
+	overflow: visible;
+}
+
+.FDS2025TicTacToe2 {
+	width: 80%;
+	display: flex;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Left {
+	flex: 2;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Left .FDS2025TicTacToe2Choices {
+	width: 100%;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Left .FDS2025TicTacToe2Choices .table {
+	border-collapse: collapse;
+	border: 2px solid black;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Left .FDS2025TicTacToe2Choices .table .row {
+	border: 2px solid black;
+	margin: 0px;
+	padding: 0px;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Left .FDS2025TicTacToe2Choices .table .row button {
+	padding: 2px;
+	margin: 2px;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Left .FDS2025TicTacToe2Board {
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Left .FDS2025TicTacToe2Board .FDS2025TicTacToe2Display {
+	width: 100%;
+	border: 2px solid black;
+	background-color: #eeeeee;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Left .FDS2025TicTacToe2Board .FDS2025TicTacToe2Display .FDS2025TicTacToe2DisplayLine {
+	display: flex;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Left .FDS2025TicTacToe2Board .FDS2025TicTacToe2Display .FDS2025TicTacToe2DisplayLine .FDS2025TicTacToe2DisplayLineImage {
+	border: 2px solid black;
+	flex: 1;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Left .FDS2025TicTacToe2Board .FDS2025TicTacToe2Display .FDS2025TicTacToe2DisplayLine .FDS2025TicTacToe2DisplayLineImage img {
+	width: 100%;
+	height: 100%;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Right {
+	flex: 3;
+	background-color: #eeeeee;
+}
+
+.FDS2025TicTacToe2 .FDS2025TicTacToe2Right img {
+	width: 100%;
+	overflow: visible;
+}
