@@ -72,30 +72,42 @@ class TicTacToeNode
 	}
 }
 
+// second-level
+// [XO-]
+// [---]
+// [---]
 let ttt1Branch23 = new TicTacToeNode(2, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch25 = new TicTacToeNode(2, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch26 = new TicTacToeNode(2, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch273 = new TicTacToeNode(3, 1, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch276 = new TicTacToeNode(3, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
-let ttt1Branch278 = new TicTacToeNode(3, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
-let ttt1Branch279 = new TicTacToeNode(3, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
+let ttt1Branch278 = new TicTacToeNode(3, 1, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
+let ttt1Branch279 = new TicTacToeNode(3, 1, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch27 = new TicTacToeNode(2, 1, 1, "", [[null, null, ttt1Branch273], [null, null, ttt1Branch276], [null, ttt1Branch278, ttt1Branch279]]);
 let ttt1Branch28 = new TicTacToeNode(2, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch29 = new TicTacToeNode(2, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch2 = new TicTacToeNode(1, 1, 0, "", [[null, null, ttt1Branch23], [null, ttt1Branch25, ttt1Branch26], [ttt1Branch27, ttt1Branch28, ttt1Branch29]]);
 
+// second-level
+// [X-O]
+// [---]
+// [---]
 let ttt1Branch32 = new TicTacToeNode(2, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch35 = new TicTacToeNode(2, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch36 = new TicTacToeNode(2, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch372 = new TicTacToeNode(3, 1, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch376 = new TicTacToeNode(3, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
-let ttt1Branch378 = new TicTacToeNode(3, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
-let ttt1Branch379 = new TicTacToeNode(3, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
+let ttt1Branch378 = new TicTacToeNode(3, 1, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
+let ttt1Branch379 = new TicTacToeNode(3, 1, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch37 = new TicTacToeNode(2, 1, 1, "", [[null, ttt1Branch372, null], [null, null, ttt1Branch376], [null, ttt1Branch378, ttt1Branch379]]);
 let ttt1Branch38 = new TicTacToeNode(2, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch39 = new TicTacToeNode(2, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch3 = new TicTacToeNode(1, 1, 0, "", [[null, ttt1Branch32, null], [null, ttt1Branch35, ttt1Branch36], [ttt1Branch37, ttt1Branch38, ttt1Branch39]]);
 
+// second-level
+// [X--]
+// [O--]
+// [---]
 let ttt1Branch436 = new TicTacToeNode(3, 2, 1, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch437 = new TicTacToeNode(3, 2, 1, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch438 = new TicTacToeNode(3, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
@@ -108,12 +120,16 @@ let ttt1Branch48 = new TicTacToeNode(2, 0, 2, "w", [[null, null, null], [null, n
 let ttt1Branch49 = new TicTacToeNode(2, 0, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch4 = new TicTacToeNode(1, 0, 1, "", [[null, null, ttt1Branch43], [null, ttt1Branch45, ttt1Branch46], [ttt1Branch47, ttt1Branch48, ttt1Branch49]]);
 
+// second-level
+// [X--]
+// [-O-]
+// [---]
 let ttt1Branch5348 = new TicTacToeNode(4, 2, 2, "n", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch5349 = new TicTacToeNode(4, 2, 1, "n", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch534 = new TicTacToeNode(3, 1, 2, "", [[null, null, null], [null, null, null], [null, ttt1Branch5348, ttt1Branch5349]]);
 let ttt1Branch536 = new TicTacToeNode(3, 1, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch538 = new TicTacToeNode(3, 1, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
-let ttt1Branch539 = new TicTacToeNode(3, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
+let ttt1Branch539 = new TicTacToeNode(3, 1, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch53 = new TicTacToeNode(2, 2, 0, "", [[null, null, null], [ttt1Branch534, null, ttt1Branch536], [null, ttt1Branch538, ttt1Branch539]]);
 let ttt1Branch54 = new TicTacToeNode(2, 0, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch56 = new TicTacToeNode(2, 0, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
@@ -122,6 +138,10 @@ let ttt1Branch58 = new TicTacToeNode(2, 0, 2, "w", [[null, null, null], [null, n
 let ttt1Branch59 = new TicTacToeNode(2, 0, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch5 = new TicTacToeNode(1, 0, 1, "", [[null, null, ttt1Branch53], [ttt1Branch54, null, ttt1Branch56], [ttt1Branch57, ttt1Branch58, ttt1Branch59]]);
 
+// second-level
+// [X--]
+// [--O]
+// [---]
 let ttt1Branch62 = new TicTacToeNode(2, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch63 = new TicTacToeNode(2, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch64 = new TicTacToeNode(2, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
@@ -134,6 +154,10 @@ let ttt1Branch698 = new TicTacToeNode(3, 0, 1, "w", [[null, null, null], [null, 
 let ttt1Branch69 = new TicTacToeNode(2, 0, 2, "", [[null, ttt1Branch692, null], [ttt1Branch694, null, null], [ttt1Branch697, ttt1Branch698, null]]);
 let ttt1Branch6 = new TicTacToeNode(1, 1, 1, "", [[null, ttt1Branch62, ttt1Branch63], [ttt1Branch64, null, null], [ttt1Branch67, ttt1Branch68, ttt1Branch69]]);
 
+// second-level
+// [X--]
+// [---]
+// [O--]
 let ttt1Branch734 = new TicTacToeNode(3, 2, 1, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch736 = new TicTacToeNode(3, 2, 1, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch738 = new TicTacToeNode(3, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
@@ -146,6 +170,10 @@ let ttt1Branch78 = new TicTacToeNode(2, 0, 2, "w", [[null, null, null], [null, n
 let ttt1Branch79 = new TicTacToeNode(2, 0, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch7 = new TicTacToeNode(1, 0, 1, "", [[null, null, ttt1Branch73], [ttt1Branch74, ttt1Branch75, ttt1Branch76], [null, ttt1Branch78, ttt1Branch79]]);
 
+// second-level
+// [X--]
+// [---]
+// [-O-]
 let ttt1Branch824 = new TicTacToeNode(3, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch826 = new TicTacToeNode(3, 2, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch827 = new TicTacToeNode(3, 2, 2, "w", [[null, null, null], [null, null, null], [null, null, null]]);
@@ -158,6 +186,10 @@ let ttt1Branch87 = new TicTacToeNode(2, 0, 1, "w", [[null, null, null], [null, n
 let ttt1Branch89 = new TicTacToeNode(2, 0, 1, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch8 = new TicTacToeNode(1, 0, 2, "", [[null, ttt1Branch82, null], [ttt1Branch84, ttt1Branch85, ttt1Branch86], [ttt1Branch87, null, ttt1Branch89]]);
 
+// second-level
+// [X--]
+// [---]
+// [--O]
 let ttt1Branch924 = new TicTacToeNode(3, 1, 1, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch925 = new TicTacToeNode(3, 1, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch926 = new TicTacToeNode(3, 1, 0, "w", [[null, null, null], [null, null, null], [null, null, null]]);
@@ -170,6 +202,10 @@ let ttt1Branch97 = new TicTacToeNode(2, 0, 1, "w", [[null, null, null], [null, n
 let ttt1Branch98 = new TicTacToeNode(2, 0, 1, "w", [[null, null, null], [null, null, null], [null, null, null]]);
 let ttt1Branch9 = new TicTacToeNode(1, 0, 2, "", [[null, ttt1Branch92, null], [ttt1Branch94, ttt1Branch95, ttt1Branch96], [ttt1Branch97, ttt1Branch98, null]]);
 
+// first-level aka root
+// [---]
+// [---]
+// [---]
 let root1 = new TicTacToeNode(0, 0, 0, "", [[null, ttt1Branch2, ttt1Branch3], [ttt1Branch4, ttt1Branch5, ttt1Branch6], [ttt1Branch7, ttt1Branch8, ttt1Branch9]]);
 let ticTacToe1Node = root1;
 
